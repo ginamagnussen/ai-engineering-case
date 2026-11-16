@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2641,
+  "output": 405,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.75,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer-only line NIG-DE:5100873375 (GBP 13,070.00, posted 2026-10-14, ref 9000010968, P-24017 Bauüberwachung) carries the same seller reference as NIG-DE:5100873346 (posted 2026-10-09), which is already matched in M0186. The nearest unmatched NIG-UK receivables (GBP 1,520 and GBP 25,200, ratios 0.12 and 1.93) do not fit. This indicates NIG-DE booked invoice 9000010968 twice.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should confirm that invoice 9000010968 was posted twice and reverse the second posting, 5100873375, dated 2026-10-14.",
+  "adjustment_amount": 13070.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-DE, reverse duplicate IC payable 5100873375: debit IC payable to NIG-UK and credit the cost account (Bauüberwachung P-24017) for GBP 13,070.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

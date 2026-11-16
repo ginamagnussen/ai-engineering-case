@@ -30,3 +30,6 @@ data/reference/alias_overrides.csv
 # Held-out evaluation dataset and its outputs (regenerate: see docs/evaluation.md)
 data_holdout/
 out_holdout/
+
+# Private notes
+notes/

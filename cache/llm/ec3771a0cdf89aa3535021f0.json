@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2642,
+  "output": 403,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.16,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer line NIG-AU:77484 (GBP 19,500.00, 'bentley openroads licences from uk', posted 2026-10-16) carries reference 9000010767, the same seller invoice reference as NIG-AU:77462 (posted 2026-10-13), which is already matched in M0169. No unmatched NIG-UK seller line is close in amount: the nearest are GBP 25,200 (ratio 1.28, booked to NIG-AE) and GBP 1,520 (ratio 0.08). This indicates NIG-AU booked the same licence invoice twice.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm that 77484 duplicates 77462 (same reference 9000010767) and reverse line 77484.",
+  "adjustment_amount": 19500.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse duplicate IC payable NIG-AU:77484 to NIG-UK: debit IC payable NIG-UK GBP 19,500.00, credit the original licence cost/expense account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

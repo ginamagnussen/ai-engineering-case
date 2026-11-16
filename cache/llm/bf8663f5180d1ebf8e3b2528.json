@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2652,
+  "output": 409,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.81,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "NIG-AE payable line NIG-AE:ICV-AE-031254 (USD 14,800.00, posted 2026-10-13, ref INV-US-100392, 'Seconded staff H.Brown P-24050') has no seller counterpart. The same invoice reference was already booked on NIG-AE:ICV-AE-031240 (posted 2026-10-10) and matched in M0217. The nearest unmatched NIG-US receivables (USD 9,900 and USD 1,760) are for other partners and other employees, so this line appears to be a second booking of the same invoice by the buyer.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm that ICV-AE-031254 duplicates ICV-AE-031240 for INV-US-100392 and then reverse it before close.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reverse duplicate IC payable ICV-AE-031254 to NIG-US: debit IC payable NIG-US USD 14,800, credit the original secondment cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

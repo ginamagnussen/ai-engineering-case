@@ -32,6 +32,7 @@ class Usage:
         self.errors = 0
         self.tokens = {"input": 0, "output": 0, "cache_read": 0, "cache_write": 0}
         self.latencies: list[float] = []
+        self.replayed_cost = 0.0  # what the cached answers cost when they were generated
 
     def add(self, u: dict):
         with _lock:
@@ -44,7 +45,8 @@ class Usage:
 
     def as_dict(self) -> dict:
         return {"api_calls": self.calls, "cache_hits": self.cache_hits, "refusals": self.refusals,
-                "errors": self.errors, "tokens": self.tokens, "cost_usd": self.cost_usd}
+                "errors": self.errors, "tokens": self.tokens, "cost_usd": self.cost_usd,
+                "full_run_cost_usd": round(self.cost_usd + self.replayed_cost, 4)}
 
 
 def cost_of(tokens: dict, model: Optional[str] = None) -> float:
@@ -100,6 +102,7 @@ def structured_call(system: str, payload: str, schema: type[T], *, allow_api: bo
         rec = json.loads(path.read_text(encoding="utf-8"))
         with _lock:
             USAGE.cache_hits += 1
+            USAGE.replayed_cost += cost_of(rec.get("usage", {}), config.MODEL)
         return schema.model_validate(rec["output"])
     if not allow_api:
         return None

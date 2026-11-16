@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2652,
+  "output": 396,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.88,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.86,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031254 (USD 14,800.00, posted 2026-10-13, ref INV-US-100392) has no seller counterpart, but the same invoice reference was already booked by NIG-AE as NIG-AE:ICV-AE-031240 (posted 2026-10-10) and matched in M0226. The nearest unmatched NIG-US receivables (USD 9,900 and USD 1,760) belong to other partners and do not fit, so this is a second booking of the same invoice.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm that ICV-AE-031254 is a re-entry of INV-US-100392 and reverse it, checking that no duplicate payment was released.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AE: reverse duplicate IC payable ICV-AE-031254. Debit IC payable NIG-US USD 14,800 and credit the secondment cost account originally charged.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

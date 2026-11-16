@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2673,
+  "output": 438,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.34,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer line NIG-AU:77458 (EUR 35,280.00, posted 2026-10-12) carries reference RE-2026-000310, which was already booked by NIG-AU on line NIG-AU:77432 (posted 2026-10-07) and matched to NIG-DE in M0068. No unmatched NIG-DE receivable is close in amount: the nearest lines, NIG-DE:5100873496 and NIG-DE:5100873391, are 2.5x the amount and belong to other partners. This indicates NIG-AU booked the same seconded-staff invoice (m.sharma, P-25019) twice.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm against invoice RE-2026-000310 that line NIG-AU:77458 duplicates already-matched line NIG-AU:77432, then reverse it in the October 2026 period.",
+  "adjustment_amount": 35280.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-AU to reverse duplicate IC payable line NIG-AU:77458 (debit IC payable to NIG-DE EUR 35,280.00, credit the original cost account).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

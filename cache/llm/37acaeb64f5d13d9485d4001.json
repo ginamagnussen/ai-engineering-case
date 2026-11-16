@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2985,
+  "output": 468,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.6,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer line NIG-AU:77465 (SAR 33,000, posted 2026-10-13, ref SA-ICINV-00585) carries the same invoice reference as NIG-AU:77453 (posted 2026-10-11), which is already matched to NIG-SA's invoice in M0129. No unmatched NIG-SA seller line is close: the nearest is SAR 25,200, a ratio of 0.76. This points to NIG-AU booking invoice SA-ICINV-00585 twice.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm that line 77465 duplicates the already-matched line 77453 for SA-ICINV-00585 and reverse it in the October period.",
+  "adjustment_amount": 33000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse the duplicate IC payable NIG-AU:77465. Debit the IC payable to NIG-SA and credit the expense or cost account originally charged, SAR 33,000.",
+  "model_requests_review": true,
+  "review_reason": "The evidence does not show the amount of the matched twin 77453, so it is not verified that the two lines are identical. The descriptions mention staff t.brown and project P-23110, so it should be confirmed that this is not a separate secondment invoice issued under a reused reference."
+ }
+}

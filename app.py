@@ -16,7 +16,7 @@ import streamlit as st
 from recon import config, llm
 from recon.classify import Category
 from recon.entities import OVERRIDES_FILE, confirm_alias
-from recon.review import case_key, latest_decisions, load_log, record
+from recon.review import LOG, case_key, latest_decisions, load_log, record
 from recon.run import run_pipeline
 
 st.set_page_config(page_title="IC Reconciliation Copilot", page_icon="⚖️", layout="wide")
@@ -64,6 +64,13 @@ with st.sidebar.expander("Run pipeline"):
             s.update(label=f"Done in {summ['runtime_s']}s · LLM cost ${summ['llm']['cost_usd']}", state="complete")
         st.cache_data.clear()
         st.rerun()
+    if st.button("Reset demo", width="stretch",
+                 help="Clear recorded decisions and confirmed aliases, then re-run from cache (no API calls)."):
+        for p in (LOG, OVERRIDES_FILE):
+            p.unlink(missing_ok=True)
+        run_pipeline(use_llm=False, log=lambda m: None)
+        st.cache_data.clear()
+        st.rerun()
 
 if not all((config.OUT / f).exists() for f in FILES):
     st.info("No pipeline output yet. Open **Run pipeline** in the sidebar and click **Run now**.")
@@ -85,8 +92,10 @@ def page_overview():
     c[2].metric("Exception cases", summary["cases"])
     c[3].metric("Need human review", summary["needs_review"])
     c[4].metric("Decisions recorded", f"{reviewed}/{len(cases)}")
-    c[5].metric("Model cost (this run)", f"${summary['llm']['cost_usd']:.2f}",
-                f"{summary['llm']['cache_hits']} cached answers", delta_color="off")
+    full = summary["llm"].get("full_run_cost_usd", summary["llm"]["cost_usd"])
+    c[5].metric("Model cost per run", f"${full:.2f}",
+                f"this replay: ${summary['llm']['cost_usd']:.2f} ({summary['llm']['cache_hits']} cached)",
+                delta_color="off", help="What the model calls cost when generated live; cached replays are free.")
 
     rows = []
     for k in cases:
@@ -186,7 +195,10 @@ def page_queue():
     rv_f = f[1].selectbox("Review flag", ["All", "Needs review", "Auto-accept eligible"])
     cat_f = f[2].multiselect("AI category", sorted(df.ai_category.unique()))
     ent_f = f[3].multiselect("Entity", sorted(set(df.seller) | set(df.buyer)))
-    if st_f:
+    jump = st.text_input("Jump to case", placeholder="e.g. C0048", key="jump").strip().upper()
+    if jump:
+        df = df[df.case == jump]
+    elif st_f:
         df = df[df.status.isin(st_f)]
     if rv_f != "All":
         df = df[df.review.str.startswith("⚠️") == (rv_f == "Needs review")]
