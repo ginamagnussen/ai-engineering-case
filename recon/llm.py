@@ -11,6 +11,7 @@ import hashlib
 import json
 import os
 import threading
+import time
 from typing import Optional, TypeVar
 
 from pydantic import BaseModel
@@ -30,6 +31,7 @@ class Usage:
         self.refusals = 0
         self.errors = 0
         self.tokens = {"input": 0, "output": 0, "cache_read": 0, "cache_write": 0}
+        self.latencies: list[float] = []
 
     def add(self, u: dict):
         with _lock:
@@ -38,11 +40,22 @@ class Usage:
 
     @property
     def cost_usd(self) -> float:
-        return round(sum(self.tokens[k] * config.PRICE_PER_MTOK[k] / 1e6 for k in self.tokens), 4)
+        return cost_of(self.tokens)
 
     def as_dict(self) -> dict:
         return {"api_calls": self.calls, "cache_hits": self.cache_hits, "refusals": self.refusals,
                 "errors": self.errors, "tokens": self.tokens, "cost_usd": self.cost_usd}
+
+
+def cost_of(tokens: dict, model: Optional[str] = None) -> float:
+    p = config.PRICES[model or config.MODEL]
+    return round(sum((tokens.get(k, 0) or 0) * p[k] / 1e6 for k in p), 4)
+
+
+def cached_record(system: str, payload: str, schema: type[BaseModel]) -> Optional[dict]:
+    """The raw cache entry (output, usage, latency) for a call, if it exists."""
+    path = config.LLM_CACHE / f"{_key(system, payload, schema)}.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
 
 
 USAGE = Usage()
@@ -93,6 +106,11 @@ def structured_call(system: str, payload: str, schema: type[T], *, allow_api: bo
 
     import anthropic
 
+    kwargs = {}
+    if config.MODEL in config.FALLBACK_MODELS:
+        # on a safety decline, the API retries on a suitable fallback model
+        kwargs = {"betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default"}
+    t0 = time.perf_counter()
     try:
         resp = _get_client().beta.messages.parse(
             model=config.MODEL,
@@ -105,8 +123,7 @@ def structured_call(system: str, payload: str, schema: type[T], *, allow_api: bo
             # No prompt caching: the shared prefix (system prompt) is below the minimum cacheable
             # size and every payload is unique, so caching only added the 25% cache-write premium
             # (observed in the first full run: 283k cache-write tokens, 0 cache reads).
-            betas=["server-side-fallback-2026-07-01"],
-            fallbacks="default",  # on a safety decline, the API retries on a suitable fallback model
+            **kwargs,
         )
     except (anthropic.AuthenticationError, anthropic.PermissionDeniedError):
         raise  # configuration problem: surface it, don't silently degrade
@@ -116,12 +133,14 @@ def structured_call(system: str, payload: str, schema: type[T], *, allow_api: bo
         print(f"  ! LLM call failed ({type(e).__name__}): {e}")
         return None
 
+    latency = round(time.perf_counter() - t0, 2)
     u = resp.usage
     usage = {"input": u.input_tokens, "output": u.output_tokens,
              "cache_read": getattr(u, "cache_read_input_tokens", 0) or 0,
              "cache_write": getattr(u, "cache_creation_input_tokens", 0) or 0}
     with _lock:
         USAGE.calls += 1
+        USAGE.latencies.append(latency)
     USAGE.add(usage)
 
     if resp.stop_reason == "refusal" or resp.parsed_output is None:
@@ -130,6 +149,6 @@ def structured_call(system: str, payload: str, schema: type[T], *, allow_api: bo
         return None
 
     path.write_text(json.dumps({"model": resp.model, "prompt_version": config.PROMPT_VERSION,
-                                "usage": usage, "output": resp.parsed_output.model_dump()},
+                                "usage": usage, "latency_s": latency, "output": resp.parsed_output.model_dump()},
                                indent=1, ensure_ascii=False), encoding="utf-8")
     return resp.parsed_output

@@ -12,11 +12,11 @@ except ImportError:  # pragma: no cover
     pass
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = Path(os.getenv("RECON_DATA", ROOT / "data"))  # override to run on a held-out dataset
 RAW = DATA / "raw"
 REFERENCE = DATA / "reference"
 GROUND_TRUTH = DATA / "ground_truth"  # used ONLY by recon.evaluate
-OUT = ROOT / "out"
+OUT = Path(os.getenv("RECON_OUT", ROOT / "out"))
 LLM_CACHE = ROOT / "cache" / "llm"  # committed, so the demo replays without an API key
 
 # --- LLM -------------------------------------------------------------------------------
@@ -24,7 +24,12 @@ MODEL = os.getenv("RECON_MODEL", "claude-opus-5-5")
 EFFORT = os.getenv("RECON_EFFORT", "medium")
 MAX_WORKERS = int(os.getenv("RECON_MAX_WORKERS", "8"))
 PROMPT_VERSION = "v1"  # bump to invalidate cached LLM answers when prompts change
-PRICE_PER_MTOK = {"input": 4.00, "output": 20.00, "cache_read": 0.20, "cache_write": 5.00}  # Opus 5.5
+PRICES = {  # USD per million tokens (Anthropic list prices; Haiku rate is for prompts <= 100K tokens)
+    "claude-opus-5-5": {"input": 4.00, "output": 20.00, "cache_read": 0.20, "cache_write": 5.00},
+    "claude-sonnet-5-5": {"input": 2.00, "output": 10.00, "cache_read": 0.10, "cache_write": 2.50},
+    "claude-haiku-5-5": {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125},
+}
+FALLBACK_MODELS = {"claude-opus-5-5", "claude-sonnet-5-5"}  # models that accept server-side `fallbacks`
 
 # --- Matching rules --------------------------------------------------------------------
 AMOUNT_TOL = 0.01          # absolute tolerance in transaction currency
