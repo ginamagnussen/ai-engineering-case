@@ -1,0 +1,27 @@
+{
+  "transactions": 344,
+  "ledger_lines": 701,
+  "by_category": {
+    "clean": 180,
+    "fuzzy_ref": 37,
+    "wht": 30,
+    "timing": 19,
+    "split": 18,
+    "fx_difference": 11,
+    "amount_typo": 10,
+    "missing_buyer": 10,
+    "accrual_no_invoice": 9,
+    "duplicate": 8,
+    "miscoded_counterparty": 7,
+    "dispute": 5
+  },
+  "by_type": {
+    "SECONDMENT": 170,
+    "PROJECT_RECHARGE": 150,
+    "LICENSE": 11,
+    "MGMT_FEE": 5,
+    "IT_SHARED": 5,
+    "LOAN_INTEREST": 3
+  },
+  "total_abs_oct_diff_usd": 1801379.92
+}

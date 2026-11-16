@@ -1,0 +1,7 @@
+entity_code,legal_name,country,functional_currency,erp,oracle_segment,sap_trading_partner,known_aliases
+NIG-US,NorthStar Infrastructure Group Inc.,US,USD,Oracle EBS 12.2,100,US01,NIG US|NorthStar US
+NIG-UK,NorthStar Infrastructure UK Ltd,GB,GBP,SAP S/4HANA (EN),200,GB01,NIG UK|Northstar UK
+NIG-DE,NorthStar Infrastruktur GmbH,DE,EUR,SAP ECC 6.0 (DE),300,DE01,NIG DE|Northstar GmbH
+NIG-AE,NorthStar Infrastructure Middle East LLC,AE,AED,Dynamics 365 F&O,400,AE01,NIG ME|Northstar Dubai
+NIG-SA,NorthStar Infrastructure Saudi Arabia Co.,SA,SAR,Dynamics 365 F&O,410,SA01,NIG KSA|Northstar Saudi
+NIG-AU,NorthStar Infrastructure Australia Pty Ltd,AU,AUD,"Legacy SCE Ledger (acquired Southern Cross Engineering, 2023)",500,AU01,

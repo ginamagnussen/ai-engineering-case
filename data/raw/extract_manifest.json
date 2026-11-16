@@ -1,0 +1,47 @@
+{
+  "company": "NorthStar Infrastructure Group (fictional)",
+  "period": "2026-10",
+  "period_end": "2026-10-31",
+  "extract_run_date": "2026-11-10",
+  "note": "Extracts contain IC receivable/payable postings from 2026-10-01 to extract_run_date. Postings after period_end belong to November.",
+  "reconciliation_convention": "Compare in transaction currency when both sides match; otherwise convert both sides to USD at the seller's invoice-date daily rate.",
+  "files": {
+    "ledger_NIG-US.csv": {
+      "rows": 92,
+      "delimiter": ",",
+      "entity": "NIG-US",
+      "erp": "Oracle EBS 12.2"
+    },
+    "ledger_NIG-UK.csv": {
+      "rows": 151,
+      "delimiter": ",",
+      "entity": "NIG-UK",
+      "erp": "SAP S/4HANA (EN)"
+    },
+    "ledger_NIG-DE.csv": {
+      "rows": 119,
+      "delimiter": ";",
+      "entity": "NIG-DE",
+      "erp": "SAP ECC 6.0 (DE)"
+    },
+    "ledger_NIG-AE.csv": {
+      "rows": 134,
+      "delimiter": ",",
+      "entity": "NIG-AE",
+      "erp": "Dynamics 365 F&O"
+    },
+    "ledger_NIG-SA.csv": {
+      "rows": 129,
+      "delimiter": ",",
+      "entity": "NIG-SA",
+      "erp": "Dynamics 365 F&O"
+    },
+    "ledger_NIG-AU.csv": {
+      "rows": 76,
+      "delimiter": ",",
+      "entity": "NIG-AU",
+      "erp": "Legacy SCE Ledger (acquired Southern Cross Engineering, 2023)"
+    }
+  },
+  "seed": 42
+}

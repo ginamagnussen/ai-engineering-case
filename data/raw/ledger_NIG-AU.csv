@@ -1,0 +1,77 @@
+txn_id,date,acct,ic_entity,memo,amount,dr_cr,ccy,ref
+77411,01/10/2026,IC-PAY,US HQ,p-25002 subcontract us geotech analysis,58800.00,C,USD,INV-US-100452
+77414,02/10/2026,IC-REC,NIG US,Project recharge P-24088 A8 Autobahn Bridge Rehab - cost estimating,28640.00,D,AUD,AU/IC/2026/0688
+77416,04/10/2026,IC-REC,Middle East LLC,Secondment Hannah Hassan 168h @ 210 - P-23110,35280.00,D,AUD,AU/IC/2026/0684
+77419,05/10/2026,IC-REC,NorthStar US,Project recharge P-25019 NEOM Utilities Package 3 - environmental survey,36930.00,D,AUD,AU/IC/2026/0691
+77422,05/10/2026,IC-REC,Head Office Denver,Secondment James Rahman 8h @ 165 - P-24088,1320.00,D,AUD,AU/IC/2026/0650
+77425,05/10/2026,IC-REC,Germany,Secondment Mohammed Schmidt 24h @ 210 - P-24017,5040.00,D,AUD,AU/IC/2026/0671
+77428,05/10/2026,IC-REC,NorthStar US,Project recharge P-24088 A8 Autobahn Bridge Rehab - environmental survey,161620.00,D,AUD,AU/IC/2026/0727
+77431,06/10/2026,IC-PAY,London office,seconded staff k.schmidt p-25031,4400.00,C,GBP,9000010779
+77432,07/10/2026,IC-PAY,NS Infrastruktur,seconded staff m.sharma p-25019,35280.00,C,EUR,RE-2026-000310
+77434,07/10/2026,IC-PAY,Head Office Denver,p-24050 subcontract us design review,28080.00,C,USD,INV-US-100448
+77435,07/10/2026,IC-REC,NorthStar US,Project recharge P-25031 Dubai Creek Water Treatment - environmental survey,51650.00,D,AUD,AU/IC/2026/0694
+77438,07/10/2026,IC-REC,NorthStar US,Project recharge P-24102 HS2 Area North Design - geotech analysis,111180.00,D,AUD,AU/IC/2026/0707
+77439,08/10/2026,IC-PAY,NorthStar US,seconded staff f.garcia p-25002 CC5150,417.68,C,USD,INV-US-100355
+77441,08/10/2026,IC-PAY,NorthStar US,seconded staff f.garcia p-25002 CC4100,661.87,C,USD,INV-US-100355
+77443,08/10/2026,IC-PAY,NIG US,seconded staff f.garcia p-25002 CC5150,240.45,C,USD,INV-US-100355
+77446,09/10/2026,IC-REC,Middle East LLC,Secondment Omar Brown 168h @ 185 - P-25002,31080.00,D,AUD,AU/IC/2026/0654
+77448,10/10/2026,IC-PAY,NIG DE,seconded staff m.hassan p-23110,2640.00,C,EUR,RE-2026-000289
+77450,11/10/2026,IC-REC,Germany,Secondment Omar Hassan 168h @ 165 - P-24017,27720.00,D,AUD,AU/IC/2026/0667
+77453,11/10/2026,IC-PAY,KSA branch,seconded staff t.brown p-23110,33000.00,C,SAR,SA-ICINV-00585
+77454,11/10/2026,IC-REC,NorthStar US,Project recharge P-25002 Sydney Harbour Tunnel Upgrade - geotech analysis,39400.00,D,AUD,AU/IC/2026/0739
+77455,12/10/2026,IC-REC,NorthStar US,Secondment Aisha Clarke 8h @ 165 - P-24102,1320.00,D,AUD,AU/IC/2026/0663
+77458,12/10/2026,IC-PAY,Northstar GmbH,seconded staff m.sharma p-25019,35280.00,C,EUR,RE-2026-000310
+77459,12/10/2026,IC-PAY,NIG KSA,seconded staff j.hassan p-25031,3386.29,C,AUD,SA-ICINV-00524
+77462,13/10/2026,IC-PAY,Northstar UK,bentley openroads licences from uk,19500.00,C,GBP,9000010767
+77465,13/10/2026,IC-PAY,KSA branch,seconded staff t.brown p-23110,33000.00,C,SAR,SA-ICINV-00585
+77468,13/10/2026,IC-PAY,Head Office Denver,seconded staff c.turner p-25031,159600.00,C,SAR,SA-ICINV-00562
+77469,14/10/2026,IC-PAY,NS UAE,seconded staff m.o'connor p-24017,38000.00,C,AED,aeicinv00556
+77470,14/10/2026,IC-REC,Head Office Denver,Project recharge P-24050 I-95 Corridor Resurfacing - cost estimating,7050.00,D,AUD,AU/IC/2026/0698
+77472,14/10/2026,IC-REC,NorthStar US,Secondment Noura Müller 152h @ 110 - P-25019,16720.00,D,AUD,AU/IC/2026/0666
+77475,15/10/2026,IC-PAY,KSA branch,seconded staff o.brown p-25002,5000.00,C,SAR,SA-ICINV-00528
+77478,15/10/2026,IC-PAY,NS Infrastruktur,seconded staff r.haddad p-23110,9900.00,C,EUR,
+77481,15/10/2026,IC-PAY,NIG US,seconded staff m.haddad p-25031,4440.00,C,USD,INV-US-100362
+77482,15/10/2026,IC-REC,Head Office Denver,Secondment Chen Nasser 152h @ 165 - P-25019,25080.00,D,AUD,AU/IC/2026/0675
+77484,16/10/2026,IC-PAY,NS UK,bentley openroads licences from uk,19500.00,C,GBP,9000010767
+77485,16/10/2026,IC-REC,Head Office Denver,Project recharge P-25002 Sydney Harbour Tunnel Upgrade - QA/QC inspection,6470.00,D,AUD,AU/IC/2026/0713
+77488,17/10/2026,IC-REC,NIG US,Project recharge P-24050 I-95 Corridor Resurfacing - structural calcs,31550.00,D,AUD,AU/IC/2026/0717
+77491,18/10/2026,IC-REC,NIG UK,Secondment Daniel Becker 120h @ 125 - P-25019,15000.00,D,AUD,AU/IC/2026/0647
+77492,18/10/2026,IC-PAY,Middle East LLC,seconded staff f.haddad p-24017,16800.00,C,AED,AE-ICINV-00490
+77494,19/10/2026,IC-REC,KSA branch,Secondment Mohammed Smith 60h @ 110 - P-23110,6600.00,D,AUD,AU/IC/2026/0639
+77495,19/10/2026,IC-REC,NIG UK,Secondment Khalid Haddad 120h @ 165 - P-24017,19800.00,D,AUD,AU/IC/2026/0648
+77498,20/10/2026,IC-PAY,Northstar Saudi,seconded staff j.walsh p-24088,15000.00,C,SAR,saicinv00586
+77501,20/10/2026,IC-PAY,Head Office Denver,seconded staff g.brown p-24050,11200.00,C,USD,INV-US-100363
+77504,21/10/2026,IC-REC,NIG DE,Secondment Tom Garcia 8h @ 95 - P-25031,760.00,D,AUD,AU/IC/2026/0636
+77505,21/10/2026,IC-PAY,NS Infrastruktur,seconded staff d.brown p-24050,21280.00,C,EUR,2026000285
+77506,21/10/2026,IC-REC,NIG DE,Secondment Omar Nasser 152h @ 140 - P-23110,21280.00,D,AUD,AU/IC/2026/0681
+77508,22/10/2026,IC-REC,NorthStar US,Project recharge P-25002 Sydney Harbour Tunnel Upgrade - structural calcs,194330.00,D,AUD,AU/IC/2026/0735
+77509,22/10/2026,IC-REC,US HQ,Project recharge P-24050 I-95 Corridor Resurfacing - QA/QC inspection,312300.00,D,AUD,AU/IC/2026/0701
+77512,23/10/2026,IC-REC,Head Office Denver,Project recharge P-24050 I-95 Corridor Resurfacing - cost estimating,33590.00,D,AUD,AU/IC/2026/0729
+77513,24/10/2026,IC-REC,Head Office Denver,Project recharge P-24050 I-95 Corridor Resurfacing - structural calcs,88890.00,D,AUD,AU/IC/2026/0711
+77515,24/10/2026,IC-PAY,NS UK,seconded staff a.clarke p-24102,5040.00,C,GBP,INV 9000010839
+77517,25/10/2026,IC-REC,US HQ,Project recharge P-24102 HS2 Area North Design - geotech analysis,88110.00,D,AUD,AU/IC/2026/0686
+77519,26/10/2026,IC-REC,Head Office Denver,Project recharge P-25019 NEOM Utilities Package 3 - cost estimating,12640.00,D,AUD,AU/IC/2026/0730
+77521,26/10/2026,IC-PAY,Northstar Dubai,seconded staff e.fischer p-25019,19449.29,C,AUD,AE-ICINV-00511
+77523,26/10/2026,IC-REC,Head Office Denver,Project recharge P-23110 Thames Tideway Support - geotech analysis,20290.00,D,AUD,AU/IC/2026/0720
+77526,26/10/2026,IC-PAY,US HQ,p-24017 subcontract us structural calcs,21970.00,C,USD,INV INV-US-100450
+77529,27/10/2026,IC-REC,NIG KSA,Secondment Noura O'Connor 152h @ 165 - P-24050,25080.00,D,AUD,AU/IC/2026/0643
+77532,27/10/2026,IC-PAY,Northstar UK,seconded staff r.hassan p-24088,27720.00,C,GBP,9000010821
+77534,27/10/2026,IC-REC,Head Office Denver,Project recharge P-24050 I-95 Corridor Resurfacing - cost estimating,60850.00,D,AUD,AU/IC/2026/0733
+77535,28/10/2026,IC-REC,Middle East LLC,Secondment Chen Nasser 40h @ 140 - P-25031,5600.00,D,AUD,AU/IC/2026/0658
+77536,28/10/2026,IC-PAY,NIG UK,seconded staff e.müller p-24017,15960.00,C,GBP,9000010774
+77537,29/10/2026,IC-REC,NIG ME,Secondment Chen Smith 152h @ 210 - P-24017,31920.00,D,AUD,AU/IC/2026/0661
+77538,29/10/2026,IC-REC,NorthStar US,Project recharge P-25002 Sydney Harbour Tunnel Upgrade - site supervision,65820.00,D,AUD,AU/IC/2026/0742
+77539,30/10/2026,IC-REC,NorthStar US,Project recharge P-23110 Thames Tideway Support - geotech analysis,122650.00,D,AUD,AU/IC/2026/0705
+77540,30/10/2026,IC-REC,Head Office Denver,Project recharge P-24088 A8 Autobahn Bridge Rehab - structural calcs,18400.00,D,AUD,AU/IC/2026/0706
+77543,30/10/2026,IC-REC,Head Office Denver,Secondment Sophie Garcia 152h @ 185 - P-24102,28120.00,D,AUD,AU/IC/2026/0678
+77546,30/10/2026,IC-PAY,NS UAE,autodesk aec licences from uk,4200.00,C,GBP,9000010763
+77548,31/10/2026,IC-PAY,Middle East LLC,seconded staff f.wang p-24050,42000.00,C,AED,
+77551,31/10/2026,IC-PAY,NIG DE,seconded staff s.brown p-24017,4440.00,C,GBP,9000010777
+77554,31/10/2026,IC-PAY,Northstar Dubai,seconded staff s.o'connor p-25031,99000.00,C,AED,AE-ICINV-00484
+77557,31/10/2026,IC-PAY,Middle East LLC,seconded staff k.al-qahtani p-25002,5000.00,C,AED,AE-ICINV-00510
+77558,31/10/2026,IC-PAY,NorthStar US,Accrual - management fee oct-26 us - invoice not received,48000.00,C,USD,ACCR-OCT26
+77561,31/10/2026,IC-PAY,London office,it services recharge uk,7600.00,C,GBP,9000010762
+77562,31/10/2026,IC-REC,NIG US,Project recharge P-24050 I-95 Corridor Resurfacing - cost estimating,20470.00,D,AUD,AU/IC/2026/0724
+77563,31/10/2026,IC-PAY,US HQ,loan interest l-2023-02,58772.25,C,AUD,INV-US-100352
+77566,04/11/2026,IC-PAY,NS UAE,seconded staff o.sharma p-24050,75000.00,C,AED,AE-ICINV-00545
+77567,09/11/2026,IC-PAY,NorthStar US,seconded staff r.garcia p-23110,880.00,C,USD,INV-US-100384
