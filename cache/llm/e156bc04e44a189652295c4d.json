@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 465,
+  "cache_read": 0,
+  "cache_write": 2470
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-AE invoiced AED 57,000.00 (NIG-AE:ICV-AE-031305, AE-ICINV-00483) for the secondment of Daniel Wang on P-24017. NIG-SA booked AED 54,150.00 (NIG-SA:ICV-SA-018978), with the description 'net of WHT 5%'. The buyer-to-seller ratio of 0.95 matches the Saudi 5% withholding rate on services, leaving an AED 2,850.00 gap (USD 776.03 at the invoice-date rate).",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify the AED 2,850.00 withheld from the IC payable to the WHT payable/remitted account, and provide the WHT certificate to NIG-AE so it can recognise the tax credit or receivable and clear the IC balance.",
+  "adjustment_amount": 2850.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Gross up the NIG-SA IC payable to NIG-AE by AED 2,850.00 against WHT payable to ZATCA. On settlement, NIG-AE clears the AED 2,850.00 residual receivable against the WHT tax credit or receivable, supported by the certificate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

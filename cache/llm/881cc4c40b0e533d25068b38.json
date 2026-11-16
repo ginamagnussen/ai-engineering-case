@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 471,
+  "cache_read": 0,
+  "cache_write": 2430
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked IC payable NIG-SA:ICV-SA-018953 at USD 15,162.00 against NIG-US receivable NIG-US:4471091 of USD 15,960.00 for INV-US-100396 (secondment F. Turner, P-25031). The ratio is 0.95 and the USD 798.00 difference equals Saudi 5% WHT on services, which the buyer description explicitly states ('net of WHT 5%'). Both lines are in period, in the same currency, and against the correct counterparties.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify the USD 798.00 withheld from the IC payable to a WHT payable/remittance account and send NIG-US the WHT certificate, so NIG-US can book the matching WHT receivable/tax credit and clear the IC balance.",
+  "adjustment_amount": 798.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-SA: gross up the IC payable to NIG-US by USD 798.00 and credit WHT payable to the Saudi tax authority by USD 798.00. NIG-US: on receipt of the WHT certificate, debit WHT recoverable/tax expense and credit IC receivable from NIG-SA by USD 798.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

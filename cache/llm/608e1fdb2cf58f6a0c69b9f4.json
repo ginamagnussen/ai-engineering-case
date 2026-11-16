@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 453,
+  "cache_read": 0,
+  "cache_write": 2448
+ },
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-DE invoiced EUR 9,900.00 (NIG-DE:5100873469, RE-2026-000305, staff secondment of L. Al-Mansouri, 60 hrs) but NIG-UK booked only EUR 7,682.05 (NIG-UK:1900045403), a ratio of 0.77596 and a USD 2,370.10 gap. Both lines are in EUR on the same date with the same reference, so FX and timing are ruled out. The buyer description explicitly states 'partial accept, hours disputed pending PM approval', which indicates a deliberate short-booking. The ratio does not match any withholding rate.",
+  "responsible_entity": "both",
+  "recommended_action": "Escalate the disputed EUR 2,217.95 (about 13.4 of the 60 hours) to the NIG-DE and NIG-UK project managers for P-25002 to agree the hours, then have NIG-DE issue a credit note or NIG-UK book the remainder.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Disputed charge: settling it requires agreement between the entities on the hours actually provided, which is a business judgement. Until PM approval is given, it is not clear which side should adjust."
+ }
+}

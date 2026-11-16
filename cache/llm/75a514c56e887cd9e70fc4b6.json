@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 421,
+  "cache_read": 0,
+  "cache_write": 2411
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-SA booked GBP 9,990.00 on NIG-SA:ICV-SA-019044 against NIG-UK invoice 9000010754 (NIG-UK:1900045516), which is for GBP 9,900.00. Both lines are in the same currency, were posted on the same day and reference the same invoice, so no FX or timing explanation applies. The single-digit pattern (9,900 vs 9,990, ratio 1.00909) points to a keying error, and the buyer is overbooked by GBP 90.00 (USD 115.97 at the invoice-date rate).",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm the amount against the original NIG-UK invoice 9000010754 and post a correction reducing the IC payable by GBP 90.00 to GBP 9,900.00.",
+  "adjustment_amount": 90.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA: debit IC payable NIG-UK and credit the IT services expense by GBP 90.00 to correct the keying error (9,990 booked vs 9,900 invoiced).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 381,
+  "cache_read": 0,
+  "cache_write": 2581
+ },
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-DE line NIG-DE:5100873517 is an explicit month-end accrual (ref ACCR-OCT26, 2026-10-31) of GBP 840.00 for Autodesk AEC licences recharged by NIG-UK, described as 'invoice not received'. No NIG-UK receivable matches: the nearest unmatched NIG-UK lines (NIG-UK:1900045345 GBP 1,520 and NIG-UK:1900045276 GBP 25,200) are secondments to NIG-AU and NIG-AE, ratios 1.80 and 29.58, so they are unrelated.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether the October Autodesk licence recharge to NIG-DE is due and issue the GBP 840 invoice, or tell NIG-DE to reverse the accrual if no charge is planned.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

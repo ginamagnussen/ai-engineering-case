@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 457,
+  "cache_read": 0,
+  "cache_write": 2484
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked NIG-SA:ICV-SA-018857 at AED 281,705.40 against NIG-AE invoice AE-ICINV-00574 (NIG-AE:ICV-AE-031242) of AED 296,532.00. That is a 0.95 ratio, consistent with 5% Saudi WHT on services, and the buyer description explicitly states 'net of WHT 5%'. The USD 4,037.14 difference equals the withheld tax, and both lines carry the same date, currency and counterparty.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to the full invoice amount, book the 5% WHT as a liability to ZATCA, and send the WHT certificate to NIG-AE so it can record the tax as a receivable or credit.",
+  "adjustment_amount": 14826.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA: Dr cost/IC clearing, Cr IC payable NIG-AE AED 14,826.60 to gross up to AED 296,532.00, with an offsetting Cr WHT payable to ZATCA AED 14,826.60 (net effect reclassifies the withheld portion from the IC balance).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

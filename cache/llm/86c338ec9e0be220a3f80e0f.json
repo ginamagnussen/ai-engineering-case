@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 637,
+  "cache_read": 0,
+  "cache_write": 2412
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-AU:77546 matches NIG-UK:1900045419 exactly: GBP 4,200.00, same reference 9000010763, ratio 1.0 and zero USD difference at the invoice-date rate. However, NIG-AU booked the payable against 'NS UAE' (resolved to NIG-AE) instead of NIG-UK, even though its own description reads 'autodesk aec licences from uk'. The small USD gap (5,377.22 vs 5,367.14) comes only from translation on different posting dates and is not a real difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclassify the GBP 4,200 IC payable on line 77546 from counterparty NIG-AE to NIG-UK and correct the partner code mapping in the legacy SCE ledger.",
+  "adjustment_amount": 4200.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-AU, debit the IC payable to NIG-AE by GBP 4,200 and credit the IC payable to NIG-UK by GBP 4,200 for reference 9000010763. This moves the balance to the correct partner with no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 706,
+  "cache_read": 0,
+  "cache_write": 2902
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-SA invoiced NIG-AU SAR 25,200 (USD 6,720.08) under SA-ICINV-00584 (line NIG-SA:ICV-SA-018847) for Olivia Turner's secondment on P-24088, 24h @ 1,050. No NIG-AU line carries this reference. The closest buyer line, NIG-AU:77465 (SAR 33,000, ratio 1.3095), is a different invoice (SA-ICINV-00585) for a different secondee (t.brown, P-23110), so it is not this invoice. Nothing in the case shows a post-period booking, so cut-off timing cannot be confirmed; the payable appears to be unbooked.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should check whether it received invoice SA-ICINV-00584 and, if so, book the IC payable to NIG-SA for SAR 25,200 in the October 2026 period.",
+  "adjustment_amount": 25200.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "In NIG-AU: Dr secondment/staff cost, Cr IC payable NIG-SA SAR 25,200 for invoice SA-ICINV-00584 (Olivia Turner, P-24088).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

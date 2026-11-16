@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 420,
+  "cache_read": 0,
+  "cache_write": 2430
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-DE invoiced EUR 21,910.00 (NIG-DE:5100873438, RE-2026-000374) and NIG-UK booked EUR 21,190.00 (NIG-UK:1900045375) against the same reference. Both lines are in EUR, posted on the same day and coded to the correct counterparty. The EUR 720.00 gap (USD 774.36) matches an adjacent-digit transposition (91→19), and the ratio of 0.967 does not fit any withholding rate, so this looks like a keying error.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should check invoice RE-2026-000374 and correct its payable from EUR 21,190.00 to EUR 21,910.00 before the October close.",
+  "adjustment_amount": 720.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-UK to increase its IC payable to NIG-DE by EUR 720.00 (Dr project/subcontract cost, Cr IC payable NIG-DE), bringing the liability to EUR 21,910.00 for invoice RE-2026-000374.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

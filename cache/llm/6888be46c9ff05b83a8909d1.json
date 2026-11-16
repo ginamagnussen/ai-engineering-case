@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 423,
+  "cache_read": 0,
+  "cache_write": 2725
+ },
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer-only line NIG-SA:ICV-SA-019058 (AED 136,944.00, ref AE-ICINV-00586, posted 2026-10-31) carries the same invoice reference as NIG-SA:ICV-SA-019047, which was already matched to the NIG-AE receivable in M0030 on the same posting date. Neither unmatched NIG-AE seller line is a plausible match (ratios 1.3233 and 0.241, different references and projects), so NIG-SA appears to have booked invoice AE-ICINV-00586 twice.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm that ICV-SA-019058 duplicates ICV-SA-019047 for AE-ICINV-00586 and reverse the second booking in the October 2026 period.",
+  "adjustment_amount": 136944.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA to reverse the duplicate IC payable ICV-SA-019058 to NIG-AE for AED 136,944.00 (debit IC payable NIG-AE, credit the original cost/expense account).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

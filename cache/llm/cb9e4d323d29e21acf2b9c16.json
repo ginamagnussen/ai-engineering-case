@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 544,
+  "cache_read": 0,
+  "cache_write": 2445
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-UK invoiced GBP 8,520.00 (NIG-UK:1900045440, ref 9000010838), and NIG-AE booked GBP 8,502.00 (NIG-AE:ICV-AE-031425) against the same reference and the correct counterparty. Both lines are in GBP and in period, and the ratio of 0.99789 does not match any withholding rate. The digit pattern shows adjacent digits transposed (20 → 02), giving a difference of GBP 18.00, or USD 23.01 at the invoice-date rate.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should check the amount against invoice 9000010838 and post a correcting entry to increase the IC payable to NIG-UK by GBP 18.00 in October 2026.",
+  "adjustment_amount": 18.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-AE: debit the project subcontract cost for P-24050 and credit the IC payable to NIG-UK by GBP 18.00, bringing the payable from GBP 8,502.00 to GBP 8,520.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

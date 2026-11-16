@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 1011,
+  "cache_read": 0,
+  "cache_write": 2886
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.6,
+  "explanation": "Buyer line NIG-US:4471048 (AUD 1,320.00, 'Seconded staff J.Rahman P-24088', ref 20260650) has an exact twin on the seller side, NIG-AU:77422 (AUD 1,320.00, 'Secondment James Rahman 8h @ 165 - P-24088', ref AU/IC/2026/0650). Same amount, same project, same person and matching reference number. The pair failed to match only because NIG-AU booked the counterparty as the free-text 'Head Office Denver', which did not resolve to NIG-US; the small USD gap (871.90 vs 867.17) comes from different posting-date translation, not a currency difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that 'Head Office Denver' means NIG-US. If so, recode NIG-AU:77422 to the NIG-US intercompany partner (or add the alias to the counterparty mapping) and pair it with NIG-US:4471048.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction needed. Recode the counterparty on NIG-AU:77422 from 'Head Office Denver' to NIG-US (AUD 1,320.00 receivable), then match it to NIG-US:4471048.",
+  "model_requests_review": true,
+  "review_reason": "The seller counterparty is unresolved free text rather than a clearly wrong partner, so this may be a master-data alias gap rather than a true miscoding. A human should confirm the mapping. Other NIG-AU legacy lines (e.g. 'Germany') suggest the alias problem is systemic."
+ }
+}

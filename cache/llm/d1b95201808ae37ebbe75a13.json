@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 621,
+  "cache_read": 0,
+  "cache_write": 2538
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "NIG-US:4471190 books invoice 9000010733 at USD 26,349.32 against NIG-UK:1900045520 for GBP 21,500.00 (USD 27,702.53 at the invoice-date rate). The buyer's implied rate of 1.22555 matches the 2026 budget rate exactly (0.0% deviation), while it is 4.885% off the invoice-date, posting-date and month-end rates, leaving a USD 1,353.21 difference. The ratio of 0.95115 also happens to fit 5% WHT, but the buyer is a US entity rather than Saudi, so the exact budget-rate match is the better explanation.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should revalue the IC payable for invoice 9000010733 from the budget rate to the invoice-date daily GBP/USD rate, so that it equals USD 27,702.53.",
+  "adjustment_amount": 1353.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-US, increase the IC payable to NIG-UK by USD 1,353.21, bringing invoice 9000010733 to USD 27,702.53 at the invoice-date rate. The offset goes to FX difference or the IT services cost per group FX policy.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

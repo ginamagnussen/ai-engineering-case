@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 416,
+  "cache_read": 0,
+  "cache_write": 2986
+ },
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "NIG-AU line NIG-AU:77465 (SAR 33,000, ref SA-ICINV-00585, posted 2026-10-13) has no matching NIG-SA receivable, while the same invoice reference was already booked by NIG-AU on line NIG-AU:77453 (posted 2026-10-11), which is matched in M0133. None of the nearest unmatched NIG-SA lines fits: the closest ratio is 0.7636 to SA-ICINV-00584. The second booking therefore looks like a double posting of invoice SA-ICINV-00585 by the buyer.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm that NIG-AU:77465 duplicates NIG-AU:77453 for invoice SA-ICINV-00585 and reverse it in the October 2026 period.",
+  "adjustment_amount": 33000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse duplicate IC payable NIG-AU:77465 (debit IC payable to NIG-SA, credit the original expense account) for SAR 33,000.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

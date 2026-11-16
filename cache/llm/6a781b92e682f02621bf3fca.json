@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 735,
+  "cache_read": 0,
+  "cache_write": 2450
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked IC payable NIG-SA:ICV-SA-018928 at EUR 7,980.00 against NIG-DE's receivable NIG-DE:5100873381 of EUR 8,400.00 for the same invoice RE-2026-000328 (staff secondment, P-23110). The buyer-to-seller ratio is 0.95, which matches the 5% Saudi withholding tax on services, and the buyer line description states 'net of WHT 5%'. The EUR 420.00 gap (USD 446.10 at the invoice-date rate) is the withheld tax, not a keying or currency error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to EUR 8,400.00, recognise EUR 420.00 as WHT payable to the Saudi tax authority, and send the WHT certificate to NIG-DE so it can book the tax credit and clear its receivable.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "In NIG-SA, increase the IC payable to NIG-DE by EUR 420.00 and recognise EUR 420.00 as WHT payable to the Saudi tax authority, reclassifying the withheld amount out of the intercompany balance. On receipt of the WHT certificate, NIG-DE settles its EUR 420.00 receivable against a WHT tax credit or tax expense.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

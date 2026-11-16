@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 456,
+  "cache_read": 0,
+  "cache_write": 2455
+ },
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-AE invoiced AED 66,000.00 (NIG-AE:ICV-AE-031237, secondment of G. Al-Mansouri, 80h @ 825, P-25019), but NIG-US booked only AED 48,781.62 (NIG-US:4471051), a ratio of 0.73912 and a gap of USD 4,688.39 at the invoice-date rate. Both lines are in AED, in period, and against the correct counterparty, and the ratio does not match a withholding rate. The buyer description explicitly says 'partial accept, hours disputed pending PM approval', which indicates an intentional short-booking.",
+  "responsible_entity": "both",
+  "recommended_action": "Escalate to the NIG-US project manager and NIG-AE to resolve the disputed secondment hours on P-25019, then have NIG-US book the remaining AED 18,218.38 or NIG-AE issue a credit note for the agreed reduction.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "This is a commercial dispute over seconded hours. The correction depends on PM approval, so it could be either a NIG-US top-up of AED 18,218.38 or a NIG-AE credit note, and that is a judgement call."
+ }
+}

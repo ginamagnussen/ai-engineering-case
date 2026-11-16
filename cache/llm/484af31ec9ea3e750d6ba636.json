@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 802,
+  "cache_read": 0,
+  "cache_write": 2440
+ },
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "Seller line NIG-AU:77454 is invoice AU/IC/2026/0739 for AUD 39,400 (P-25002 Sydney Harbour Tunnel, geotech analysis). Buyer line NIG-US:4471111 is AUD 33,590 with reference auic20260723, which looks like a different invoice (AU/IC/2026/0723), and it relates to a different project and service (P-24050, cost estimating). Both lines are in AUD, the ratio of 0.85254 matches no withholding rate, and the counterparties are correct, so this looks like a false pairing of two unrelated invoices rather than one invoice with a USD 3,836.05 difference.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-US should confirm whether it has booked invoice AU/IC/2026/0739, and NIG-AU should locate invoice AU/IC/2026/0723 so that each line can be re-matched to its correct counterpart.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The references, project codes and service descriptions differ, so the lines probably belong to different invoices. The true counterpart of each line, or whether invoice 0739 is missing on the buyer side, cannot be verified from this case."
+ }
+}

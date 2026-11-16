@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 733,
+  "cache_read": 0,
+  "cache_write": 2443
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked GBP 62,111.00 (NIG-SA:ICV-SA-019031) against NIG-UK's invoice 9000010983 for GBP 65,380.00 (NIG-UK:1900045447). The ratio is 0.95, matching Saudi 5% WHT on services, and the buyer description explicitly says 'net of WHT 5%'. The GBP 3,269.00 gap (USD 4,178.73 at the invoice-date rate) is withholding tax, not a booking error.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-SA should provide the WHT certificate and payment evidence for GBP 3,269.00, and NIG-UK should clear that portion of the IC receivable to WHT suffered or recoverable tax.",
+  "adjustment_amount": 3269.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-UK, reclassify GBP 3,269.00 from the IC receivable against NIG-SA to WHT suffered (tax receivable/expense), supported by NIG-SA's WHT certificate. Alternatively, NIG-SA presents the payable gross (GBP 65,380) with a separate WHT liability of GBP 3,269 to ZATCA.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

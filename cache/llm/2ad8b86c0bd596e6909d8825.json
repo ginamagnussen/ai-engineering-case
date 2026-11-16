@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 400,
+  "cache_read": 0,
+  "cache_write": 2444
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "NIG-SA booked EUR 2,360.00 (NIG-SA:ICV-SA-018863) against NIG-DE's invoice RE-2026-000298 for EUR 3,360.00 (NIG-DE:5100873326). Both lines are in EUR with the same reference and project P-25031, and only one digit differs (3 vs 2). The ratio of 0.70238 does not match any Saudi WHT rate, which points to a keying error rather than FX or withholding (difference USD 1,068.90).",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should check the posted amount against invoice RE-2026-000298 and correct the IC payable to EUR 3,360.00.",
+  "adjustment_amount": 1000.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Increase NIG-SA IC payable to NIG-DE by EUR 1,000.00 (debit secondment expense, credit IC payable NIG-DE) so it agrees with invoice RE-2026-000298 at EUR 3,360.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

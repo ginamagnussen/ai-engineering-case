@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 303,
+  "cache_read": 0,
+  "cache_write": 2335
+ },
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.92,
+  "explanation": "NIG-AU line NIG-AU:77558 is an IC payable accrual of USD 48,000.00 for the October 2026 management fee from NIG-US (ref ACCR-OCT26, 'invoice not received'). No matching NIG-US receivable exists; the only unmatched NIG-US line, NIG-US:4471046 (USD 1,760 secondment, ratio 0.0367), is unrelated.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US to confirm whether the October 2026 management fee of USD 48,000 is due and issue the IC invoice, or NIG-AU to reverse the accrual if no charge applies.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

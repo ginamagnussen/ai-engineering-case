@@ -1,0 +1,68 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 1287,
+  "cache_read": 0,
+  "cache_write": 3877
+ },
+ "output": {
+  "items": [
+   {
+    "raw": "Germany",
+    "entity_code": "NIG-DE",
+    "confidence": 0.78,
+    "reasoning": "NIG-DE is the only German entity in the master; the sample lines are AUD receivables issued under NIG-AU's own AU/IC references, so they give no corroborating evidence beyond the country name."
+   },
+   {
+    "raw": "Head Office Denver",
+    "entity_code": "NIG-US",
+    "confidence": 0.75,
+    "reasoning": "'Head Office' and the US city Denver point to the US parent, supported by INV-US-100448 in USD and I-95 project recharges, though one line is a SAR SA-ICINV invoice and so is mixed."
+   },
+   {
+    "raw": "KSA branch",
+    "entity_code": "NIG-SA",
+    "confidence": 0.93,
+    "reasoning": "KSA matches the NIG KSA alias, and the payables are SAR invoices with SA-ICINV prefixes."
+   },
+   {
+    "raw": "London office",
+    "entity_code": "NIG-UK",
+    "confidence": 0.9,
+    "reasoning": "London refers to the UK entity, consistent with the GBP payables using 9000010xxx references and an 'it services recharge uk' description."
+   },
+   {
+    "raw": "Middle East LLC",
+    "entity_code": "NIG-AE",
+    "confidence": 0.93,
+    "reasoning": "The name matches NIG-AE's legal name 'Middle East LLC', and the payable is an AED invoice with an AE-ICINV reference."
+   },
+   {
+    "raw": "NS Infrastruktur",
+    "entity_code": "NIG-DE",
+    "confidence": 0.92,
+    "reasoning": "'Infrastruktur' matches the German legal name, and the payables are in EUR with a RE- reference that looks like a German Rechnung."
+   },
+   {
+    "raw": "NS UAE",
+    "entity_code": "NIG-AE",
+    "confidence": 0.85,
+    "reasoning": "UAE indicates the Middle East LLC, supported by AED invoices with AE-ICINV references, although one GBP UK licence line appears to be misposted."
+   },
+   {
+    "raw": "NS UK",
+    "entity_code": "NIG-UK",
+    "confidence": 0.93,
+    "reasoning": "UK matches the NIG UK alias, and the payables are GBP invoices with 9000010xxx references for licences 'from uk'."
+   },
+   {
+    "raw": "US HQ",
+    "entity_code": "NIG-US",
+    "confidence": 0.9,
+    "reasoning": "'US HQ' refers to the US parent, supported by USD INV-US invoices and I-95 project recharges, despite one HS2 recharge line."
+   }
+  ]
+ }
+}

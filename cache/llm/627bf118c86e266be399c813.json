@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 576,
+  "cache_read": 0,
+  "cache_write": 2871
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-US booked IC receivable NIG-US:4471046 for USD 1,760.00 (INV-US-100430, secondment Mohammed O'Connor 16h @ 110, P-25002) against NIG-AU, but no NIG-AU payable carries this reference. The nearest unmatched NIG-AU lines are for other partners and staff: 77465 is NIG-SA (t.brown), 77484 is NIG-UK (licences) and 77458 is NIG-DE (m.sharma). Their amount ratios of 5.0, 14.2 and 21.4 rule them out as matches.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should locate INV-US-100430 and book the IC payable to NIG-US for USD 1,760.00 in the October 2026 period, or confirm whether it was received after cut-off.",
+  "adjustment_amount": 1760.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AU: Dr secondment cost / Cr IC payable NIG-US USD 1,760.00, reference INV-US-100430.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

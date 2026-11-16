@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 430,
+  "cache_read": 0,
+  "cache_write": 2874
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK booked IC receivable NIG-UK:1900045345 for GBP 1,520.00 (USD 1,950.65), secondment of Chen Clarke 16h @ 95 on P-24050, ref 9000010818, posted 2026-10-16 in period. No NIG-AU line carries this reference, and the nearest unmatched NIG-AU payables are unrelated: other partners or invoices, with ratios of 4.5x to 19x. The buyer appears not to have booked the charge.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm receipt of NIG-UK invoice 9000010818 and book the IC payable of GBP 1,520.00 to NIG-UK in the October 2026 period. If the invoice is contested or was never received, NIG-AU should tell NIG-UK instead.",
+  "adjustment_amount": 1520.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-AU to debit secondment cost and credit IC payable to NIG-UK for GBP 1,520.00, ref 9000010818 (P-24050, Chen Clarke 16h).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 365,
+  "cache_read": 0,
+  "cache_write": 2640
+ },
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.88,
+  "explanation": "NIG-UK line NIG-UK:1900045511 is a month-end accrual of AED 126,000 (USD 34,308.54) for seconded staff C.Turner on P-23110, explicitly marked 'invoice not received' with reference ACCR-OCT26. NIG-AE has no matching receivable: the two unmatched NIG-AE lines searched (ICV-AE-031208, AED 181,224, and ICV-AE-031365, AED 33,000) are both booked against NIG-SA and relate to different projects and staff, with ratios of 1.44 and 0.26.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm whether the October secondment of C.Turner on P-23110 is billable and either issue the IC invoice for AED 126,000 or tell NIG-UK to reverse the accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 578,
+  "cache_read": 0,
+  "cache_write": 2437
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Both lines carry invoice reference 9000010930 for P-25002 BIM coordination in GBP, posted one day apart within the period. NIG-UK:1900045437 shows GBP 26,280.00, while NIG-DE:5100873494 shows GBP 26,208.00, with the last two digits transposed (80 vs 08). The GBP 72.00 shortfall (USD 92.04 at the invoice-date rate) has no FX, withholding or dispute explanation, since both lines are in the same currency and the ratio is 0.99726.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should correct payable document 5100873494 to GBP 26,280.00, matching NIG-UK invoice 9000010930, before the October 2026 close.",
+  "adjustment_amount": 72.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-DE, increase the IC payable to NIG-UK by GBP 72.00 (debit project cost / BIM coordination expense, credit IC payable NIG-UK), bringing the booking from GBP 26,208.00 to GBP 26,280.00 for invoice 9000010930.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

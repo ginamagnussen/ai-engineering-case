@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 655,
+  "cache_read": 0,
+  "cache_write": 2443
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked GBP 8,882.50 on NIG-SA:ICV-SA-019005 against NIG-UK's GBP 9,350.00 invoice (NIG-UK:1900045366, ref 9000010890). The ratio of 0.95 matches Saudi 5% WHT on services, and the buyer description explicitly says 'net of WHT 5%'. The difference is GBP 467.50 (USD 600.55 at the invoice-date rate), with the same currency, the correct counterparty and both lines in period.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Obtain the WHT certificate from NIG-SA and have NIG-UK reclassify the withheld GBP 467.50 out of the IC receivable to WHT recoverable or tax expense, so both sides agree at GBP 8,882.50.",
+  "adjustment_amount": 467.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-UK: Dr WHT receivable/withholding tax expense GBP 467.50, Cr IC receivable NIG-SA GBP 467.50 (Saudi 5% WHT withheld on invoice 9000010890).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

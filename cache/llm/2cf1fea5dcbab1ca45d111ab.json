@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 439,
+  "cache_read": 0,
+  "cache_write": 2431
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked payable NIG-SA:ICV-SA-018986 at USD 15,960 against NIG-US receivable NIG-US:4471103 of USD 16,800 for INV-US-100439 (secondment, services), a ratio of 0.95. The USD 840 difference matches Saudi 5% WHT on services, and the buyer description explicitly states 'net of WHT 5%'.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify the USD 840 withheld amount from the IC payable to a WHT payable/settlement clearing and provide the WHT certificate to NIG-US, so NIG-US can record a WHT receivable/tax credit against its IC receivable.",
+  "adjustment_amount": 840.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Gross up the IC elimination: NIG-SA recognises USD 840 withheld as WHT payable to the Saudi tax authority (IC payable to NIG-US reflects the full 16,800 settled partly via WHT); NIG-US reclassifies USD 840 from IC receivable to WHT recoverable/tax expense upon receipt of the certificate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

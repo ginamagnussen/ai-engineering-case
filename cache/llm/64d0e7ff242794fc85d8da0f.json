@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 996,
+  "cache_read": 0,
+  "cache_write": 2417
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.5,
+  "explanation": "Seller line NIG-US:4471187 is invoice INV-US-100441 for USD 11,400.00 (secondment of Chen Nasser, 120h @ 95, project P-25002). The only buyer line, NIG-UK:1900045523, is a USD 8,400.00 accrual for a different secondee (P.Hassan, project P-25019) and is marked 'invoice not received'. The two lines look like unrelated items paired only because they share counterparties and posting date: the ratio of 0.73684 does not fit any withholding rate, and the invoice reference is not on the buyer line. That suggests NIG-UK has not booked INV-US-100441, while its P-25019 accrual has no seller invoice yet, so the USD 3,000.00 difference is not a single error.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm receipt of INV-US-100441 and book it as a USD 11,400.00 IC payable to NIG-US, and separately confirm with NIG-US whether a P-25019 invoice for P.Hassan is coming to support the USD 8,400.00 accrual.",
+  "adjustment_amount": 11400.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-UK: Dr secondment cost / Cr IC payable NIG-US, USD 11,400.00, for INV-US-100441 (Chen Nasser, P-25002). Keep the P-25019 accrual ACCR-OCT26 (USD 8,400.00) as a separate open item pending NIG-US invoicing.",
+  "model_requests_review": true,
+  "review_reason": "The pair appears to combine two distinct items: a missing buyer booking for P-25002 and an accrual with no invoice for P-25019. A human should confirm both projects with NIG-UK and NIG-US before splitting the case and posting entries."
+ }
+}

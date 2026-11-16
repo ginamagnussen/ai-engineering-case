@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 406,
+  "cache_read": 0,
+  "cache_write": 2619
+ },
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer line NIG-US:4471200 (GBP 16,800.00, 'Seconded staff J.Haddad P-24017', ref 9000010810, posted 2026-10-31) has no seller counterpart. The same reference 9000010810 was already booked as NIG-US:4471166 on 2026-10-30 and matched in M0217. The only unmatched NIG-UK seller lines are GBP 25,200 and GBP 1,520 (ratios 1.479 and 0.0901). Both are booked against other partners, so neither explains this line.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm that 4471200 is a second booking of UK invoice 9000010810 already matched in M0217 and reverse it.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse duplicate IC payable NIG-US:4471200 to NIG-UK (Dr IC payable NIG-UK GBP 16,800 / Cr secondment cost), leaving the original booking 4471166 in place.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

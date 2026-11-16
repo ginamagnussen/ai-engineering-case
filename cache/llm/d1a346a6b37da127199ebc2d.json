@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 756,
+  "cache_read": 0,
+  "cache_write": 2364
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.8,
+  "explanation": "NIG-AU receivable NIG-AU:77485 is AUD 6,470.00 for reference AU/IC/2026/0713, P-25002 QA/QC inspection. NIG-US payable NIG-US:4471080 carries the same reference, posting date (2026-10-16), currency and description but is AUD 4,670.00. The leading digits 6 and 4 are transposed, a difference of AUD 1,800.00 with no business reason. The pair also failed to auto-match because the seller's counterparty 'Head Office Denver' is unresolved in master data; it evidently refers to NIG-US.",
+  "responsible_entity": "both",
+  "recommended_action": "Pull invoice AU/IC/2026/0713 to confirm the correct amount; the entity that keyed it wrong then corrects its line by AUD 1,800, and NIG-AU maps 'Head Office Denver' to NIG-US in master data.",
+  "adjustment_amount": 1800.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "If the invoice is AUD 6,470, NIG-US increases IC payable NIG-US:4471080 to NIG-AU by AUD 1,800. If the invoice is AUD 4,670, NIG-AU reduces IC receivable NIG-AU:77485 by AUD 1,800.",
+  "model_requests_review": true,
+  "review_reason": "The evidence does not show which side mis-keyed the amount, so the invoice document must be checked before posting. The seller counterparty mapping also needs a master-data fix."
+ }
+}

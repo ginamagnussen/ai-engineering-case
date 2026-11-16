@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 753,
+  "cache_read": 0,
+  "cache_write": 2477
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked IC payable NIG-SA:ICV-SA-019018 at AED 81,293.40 against NIG-AE's receivable NIG-AE:ICV-AE-031368 of AED 85,572.00 for AE-ICINV-00610. Both are on the same date and in the same currency, and the ratio of 0.95 matches Saudi 5% WHT on services. The buyer description explicitly says 'net of WHT 5%', and the gap of AED 4,278.60 (USD 1,165.02) is the withheld tax, not an FX or keying difference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should obtain the WHT certificate and remittance proof from NIG-SA, then reclassify AED 4,278.60 from the IC receivable to WHT receivable/tax expense so both sides agree at AED 81,293.40.",
+  "adjustment_amount": 4278.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-AE, credit the IC receivable due from NIG-SA by AED 4,278.60 and debit WHT tax receivable (or WHT expense if not creditable) for Saudi 5% withholding on invoice AE-ICINV-00610, supported by NIG-SA's WHT certificate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}
