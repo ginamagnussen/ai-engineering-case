@@ -93,6 +93,31 @@ def score(cases: list[dict], truth: list[str], model: str) -> dict:
     }
 
 
+def cascade(cheap: list[dict], strong: list[dict], truth: list[str], cheap_m: str, strong_m: str) -> dict:
+    """Simulate 'cheap model first, escalate to strong model when the review policy flags it'."""
+    final, cost_tokens = [], {"cheap": 0.0, "strong": 0.0}
+    for c, s in zip(cheap, strong):
+        rc = llm.cached_record(SYSTEM, _payload(c), CaseAssessment)
+        cost_tokens["cheap"] += llm.cost_of(rc["usage"], cheap_m) if rc else 0
+        if c["assessment"] and not c["needs_review"]:
+            final.append(c)
+        else:
+            rs = llm.cached_record(SYSTEM, _payload(s), CaseAssessment)
+            cost_tokens["strong"] += llm.cost_of(rs["usage"], strong_m) if rs else 0
+            final.append(s)
+    idx = [i for i, t in enumerate(truth) if not t.startswith("auto:") and t != "unknown"]
+    ok = sum(final[i]["assessment"] and final[i]["assessment"]["category"] == truth[i] for i in idx)
+    auto = [i for i in idx if not final[i]["needs_review"]]
+    auto_ok = sum(final[i]["assessment"]["category"] == truth[i] for i in auto)
+    escalated = sum(f is s for f, s in zip(final, strong))
+    total = cost_tokens["cheap"] + cost_tokens["strong"]
+    return {"model": f"cascade {cheap_m} -> {strong_m}", "escalated": escalated,
+            "accuracy": round(ok / len(idx), 3), "accuracy_ci95": wilson(ok, len(idx)),
+            "review_rate": round(sum(f["needs_review"] for f in final) / len(final), 3),
+            "auto_accepted": len(auto), "auto_accept_accuracy": round(auto_ok / len(auto), 3) if auto else None,
+            "cost_usd_all_cases": round(total, 4), "cost_usd_per_case": round(total / len(final), 4)}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-llm", action="store_true")
@@ -102,11 +127,11 @@ def main():
 
     base = prepare()
     truth = case_truth(base)
-    results, orig = [], config.MODEL
+    results, orig, classified = [], config.MODEL, {}
     for m in a.models:
         config.MODEL = m
         llm.USAGE.__init__()
-        cases = classify_cases(copy.deepcopy(base), use_llm)
+        cases = classified[m] = classify_cases(copy.deepcopy(base), use_llm)
         r = score(cases, truth, m)
         r["this_run"] = llm.USAGE.as_dict()
         results.append(r)
@@ -115,6 +140,14 @@ def main():
               f"cost/case=${r['cost_usd_per_case']}  latency={r['mean_latency_s']}s  "
               f"new_calls={r['this_run']['api_calls']} errors={r['this_run']['errors']}")
     config.MODEL = orig
+
+    cheap, strong = "claude-haiku-5-5", "claude-opus-5-5"
+    if cheap in classified and strong in classified:
+        c = cascade(classified[cheap], classified[strong], truth, cheap, strong)
+        results.append(c)
+        print(f"{'cascade haiku->opus':20s} acc={c['accuracy']} {c['accuracy_ci95']}  review={c['review_rate']}  "
+              f"auto_acc={c['auto_accept_accuracy']} (n={c['auto_accepted']})  cost/case=${c['cost_usd_per_case']}  "
+              f"escalated={c['escalated']}")
 
     config.OUT.mkdir(exist_ok=True)
     (config.OUT / "experiments.json").write_text(json.dumps(results, indent=1, ensure_ascii=False), encoding="utf-8")
