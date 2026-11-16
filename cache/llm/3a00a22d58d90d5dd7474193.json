@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 832,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77543 and NIG-US:4471197 both carry AUD 28,120.00 with the same reference AU/IC/2026/0678 and project P-24102, and both posted in period one day apart. The USD translations differ (18,865.43 vs 18,923.92) only because the lines were translated at different dates' rates, and the computed difference at the invoice-date rate is 0.00. The seller line's counterparty 'Head Office Denver' is unresolved in master data, which likely blocked the automatic match, although it plausibly refers to NIG-US.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Translate both sides at the AUD invoice-date rate to clear the USD 58.49 translation gap, and add a master-data mapping so 'Head Office Denver' in the SCE legacy ledger resolves to NIG-US.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller counterparty 'Head Office Denver' is unresolved in master data. Someone should confirm it maps to NIG-US before the pair is closed as a pure translation-rate difference."
+ }
+}

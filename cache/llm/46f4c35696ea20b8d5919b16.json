@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 854,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.8,
+  "explanation": "Seller line NIG-US:4471035 and buyer line NIG-AU:77434 agree exactly: USD 28,080.00, same reference INV-US-100448, same project P-24050, both posted 2026-10-07, ratio 1.0 and zero USD difference. The only break is that NIG-AU's legacy SCE ledger booked the payable against the free-text partner 'Head Office Denver', which does not resolve to any group entity code, so the line was not matched to the expected partner NIG-US. This is a counterparty coding or mapping error, not a difference in amount or timing.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclassify payable NIG-AU:77434 from 'Head Office Denver' to the IC partner code for NIG-US, and add a permanent mapping of that text to NIG-US in the legacy SCE ledger's counterparty master data.",
+  "adjustment_amount": 28080.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclass only, with no change to the P&L or balance: in NIG-AU, move the IC payable of USD 28,080.00 (INV-US-100448) from unresolved partner 'Head Office Denver' to IC partner NIG-US.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

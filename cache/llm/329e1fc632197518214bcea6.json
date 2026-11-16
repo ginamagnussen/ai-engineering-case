@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2433,
+  "output": 782,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "NIG-AU:77482 and NIG-US:4471082 are the same invoice AU/IC/2026/0675 (secondment C. Nasser, P-25019), both booked in period at AUD 25,080.00 with a 1.0 ratio. The only gap is in USD translation: 16,818.40 on the seller versus 16,602.21 on the buyer, a USD 216.19 difference. The evidence shows a zero difference at the invoice-date rate, so the gap comes only from the buyer translating at its 17-Oct posting-date rate rather than the 15-Oct invoice-date rate.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Clear the pair for elimination at the invoice-date rate and post the USD 216.19 translation difference to the consolidation FX difference account, with no entity-level rebooking of the AUD amount; also map the seller's free-text counterparty 'Head Office Denver' to NIG-US in the legacy SCE master data.",
+  "adjustment_amount": 216.19,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Consolidation entry: align NIG-US payable translation to the invoice-date rate (USD 16,818.40) and take the USD 216.19 difference to the IC FX translation difference account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

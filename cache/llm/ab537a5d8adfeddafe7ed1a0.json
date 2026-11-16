@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 960,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77422 and NIG-US:4471048 are the same secondment invoice (P-24088, AU/IC/2026/0650 / 20260650) for AUD 1,320.00 on both sides. The only difference is USD 871.90 vs 867.17, which comes from translating on different posting dates (5 vs 9 Oct); at the invoice-date rate the difference is 0.00. The seller line also names its counterparty as free text 'Head Office Denver', which did not resolve to NIG-US in master data and likely stopped the automatic match.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Match the pair manually, translate both sides at the invoice-date rate for elimination, and map 'Head Office Denver' to NIG-US in the NIG-AU legacy ledger counterparty master data.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The transaction-currency amounts agree, so this may be better treated as a master-data or counterparty-mapping exception ('other') than a true FX difference. A reviewer should confirm the classification and confirm that 'Head Office Denver' means NIG-US."
+ }
+}

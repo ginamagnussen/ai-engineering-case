@@ -19,6 +19,7 @@ from . import config
 
 T = TypeVar("T", bound=BaseModel)
 _lock = threading.Lock()
+USED_KEYS: set[str] = set()  # cache files touched in this process (for --prune-cache)
 _client = None
 
 
@@ -47,6 +48,14 @@ class Usage:
 USAGE = Usage()
 
 
+def prune_cache() -> int:
+    """Delete cached answers not used by the current run (stale prompts/payloads)."""
+    stale = [p for p in config.LLM_CACHE.glob("*.json") if p.name not in USED_KEYS]
+    for p in stale:
+        p.unlink()
+    return len(stale)
+
+
 def credentials_available() -> bool:
     return bool(os.getenv("ANTHROPIC_API_KEY") or os.getenv("ANTHROPIC_AUTH_TOKEN"))
 
@@ -72,6 +81,8 @@ def structured_call(system: str, payload: str, schema: type[T], *, allow_api: bo
     """Return a validated `schema` instance, or None (refusal / error / no credentials)."""
     config.LLM_CACHE.mkdir(parents=True, exist_ok=True)
     path = config.LLM_CACHE / f"{_key(system, payload, schema)}.json"
+    with _lock:
+        USED_KEYS.add(path.name)
     if path.exists():
         rec = json.loads(path.read_text(encoding="utf-8"))
         with _lock:

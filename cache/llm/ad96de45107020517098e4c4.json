@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2872,
+  "output": 660,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-AU receivable NIG-AU:77454 (AUD 39,400.00, USD 26,013.85, ref AU/IC/2026/0739, posted 2026-10-11) for the P-25002 geotech recharge has no matching payable at NIG-US. None of the 3 unmatched NIG-US lines searched fits: the nearest are booked to NIG-UK and NIG-SA, are for seconded staff, and have ratios of 0.83 or lower. No line elsewhere carries the same reference. Because the invoice was posted mid-October, a cut-off explanation is unlikely.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm receipt of invoice AU/IC/2026/0739 and book the IC payable to NIG-AU for AUD 39,400.00 in the October 2026 period.",
+  "adjustment_amount": 39400.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "At NIG-US, debit project cost (P-25002 geotech analysis) and credit IC payable to NIG-AU for AUD 39,400.00, ref AU/IC/2026/0739.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

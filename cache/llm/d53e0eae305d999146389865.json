@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2602,
+  "output": 857,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.88,
+  "explanation": "NIG-DE:5100873331 (EUR 3,109.62) and NIG-AU:77425 (AUD 5,040.00) carry the same invoice reference AU/IC/2026/0671 and project P-24017, so they are the same secondment charge. The buyer's implied rate of 0.616988 matches the 2026 budget rate exactly (0.0% deviation) but differs by 0.945% from the invoice-date daily rate, which produces the -31.47 USD difference at the invoice-date rate. Separately, the seller line's counterparty text 'Germany' is unresolved in master data, although the expected counterparty NIG-DE is clear.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should re-translate the AUD 5,040.00 payable at the invoice-date daily rate instead of the 2026 budget rate and book the resulting FX difference, and NIG-AU should map counterparty 'Germany' to NIG-DE in master data.",
+  "adjustment_amount": 31.47,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue the NIG-DE IC payable for AU/IC/2026/0671 from the budget rate to the invoice-date rate, clearing the 31.47 USD-equivalent difference against FX gain/loss. The EUR amount should be confirmed in SAP using the official invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

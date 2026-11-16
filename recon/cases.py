@@ -99,6 +99,10 @@ def _twin(r: dict, matched_rows: list[dict], match_of: dict) -> dict | None:
 def build_cases(lines: pd.DataFrame, matches: list[dict], ctx: Context) -> list[dict]:
     match_of = {k: m["match_id"] for m in matches for k in m["seller_lines"] + m["buyer_lines"]}
     rows = lines.to_dict("records")
+    for r in rows:  # pandas yields NaN (truthy!) for missing values; normalise to None
+        for k in ("counterparty", "cp_suggestion"):
+            if k in r and not isinstance(r[k], str):
+                r[k] = None
     matched_rows = [r for r in rows if r["line_key"] in match_of]
     open_rows = [r for r in rows if r["line_key"] not in match_of]
     sellers = [r for r in open_rows if r["side"] == "REC" and r["in_period"]]

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 1060,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77450 and NIG-DE:5100873367 agree exactly: AUD 27,720.00, same reference AU/IC/2026/0667 and project P-24017, both posted in period two days apart, and the difference at the invoice-date rate is 0.0. The USD gap (18,302.13 vs 18,455.42) comes only from each side translating on its own posting date. The likely reason the pair did not auto-match is that the seller line's counterparty 'Germany' in the legacy SCE ledger did not resolve to an entity code; this is a master-data mapping gap, not a booking against the wrong partner.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Map the legacy SCE counterparty text 'Germany' to NIG-DE in the counterparty master data, then match the pair at the invoice-date rate so no translation difference remains.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No transactional difference exists. A reviewer should confirm that the unresolved seller counterparty mapping, not the posting-date USD translation difference (which could be read as fx_difference), caused the exception."
+ }
+}

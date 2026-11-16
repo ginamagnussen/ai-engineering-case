@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 999,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "Seller line NIG-AU:77523 and buyer line NIG-US:4471161 match exactly at AUD 20,290.00 for the same project (P-23110, ref 0720), with a ratio of 1.0. The difference at the invoice-date rate is 0.00, so the only gap is the USD translation: 13,472.97 versus 13,621.69, a difference of 148.72. That gap is consistent with NIG-US translating at its 29 Oct posting-date rate instead of the 26 Oct invoice-date rate. Separately, the seller booked the counterparty as the free-text 'Head Office Denver', which did not resolve in master data and probably kept this pair out of automatic matching.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Match the pair on the AUD amount and invoice reference, and clear the USD 148.72 translation gap through the group FX difference process. Ask NIG-AU to map 'Head Office Denver' to entity NIG-US in its legacy SCE ledger counterparty master data.",
+  "adjustment_amount": 148.72,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Group-level elimination entry: post USD 148.72 to IC FX translation difference so NIG-US's USD payable aligns with the invoice-date-rate equivalent of USD 13,472.97. No change is needed to either AUD ledger amount.",
+  "model_requests_review": true,
+  "review_reason": "I cannot confirm from the evidence that 'Head Office Denver' on the seller line means NIG-US. The exception may stem mainly from this master-data gap rather than the rate basis, so a human should verify the mapping before the FX treatment is applied."
+ }
+}
