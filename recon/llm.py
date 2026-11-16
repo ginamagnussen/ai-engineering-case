@@ -91,7 +91,9 @@ def structured_call(system: str, payload: str, schema: type[T], *, allow_api: bo
             output_format=schema,
             output_config={"effort": config.EFFORT},
             thinking={"type": "adaptive"},
-            cache_control={"type": "ephemeral"},
+            # No prompt caching: the shared prefix (system prompt) is below the minimum cacheable
+            # size and every payload is unique, so caching only added the 25% cache-write premium
+            # (observed in the first full run: 283k cache-write tokens, 0 cache reads).
             betas=["server-side-fallback-2026-07-01"],
             fallbacks="default",  # on a safety decline, the API retries on a suitable fallback model
         )
