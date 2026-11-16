@@ -23,9 +23,32 @@ def _norm(s: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]", " ", s.lower())).strip()
 
 
+OVERRIDES_FILE = config.REFERENCE / "alias_overrides.csv"  # written by the review UI
+
+
+def load_confirmed_aliases() -> dict[str, str]:
+    """Aliases confirmed by a human in the review UI (production: written back to MDM)."""
+    if not OVERRIDES_FILE.exists():
+        return {}
+    df = pd.read_csv(OVERRIDES_FILE, dtype=str, keep_default_na=False)
+    return {_norm(a): c for a, c in zip(df.alias, df.entity_code)}
+
+
+def confirm_alias(alias: str, entity_code: str, confirmed_by: str) -> None:
+    from datetime import datetime, timezone
+
+    row = pd.DataFrame([{"alias": alias, "entity_code": entity_code, "confirmed_by": confirmed_by,
+                         "confirmed_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}])
+    if OVERRIDES_FILE.exists():
+        old = pd.read_csv(OVERRIDES_FILE, dtype=str, keep_default_na=False)
+        row = pd.concat([old[old.alias.map(_norm) != _norm(alias)], row], ignore_index=True)
+    row.to_csv(OVERRIDES_FILE, index=False)
+
+
 class EntityMaster:
     def __init__(self, ents: pd.DataFrame):
         self.codes = list(ents.entity_code)
+        self.confirmed = load_confirmed_aliases()
         self.maps: dict[str, dict[str, str]] = {
             "oracle_segment": dict(zip(ents.oracle_segment, ents.entity_code)),
             "sap_trading_partner": dict(zip(ents.sap_trading_partner, ents.entity_code)),
@@ -70,8 +93,19 @@ def resolve_counterparties(lines: pd.DataFrame, master: EntityMaster, use_llm: b
     lines["cp_method"] = lines.counterparty.notna().map({True: "master_data", False: "unresolved"})
     lines["cp_confidence"] = lines.counterparty.notna().astype(float)
     lines["cp_reasoning"] = ""
+    lines["cp_suggestion"] = None
 
+    # The LLM payload is built from master-data gaps only (not from human confirmations), so it
+    # stays byte-identical and its cached answer remains valid after a reviewer confirms an alias.
     todo = lines[lines.counterparty.isna()]
+
+    # human-confirmed aliases outrank the LLM
+    for i in todo.index:
+        code = master.confirmed.get(_norm(lines.at[i, "cp_raw"]))
+        if code:
+            lines.at[i, "counterparty"] = code
+            lines.at[i, "cp_method"] = "confirmed_alias"
+            lines.at[i, "cp_confidence"] = 1.0
     if todo.empty:
         return lines
 
@@ -86,6 +120,8 @@ def resolve_counterparties(lines: pd.DataFrame, master: EntityMaster, use_llm: b
         return lines
     by_raw = {r.raw: r for r in result.items}
     for i in todo.index:
+        if lines.at[i, "cp_method"] == "confirmed_alias":
+            continue
         r = by_raw.get(lines.at[i, "cp_raw"])
         if (r and r.entity_code in master.codes and r.entity_code != lines.at[i, "entity"]
                 and r.confidence >= config.ENTITY_RESOLUTION_MIN_CONFIDENCE):
@@ -95,4 +131,6 @@ def resolve_counterparties(lines: pd.DataFrame, master: EntityMaster, use_llm: b
             lines.at[i, "cp_reasoning"] = r.reasoning
         elif r:
             lines.at[i, "cp_reasoning"] = f"LLM below threshold ({r.confidence:.2f}): {r.reasoning}"
+            lines.at[i, "cp_suggestion"] = r.entity_code
+            lines.at[i, "cp_confidence"] = r.confidence
     return lines
