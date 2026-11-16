@@ -109,12 +109,17 @@ def build_cases(lines: pd.DataFrame, matches: list[dict], ctx: Context) -> list[
     buyers = [r for r in open_rows if r["side"] == "PAY"]  # incl. after-period lines as link targets
 
     # --- link unmatched seller lines to their most plausible unmatched buyer line ----------
+    seller_pool = [r for r in rows if r["side"] == "REC"]  # all invoices, matched or not
     scored = []
     for s in sellers:
         for b in buyers:
             if b["entity"] == s["entity"] or (s["counterparty"] and b["entity"] != s["counterparty"]):
                 continue
             rm = ref_match(s["ref"], b)
+            # Same guard as matching P2 (added after M4 error analysis): never link on amount
+            # proximity when the buyer line's reference points at a different seller invoice.
+            if not rm and any(o is not s and ref_match(o["ref"], b) for o in seller_pool):
+                continue
             cp_ok = b["counterparty"] == s["entity"]
             ratio = b["amount"] * ctx.usd(b["currency"], s["posting_date"]) / s["amount_usd"]
             near = 0.7 <= ratio <= 1.3
