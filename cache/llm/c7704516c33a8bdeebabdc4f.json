@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2469,
+  "output": 403,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.21,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-AU invoice AU/IC/2026/0713 (line NIG-AU:77485) is AUD 6,470.00, while NIG-US booked AUD 4,670.00 on NIG-US:4471080 with the same reference, same currency and same posting date. The evidence flags the digit pattern as adjacent digits transposed (6470 vs 4670), and the USD difference at the invoice-date rate is 1,199.34. Nothing points to an FX, withholding or cut-off explanation.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should correct payable line NIG-US:4471080 from AUD 4,670.00 to AUD 6,470.00 to match invoice AU/IC/2026/0713.",
+  "adjustment_amount": 1800.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase the NIG-US IC payable to NIG-AU by AUD 1,800.00 (debit project cost / QA/QC subcontract, credit IC payable NIG-AU) to correct the transposed-digit keying error.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

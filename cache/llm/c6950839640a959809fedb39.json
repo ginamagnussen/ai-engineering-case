@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2611,
+  "output": 814,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.29,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-DE:5100873331 (EUR 3,109.62) and NIG-AU:77425 (AUD 5,040.00) share the invoice reference AU/IC/2026/0671 and project P-24017, both posted in period two days apart. The buyer's implied rate of 0.616988 matches the 2026 budget rate exactly (0.0% deviation) but is 0.945% above the invoice-date daily rate. This rate basis explains the buyer-to-seller ratio of 1.00945 and the USD -31.47 difference at the invoice-date rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should revalue the IC payable on NIG-DE:5100873331 from the 2026 budget rate to the invoice-date daily rate for AUD 5,040.00, in line with group IC policy.",
+  "adjustment_amount": 31.47,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-DE's IC payable to NIG-AU by the EUR equivalent of USD 31.47, restating AUD 5,040.00 at the invoice-date rate instead of the budget rate. Book the offset to FX result or the cost account per policy.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}
