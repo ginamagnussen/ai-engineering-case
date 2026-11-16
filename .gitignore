@@ -20,3 +20,9 @@ AI Engineer Case.pdf
 personal case notes.odt
 *.odt
 .~lock.*#
+
+# Editor settings
+.vscode/
+
+# Demo state written by the review UI (human-confirmed aliases); repo ships the baseline
+data/reference/alias_overrides.csv
