@@ -24,13 +24,24 @@ def ref_digits(s: str) -> str:
     return "".join(re.findall(r"\d", s or "")).lstrip("0")
 
 
+def ref_alnum(s: str) -> str:
+    return re.sub(r"[^A-Z0-9]", "", (s or "").upper())
+
+
 def ref_match(seller_ref: str, buyer: dict) -> bool:
-    sd = ref_digits(seller_ref)
-    if len(sd) < 4:
-        return False
-    if sd in ref_digits(buyer["ref"]):
+    """Does the buyer line carry the seller's invoice reference (in any common re-keyed form)?
+
+    M4 fix: the digits-only rule alone missed every AE/SA reference ('AE-ICINV-00599' -> '599',
+    below the 4-digit minimum), silently pushing those invoices into amount-only matching.
+    """
+    sa = ref_alnum(seller_ref)
+    if len(sa) >= 6 and (sa in ref_alnum(buyer["ref"]) or any(sa in ref_alnum(t) for t in buyer["desc"].split())):
         return True
-    return any(sd in ref_digits(tok) for tok in buyer["desc"].split())
+    sd = ref_digits(seller_ref)
+    bd = ref_digits(buyer["ref"])
+    if len(sd) >= 4:
+        return sd in bd or any(sd in ref_digits(tok) for tok in buyer["desc"].split())
+    return len(sd) >= 3 and sd == bd  # short numbers: exact digit equality only
 
 
 def _days(s: dict, b: dict) -> int:
@@ -53,6 +64,7 @@ def run_matching(lines: pd.DataFrame) -> list[dict]:
     rec = known[(known.side == "REC") & known.in_period]
     pay = known[known.side == "PAY"]
     matches: list[dict] = []
+    all_rec = {e: g.to_dict("records") for e, g in lines[lines.side == "REC"].groupby("entity")}
 
     def add(s, bs, rule, conf):
         for b in bs:
@@ -85,8 +97,10 @@ def run_matching(lines: pd.DataFrame) -> list[dict]:
         # Guard (added after an observed false positive): never amount-match a buyer line whose
         # reference points at a *different* seller invoice - equal amounts across invoices are
         # common (recurring fees, net-of-WHT amounts that coincide with another gross amount).
+        # Checks ALL the seller's invoices, incl. lines whose counterparty is unresolved
+        # (held-out run showed a false positive when the referenced invoice was unresolved).
         def points_elsewhere(s, b):
-            return any(o is not s and ref_match(o["ref"], b) for o in sel)
+            return any(o["line_key"] != s["line_key"] and ref_match(o["ref"], b) for o in all_rec[seller])
 
         def cands(s):
             return [b for b in buy if not b["_used"] and b["currency"] == s["currency"]
