@@ -73,8 +73,10 @@ with st.sidebar.expander("Run pipeline"):
         st.rerun()
 
 if not all((config.OUT / f).exists() for f in FILES):
-    st.info("No pipeline output yet. Open **Run pipeline** in the sidebar and click **Run now**.")
-    st.stop()
+    # first start (e.g. a fresh hosted deployment): build outputs from cached answers, no API calls
+    with st.spinner("Preparing the October close (first start)..."):
+        run_pipeline(use_llm=False, log=lambda m: None)
+    st.cache_data.clear()
 
 cases, lines, matches, summary = load(_mtime())
 decisions = latest_decisions()
