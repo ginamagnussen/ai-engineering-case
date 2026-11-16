@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2428,
+  "output": 1015,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.55,
+  "explanation": "NIG-AU:77519 (AUD 12,640.00, posted 2026-10-26) and NIG-US:4471144 (AUD 12,640.00, posted 2026-10-28) match exactly in invoice currency for project P-25019 cost estimating, ratio 1.0. Their USD values differ (8,393.21 vs 8,481.44, a gap of about USD 88) only because they were translated at different rates, and the difference at the invoice-date rate is 0.00. The pair did not auto-match for two reasons: the seller's counterparty text 'Head Office Denver' is unresolved in master data, and the buyer line has no invoice reference AU/IC/2026/0730.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Confirm the match and translate both lines at the invoice-date rate for elimination, with no ledger correction. Ask NIG-AU to map 'Head Office Denver' to NIG-US in master data and ask NIG-US to add reference AU/IC/2026/0730 to line 4471144.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The AUD amounts agree and the USD gap is purely a translation-rate effect. The real exception driver may instead be the unresolved seller counterparty mapping or the missing buyer reference, so the choice between fx_difference and other (master-data issue) is a judgement call."
+ }
+}

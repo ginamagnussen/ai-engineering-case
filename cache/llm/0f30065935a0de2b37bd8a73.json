@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 920,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "NIG-AU:77470 and NIG-US:4471097 both carry reference AU/IC/2026/0698 for AUD 7,050.00 (ratio 1.0, difference 0.00 at the invoice-date rate), both posted in period. The only gap is USD 0.98 (4,709.96 vs 4,708.98), which comes from translating on different posting dates (14 vs 19 Oct). The likely blocker is that the seller line's counterparty, 'Head Office Denver' in the legacy SCE ledger, is unresolved and not mapped to NIG-US. This is a master-data mapping gap, not an amount mismatch.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Add a counterparty mapping in the NIG-AU legacy SCE ledger so 'Head Office Denver' resolves to NIG-US, then re-run matching. The pair should clear, with the USD 0.98 translation gap treated as within tolerance.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Amounts and reference agree exactly. A human must confirm that 'Head Office Denver' is NIG-US and approve the master-data mapping, since the seller counterparty cannot be verified from the evidence."
+ }
+}

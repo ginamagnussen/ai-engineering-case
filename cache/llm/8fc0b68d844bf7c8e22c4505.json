@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 431,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-AU:77485 invoices AUD 6,470.00 (ref AU/IC/2026/0713), while NIG-US:4471080 books the same reference at AUD 4,670.00 on the same date. Both lines are in AUD, so this is not a rate issue, and the 0.72179 ratio fits no withholding rate. The computed digit pattern shows adjacent digits transposed (6470 vs 4670), a USD 1,199.34 difference at the invoice-date rate. The seller's counterparty text 'Head Office Denver' is unresolved but plainly refers to NIG-US.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should correct the payable on line 4471080 from AUD 4,670.00 to AUD 6,470.00 against invoice AU/IC/2026/0713 before the October close.",
+  "adjustment_amount": 1800.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase the IC payable to NIG-AU by AUD 1,800.00 (debit project cost P-25002, credit IC payable NIG-AU) so it equals the invoiced AUD 6,470.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

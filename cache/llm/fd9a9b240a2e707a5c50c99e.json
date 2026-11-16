@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2893,
+  "output": 449,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-AU payable NIG-AU:77468 (SAR 159,600.00, ref SA-ICINV-00562, 'seconded staff c.turner p-25031') is booked against 'Head Office Denver', which is unresolved. It exactly matches NIG-SA receivable NIG-SA:ICV-SA-018861 (SAR 159,600.00, same reference SA-ICINV-00562, Chen Turner secondment P-25031, ratio 1.0). The buyer recorded the correct invoice and amount but against the wrong intercompany partner.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclass line 77468 from the 'Head Office Denver' counterparty to NIG-SA (NorthStar Infrastructure Saudi Arabia Co.) so it matches NIG-SA:ICV-SA-018861.",
+  "adjustment_amount": 159600.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the NIG-AU IC payable of SAR 159,600.00 (ref SA-ICINV-00562) from counterparty Head Office Denver to IC payable NIG-SA; no change to amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

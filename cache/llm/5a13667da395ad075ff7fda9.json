@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2432,
+  "output": 842,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77513 and NIG-US:4471142 agree exactly at AUD 88,890.00 (ratio 1.0, zero difference at the invoice-date rate), and both carry project P-24050 structural calcs, posted 3 days apart within the period. The USD gap of 218.67 (58,907.40 vs 59,126.07) comes only from translating at different posting-date rates, not from a booking error. The pair likely failed auto-matching because the legacy SCE ledger booked the counterparty as free text 'Head Office Denver' (unresolved), and the buyer line does not carry reference AU/IC/2026/0711.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that 'Head Office Denver' is NIG-US, map it to the NIG-US intercompany code in the legacy SCE ledger master data, and manually match the pair, eliminating at the common group rate.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller counterparty is unresolved free text and the buyer line lacks the invoice reference. The match rests on amount and project description, so someone should confirm that 'Head Office Denver' maps to NIG-US before the manual match."
+ }
+}
