@@ -8,7 +8,7 @@ NIG has six legal entities running five different finance systems (ERPs). Every 
 - **Claude** classifies, explains and proposes a fix for the exceptions that remain.
 - **An accountant** approves every proposal in a review screen, with a full audit trail.
 
-> Cluster: **FIN · Finance**. Status: working prototype and evaluation done (M1–M4); the design document, executive summary and demo video are in progress.
+> Cluster: **FIN · Finance**. Status: prototype, evaluation, design document and executive summary done (M1–M5); demo video in progress.
 
 ---
 
@@ -24,8 +24,8 @@ The brief asks us to choose one painful operational workflow, build a working pr
 |---|---|---|
 | Working prototype (source code or hosted) | this repo: `recon/`, `app.py` | ✅ done |
 | Recorded demo, 5–10 min, at least one workflow end-to-end | link added here | ⏳ M6 |
-| Technical design document | `docs/technical_design.md` | ⏳ M5 |
-| Executive summary (standalone) | `docs/executive_summary.md` | ⏳ M5 |
+| Technical design document | [docs/technical_design.md](docs/technical_design.md) (+ [evaluation report](docs/evaluation.md)) | ✅ done |
+| Executive summary (standalone) | [docs/executive_summary.md](docs/executive_summary.md) | ✅ done |
 | Live session: ~30 min presentation and demo, ~30 min Q&A | uses the material above | later |
 
 ### The five tasks and where each is answered
@@ -33,10 +33,10 @@ The brief asks us to choose one painful operational workflow, build a working pr
 | Task | The brief asks for | Answered in |
 |---|---|---|
 | **1 · Build an operational solution** | A specific, painful workflow from one cluster, automated or augmented. Define the user, the current pain and the future workflow. Mock data must expose the hard parts, not hide them. | Prototype (`recon/`, `app.py`); mock data with deliberate hard cases (`data/README.md`); user and workflow in §2 |
-| **2 · Technical design review** | Architecture, tooling, models, integrations, evaluation strategy. Bought vs built and why. What you'd change with more time. How you know it works: quality measures and observed failure cases. | `docs/technical_design.md`; evaluation harness `recon/evaluate.py`; current results in §4 |
-| **3 · Production readiness** | The work needed to scale across teams, projects and countries: data, security, reliability, cost, operational ownership. An honest effort estimate. | `docs/technical_design.md`, production section |
-| **4 · Executive summary and demo video** | A 5-minute read for executives burned by AI hype: business value, expected ROI, risks, costs, rollout. Must stand alone. The video may be forwarded without the presenter. | `docs/executive_summary.md` and the demo video |
-| **5 · Assumptions and kill test** | The three assumptions the solution depends on most (why each matters, how to validate it, what happens if it's false), plus three shut-down metrics with measurement windows and thresholds. | `docs/technical_design.md`, assumptions and kill-test section |
+| **2 · Technical design review** | Architecture, tooling, models, integrations, evaluation strategy. Bought vs built and why. What you'd change with more time. How you know it works: quality measures and observed failure cases. | [Design doc §1](docs/technical_design.md#1-architecture-task-2), [evaluation report](docs/evaluation.md); results in §4 |
+| **3 · Production readiness** | The work needed to scale across teams, projects and countries: data, security, reliability, cost, operational ownership. An honest effort estimate. | [Design doc §2](docs/technical_design.md#2-production-readiness-task-3): two quarters plus a rollout quarter, gated on three dependencies |
+| **4 · Executive summary and demo video** | A 5-minute read for executives burned by AI hype: business value, expected ROI, risks, costs, rollout. Must stand alone. The video may be forwarded without the presenter. | [Executive summary](docs/executive_summary.md) and the demo video |
+| **5 · Assumptions and kill test** | The three assumptions the solution depends on most (why each matters, how to validate it, what happens if it's false), plus three shut-down metrics with measurement windows and thresholds. | [Design doc §3](docs/technical_design.md#3-assumptions-and-kill-test-task-5) |
 
 ### Milestones
 
@@ -47,7 +47,7 @@ The brief asks us to choose one painful operational workflow, build a working pr
 | M2 | Core pipeline: ingestion, entity resolution, rule matching, LLM classification, evaluation | ✅ |
 | M3 | Review UI: queue, case detail, approve/override/escalate, alias confirmation, audit log | ✅ |
 | M4 | Evaluation: held-out test set, model comparison and cascade, calibration, failure analysis ([report](docs/evaluation.md)) | ✅ |
-| M5 | Technical design document and executive summary | ⏳ |
+| M5 | Technical design document and executive summary | ✅ |
 | M6 | Demo video | ⏳ |
 | M7 | Submission | ⏳ |
 
@@ -169,7 +169,7 @@ recon/
   run.py         CLI / pipeline entry point
 app.py           Streamlit review UI
 cache/llm/       committed model answers (reproducible demo)
-docs/            evaluation report (M4); design document + executive summary (M5)
+docs/            technical design, executive summary, evaluation report
 ```
 
 All company, people and transaction data is fictional and generated by `data_gen/`.
