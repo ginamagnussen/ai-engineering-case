@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2468,
+  "output": 671,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.7,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-018876 books the AED 162,504.00 payable (USD 44,248.21) against NIG-UK, while seller line NIG-AE:ICV-AE-031244 invoices the same amount to NIG-SA under the same reference AE-ICINV-00592, posted on the same date with a zero difference. The buyer description 'subcontract AE' also points to NIG-AE as the true counterparty, so this is a counterparty coding error rather than a value difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify line NIG-SA:ICV-SA-018876 from counterparty NIG-UK to NIG-AE so it matches the seller receivable and the IC pair clears.",
+  "adjustment_amount": 162504.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reclassify the AED 162,504.00 IC payable from NIG-UK to NIG-AE in NIG-SA's ledger; no P&L or amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

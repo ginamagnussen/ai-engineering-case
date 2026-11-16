@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 664,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.08,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-DE invoiced EUR 9,900.00 (RE-2026-000305, line NIG-DE:5100873469) and NIG-UK booked EUR 7,682.05 (line NIG-UK:1900045403) against the same reference, a shortfall of EUR 2,217.95 (ratio 0.776). The buyer's description states 'partial accept, hours disputed pending PM approval', and both sides are in EUR with matching counterparties and posting dates, so this is an intentional under-booking rather than an FX, timing or keying error.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Escalate the disputed hours on P-25002 to the project manager for approval and have NIG-UK and NIG-DE agree the accepted hours before any correcting entry is posted.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer intentionally booked less because it contests part of the charge; the accepted amount depends on a pending PM decision that cannot be verified from the evidence.}"
+ }
+}

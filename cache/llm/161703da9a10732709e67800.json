@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 1108,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.98,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.5,
+  "explanation": "NIG-US invoiced 11,400 USD (line NIG-US:4471187, INV-US-100441, Chen Nasser 120h at 95, project P-25002), but NIG-UK's IC payable line NIG-UK:1900045523 is an 8,400 USD accrual (ACCR-OCT26) for P.Hassan under P-25019 marked 'invoice not received'. The invoice reference is not on the buyer line, and the staff member and project codes differ, so the evidence does not show whether the accrual relates to this invoice; the 3,000 USD gap is not explained by FX, timing, or withholding.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether the 8,400 USD accrual relates to P-25019 and whether the 11,400 USD NIG-US invoice for P-25002 is booked anywhere in NIG-UK, then reverse or true up the accrual against the actual invoice once received.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The accrual and the invoice refer to different secondees and projects (P-25019 vs P-25002) and the 3,000 USD difference cannot be verified from the evidence, so a human must decide whether this is an unbilled accrual, a missing buyer booking, or a mismatch requiring a correction."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2893,
+  "output": 1244,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.97,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.88,
+  "explanation": "NIG-AU line 77468 (IC payable, 159,600 SAR, ref SA-ICINV-00562, Chen Turner secondment P-25031) is booked to 'Head Office Denver', which is unresolved in master data. The NIG-SA receivable ICV-SA-018861 has the same reference, amount, currency and description, and its counterparty resolves to NIG-AU, so the buyer line points at the wrong partner. Both lines are in period (seller 2026-10-10, buyer 2026-10-13), so no cut-off issue applies.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Reclassify NIG-AU line 77468 from Head Office Denver to the NIG-SA intercompany partner so it pairs with NIG-SA:ICV-SA-018861 on reference SA-ICINV-00562.",
+  "adjustment_amount": 159600.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclass IC payable of 159,600 SAR from Head Office Denver to NIG-SA (counterparty correction only, no P&L or net balance change at group level).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

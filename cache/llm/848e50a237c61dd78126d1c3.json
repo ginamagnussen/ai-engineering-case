@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2360,
+  "output": 389,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.11,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.85,
+  "explanation": "Seller NIG-DE line NIG-DE:5100873391 (EUR 90,190, ~USD 96,166, ref RE-2026-000360, project P-24050 BIM coordination) has no buyer booking at NIG-UK. The only unmatched NIG-UK line, NIG-UK:1900045511, is an AED 126,000 accrual for seconded staff on a different project and counterparty (NIG-AE), so it does not correspond. No lines with the same reference exist elsewhere.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm receipt of invoice RE-2026-000360 and book the IC payable of EUR 90,190 for project P-24050 in October 2026 if valid.",
+  "adjustment_amount": 90190.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-UK to debit project cost (P-24050 BIM coordination) and credit IC payable to NIG-DE for EUR 90,190 against RE-2026-000360.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

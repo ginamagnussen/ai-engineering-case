@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2649,
+  "output": 1310,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.59,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.75,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-018855 is a 14,800 SAR secondment invoice (SA-ICINV-00538, P-24102) to NIG-AE, but NIG-AE has no matching IC payable and no line elsewhere carries the reference. The only near-amount NIG-AE line, NIG-AE:ICV-AE-031254, is 14,800 USD to NIG-US for H.Brown (P-24050, INV-US-100392), which differs in counterparty, project, person and reference, so it is a coincidental match rather than this invoice.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm whether the P-24102 secondment invoice was received and booked, and if not, post the missing IC payable to NIG-SA; separately confirm that NIG-AE:ICV-AE-031254 belongs to NIG-US and is not a currency mis-keying of this invoice.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "NIG-AE to book IC payable and secondment cost of 14,800 SAR (3,946.72 USD) owed to NIG-SA under SA-ICINV-00538, subject to confirmation that the invoice was received.",
+  "model_requests_review": true,
+  "review_reason": "A same-amount NIG-AE line (14,800 USD to NIG-US) exists and could be a currency or counterparty miscoding; a human should confirm before posting the correcting entry."
+ }
+}

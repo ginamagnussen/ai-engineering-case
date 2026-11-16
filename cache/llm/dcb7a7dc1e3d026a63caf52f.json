@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 579,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.94,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031288 books 1523.83 USD against seller line NIG-US:4471058 at 1680.00 USD for INV-US-100423 (secondment P-24017), leaving a 156.17 USD gap (ratio 0.907). The buyer's description states 'partial accept, hours disputed pending PM approval', so the shortfall appears to be an intentional contest of part of the hours rather than a keying or rate error.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have the NIG-AE project manager confirm the disputed hours for P-24017 and decide whether the 156.17 USD shortfall is accepted, credited, or settled, then align both ledgers accordingly.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer booked less because it disputes part of the hours; the outcome depends on a pending PM approval and a commercial decision on the 156.17 USD that cannot be verified from the ledger evidence."
+ }
+}

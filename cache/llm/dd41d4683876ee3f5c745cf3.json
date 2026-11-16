@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2464,
+  "output": 416,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.06,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "Seller line NIG-SA:ICV-SA-019028 (SAR 390,456, ref SA-ICINV-00595) is billed to NIG-AE, but buyer line NIG-AE:ICV-AE-031415 for the same amount and reference is booked against NorthStar Infrastructure UK Ltd (NIG-UK) instead of NIG-SA. Amounts, currency and invoice reference match exactly (difference 0.0 USD), so the only break is the wrong partner on the buyer payable.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should recode payable NIG-AE:ICV-AE-031415 from counterparty NIG-UK to NIG-SA so it matches NIG-SA:ICV-SA-019028.",
+  "adjustment_amount": 390456.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the IC payable of SAR 390,456 on NIG-AE from counterparty NIG-UK to NIG-SA (debit IC payable NIG-UK, credit IC payable NIG-SA).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

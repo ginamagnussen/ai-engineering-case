@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2623,
+  "output": 1053,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.52,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.72,
+  "explanation": "NIG-US line NIG-US:4471200 (IC payable, 16,800.00 GBP, 21,646.63 USD, posted 2026-10-31, ref 9000010810) carries the same reference as NIG-US:4471166, which is already matched in M0217, so it looks like a second booking of one invoice. No NIG-UK seller line matches the 16,800 GBP amount: the nearest unmatched seller lines are 25,200 GBP (ratio 1.479) and 1,520 GBP (ratio 0.090), and neither is a plausible match.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm in Oracle EBS whether NIG-US:4471200 duplicates the invoice already matched in M0217 and, if so, reverse it against the IC payable to NIG-UK.",
+  "adjustment_amount": -16800.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse duplicate IC payable to NIG-UK (ref 9000010810, line NIG-US:4471200) of 16,800.00 GBP (21,646.63 USD) on NIG-US.",
+  "model_requests_review": true,
+  "review_reason": "The duplicate link rests only on a shared reference, and the line description (J.Haddad P-24017) cannot be checked against the M0217 twin or any seller invoice in the evidence, so a human should confirm before reversing."
+ }
+}

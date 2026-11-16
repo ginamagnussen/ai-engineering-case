@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2990,
+  "output": 1135,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.12,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.75,
+  "explanation": "NIG-AU line NIG-AU:77465 (33,000 SAR, 8,800.11 USD, posted 2026-10-13) carries reference SA-ICINV-00585, which is already matched to NIG-AU:77453 in M0133 (posted 2026-10-11). No NIG-SA seller line of 33,000 SAR was found among the unmatched seller lines, so the second buyer booking appears to duplicate the same invoice. The evidence does not show the amount of NIG-AU:77453, so equality with 33,000 SAR is not verified.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that NIG-AU:77453 carries the same 33,000 SAR amount for SA-ICINV-00585, and if so reverse NIG-AU:77465 in the Legacy SCE Ledger.",
+  "adjustment_amount": -33000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse the duplicate IC payable booking NIG-AU:77465 (33,000 SAR, ref SA-ICINV-00585) so only the matched booking NIG-AU:77453 remains.",
+  "model_requests_review": true,
+  "review_reason": "The amount of the already-matched twin NIG-AU:77453 is not in the evidence, and the legacy ledger line's description (seconded staff, no invoice-level detail) cannot confirm that both lines relate to one invoice rather than a second charge."
+ }
+}

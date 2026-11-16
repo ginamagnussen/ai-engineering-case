@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 494,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.93,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "NIG-UK receivable NIG-UK:1900045457 is GBP 8,400.00 and NIG-SA payable NIG-SA:ICV-SA-019035 is GBP 7,980.00 for the same reference 9000010808 and project P-24088. The buyer ratio of 0.95 matches 5% withholding and the buyer description says 'net of WHT 5%', so the USD 539.85 difference is tax withheld, not a rate or timing issue. Counterparties are correct and both lines post in period.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm the 5% WHT applies to this secondment and record the GBP 420.00 WHT payable/receivable, and the WHT certificate should be sent to NIG-UK so the IC balances agree.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up the NIG-SA IC payable by GBP 420.00 with a credit to IC payable and a debit to the WHT expense/recoverable account, with a matching WHT payable to the tax authority, so the IC payable equals the invoiced GBP 8,400.00.",
+  "model_requests_review": true,
+  "review_reason": "Whether 5% WHT is applicable to secondment services and who bears the cost (gross-up vs. NIG-UK absorbing it) is a tax judgement; confirm with group tax."
+ }
+}

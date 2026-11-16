@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2404,
+  "output": 437,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.67,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer-only line NIG-AE:ICV-AE-031254 (USD 14,800, ref INV-US-100392, posted 2026-10-13) carries the same invoice reference as NIG-AE:ICV-AE-031240 posted 2026-10-10, which is already matched in M0218. No seller line exists for this second booking, so NIG-AE appears to have booked INV-US-100392 twice. The only nearby seller line (NIG-US:4471046, USD 1,760, NIG-AU) is unrelated.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm the amount of ICV-AE-031240 matches INV-US-100392, then reverse the duplicate ICV-AE-031254 in NIG-AE.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reverse duplicate IC payable ICV-AE-031254 (Dr IC payable NIG-US, Cr original expense/clearing) in NIG-AE.",
+  "model_requests_review": true,
+  "review_reason": "The description and project code differ from the matched twin and the matched amount was not shown, so confirm it is a true duplicate rather than a separate charge reusing the reference."
+ }
+}

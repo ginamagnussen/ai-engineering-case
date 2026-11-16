@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2650,
+  "output": 1257,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.68,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.88,
+  "explanation": "NIG-SA invoiced 390,456.00 SAR on SA-ICINV-00595 (NIG-SA:ICV-SA-019028, 2026-10-29), and NIG-AE has an in-period IC payable for the identical amount, currency and reference (NIG-AE:ICV-AE-031415, posted 2026-10-31, ratio_to_target 1.0). That buyer line is booked against NorthStar Infrastructure UK Ltd, which master data resolves to NIG-UK, not NIG-SA, so the pair fails to match only because of the counterparty code.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to change the counterparty on ICV-AE-031415 from NIG-UK to NIG-SA and rerun matching, and have NIG-UK confirm it holds no offsetting SAR payable for this invoice.",
+  "adjustment_amount": 390456.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the 390,456.00 SAR IC payable from NIG-UK to NIG-SA in NIG-AE's ledger so it matches SA-ICINV-00595; no change to the total payable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

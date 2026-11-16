@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 1111,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.88,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-UK seller line NIG-UK:1900045315 invoices GBP 40,590.00 and NIG-SA buyer line NIG-SA:ICV-SA-018933 books GBP 38,560.50 on the same reference 9000010933, a ratio of 0.95 that matches the 5% Saudi WHT rate. The buyer description states 'net of WHT 5%', and the gap of GBP 2,029.50 (USD 2,571.44 at invoice-date rate) is the withheld amount, so the difference is explained by withholding rather than an error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the subcontract expense to GBP 40,590.00, record the GBP 2,029.50 as Saudi WHT payable to ZATCA, and confirm the WHT certificate and recoverability with the group tax team before closing.",
+  "adjustment_amount": 2029.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Dr IC subcontract expense (NIG-SA) GBP 2,029.50 / Cr Saudi WHT payable GBP 2,029.50 to gross up the buyer booking to the invoiced gross amount.",
+  "model_requests_review": true,
+  "review_reason": "The gross-up and WHT liability treatment is a tax judgement; the group tax team should confirm the 5% WHT applies and whether the amount is recoverable before posting the correction."
+ }
+}

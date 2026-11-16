@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2909,
+  "output": 346,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.37,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-US line NIG-US:4471173 is an accrual of SAR 79,800 (USD 21,280.27) for seconded staff P.Becker, project P-25002, dated 2026-10-31 and explicitly marked 'invoice not received'. None of the 4 unmatched NIG-SA seller lines searched matches this amount or project; the nearest, ICV-SA-018861 at SAR 159,600, is exactly 2.0x but belongs to a different project and person (P-25031, Chen Turner) and to NIG-AU.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm the P.Becker P-25002 secondment hours and issue the IC invoice, or confirm no charge is due so NIG-US can reverse the accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2449,
+  "output": 960,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.29,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Both sides carry reference 9000010838 and the same counterparty (NIG-UK), and both postings are in period, 4 days apart. NIG-AE line ICV-AE-031425 is GBP 8,502 against NIG-UK line 1900045440 at GBP 8,520, an 18 GBP gap that matches the adjacent-digit transposition (8520 vs 8502), and the ratio of 0.99789 is not a withholding rate. The USD gap of 23.01 at invoice-date rate reflects the transposition, not an FX basis difference, since both lines are GBP-denominated.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to correct keying error on ICV-AE-031425 from GBP 8,502 to GBP 8,520 so the payable matches the UK receivable.",
+  "adjustment_amount": 18.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Increase NIG-AE IC payable (P-24050 geotech analysis, ref 9000010838) by GBP 18 to correct the transposed amount from 8,502 to 8,520.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

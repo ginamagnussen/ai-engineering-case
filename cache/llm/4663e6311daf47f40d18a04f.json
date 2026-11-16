@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2878,
+  "output": 488,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.83,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK invoiced NIG-AU GBP 1,520.00 (USD 1,950.65) for secondment of Chen Clarke, 16h @ 95, project P-24050 (NIG-UK:1900045345, ref 9000010818, posted 2026-10-16). Searching 5 unmatched NIG-AU lines and other ledgers for the same reference found nothing, and the nearest buyer lines (NIG-AU:77465, 77484, 77458) have different references, projects, and amounts that are unrelated.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to confirm receipt of invoice 9000010818 and book the GBP 1,520.00 IC payable to NIG-UK for P-24050, or confirm whether it was posted after period end.",
+  "adjustment_amount": 1520.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-AU to book IC payable to NIG-UK (Dr secondment expense / Cr IC payable NIG-UK) for GBP 1,520.00 against invoice 9000010818.",
+  "model_requests_review": true,
+  "review_reason": "No buyer line was found, so it cannot be confirmed whether NIG-AU simply has not booked the invoice (missing_buyer) or posted it after period end (timing); NIG-AU should verify before the adjustment is posted."
+ }
+}

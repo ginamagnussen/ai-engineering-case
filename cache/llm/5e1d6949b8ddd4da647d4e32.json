@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 374,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.72,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-US invoiced 1,000.00 USD (NIG-US:4471065, INV-US-100368) for 8h secondment of Omar Nasser, while NIG-AE booked 785.35 USD (NIG-AE:ICV-AE-031302) against the same invoice reference. The buyer description states 'partial accept, hours disputed pending PM approval', so the 214.65 USD shortfall is an intentional partial rejection rather than FX, timing or WHT; both lines are in period and the currency is USD on both sides.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-AE project manager and NIG-US should confirm the disputed hours on P-25002 and agree whether NIG-US issues a credit note or NIG-AE books the remaining 214.65 USD.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Dispute outcome depends on PM approval of the hours; no correcting entry should be booked until the dispute is resolved."
+ }
+}

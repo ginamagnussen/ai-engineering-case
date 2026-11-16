@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2346,
+  "output": 1023,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.39,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-SA line ICV-SA-019060 accrues 2,640.00 USD owed to NIG-US for seconded staff L.Rahman (P-25019) with the note 'invoice not received' and reference ACCR-OCT26, and no NIG-US receivable line exists for that charge. The only nearby unmatched seller line is NIG-US:4471046 for 1,760.00 USD (P-25002, M. O'Connor, 16h at 110, booked to counterparty '500' which resolves to NIG-AU). Its different project, person, invoice and amount (ratio 0.6667) rule it out as the match.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm whether an invoice for P-25019 (L.Rahman secondment) has been or will be issued; if it is not issued in October, NIG-SA should reverse the 2,640.00 USD accrual in the period, and the group controller should confirm the treatment.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller has no invoice, so whether to keep the buyer accrual (with seller accrual) or reverse it is a judgement call that a human must make. The nearest seller line NIG-US:4471046 also has a counterparty mis-booking to NIG-AU that should be checked separately."
+ }
+}

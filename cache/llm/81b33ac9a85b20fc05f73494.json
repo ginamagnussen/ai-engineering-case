@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2480,
+  "output": 786,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.57,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-018892 (47,948.40 AED) is booked net of 5% Saudi WHT against the NIG-AE receivable NIG-AE:ICV-AE-031236 (50,472.00 AED), and the buyer-to-seller ratio of 0.95 matches the 5% withholding rate. The 2,523.60 AED gap (about 687.15 USD at invoice-date rate) is the withheld amount, not an unexplained difference. Both lines are in period and posted four days apart.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to 50,472.00 AED and record the 2,523.60 AED withholding as Saudi WHT payable, supported by the withholding certificate or tax filing reference.",
+  "adjustment_amount": 2523.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr IC expense (P-23110 subcontract) 2,523.60 AED; Cr IC payable NIG-AE 2,523.60 AED to restore the gross invoice; WHT payable recorded separately under the Saudi WHT liability account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2415,
+  "output": 839,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.2,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.78,
+  "explanation": "Both lines carry invoice reference 9000010754 and are in GBP, so this is not an FX or counterparty issue. NIG-UK line NIG-UK:1900045516 is 9,900.00 GBP while NIG-SA line NIG-SA:ICV-SA-019044 is 9,990.00 GBP, a 90.00 GBP overstatement on the buyer side with a single differing digit and no business reason in the evidence.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to correct ICV-SA-019044 from 9,990.00 GBP to 9,900.00 GBP against invoice 9000010754 and confirm the keying error.",
+  "adjustment_amount": -90.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reduce NIG-SA IC payable to NIG-UK by 90.00 GBP to match the 9,900.00 GBP invoice.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

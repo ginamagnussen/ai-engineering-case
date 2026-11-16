@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 1107,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.29,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked IC payable ICV-SA-018850 at GBP 47,348.00 against NIG-UK receivable 1900045234 at GBP 49,840.00, a ratio of 0.95 and a gap of GBP 2,492.00, which is exactly 5% of the gross invoice. The buyer description says 'net of WHT 5%', and the same invoice reference 9000010931 is on both lines, so this is Saudi withholding tax deducted from a services charge rather than an FX, timing or keying error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to GBP 49,840.00 and post the GBP 2,492.00 withholding as a tax payable to the Saudi authority, then confirm the WHT certificate and whether NIG-UK can recover it.",
+  "adjustment_amount": 2492.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Debit IC expense/subcontract cost and credit IC payable to NIG-UK by GBP 2,492.00 to gross up to the invoiced amount, with the GBP 2,492.00 withholding recorded as a WHT payable to the tax authority.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

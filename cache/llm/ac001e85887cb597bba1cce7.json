@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 468,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.94,
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "Seller line NIG-AE:ICV-AE-031334 is AED 37,000 (USD 10,074.73) for the Nasser secondment on P-25019 under ref AE-ICINV-00488. Buyer line NIG-SA:ICV-SA-019017 is AED 31,350 (USD 8,536.29) for J.Becker on P-24017 under a different ref AE-ICINV-00565, described as net of WHT 5%. The ratio of 0.8473 does not fit 5% WHT (expected 0.95), the names, projects and references differ, and the invoice reference was not found on the buyer line, so these look like different invoices wrongly paired and the USD 1,538.44 difference cannot be explained.",
+  "responsible_entity": "both",
+  "recommended_action": "Confirm whether AE-ICINV-00488 has any buyer booking and whether AE-ICINV-00565 has its own seller invoice, then re-match or book the missing buyer entry accordingly.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Pairing looks unreliable: different invoice references, staff names and project codes, and the 0.8473 ratio does not match 5% WHT, so it cannot be classified as wht, missing_buyer or any other category from the evidence."
+ }
+}

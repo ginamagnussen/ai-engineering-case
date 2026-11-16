@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2432,
+  "output": 1206,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.85,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.82,
+  "explanation": "Both lines carry the same invoice reference set (P-24050, structural calcs) for AUD 88,890, so the amounts agree and the USD gap (58,907.40 vs 59,126.07) is translation only, with a difference of 0.00 at the invoice-date rate and a ratio of 1.0. The seller line NIG-AU:77513 is booked to counterparty 'Head Office Denver', which is unresolved, while the buyer NIG-US:4471142 correctly points to NIG-AU, so the seller's partner coding is the exception.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU reclassify line NIG-AU:77513 from 'Head Office Denver' to NIG-US in the legacy SCE ledger and confirm that Head Office Denver maps to NIG-US before the match is re-run.",
+  "adjustment_amount": 88890.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reclass the AUD 88,890 IC receivable on NIG-AU:77513 from the unresolved counterparty 'Head Office Denver' to NIG-US so it pairs with NIG-US:4471142; no amount change.",
+  "model_requests_review": true,
+  "review_reason": "The mapping of 'Head Office Denver' to NIG-US is inferred from the Denver location and is not confirmed in the evidence; if it is a separate entity the classification would change."
+ }
+}

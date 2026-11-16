@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 506,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.56,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.55,
+  "explanation": "NIG-AU:77540 (AUD 18,400, ref AU/IC/2026/0706) and NIG-US:4471182 (AUD 18,400, same ref) agree in local currency and reference, and the buyer's counterparty code 500 resolves to NIG-AU via master data. The only anomaly is the seller's counterparty booked as 'Head Office Denver', which is unresolved and likely a legacy SCE ledger mapping issue. The USD gap of 38.27 (12,344.38 vs 12,382.65) is just a rate-basis difference on identical AUD amounts.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU remap the counterparty on line 77540 from 'Head Office Denver' to NIG-US in the legacy SCE ledger so the pair matches.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify the counterparty on NIG-AU:77540 from 'Head Office Denver' to NIG-US; no amount change in AUD.",
+  "model_requests_review": true,
+  "review_reason": "The seller's counterparty 'Head Office Denver' is unresolved. It is probably a mapping issue, but it could also reflect a deliberate booking to a different partner. The evidence flags no counterparty mismatch, so a human should confirm. The USD difference of 38.27 is rate-basis only and does not require correction."
+ }
+}

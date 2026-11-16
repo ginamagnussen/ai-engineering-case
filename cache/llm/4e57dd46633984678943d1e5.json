@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2918,
+  "output": 954,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 9.56,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "Buyer line NIG-AE:ICV-AE-031332 (IC payable, SAR 97,524.00, P-23110 design review, posted 2026-10-21) has no matching seller reference, but seller line NIG-SA:ICV-SA-018937 (IC receivable to NIG-AE, SAR 97,524.00, P-23110 design review, posted 2026-10-18) matches it on amount (ratio 1.0), currency, project and service. The only difference is the reference: the buyer keyed 'saicinv00614' and the seller invoice is SA-ICINV-00610. This looks like a reference keying error rather than an amount difference, so none of the standard categories fits exactly.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have NIG-AE check the supporting invoice and, if it is SA-ICINV-00610, correct the reference on ICV-AE-031332 so it pairs with NIG-SA:ICV-SA-018937.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction is needed because the balances already agree at SAR 97,524.00. Only the invoice reference on the NIG-AE payable should change, from saicinv00614 to SA-ICINV-00610, once confirmed.",
+  "model_requests_review": true,
+  "review_reason": "The reference mismatch (00614 vs 00610) cannot be verified from ledger data alone. Someone must confirm that NIG-SA has not issued a separate invoice SA-ICINV-00614 for the same amount before the lines are paired."
+ }
+}

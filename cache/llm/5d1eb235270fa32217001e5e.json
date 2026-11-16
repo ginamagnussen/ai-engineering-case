@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2618,
+  "output": 405,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.01,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-SA invoiced SAR 8,800.00 (USD 2,346.70) on NIG-SA:ICV-SA-018846, while NIG-AU booked AUD 3,386.29 (USD 2,231.06) on NIG-AU:77459 against the same reference SA-ICINV-00524. The buyer's implied rate of 0.384806 matches the 2026 budget rate exactly (0.0% deviation), versus -5.2% against the invoice-date rate, so the USD gap of 122.08 comes from the rate basis, not from the amount.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU revalue the IC payable at the invoice-date rate instead of the budget rate and post the FX difference.",
+  "adjustment_amount": 122.08,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU IC payable NIG-AU:77459 from the 2026 budget rate to the invoice-date rate, increasing the payable by USD 122.08 equivalent with the offset to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

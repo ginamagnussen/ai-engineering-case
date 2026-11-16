@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 542,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.3,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031395 is AED 50,000 (USD 13,614.50) and NIG-SA payable NIG-SA:ICV-SA-019056 is AED 47,500 (USD 12,933.77) on the same invoice reference AE-ICINV-00555. The buyer line description says 'net of WHT 5%', the ratio of 0.95 matches 5%, and the USD difference is 680.73. Both lines are in period, in the same currency and with the correct counterparties, so FX, timing and miscoding are ruled out.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the AED 2,500 withholding tax as a payable to the tax authority and settle the full invoice amount with NIG-AE, or confirm that the 5% rate applies to secondment recharges and that NIG-AE will receive a WHT certificate.",
+  "adjustment_amount": 2500.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-AE by AED 2,500 and credit WHT payable by AED 2,500 so the IC balance matches the AED 50,000 invoice. NIG-AE would then book the WHT as a receivable or tax credit when the certificate is received.",
+  "model_requests_review": true,
+  "review_reason": "Whether 5% WHT is applicable to a staff secondment recharge is a tax judgement, and a WHT certificate is not evidenced. Tax should confirm before the correcting entry is posted."
+ }
+}

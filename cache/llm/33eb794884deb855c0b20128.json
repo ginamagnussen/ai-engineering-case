@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2416,
+  "output": 1061,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.33,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.92,
+  "explanation": "The seller NIG-UK booked GBP 4,200.00 under reference 9000010763 against NIG-AU, and the buyer NIG-AU booked the same GBP 4,200.00 with the same reference and invoice reference, so the amounts match with a difference of 0.0 at the invoice-date rate. The buyer line is booked against NIG-AE ('NS UAE', resolved by LLM from the legacy SCE ledger) instead of the expected counterparty NIG-UK, which is the only break.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to reclassify line NIG-AU:77546 from counterparty NS UAE/NIG-AE to NIG-UK in the legacy SCE ledger so it matches the seller line NIG-UK:1900045419.",
+  "adjustment_amount": 4200.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclass the NIG-AU IC payable of GBP 4,200.00 (ref 9000010763) from NIG-AE to NIG-UK; no value adjustment is needed.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2609,
+  "output": 1171,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.75,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both lines reference AE-ICINV-00547 for AED 37,500 secondment P-25031, and the buyer line resolves correctly to NIG-AE. NIG-DE booked EUR 9,090.88 at the 2026 budget rate (implied 0.242423, 0.0% deviation), which is 4.122% below the invoice-date rate, leaving a difference of 420.91 USD at invoice-date rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to true up the IC payable from the budget rate to the invoice-date rate (or the group-mandated IC rate) in October 2026 and confirm the entry with NIG-AE.",
+  "adjustment_amount": 420.91,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-DE IC payable for AE-ICINV-00547 from the 2026 budget rate to the invoice-date rate, increasing the EUR payable by about 420.91 USD equivalent.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

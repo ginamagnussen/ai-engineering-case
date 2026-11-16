@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2459,
+  "output": 399,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.74,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-AE:ICV-AE-031237 invoiced AED 66,000 (USD 17,971.14) for 80h secondment of G. Al-Mansouri, while buyer line NIG-US:4471051 booked AED 48,781.62 (USD 13,282.75) against the same reference AE-ICINV-00516. The buyer description states 'partial accept, hours disputed pending PM approval', and the ratio of 0.73912 does not match a withholding rate, so this is an intentional short-booking; the difference is USD 4,688.39 at the invoice-date rate.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US obtain PM approval on the disputed secondment hours and agree the final billable amount with NIG-AE, then book the corrective entry on whichever side is wrong.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Buyer is contesting part of the charge pending PM approval of hours; outcome is a business judgement and no correcting entry should be posted until resolved."
+ }
+}

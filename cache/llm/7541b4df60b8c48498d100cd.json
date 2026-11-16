@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2468,
+  "output": 394,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.24,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-AE invoiced NIG-SA AED 162,504.00 (USD 44,248.21) on ref AE-ICINV-00592 (NIG-AE:ICV-AE-031244). NIG-SA booked the identical amount, date and reference (NIG-SA:ICV-SA-018876) with the description 'subcontract AE', but coded the counterparty to NIG-UK instead of NIG-AE. The amount difference is zero, so the only break is the counterparty coding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclass the AED 162,504.00 IC payable on line ICV-SA-018876 from counterparty NIG-UK to NIG-AE in the October 2026 period.",
+  "adjustment_amount": 162504.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, debit the IC payable to NIG-UK and credit the IC payable to NIG-AE for AED 162,504.00 (invoice AE-ICINV-00592).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

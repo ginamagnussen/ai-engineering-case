@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2426,
+  "output": 334,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.26,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-US:4471101 (USD 11,200, INV-US-100363) and buyer line NIG-AU:77501 (USD 11,200) match on amount, date, reference and description (secondment Grace Brown, P-24050). The buyer booked the counterparty as 'Head Office Denver', which does not resolve to NIG-US, so the pairing failed only because of the counterparty coding.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Recode counterparty on NIG-AU:77501 from 'Head Office Denver' to NIG-US and add a legacy SCE ledger mapping so the entry matches NIG-US:4471101.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount change; reclassify the counterparty on NIG-AU:77501 to NIG-US.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

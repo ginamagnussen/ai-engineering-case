@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2609,
+  "output": 1338,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.95,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "NIG-DE line NIG-DE:5100873315 books the AED 37,500 secondment invoice AE-ICINV-00547 at an implied rate of 0.242423 EUR/AED, which matches the 2026 budget rate exactly (0.0% deviation) but sits 4.122% below the invoice-date rate and 3.785% below the posting-date rate. The USD 420.91 gap at invoice-date rate is therefore a rate-basis difference rather than a missing or mis-keyed amount, and the counterparty (NIG-AE) and period are correct.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Have NIG-DE revalue the IC payable AE-ICINV-00547 to the invoice-date rate and post the USD 420.91 equivalent difference, confirming the group policy on which rate basis applies to IC settlements.",
+  "adjustment_amount": 420.91,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-DE IC payable and related secondment expense by USD 420.91 equivalent (EUR amount to be computed at invoice-date rate) to align with the AED invoice at the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

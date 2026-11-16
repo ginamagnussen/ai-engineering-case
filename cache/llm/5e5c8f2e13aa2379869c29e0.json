@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2945,
+  "output": 444,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.37,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-AE line NIG-AE:ICV-AE-031334 (AED 37,000, about USD 10,074.73, ref AE-ICINV-00488, secondment Lukas Nasser P-25019) has no buyer booking at NIG-SA. The 3 unmatched NIG-SA lines searched do not fit: none match the amount or reference, none is an AED 37,000 line against NIG-AE, and the same-reference search found nothing. The NIG-SA accrual ICV-SA-019060 for seconded staff L.Rahman on P-25019 is a different person, a different counterparty (NIG-US) and a different amount.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm receipt of invoice AE-ICINV-00488 and book the IC payable of AED 37,000 to NIG-AE for the Nasser secondment on P-25019.",
+  "adjustment_amount": 37000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, debit secondment cost on P-25019 and credit IC payable to NIG-AE for AED 37,000, per invoice AE-ICINV-00488.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

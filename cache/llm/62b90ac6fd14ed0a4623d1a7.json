@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 424,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.47,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77543 and NIG-US:4471197 agree on amount (AUD 28,120.00), invoice reference AU/IC/2026/0678 and project P-24102, and both posted in period (30 and 31 Oct). The ratio is 1.0 and the counterparty resolves correctly to NIG-AU on the buyer side. The only gap is USD 58.49 (18,865.43 vs 18,923.92), which comes from a differing translation rate, not from an invoice difference. The seller's counterparty 'Head Office Denver' is unresolved, which is a master-data issue and not a booking error against another partner.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Map 'Head Office Denver' to NIG-US in the NIG-AU legacy ledger master data and confirm the USD translation rate difference of 58.49 is a rate-basis item only.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No listed category fits cleanly: the pair matches in transaction currency, and the only issues are an unresolved seller counterparty label and a small USD translation difference, which need human confirmation."
+ }
+}

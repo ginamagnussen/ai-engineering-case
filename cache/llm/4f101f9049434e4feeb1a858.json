@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 373,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.14,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "Seller line NIG-US:4471035 (INV-US-100448, USD 28,080.00) and buyer line NIG-AU:77434 (same reference, USD 28,080.00) match exactly in amount, currency and posting date (2026-10-07). The buyer booked the counterparty as free text 'Head Office Denver', which does not resolve to a partner entity, instead of NIG-US, so the pair did not auto-match.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on payable line 77434 from 'Head Office Denver' to NIG-US and add a mapping in the legacy SCE ledger so it resolves to NIG-US in future.",
+  "adjustment_amount": 28080.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify IC payable line NIG-AU:77434 to counterparty NIG-US (no change to amount); the pair then eliminates against NIG-US:4471035.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

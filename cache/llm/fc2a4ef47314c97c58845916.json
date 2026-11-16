@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 386,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.13,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "Seller NIG-US line NIG-US:4471058 invoiced USD 1,680.00 (INV-US-100423, 8h @ 210), while buyer NIG-AE line NIG-AE:ICV-AE-031288 booked USD 1,523.83, a shortfall of USD 156.17 (ratio 0.90704). The buyer description states 'partial accept, hours disputed pending PM approval', and the invoice reference, counterparty, currency and period all match, so this is not FX, timing, WHT or miscoding.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have NIG-AE obtain the project manager's decision on the disputed hours for P-24017 and either book the remaining USD 156.17 or have NIG-US issue a credit note.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Buyer has intentionally booked less pending PM approval of the hours; the outcome is a business judgement and no correcting entry should be posted until the dispute is resolved."
+ }
+}

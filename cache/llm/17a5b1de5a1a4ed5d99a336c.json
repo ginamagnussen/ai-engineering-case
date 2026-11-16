@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2446,
+  "output": 374,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.09,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer-only line NIG-SA:ICV-SA-019058 (AED 136,944, ref AE-ICINV-00586, posted 2026-10-31) carries the same reference and posting date as NIG-SA:ICV-SA-019047, which was already matched in M0026. No seller line exists for this second booking. The only unmatched seller line (NIG-AE:ICV-AE-031334, AED 37,000) is a different secondment invoice at 0.27 ratio and does not fit.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm with NIG-SA AP that ICV-SA-019058 duplicates ICV-SA-019047 and reverse the duplicate booking.",
+  "adjustment_amount": 136944.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse duplicate IC payable NIG-SA:ICV-SA-019058 (AED 136,944) against the NIG-AE IC payable account and original expense or accrual.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

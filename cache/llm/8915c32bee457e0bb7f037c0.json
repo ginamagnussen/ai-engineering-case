@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2924,
+  "output": 990,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 13.18,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-SA receivable NIG-SA:ICV-SA-018937 (SAR 97,524, SA-ICINV-00610, P-23110 design review) has an unmatched NIG-AE payable NIG-AE:ICV-AE-031332 for exactly SAR 97,524 (ratio 1.0), with the same project, description and counterparty, but referenced 'saicinv00614'. This looks like the same invoice with a keyed reference error (00614 vs 00610) rather than an amount difference; the reference hit AE-ICINV-00610 is an unrelated NIG-AE receivable to NIG-SA (P-25019) and is not relevant.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm against the NIG-SA invoice document that ICV-AE-031332 relates to SA-ICINV-00610, correct the reference on the payable line, and then pair the two lines manually.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction. Update the reference on NIG-AE:ICV-AE-031332 from saicinv00614 to SA-ICINV-00610 and match it to NIG-SA:ICV-SA-018937.",
+  "model_requests_review": true,
+  "review_reason": "The match relies on identical amount and description despite differing invoice numbers. A human must confirm that NIG-SA has not issued a separate invoice SA-ICINV-00614; if it has, this case would instead be missing_buyer."
+ }
+}

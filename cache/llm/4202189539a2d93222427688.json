@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 1388,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.87,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.82,
+  "explanation": "Both lines carry reference AU/IC/2026/0698 for P-24050 at 7,050.00 AUD, so the amounts agree and the 0.98 USD gap comes from posting-date rates, not the invoice. The seller line NIG-AU:77470 is booked against 'Head Office Denver', which does not resolve to a legal entity code in the legacy SCE ledger, while the buyer line NIG-US:4471097 resolves to NIG-AU via master data. The counterparty on the seller side appears to be the wrong partner code (most likely NIG-US, the Denver-based buyer, though that mapping is inferred).",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU correct the counterparty on line NIG-AU:77470 in the legacy SCE ledger to the NIG-US intercompany code and confirm that Head Office Denver maps to NIG-US, so the pair matches in the October close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

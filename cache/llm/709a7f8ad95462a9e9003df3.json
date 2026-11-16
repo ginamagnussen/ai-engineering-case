@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2464,
+  "output": 515,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.16,
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "Seller line NIG-AE:ICV-AE-031273 (AED 105,000, secondment of Fatima O'Connor, project P-24017, ref AE-ICINV-00541) and buyer line NIG-SA:ICV-SA-018915 (AED 118,400.40, project P-24102 subcontract design review net of WHT 5%) do not appear to be the same transaction. The projects, descriptions and references differ, the buyer-to-seller ratio is 1.12762 (buyer higher, USD difference -3,648.79), and a 5% WHT deduction would make the buyer amount lower, not higher. Both are in AED, so FX does not explain it, and the counterparties are correct. The buyer line has no match for the seller invoice, which may mean the seller invoice is unbooked on the buyer side, but this cannot be confirmed.",
+  "responsible_entity": "both",
+  "recommended_action": "Have NIG-SA and NIG-AE confirm whether P-24102 is a separate invoice with its own seller line and whether NIG-SA has booked the P-24017 secondment invoice AE-ICINV-00541.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The lines refer to different projects and descriptions, the ratio fits no single category (WHT would reduce the buyer amount), and the evidence is insufficient to say whether this is a mismatched pairing or a missing buyer booking."
+ }
+}

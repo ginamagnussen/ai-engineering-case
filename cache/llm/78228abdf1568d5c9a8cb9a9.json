@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2360,
+  "output": 374,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.29,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-UK booked an accrual NIG-UK:1900045511 of AED 126,000 (USD 34,308.54) on 2026-10-31 against NIG-AE for seconded staff C.Turner P-23110, explicitly marked 'invoice not received' (ref ACCR-OCT26). The only unmatched NIG-AE receivable, NIG-AE:ICV-AE-031334 (AED 37,000, ratio 0.2937), relates to a different secondee/project and is booked against NIG-SA, so it is not a match.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE to confirm whether the C.Turner P-23110 secondment for October will be invoiced and issue the invoice (or advise NIG-UK to reverse the accrual if no charge is due); NIG-UK to reverse the accrual on receipt of the invoice.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

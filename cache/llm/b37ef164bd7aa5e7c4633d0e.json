@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2456,
+  "output": 1093,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.41,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-UK line NIG-UK:1900045390 invoices 18,690.00 GBP for P-25002, and NIG-SA line NIG-SA:ICV-SA-019019 books 17,755.50 GBP, which is exactly 95% of the invoice (ratio 0.95, consistent with the 5% Saudi services WHT). The buyer's description states 'net of WHT 5%', the invoice reference is present on the buyer line, and both sides resolve to the correct counterparties, so the gap is withholding rather than an error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to 18,690.00 GBP and record the 934.50 GBP withholding as a tax payable to the Saudi authority, supported by the WHT certificate.",
+  "adjustment_amount": 934.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclassify the 934.50 GBP WHT from the IC payable to a Saudi WHT tax liability so the IC payable equals the 18,690.00 GBP invoice.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

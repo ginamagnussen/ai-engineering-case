@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2590,
+  "output": 1130,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.03,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-UK seller line 1900045228 invoices GBP 21,000 (USD 26,681.76) and NIG-AE buyer line ICV-AE-031221 books AED 94,518.90 (USD 25,736.55) with the same invoice reference 9000010813 and matching counterparty. The buyer implied rate of 4.5009 matches the 2026 budget rate exactly (0.0% deviation), while the invoice-date rate gap is USD 945.21, so the difference comes from the rate basis, not the amount.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to restate or true-up its IC payable to the invoice-date rate (USD 945.21 difference), or have the group controller confirm that the budget rate is an approved IC rate basis for this flow.",
+  "adjustment_amount": 945.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AE IC payable ICV-AE-031221 from the 2026 budget rate to the invoice-date rate, increasing the payable and the related expense by USD 945.21 equivalent.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

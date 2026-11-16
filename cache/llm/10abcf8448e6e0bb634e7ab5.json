@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2597,
+  "output": 1413,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.79,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both lines reference P-24050 (reference 9000010873) with matching counterparties after master-data resolution. NIG-SA booked GBP 15,580.00 as SAR 71,601.86 at an implied rate of 4.595755, which matches the 2026 budget rate exactly (0.0% deviation) but is about 4.27% below the invoice-date rate, leaving a USD difference of 852.23 at invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should restate the IC payable ICV-SA-018960 to the invoice-date rate and book the 852.23 USD difference through FX or cost, unless group policy confirms budget-rate booking is acceptable.",
+  "adjustment_amount": 852.23,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-SA IC payable and debit the related cost or FX line by 852.23 USD equivalent so the SAR balance reflects the invoice-date rate instead of the 2026 budget rate.",
+  "model_requests_review": true,
+  "review_reason": "Buyer used the 2026 budget rate rather than the invoice-date rate; the group controller should confirm whether budget-rate booking is an approved policy for intercompany postings."
+ }
+}

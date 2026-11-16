@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 442,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.48,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77523 (AUD 20,290.00) and NIG-US:4471161 (AUD 20,290.00) match in currency, amount and project P-23110, with ratio 1.0 and the invoice reference found on the buyer line. The USD amounts differ (13,472.97 vs 13,621.69), but evidence shows a 0.0 difference at the invoice-date rate, so this is only a translation-rate difference on the group reporting basis, not a true mismatch. The seller line's counterparty is 'Head Office Denver' (unresolved), though the buyer booked it against NIG-AU, so the seller-side counterparty coding may need review.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU confirm and correct the counterparty on line 77523 from 'Head Office Denver' to NIG-US, then treat the pair as matched in AUD.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pair matches in AUD with no real difference. The only anomaly is the seller's unresolved counterparty label 'Head Office Denver', which does not map cleanly to any category and needs confirmation that it points to NIG-US."
+ }
+}

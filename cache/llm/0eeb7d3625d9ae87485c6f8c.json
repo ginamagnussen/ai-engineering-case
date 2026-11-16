@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 514,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.58,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.55,
+  "explanation": "NIG-AU:77512 (AUD 33,590, USD 22,141.18) and NIG-US:4471111 (AUD 33,590, USD 22,260.09) agree in transaction currency, with a buyer-to-seller ratio of 1.0 and both lines in period, one day apart. The only gap is about USD 118.91 in the USD translation, which points to a different rate basis (NIG-US booked at a rate other than the invoice-date rate); the buyer line also carries a different reference format (auic20260723 vs AU/IC/2026/0729), so the match is not confirmed by invoice reference.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm the two lines relate to the same invoice, then have NIG-US revalue the AUD 33,590 payable at the invoice-date rate to clear the USD translation difference.",
+  "adjustment_amount": 118.91,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-US IC payable NIG-US:4471111 from the booked rate to the invoice-date rate, reducing the USD payable by 118.91 with an offset to FX gain/loss.",
+  "model_requests_review": true,
+  "review_reason": "The invoice reference was not found on the buyer line and the references differ (AU/IC/2026/0729 vs auic20260723); the seller counterparty 'Head Office Denver' is unresolved. A human should verify these are the same invoice and that the difference is purely rate-driven."
+ }
+}

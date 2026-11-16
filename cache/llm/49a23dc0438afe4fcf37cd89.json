@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 838,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.69,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked IC payable ICV-SA-018834 at GBP 2,128.00 against NIG-UK receivable 1900045238 at GBP 2,240.00 for the same secondment invoice P-24088 (reference 9000010783), a ratio of 0.95 that matches the 5% Saudi WHT rate, and the buyer description explicitly says 'net of WHT 5%'. The GBP 112.00 gap is therefore withheld tax that NIG-SA should have grossed up, not a keying error or dispute, and both lines are in period.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the payable to GBP 2,240.00, record the GBP 112.00 as Saudi WHT payable to ZATCA, and confirm the WHT certificate is on file before the October close.",
+  "adjustment_amount": 112.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Dr IC services expense (secondment) GBP 112.00 / Cr WHT payable (Saudi tax authority) GBP 112.00 in NIG-SA, so that the IC payable equals the GBP 2,240.00 invoiced by NIG-UK.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

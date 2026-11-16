@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2404,
+  "output": 1061,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.77,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "NIG-AE booked a second IC payable line ICV-AE-031254 for 14,800 USD against INV-US-100392, the same reference already matched in M0219 via ICV-AE-031240 (posted 2026-10-10). No unmatched NIG-US seller line of 14,800 exists; the nearest seller line (NIG-US:4471046, 1,760 USD, INV-US-100430) is a different invoice and is not a match.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm that ICV-AE-031240 carries the same 14,800 USD amount for INV-US-100392, then reverse ICV-AE-031254 in NIG-AE as a duplicate posting.",
+  "adjustment_amount": -14800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reverse the duplicate IC payable line ICV-AE-031254 (14,800 USD, INV-US-100392) in NIG-AE so the invoice is carried once.",
+  "model_requests_review": true,
+  "review_reason": "The twin line ICV-AE-031240's amount is not shown in the case, so the duplicate match cannot be fully verified from the evidence."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2585,
+  "output": 1121,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.91,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both lines reference P-24017 (reference 9000010893) and the counterparties match. NIG-DE booked the GBP 50,250.00 invoice from NIG-UK as EUR 54,828.96, an implied rate of 1.091124 that equals the 2026 budget rate exactly (0.0% deviation), while it sits about 8.7% from the invoice-date daily rate. The USD difference at invoice-date rate is 5,563.82.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should confirm whether the IC payable should be restated to the invoice-date rate, with the 5,563.82 USD FX difference posted in its books, or whether the group's budget-rate policy for IC charges applies and the difference is accepted.",
+  "adjustment_amount": 5563.82,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Restate NIG-DE IC payable (P-24017) from the 2026 budget rate to the invoice-date rate, adjusting the EUR payable and recognising the FX difference of 5,563.82 USD, unless the group accepts budget-rate booking.",
+  "model_requests_review": true,
+  "review_reason": "The buyer used the budget rate, so whether the group's IC policy requires invoice-date rates or accepts budget rates is a judgement call for the group controller."
+ }
+}

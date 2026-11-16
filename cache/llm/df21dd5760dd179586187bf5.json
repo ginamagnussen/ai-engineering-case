@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2604,
+  "output": 478,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.3,
+ "output": {
+  "category": "wht",
+  "confidence": 0.55,
+  "explanation": "NIG-UK invoiced GBP 210,780.00 (NIG-UK:1900045367, USD 271,524.69) for QA/QC inspection under P-24017. NIG-SA booked SAR 968,693.25 (NIG-SA:ICV-SA-018979, USD 258,321.43) with the same reference 9000010966, so the USD gap is 13,203.26 and the ratio of 0.95137 is consistent with 5% Saudi WHT on services. However, the SAR implied rate of 4.595755 matches the 2026 budget rate exactly (0.0% deviation), so the gap is equally explained by the buyer translating at the budget rate instead of the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm whether SAR 968,693.25 was translated at the budget rate or reduced by 5% WHT, and rebook at the invoice-date rate or record the WHT receivable accordingly.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Evidence supports both fx_difference (implied rate equals the budget rate exactly) and wht (ratio ~5%); the buyer's booking basis cannot be verified from the case data, and a WHT assertion would need supporting certificates."
+ }
+}

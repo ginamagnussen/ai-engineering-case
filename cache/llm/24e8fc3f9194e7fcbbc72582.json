@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2481,
+  "output": 433,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.3,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "Buyer line NIG-SA:ICV-SA-019055 (AED 360,741.60) is 95% of seller line NIG-AE:ICV-AE-031434 (AED 379,728.00), which matches a 5% withholding rate. The buyer description states 'net of WHT 5%', the invoice reference AE-ICINV-00576 matches, and both lines are in period in the same currency. The difference is USD 5,169.81 at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable by the withheld AED 18,986.40 and book it to a WHT payable account, with the WHT certificate retained as support.",
+  "adjustment_amount": 18986.4,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr expense/IC clearing and Cr WHT payable AED 18,986.40 at NIG-SA, so the IC payable is restored to the invoiced AED 379,728.00.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that WHT applies to this recharge. A 5% rate is consistent with services, but NIG-SA is booking it against a UAE seller, and the WHT liability needs tax team confirmation."
+ }
+}

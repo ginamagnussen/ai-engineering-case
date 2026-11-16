@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 1140,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.51,
+ "output": {
+  "category": "other",
+  "confidence": 0.4,
+  "explanation": "Seller line NIG-AE:ICV-AE-031334 invoices 37,000 AED (AE-ICINV-00488, project P-25019), while buyer line NIG-SA:ICV-SA-019017 books 31,350 AED (ratio 0.8473, gap 5,650 AED or 1,538.44 USD) described as net of 5% WHT, but 5% WHT would give 35,150 AED and the ratio is not consistent with the withholding rate. The buyer line also cites a different person and project (J.Becker, P-24017) and does not carry the invoice reference, so it may relate to another charge.",
+  "responsible_entity": "both",
+  "recommended_action": "Obtain the supporting documents for AE-ICINV-00488 and AE-ICINV-00565 to confirm which secondment (P-25019 or P-24017) each side refers to, and confirm whether any WHT was actually withheld before deciding on a correction.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The WHT description does not reconcile to the amount, the buyer line references a different employee and project than the seller invoice, and the invoice reference is missing on the buyer side, so the cause cannot be verified from the evidence."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2646,
+  "output": 512,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.05,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-SA line ICV-SA-018855 (SAR 14,800 / USD 3,946.72, ref SA-ICINV-00538, secondment Fatima Wang, P-24102) has no buyer line at NIG-AE. No lines elsewhere share the reference, and the two nearest unmatched NIG-AE payables (ICV-AE-031254 USD 14,800 for H.Brown with a US reference, and ICV-AE-031332 SAR 97,524) are different invoices, counterparties and projects. The USD 14,800 coincidence in face amount is not a match since it belongs to NIG-US.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm receipt of invoice SA-ICINV-00538 and book the IC payable of SAR 14,800 for the P-24102 secondment in October, or in November if it is received after cut-off.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "At NIG-AE, debit secondment expense for P-24102 and credit IC payable to NIG-SA for SAR 14,800 (USD 3,946.72) against ref SA-ICINV-00538.",
+  "model_requests_review": true,
+  "review_reason": "Cannot rule out timing (invoice booked by NIG-AE after period end) versus a truly missing booking; the NIG-AE unmatched lines searched do not confirm either."
+ }
+}

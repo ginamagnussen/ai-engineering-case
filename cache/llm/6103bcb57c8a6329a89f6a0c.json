@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 427,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.79,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77422 (AUD 1,320.00, receivable) and NIG-US:4471048 (AUD 1,320.00, payable) agree in amount, currency, project P-24088 and invoice reference, with a 4-day posting gap, both in period. The only visible difference is USD 871.90 vs 867.17 from translation rates. The seller line names the counterparty 'Head Office Denver', which could not be resolved to an entity, while the buyer line resolves to NIG-AU via master data. This looks like a matched pair that fell out because of the counterparty label, not a true economic difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU map 'Head Office Denver' to NIG-US in its legacy SCE ledger counterparty master data and confirm the pair as matched.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No category fits cleanly: the amounts agree and the issue is an unresolved counterparty label on the seller side. A human should confirm that 'Head Office Denver' means NIG-US and that the USD difference of 4.73 is only translation-rate noise."
+ }
+}

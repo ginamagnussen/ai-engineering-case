@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2944,
+  "output": 466,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.52,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031208 (AED 181,224, ref AE-ICINV-00599, QA/QC inspection P-25031) has no buyer booking at NIG-SA. No lines elsewhere share the reference, and none of the 4 unmatched NIG-SA lines fits: the nearest are ICV-SA-018876 (AED 162,504, ratio 0.8967, NIG-UK, different reference) and ICV-SA-019058 (AED 136,944, NIG-AE, different project and reference). The GBP 6,600 accrual ICV-SA-019050 is for the same project P-25031 but is a UK structural calcs accrual against NIG-UK, so it is not a match.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm receipt of invoice AE-ICINV-00599 and book the IC payable of AED 181,224 to NIG-AE for the October period.",
+  "adjustment_amount": 181224.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, debit project cost (P-25031 QA/QC inspection) and credit IC payable to NIG-AE for AED 181,224, referencing AE-ICINV-00599.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

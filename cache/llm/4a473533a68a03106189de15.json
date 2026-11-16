@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2872,
+  "output": 1406,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.58,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.6,
+  "explanation": "NIG-AU line NIG-AU:77454 invoices AUD 39,400 (USD 26,013.85) for project P-25002 geotech analysis, but no NIG-US payable matches it. The three nearest NIG-US candidates are a SAR accrual for P.Becker seconded staff on the same project code (NIG-US:4471173, USD 21,280.27, booked to NIG-SA), a GBP seconded-staff payable (NIG-US:4471200), and an SAR accrual for O.Fischer (NIG-US:4471184); none has the amount or the description of the AU geotech invoice.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm whether the P-25002 geotech recharge from NIG-AU was received and, if valid, book the IC payable to NIG-AU, while checking whether the P-25002 accrual (NIG-US:4471173) was meant for this invoice or is a separate seconded-staff cost.",
+  "adjustment_amount": 26013.85,
+  "adjustment_currency": "USD",
+  "adjustment_description": "If confirmed, NIG-US books an IC payable to NIG-AU of AUD 39,400 (USD 26,013.85 at the seller's rate) for the P-25002 geotech analysis recharge.",
+  "model_requests_review": true,
+  "review_reason": "The seller line is unmatched, and the only same-project buyer line (NIG-US:4471173) is a different cost to a different counterparty in a different amount, so the link cannot be verified. The AU ledger is a legacy SCE system, and the buyer's 'invoice not received' accrual is unresolved, so a human should decide whether this is missing_buyer, miscoded_counterparty, or timing."
+ }
+}

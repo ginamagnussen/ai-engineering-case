@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2917,
+  "output": 1173,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.24,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.8,
+  "explanation": "NIG-SA invoice ICV-SA-018861 (SA-ICINV-00562, 159,600 SAR, secondment P-25031) has a buyer line NIG-AU:77468 with the same reference, currency, amount (ratio 1.0) and posting period, but it is booked against 'Head Office Denver', which cannot be resolved to an intercompany partner. The search also reports no lines elsewhere with this reference, which conflicts with the buyer line appearing in the candidate list and needs confirmation.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that NIG-AU:77468 is the booking of SA-ICINV-00562 and reclassify its counterparty from Head Office Denver to NIG-SA in the Legacy SCE ledger so it matches the seller line.",
+  "adjustment_amount": 159600.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the IC payable of 159,600 SAR on NIG-AU:77468 from the Head Office Denver counterparty to NIG-SA; no net P&L or balance change at group level.",
+  "model_requests_review": true,
+  "review_reason": "Counterparty as booked is unresolved and the reference-match evidence is internally inconsistent (candidate line listed but no same-reference lines elsewhere), so a controller should confirm the pairing in the legacy ledger before posting the reclass."
+ }
+}

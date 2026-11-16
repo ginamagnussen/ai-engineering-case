@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2620,
+  "output": 1064,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.41,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.82,
+  "explanation": "Both lines reference AE-ICINV-00511 and are in period, with the counterparty correctly resolved to NIG-AE. NIG-AU booked AUD 19,449.29 against AED 49,500, an implied rate of 0.392915 that exactly matches the 2026 budget rate, while the invoice-date rate gives a 3.86% deviation and a USD 520.26 difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm with group finance whether IC payables may be carried at the 2026 budget rate; if not, revalue NIG-AU's payable to the invoice-date rate and book the USD 520.26 translation difference.",
+  "adjustment_amount": 520.26,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU IC payable (AUD) from budget rate to invoice-date rate, recognising a USD 520.26 FX difference, only if group policy requires invoice-date rates.",
+  "model_requests_review": true,
+  "review_reason": "The match to the budget rate is exact, so whether this is an accepted translation policy or an error to correct depends on a group policy decision that cannot be verified from the case evidence."
+ }
+}

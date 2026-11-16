@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 489,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.87,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-DE line NIG-DE:5100873432 shows EUR 13,810.00 for RE-2026-000380, while buyer NIG-SA line NIG-SA:ICV-SA-018966 shows EUR 13,119.50, described as 'net of WHT 5%'. The buyer/seller ratio of 0.95 matches a 5% withholding rate, and the USD difference is 740.15 at the invoice-date rate. The invoice reference, counterparty and posting date all agree, so this is not an FX, timing or miscoding issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm the WHT certificate and the 5% rate applies to this service, then record the withheld EUR 690.50 as a WHT receivable or payable to NIG-DE so the IC balance clears.",
+  "adjustment_amount": 690.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Gross up NIG-SA IC payable by EUR 690.50 against the WHT liability/receivable account so the IC payable equals the seller's invoice of EUR 13,810.00.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that WHT at 5% is applicable to environmental survey services between NIG-SA and NIG-DE and that a WHT certificate exists, since the rate and treatment cannot be verified from the ledger evidence."
+ }
+}

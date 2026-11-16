@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2480,
+  "output": 926,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.17,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked ICV-SA-018892 at AED 47,948.40 against NIG-AE's AED 50,472.00 receivable on AE-ICINV-00620, a ratio of 0.95 that matches the 5% Saudi services WHT on P-23110 (the invoice reference is found on the buyer line). The AED 2,523.60 gap is the withheld tax, which the buyer netted from the payable instead of recording it as a WHT liability, and the USD effect at invoice-date rate is 687.15.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up the NIG-SA IC payable to AED 50,472.00 and book the AED 2,523.60 withheld amount as a Saudi WHT liability, then confirm the treatment with local tax before the October close.",
+  "adjustment_amount": 2523.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr IC payable (NIG-AE) 2,523.60 AED / Cr Saudi WHT payable 2,523.60 AED on NIG-SA ledger, grossing the payable up to the 50,472.00 AED invoice amount.",
+  "model_requests_review": true,
+  "review_reason": "The amount and pattern match WHT, but whether NIG-SA can recover the withheld tax and how NIG-AE should treat it cannot be verified from the case alone; a WHT certificate or tax confirmation is needed."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 478,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.06,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-SA payable NIG-SA:ICV-SA-019011 (EUR 75,249.50) is 95% of NIG-DE receivable NIG-DE:5100873457 (EUR 79,210.00), same reference RE-2026-000336. The buyer description states 'net of WHT 5%', matching the ratio, leaving a USD 4,232.19 difference at the invoice-date rate. Both lines are in period and counterparties resolve correctly.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the 5% withholding tax as a liability to the tax authority and gross up the IC payable to EUR 79,210.00, with proof of WHT remittance or certificate sent to NIG-DE.",
+  "adjustment_amount": 3960.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Dr WHT expense/receivable (or cost) and Cr IC payable NIG-DE EUR 3,960.50 at NIG-SA to restore the gross payable and record the WHT liability; NIG-DE recognises the WHT as a tax credit if applicable.",
+  "model_requests_review": true,
+  "review_reason": "Confirm WHT applicability and rate on QA/QC inspection services (5% services rate) between a German seller and Saudi buyer, and the treatment of the WHT credit/cost, before posting."
+ }
+}

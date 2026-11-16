@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2925,
+  "output": 740,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.47,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-DE booked IC receivable NIG-DE:5100873496 for EUR 86,980.00 (USD 94,469.85) against NIG-SA, ref RE-2026-000365, posted 2026-10-29 for the P-24088 design review recharge. No NIG-SA line carries this reference. None of the 3 unmatched NIG-SA payables fits: they are booked to NIG-AE, NIG-UK and NIG-US, with ratios of 0.39, 0.09 and 0.03 to the target. No post-period buyer posting was found either, so NIG-SA appears not to have booked the invoice at all.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm receipt of invoice RE-2026-000365 from NIG-DE and book the IC payable in the October 2026 period, or explain why it has not.",
+  "adjustment_amount": 86980.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-SA: debit project cost (P-24088 design review), credit IC payable to NIG-DE, EUR 86,980.00, ref RE-2026-000365. Apply any Saudi WHT on services at payment, not by reducing the payable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

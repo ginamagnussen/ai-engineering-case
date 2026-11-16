@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2360,
+  "output": 816,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.52,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-DE line NIG-DE:5100873391 (invoice RE-2026-000360, EUR 90,190, USD 96,165.99) has no matching NIG-UK IC payable, and the buyer search found no lines with the same reference. The only nearby unmatched NIG-UK line, NIG-UK:1900045511, is an AED 126,000 accrual to NIG-AE (ACCR-OCT26, ratio 0.3568), which has a different counterparty, currency and reference, so it does not explain this invoice.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm whether invoice RE-2026-000360 was received and, if so, to book the EUR 90,190 IC payable to NIG-DE in October 2026.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

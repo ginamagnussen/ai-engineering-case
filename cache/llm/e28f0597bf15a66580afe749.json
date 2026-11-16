@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2425,
+  "output": 539,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.63,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-SA line ICV-SA-018943 carries invoice reference INV-US-100374 and the same USD 14,440.00 as NIG-US line 4471068, so the amounts match exactly (ratio 1.0, zero difference). The buyer booked the payable against NIG-UK (master data resolved) while the seller invoiced NIG-US, and the posting was 6 days apart within the period.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to reclassify ICV-SA-018943 from NIG-UK to NIG-US in Dynamics 365 F&O so the IC payable matches the NIG-US receivable.",
+  "adjustment_amount": 14440.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify IC payable of USD 14,440.00 (ref INV-US-100374, Secondment M. Smith P-25019) in NIG-SA from counterparty NIG-UK to NIG-US.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2916,
+  "output": 401,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.49,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.85,
+  "explanation": "NIG-DE line NIG-DE:5100873496 (EUR 86,980 / USD 94,469.85, ref RE-2026-000365, project recharge P-24088 design review) has no NIG-SA booking. Counterparty SA01 resolves to NIG-SA, no lines with the same reference exist elsewhere, and none of the 4 unmatched NIG-SA lines searched (nearest are AE/UK subcontract items and a GBP accrual for other projects) fit by amount, project or counterparty.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm receipt of invoice RE-2026-000365 and book the IC payable of EUR 86,980 for P-24088, or confirm it was posted after period end.",
+  "adjustment_amount": 86980.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-SA to book IC payable to NIG-DE of EUR 86,980 (Dr project cost / Cr IC payable NIG-DE) for invoice RE-2026-000365.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

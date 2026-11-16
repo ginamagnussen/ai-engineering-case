@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2906,
+  "output": 302,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 2.88,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.93,
+  "explanation": "NIG-US line NIG-US:4471184 is an IC payable of SAR 33,000 (USD 8,800.11), described as an accrual for seconded staff O.Fischer on P-24050 with the invoice not received, posted 2026-10-31. None of the three unmatched NIG-SA receivables (ICV-SA-018847, -018855, -018937) match it by amount, description or counterparty, so NIG-SA has not invoiced it.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to issue the secondment invoice for O.Fischer on P-24050, and keep the NIG-US accrual in place until it is received.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

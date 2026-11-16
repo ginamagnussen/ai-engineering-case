@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 398,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.16,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-UK receivable NIG-UK:1900045408 (GBP 45,900, ref 9000010879) is against NIG-AE, but NIG-AE's payable NIG-AE:ICV-AE-031359 for the same GBP 45,900 and the same invoice reference is booked against NIG-SA instead of NIG-UK. Amounts and currency match (ratio 1.0, USD difference nil), so the only break is the wrong IC partner on the buyer line.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should recode payable NIG-AE:ICV-AE-031359 from counterparty NIG-SA to NIG-UK so it matches NIG-UK:1900045408.",
+  "adjustment_amount": 45900.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclassify the IC payable of GBP 45,900 in NIG-AE from NIG-SA to NIG-UK; no P&L impact. NIG-SA should confirm it has no matching IC balance for this item.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

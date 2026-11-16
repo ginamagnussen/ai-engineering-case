@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 1142,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.36,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "NIG-AE line ICV-AE-031305 invoices 57,000 AED (AE-ICINV-00483, P-24017), and NIG-SA line ICV-SA-018978 books 54,150 AED, which is exactly 95% of the invoice and is described as net of 5% WHT. The 776.03 USD gap at the invoice-date rate is therefore the withholding tax, not an FX or keying error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm that the 2,850 AED Saudi WHT was recorded as a tax payable and remitted, then have NIG-SA gross up its IC payable to 57,000 AED so it matches NIG-AE's receivable.",
+  "adjustment_amount": 2850.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Gross up NIG-SA IC payable by 2,850 AED (5% WHT) to 57,000 AED and record the 2,850 AED as Saudi WHT payable to the tax authority, unless it is already recorded in a tax liability account.",
+  "model_requests_review": true,
+  "review_reason": "The evidence supports WHT, but I cannot verify from the case whether the 2,850 AED withholding was already recorded in a tax liability account or remitted, so the tax-side entry needs confirmation."
+ }
+}

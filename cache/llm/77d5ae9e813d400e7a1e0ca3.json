@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 1133,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.13,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.55,
+  "explanation": "Seller line NIG-AE:ICV-AE-031244 (AED 162,504, project P-24017 Riyadh Metro, ref AE-ICINV-00592) has no matching buyer booking, since the invoice reference was not found on any NIG-SA line. The only NIG-SA line from NIG-AE, NIG-SA:ICV-SA-018823 (AED 118,224, ref AE-ICINV-00599, project P-25031 QA/QC), references a different invoice and project, and the ratio of 0.72751 matches no withholding rate, so it is not a split, WHT, or FX case.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm with NIG-SA whether invoice AE-ICINV-00592 for P-24017 was received and should be booked, and whether the AED 118,224 line for P-25031 belongs to a separate invoice that needs its own seller match.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer line may belong to a different seller invoice (AE-ICINV-00599) that is outside this case, and the evidence does not show whether the P-24017 invoice was rejected, accrued under another reference, or simply not booked, so a human must decide between missing buyer booking and an invoice-matching error."
+ }
+}

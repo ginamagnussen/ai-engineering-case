@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2488,
+  "output": 1140,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.74,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "Seller NIG-AE line ICV-AE-031242 invoices 296,532.00 AED under reference AE-ICINV-00574, and buyer NIG-SA line ICV-SA-018857 books 281,705.40 AED against the same reference, which is exactly 0.95 of the invoice. The buyer description states 'net of WHT 5%', and the 5% ratio matches the Saudi services withholding rate, so the 14,826.60 AED gap is withholding tax rather than an error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to 296,532.00 AED and record the 14,826.60 AED withheld as a Saudi WHT payable to be remitted to ZATCA, then confirm the WHT certificate is available for NIG-AE.",
+  "adjustment_amount": 14826.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr IC payable (NIG-AE) / Cr Saudi WHT payable 14,826.60 AED, or equivalently gross up the expense and IC payable to the invoice amount with the withheld 5% held as WHT payable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

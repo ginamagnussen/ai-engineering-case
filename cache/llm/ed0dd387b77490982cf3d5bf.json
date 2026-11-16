@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 743,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.65,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-UK's IC receivable (line NIG-UK:1900045408, GBP 45,900) matches NIG-AE's IC payable (line NIG-AE:ICV-AE-031359, GBP 45,900) on reference 9000010879 and project P-24102, with a buyer-to-seller ratio of 1.0. NIG-AE booked the payable against NIG-SA (AE01 resolved to NIG-SA) instead of the expected counterparty NIG-UK, and the USD gap of about 18.36 is only translation on posting dates, with zero difference at the invoice-date rate.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to reclassify the GBP 45,900 payable from NIG-SA to NIG-UK in Dynamics 365 F&O before close so the pair matches.",
+  "adjustment_amount": 45900.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclassify IC payable ICV-AE-031359 from counterparty NIG-SA to NIG-UK (GBP 45,900); no P&L or FX correction needed.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

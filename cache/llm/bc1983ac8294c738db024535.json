@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 476,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.92,
+ "output": {
+  "category": "other",
+  "confidence": 0.4,
+  "explanation": "Seller NIG-AE:ICV-AE-031244 (AED 162,504, ref AE-ICINV-00592, project P-24017 Riyadh Metro structural calcs) is paired with buyer NIG-SA:ICV-SA-018823 (AED 118,224, ref AE-ICINV-00599, project P-25031 QA/QC inspection). The references, project codes and descriptions all differ, so these look like two different invoices rather than one invoice with an amount difference. The ratio of 0.72751 and the USD gap of 12,057 fit no WHT rate, FX effect (both lines are in AED) or typo pattern.",
+  "responsible_entity": "both",
+  "recommended_action": "Have NIG-AE and NIG-SA confirm whether AE-ICINV-00592 has been booked by NIG-SA at all, and whether AE-ICINV-00599 has a separate seller line, before any adjustment is posted.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pairing looks spurious: the invoice references and project codes differ and the buyer line does not reference the seller invoice. The seller invoice is likely unbooked by the buyer (missing_buyer) and the buyer line likely belongs to another seller invoice, but this cannot be verified from the evidence."
+ }
+}

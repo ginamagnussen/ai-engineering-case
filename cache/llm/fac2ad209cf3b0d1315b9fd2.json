@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2450,
+  "output": 970,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.11,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK booked a GBP 22,110.00 IC receivable (line NIG-UK:1900045272) and NIG-SA booked GBP 21,004.50 (line NIG-SA:ICV-SA-018856) against the same reference 9000010909, with the description stating 'net of WHT 5%'. The buyer-to-seller ratio of 0.95 matches a 5% withholding rate, and the GBP 1,105.50 gap is the withheld amount.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the IC payable to GBP 22,110.00, record GBP 1,105.50 as Saudi WHT payable (or tax receivable if recoverable), and confirm the WHT certificate is on file.",
+  "adjustment_amount": 1105.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable by GBP 1,105.50 to match the seller invoice and book the same amount as WHT liability to the Saudi tax authority.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

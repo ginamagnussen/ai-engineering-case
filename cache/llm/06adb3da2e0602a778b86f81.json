@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2872,
+  "output": 497,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.33,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-AU line NIG-AU:77454 (AUD 39,400, about USD 26,014, ref AU/IC/2026/0739) for project P-25002 has no buyer line at NIG-US. The three unmatched NIG-US payables searched do not fit: they differ in amount (ratios 0.83, 0.82, 0.34), counterparty (NIG-UK, NIG-SA) and currency, and the same reference appears nowhere else. NIG-US:4471173 references P-25002, but it is an accrual for seconded staff booked against NIG-SA, so it is not this AU charge.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to confirm receipt of invoice AU/IC/2026/0739 and book the AUD 39,400 IC payable to NIG-AU, or confirm if it was received and booked elsewhere.",
+  "adjustment_amount": 39400.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "NIG-US to book Dr project cost / Cr IC payable NIG-AU for AUD 39,400 against invoice AU/IC/2026/0739.",
+  "model_requests_review": true,
+  "review_reason": "Possible cut-off timing or a booking under the wrong project or partner cannot be excluded from the evidence. The shared project code P-25002 with the NIG-SA accrual is a weak link and needs buyer confirmation."
+ }
+}

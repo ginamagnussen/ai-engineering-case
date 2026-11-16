@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2918,
+  "output": 434,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.58,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "Buyer line NIG-AE:ICV-AE-031332 (SAR 97,524.00, ref saicinv00614, P-23110 design review) has no matched seller line, but unmatched seller line NIG-SA:ICV-SA-018937 (SAR 97,524.00, ref SA-ICINV-00610, same project and description) matches exactly on amount, currency and project. Both are in period and resolve to the correct counterparties, so the only discrepancy is the reference number (00614 vs 00610), which looks like a keying error in the reference rather than an amount or coding problem.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm with NIG-SA that SA-ICINV-00610 is the invoice booked by NIG-AE as saicinv00614, then correct the buyer reference so the pair matches.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pairing is based on amount and project match, but the invoice references differ (00610 vs 00614), so it must be confirmed that no separate invoice 00614 exists before matching manually. No category fits cleanly, as this is a reference mismatch rather than an amount difference."
+ }
+}

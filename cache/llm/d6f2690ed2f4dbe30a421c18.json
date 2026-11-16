@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2944,
+  "output": 1018,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.31,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031208 (AE-ICINV-00599, 181,224 AED, 49,345.48 USD, P-25031 QA/QC inspection, posted 2026-10-05) has no matching NIG-SA payable. None of the four unmatched NIG-SA lines matches on amount or reference: the closest is NIG-SA:ICV-SA-018876 at 162,504 AED (ratio 0.8967), and the P-25031 accrual NIG-SA:ICV-SA-019050 is 6,600 GBP to NIG-UK, not NIG-AE.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm whether invoice AE-ICINV-00599 was received and book the IC payable to NIG-AE in October 2026 if it was, or explain the absence if not.",
+  "adjustment_amount": 181224.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA to book an IC payable to NIG-AE for 181,224 AED (49,345.48 USD) for P-25031 QA/QC inspection, invoice AE-ICINV-00599, if the invoice is confirmed as received.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

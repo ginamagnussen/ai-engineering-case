@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2594,
+  "output": 465,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.89,
+ "output": {
+  "category": "other",
+  "confidence": 0.4,
+  "explanation": "Buyer line NIG-AE:ICV-AE-031415 (SAR 390,456, about USD 104,122.90) against NIG-UK has no seller line. Of the two unmatched NIG-UK receivables, NIG-UK:1900045276 shares project P-23110 but is a GBP 25,200 secondment (USD 32,015, ratio 0.31), and neither matches in amount or description. The reference SA-ICINV-00595 and the 'subcontract SA' wording suggest a Saudi-originated charge that may have been recharged or invoiced by another entity, so this could be missing_buyer in reverse (seller not invoiced) or an accrual, but that cannot be verified.",
+  "responsible_entity": "both",
+  "recommended_action": "Ask NIG-UK and NIG-AE to confirm whether NIG-UK issued an invoice for SA-ICINV-00595 (P-23110 geotech subcontract) or whether the charge originates from a Saudi entity or is an accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No seller line matches the buyer payable; the evidence supports several explanations (uninvoiced accrual, wrong counterparty, missing seller booking) and cannot be verified from the ledger data."
+ }
+}

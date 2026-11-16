@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2465,
+  "output": 419,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.89,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-AU payable line NIG-AU:77468 (SAR 159,600.00, USD 42,560.53) carries the NIG-SA invoice reference SA-ICINV-00562 and matches seller line NIG-SA:ICV-SA-018861 exactly (ratio 1.0, zero USD difference), but it is booked against 'Head Office Denver' instead of NIG-SA. The amount and timing agree, and both lines are in period, so the only break is the counterparty coding on the buyer side.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclass payable line NIG-AU:77468 from the 'Head Office Denver' counterparty to NIG-SA so it matches invoice SA-ICINV-00562.",
+  "adjustment_amount": 159600.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the IC payable of SAR 159,600.00 on NIG-AU:77468 from counterparty 'Head Office Denver' to counterparty NIG-SA. This is a counterparty reclass only, with no change to the amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

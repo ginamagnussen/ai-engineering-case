@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2542,
+  "output": 503,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.88,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.8,
+  "explanation": "NIG-UK invoice 9000010733 (NIG-UK:1900045520) is GBP 21,500 = USD 27,702.53 at the invoice-date rate, while NIG-US booked USD 26,349.32 (NIG-US:4471190) under the same reference. The buyer's implied rate of 1.22555 matches the 2026 budget rate exactly (0.0% deviation) and is 4.885% below the invoice-date, posting-date and month-end rates, leaving a USD 1,353.21 difference. The 0.95115 ratio is close to the 5% WHT ratio, but the exact budget-rate match makes FX the better explanation.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US rebook the payable at the invoice-date rate instead of the budget rate and confirm with NIG-US that no withholding tax was applied.",
+  "adjustment_amount": 1353.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase the NIG-US IC payable to NIG-UK by USD 1,353.21 (to GBP 21,500 at the invoice-date rate) and book the offset to FX difference.",
+  "model_requests_review": true,
+  "review_reason": "The 0.95115 ratio is also close to a 5% withholding rate, so WHT cannot be fully ruled out. The budget-rate match strongly favours FX, but NIG-US should confirm that no tax was withheld."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2602,
+  "output": 430,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.31,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-AU:77425 (AUD 5,040.00, USD 3,329.07) and NIG-DE:5100873331 (EUR 3,109.62, USD 3,323.87) carry the same invoice reference AU/IC/2026/0671 and the same project P-24017. The buyer's implied AUD/EUR rate of 0.616988 matches the 2026 budget rate exactly (0.0% deviation), whereas the invoice-date rate deviates by 0.945%, so the residual USD difference of -31.47 at invoice-date rates is a rate-basis effect, not a business difference.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to revalue the payable at the invoice-date rate instead of the 2026 budget rate, and clear the residual FX difference.",
+  "adjustment_amount": 31.47,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue the NIG-DE IC payable from the budget rate to the invoice-date rate, with the difference of about USD 31.47 posted to FX gain/loss, so the payable agrees to the seller's AUD 5,040.00 receivable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

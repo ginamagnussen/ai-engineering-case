@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2435,
+  "output": 804,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.8,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-US invoice INV-US-100439 (line NIG-US:4471103) was booked at 16,800 USD, while NIG-SA booked 15,960 USD (line NIG-SA:ICV-SA-018986), a ratio of 0.95 that matches the 5% Saudi services withholding rate. The buyer's description states 'net of WHT 5%', and the 840 USD gap equals the withheld amount, so no other category fits.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Post a correcting entry in Dynamics 365 F&O to gross up the NIG-SA expense to 16,800 USD, record the 840 USD as WHT payable to the tax authority, and confirm the WHT certificate and remittance are on file.",
+  "adjustment_amount": 840.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Dr expense 840 USD / Cr WHT payable 840 USD in NIG-SA so the IC payable matches the gross invoice of 16,800 USD owed to NIG-US.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

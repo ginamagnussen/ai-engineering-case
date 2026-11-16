@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2459,
+  "output": 720,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.22,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031237 invoices 66,000 AED (17,971.14 USD) for secondment P-25019, but NIG-US line NIG-US:4471051 books only 48,781.62 AED (13,282.75 USD), a buyer-to-seller ratio of 0.73912. The buyer's description says it partially accepted the charge and disputes the hours pending PM approval, and the 4,688.39 USD gap is not explained by FX, WHT, timing or a counterparty error, so it is a deliberate under-booking.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Escalate the disputed 17,218.38 AED (about 4,688.39 USD) to the PM approver for P-25019 and keep the balance open in the IC reconciliation until the hours decision is documented.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer has intentionally booked less pending a PM decision on disputed hours, so the outcome depends on a business judgement that the evidence cannot resolve."
+ }
+}

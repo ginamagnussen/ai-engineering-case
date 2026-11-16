@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2423,
+  "output": 848,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.2,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-US line NIG-US:4471151 invoices a Oct-26 management fee of 71,000 USD (INV-US-100343), while NIG-SA line NIG-SA:ICV-SA-019052 books 56,800 USD described as net of 20% WHT. The buyer-to-seller ratio of 0.8 and the 14,200 USD difference (exactly 20% of 71,000) match the Saudi management-fee withholding rate, and the invoice reference is found on the buyer line.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to 71,000 USD and record the 14,200 USD withholding as a WHT payable to the Saudi tax authority, with the WHT certificate retained for NIG-US.",
+  "adjustment_amount": 14200.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-SA IC payable by 14,200 USD to the gross invoice amount of 71,000 USD, and credit a WHT payable of 14,200 USD (Dr management fee expense or IC payable, Cr WHT payable).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

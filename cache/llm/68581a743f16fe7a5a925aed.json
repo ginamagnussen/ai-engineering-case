@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2480,
+  "output": 991,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.96,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031367 invoices 20,988.00 AED for P-25019 and NIG-SA line NIG-SA:ICV-SA-019041 books 19,938.60 AED, a buyer-to-seller ratio of 0.95 that matches the 5% Saudi services withholding rate. The 1,049.40 AED gap (285.74 USD at invoice-date rate) is the WHT deducted, and the buyer's description states 'net of WHT 5%'.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up its IC payable to 20,988.00 AED and record the 1,049.40 AED as WHT payable to the Saudi tax authority, then confirm the WHT certificate is available for NIG-AE.",
+  "adjustment_amount": 1049.4,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr IC expense/cost (P-25019 subcontract) 1,049.40 AED; Cr WHT payable (Saudi tax authority) 1,049.40 AED, so the NIG-SA IC payable to NIG-AE is grossed up to 20,988.00 AED (about 285.74 USD at invoice-date rate).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

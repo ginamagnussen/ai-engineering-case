@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2483,
+  "output": 1297,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.47,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-SA line ICV-SA-019038 is booked at 1,641,600 AED against NIG-AE's receivable ICV-AE-031379 of 1,728,000 AED, and the buyer's description states 'net of WHT 5%'. The ratio of 0.95 is exactly 1 minus the 5% Saudi services WHT rate, so the 86,400 AED gap is withholding tax, not an FX or keying error. The evidence flag says the invoice reference was not found on the buyer line, yet the buyer line's reference field shows AE-ICINV-00609, which conflicts with the computed evidence and needs checking.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm the 5% WHT certificate and ZATCA remittance, then have NIG-SA gross up the IC payable to 1,728,000 AED with 86,400 AED recorded as WHT payable, and have NIG-AE confirm the treatment of its related tax credit.",
+  "adjustment_amount": 86400.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Gross up NIG-SA IC payable by 86,400 AED to 1,728,000 AED and reclassify the 86,400 AED as WHT payable to the Saudi tax authority, subject to confirmation of the WHT treatment.",
+  "model_requests_review": true,
+  "review_reason": "The evidence flag that the invoice reference is absent from the buyer line conflicts with the reference shown on the line, and the group needs to confirm the WHT gross-up and the seller-side tax credit treatment."
+ }
+}

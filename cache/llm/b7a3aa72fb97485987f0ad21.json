@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2433,
+  "output": 407,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.45,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77482 and NIG-US:4471082 both carry AUD 25,080.00 with the same reference AU/IC/2026/0675 and project P-25019, posted two days apart and both in period. The buyer's counterparty resolves to NIG-AU via master data, and the amount ratio is 1.0, so there is no real discrepancy in the transaction. The only USD difference (16,818.40 vs 16,602.21) comes from translation rates, while the invoice-date-rate difference is 0.0.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm the pair as matched and have NIG-AU map the 'Head Office Denver' counterparty on the legacy SCE ledger to NIG-US so the auto-match works next close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No exception category fits: amounts, currency and reference match. The pair was likely unmatched only because the seller's counterparty 'Head Office Denver' is unresolved in the legacy ledger master data, and a human should confirm this and the USD translation variance."
+ }
+}

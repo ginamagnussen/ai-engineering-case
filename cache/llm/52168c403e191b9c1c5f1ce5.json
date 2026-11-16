@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2707,
+  "output": 1032,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.36,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "NIG-DE line NIG-DE:5100873387 (99,000 AED, ref AE-ICINV-00560, P-24017) carries the same invoice reference as NIG-DE:5100873364, which is already matched in M0010 on 2026-10-13. NIG-AE has no unmatched seller line of 99,000 AED; the two nearest seller lines (33,000 AED and 181,224 AED) are different invoices with unrelated ratios.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Reverse the second buyer posting NIG-DE:5100873387 in SAP ECC as a duplicate of AE-ICINV-00560, keeping the matched line NIG-DE:5100873364 in M0010.",
+  "adjustment_amount": -99000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse duplicate IC payable posting of invoice AE-ICINV-00560 (99,000 AED, approx. 26,956.71 USD) in NIG-DE, line NIG-DE:5100873387.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

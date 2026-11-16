@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 499,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.77,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77470 (AUD 7,050.00, USD 4,709.96) and NIG-US:4471097 (AUD 7,050.00, USD 4,708.98) carry the same reference AU/IC/2026/0698 and the same AUD amount, with a ratio of 1.0. Both are in period, and the buyer counterparty resolves to NIG-AU via master data. The only differences are the USD translation of about 0.98, which is a rate-basis rounding effect, and the seller's counterparty text 'Head Office Denver', which could not be resolved. This looks like a matched pair that the rules missed because of a counterparty label mismatch, not a true exception.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU correct the counterparty on line NIG-AU:77470 from 'Head Office Denver' to NIG-US in the legacy SCE ledger mapping, then treat the pair as matched and the USD 0.98 difference as translation rounding.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No category fits cleanly. The seller line's counterparty 'Head Office Denver' is unresolved, so it may be a miscoded counterparty or just a legacy-ledger naming issue. The USD 0.98 difference is immaterial and results from rate translation. A human should confirm the mapping."
+ }
+}

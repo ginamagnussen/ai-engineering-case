@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2620,
+  "output": 1396,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.73,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.72,
+  "explanation": "NIG-AU booked the AED 49,500 secondment invoice (AE-ICINV-00511, line NIG-AU:77521) as AUD 19,449.29 at the 2026 budget rate, which matches the budget basis exactly (0.0% deviation), while the daily rates at invoice and posting dates deviate by -3.86% and -4.18%. The counterparty resolves correctly to NIG-AE and the USD difference at invoice-date rate is 520.26, so the gap is consistent with rate basis. However, the evidence reports no invoice reference on the buyer line even though the reference AE-ICINV-00511 appears on it, so the match rests on the description and the P-25019 reference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU revalue the AUD intercompany payable to the invoice-date rate and confirm whether the budget-rate posting breaches group FX policy, after verifying the invoice reference on the buyer line.",
+  "adjustment_amount": 520.26,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AU IC payable to NIG-AE by USD 520.26 equivalent to restate the invoice at the invoice-date rate, offsetting the budget-rate posting.",
+  "model_requests_review": true,
+  "review_reason": "Budget-rate usage conflicts with transactional-rate policy, and the evidence says the invoice reference is absent on the buyer line while the line data shows it present; a human should confirm the match and the correct rate basis."
+ }
+}

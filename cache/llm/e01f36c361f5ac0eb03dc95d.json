@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2909,
+  "output": 866,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.84,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-US line NIG-US:4471173 holds a 79,800 SAR (21,280.27 USD) IC payable to NIG-SA for seconded staff P-25002, booked as an accrual with reference ACCR-OCT26 and the note 'invoice not received'. None of the four unmatched NIG-SA seller lines, including the nearest by amount (25,200, 14,800 and 159,600 SAR), equals 79,800 SAR, so no seller invoice has been found.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm whether an invoice for P-25002 for 79,800 SAR exists and issue it if so; if no charge is confirmed, NIG-US should reverse the accrual in October.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

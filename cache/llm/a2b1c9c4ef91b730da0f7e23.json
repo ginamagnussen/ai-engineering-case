@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2415,
+  "output": 430,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.73,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "NIG-UK receivable NIG-UK:1900045516 is GBP 9,900.00 while NIG-SA payable NIG-SA:ICV-SA-019044 is GBP 9,990.00 for the same reference 9000010754, same currency, same posting date. The difference is a single digit (9,900 vs 9,990), equal to USD -115.97 at the invoice-date rate; there is no FX, WHT, timing or counterparty explanation.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm the invoice amount against the original NIG-UK invoice and have NIG-SA correct its payable to the invoiced amount if GBP 9,900.00 is right.",
+  "adjustment_amount": 90.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reduce NIG-SA IC payable NIG-SA:ICV-SA-019044 by GBP 90.00 (from 9,990.00 to 9,900.00), crediting IT services expense, subject to confirming the invoice amount.",
+  "model_requests_review": true,
+  "review_reason": "Which side is correct (seller 9,900 vs buyer 9,990) should be verified against the original invoice before booking the correction."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2475,
+  "output": 1034,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.95,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "Both lines are in AUD and reference AU/IC/2026/0654. The seller invoice of 31080.00 AUD (line NIG-AU:77446, 168h x 185 = 31080) is transposed in the buyer line NIG-AE:ICV-AE-031243, which shows 13080.00 AUD. The digit transposition explains the 18000.00 AUD difference, which is a multiple of 9 as expected for an adjacent-digit swap, and the buyer-to-seller ratio of 0.42085 has no withholding-rate pattern.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should correct the keyed amount on ICV-AE-031243 from 13080.00 to 31080.00 AUD before close, or post a correcting entry for the 18000.00 AUD difference.",
+  "adjustment_amount": 18000.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase NIG-AE IC payable and related secondment cost by 18000.00 AUD to correct the transposed amount (13080 to 31080).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

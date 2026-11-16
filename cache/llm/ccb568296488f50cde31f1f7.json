@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2569,
+  "output": 421,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.12,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-US invoice INV-US-100352 (line NIG-US:4471196) is USD 40,729.17, while NIG-AU booked AUD 58,772.25 (line NIG-AU:77563), equal to USD 39,551.96, leaving a USD 1,177.21 gap (ratio 0.9711). The buyer's implied rate of 1.443001 matches the 2026 budget rate exactly (0.0% deviation) and deviates 2.89% from the invoice-date, posting-date and month-end rates, so the legacy ledger translated at budget rate rather than the spot rate.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU revalue the AUD payable NIG-AU:77563 from the 2026 budget rate to the invoice-date rate so it agrees to the USD 40,729.17 invoice.",
+  "adjustment_amount": 1177.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AU IC payable to NIG-US by USD 1,177.21 (FX revaluation to invoice-date rate) with the offset to FX loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

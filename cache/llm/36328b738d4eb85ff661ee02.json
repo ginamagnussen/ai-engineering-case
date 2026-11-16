@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2609,
+  "output": 425,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.49,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.88,
+  "explanation": "NIG-AE invoiced AED 37,500 (USD 10,210.88) on AE-ICINV-00547 (NIG-AE:ICV-AE-031206), while NIG-DE booked EUR 9,090.88 (USD 9,824.42) on NIG-DE:5100873315 with the same invoice reference and matching project P-25031. The buyer's implied rate of 0.242423 matches the 2026 budget rate exactly (0.0% deviation) and is 4.122% away from the invoice-date rate, so the USD difference of 420.91 is explained by the rate basis.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Have NIG-DE rebook the payable at the invoice-date rate instead of the budget rate, so it agrees to the AED 37,500 invoice.",
+  "adjustment_amount": 420.91,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase the NIG-DE IC payable (NIG-DE:5100873315) by USD 420.91 equivalent in EUR and post the offset to FX gain/loss, restating the booking from the budget rate to the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

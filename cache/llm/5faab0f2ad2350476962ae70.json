@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2448,
+  "output": 1022,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.04,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.75,
+  "explanation": "NIG-DE invoiced RE-2026-000298 for EUR 3,360.00 (NIG-DE:5100873326) and NIG-SA booked EUR 2,360.00 (NIG-SA:ICV-SA-018863) against the same invoice reference, with counterparty and reference matching. The EUR 1,000.00 gap equals a single-digit difference (3 vs 2) and the buyer-to-seller ratio of 0.70238 does not match any withholding rate, so this looks like a keying error rather than WHT or a dispute.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to correct the keyed amount on ICV-SA-018863 from EUR 2,360.00 to EUR 3,360.00 after checking the invoice RE-2026-000298, and confirm no partial dispute exists.",
+  "adjustment_amount": 1000.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Increase NIG-SA IC payable to NIG-DE by EUR 1,000.00 to match the invoiced amount of EUR 3,360.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

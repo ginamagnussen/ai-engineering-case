@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2462,
+  "output": 447,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.24,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031279 is AED 124,632.00 (USD 33,936.05), while NIG-SA payable NIG-SA:ICV-SA-018915 is AED 118,400.40 (USD 32,239.24), a ratio of 0.95 and a USD difference of 1,696.81. The buyer line description says 'net of WHT 5%', the invoice reference 604 matches AE-ICINV-00604, and the counterparty, currency, posting date and period all agree, so the shortfall is the 5% withholding tax.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the withheld 5% as a WHT payable/receivable adjustment against the IC payable so it carries the full invoice amount, and confirm the WHT certificate is issued to NIG-AE.",
+  "adjustment_amount": 6231.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase NIG-SA IC payable to NIG-AE by AED 6,231.60 (5% of AED 124,632.00), with the offset to WHT payable to the Saudi tax authority, so the IC balance agrees with NIG-AE's invoice.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

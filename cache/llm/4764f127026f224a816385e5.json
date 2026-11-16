@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2454,
+  "output": 814,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.43,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-DE line RE-2026-000328 (key NIG-DE:5100873381) invoiced EUR 8,400.00, while NIG-SA line ICV-SA-018928 booked EUR 7,980.00 described as net of 5% WHT. The buyer/seller ratio of 0.95 matches the 5% Saudi services withholding rate, and the invoice reference appears on the buyer line, so the EUR 420.00 gap is withholding tax rather than an FX, timing or keying difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to gross up the IC payable to EUR 8,400.00 and record the EUR 420.00 as a withholding tax liability, then confirm the WHT treatment with Saudi tax before close.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Debit IC payable (NIG-SA) and credit withholding tax payable by EUR 420.00 to gross up the buyer booking to the invoiced EUR 8,400.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

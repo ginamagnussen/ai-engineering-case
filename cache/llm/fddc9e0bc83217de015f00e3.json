@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 1157,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.42,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "NIG-AE line ICV-AE-031310 invoiced 49,500.00 AED (ref AE-ICINV-00515) and NIG-US line 4471105 booked 45,900.00 AED against the same counterparty and P-25019. The buyer-to-seller ratio of 0.92727 is not a withholding rate, both lines are in AED so there is no FX basis, and the digit pattern (adjacent digits transposed, 49500 to 45900) points to a keying error, with the 980.24 USD difference at the invoice-date rate. The buyer's reference is the same string without hyphens and case differences, though the code flagged the reference as not found on the buyer line.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to correct the keying error on line 4471105 by increasing the IC payable to 49,500.00 AED, matching the seller invoice, and confirm the reference mapping for future postings.",
+  "adjustment_amount": 3600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-US to debit expense (or the originally charged cost account) and credit IC payable to NIG-AE by 3,600.00 AED (approx. 980.24 USD at invoice-date rate) to correct the transposed amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

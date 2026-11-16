@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2906,
+  "output": 435,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.92,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-SA line NIG-SA:ICV-SA-018847 (ref SA-ICINV-00584, SAR 25,200, about USD 6,720.08) for the Olivia Turner secondment has no matching NIG-AU payable. The search of 5 unmatched buyer lines found no same-reference line elsewhere. The nearest NIG-AU line, NIG-AU:77465 (SA-ICINV-00585, SAR 33,000), is for a different person and project (t.brown, P-23110) and a different invoice number, so it is not a match.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to confirm receipt of invoice SA-ICINV-00584 and book the SAR 25,200 secondment payable to NIG-SA, or accrue it if the invoice is still being processed.",
+  "adjustment_amount": 25200.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Book an IC payable at NIG-AU to NIG-SA for SAR 25,200 (secondment of Olivia Turner, P-24088, ref SA-ICINV-00584), debiting the secondment cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

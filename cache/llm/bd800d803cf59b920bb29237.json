@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 3191,
+  "output": 740,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 9.67,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.78,
+  "explanation": "NIG-SA booked IC receivable NIG-SA:ICV-SA-018847 (SAR 25,200, USD 6,720.08, ref SA-ICINV-00584, secondment Olivia Turner 24h @ 1,050, P-24088) against NIG-AU, but none of the 4 unmatched NIG-AU payables corresponds to it. The nearest, NIG-AU:77465 (SAR 33,000, ratio 1.3095), is a different invoice (SA-ICINV-00585), person (T. Brown) and project (P-23110). The same-reference hit NIG-AE:ICV-AE-031284 is actually AE-ICINV-00584, already matched in M0019, and is unrelated.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm receipt of invoice SA-ICINV-00584 from NIG-SA and book the IC payable of SAR 25,200 in October 2026, or tell NIG-SA why the charge is not accepted.",
+  "adjustment_amount": 25200.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "In NIG-AU: Dr secondment cost (project P-24088) / Cr IC payable NIG-SA, SAR 25,200, ref SA-ICINV-00584, translated at the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

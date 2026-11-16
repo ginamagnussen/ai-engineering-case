@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2459,
+  "output": 729,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.12,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.92,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031237 invoices 66,000.00 AED (AE-ICINV-00516, P-25019), while NIG-US line NIG-US:4471051 books 48,781.62 AED against the same reference, a ratio of 0.73912 and a gap of about 4,688.39 USD at the invoice-date rate. The buyer description states 'partial accept, hours disputed pending PM approval', which indicates an intentional short-booking rather than an FX, keying or cut-off error. The invoice reference is not found on the buyer line, so the disputed portion should be confirmed against the PM's approval.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Obtain the PM's decision on the disputed hours for P-25019 and either have NIG-US book the outstanding balance or have NIG-AE issue a credit note for the rejected hours, then re-run the match.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Intercompany dispute over disputed hours pending PM approval; the amount that should ultimately be accepted is a business judgement and cannot be verified from the ledger evidence."
+ }
+}

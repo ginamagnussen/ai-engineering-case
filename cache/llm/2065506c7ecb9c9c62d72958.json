@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 1520,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.02,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.72,
+  "explanation": "Both lines carry AUD 33,590.00 for project P-24050, so the invoice amount agrees and the USD gap of 118.91 (22,260.09 vs 22,141.18) comes from the translation rate used by NIG-US, not from a keying or booking error. The buyer's USD figure matches the invoice-date rate basis (difference at invoice-date rate is 0.00), but the invoice reference AU/IC/2026/0729 does not appear on the buyer line and the seller's counterparty field 'Head Office Denver' is unresolved.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm NIG-US's translation rate for the AUD invoice matches the invoice-date rate and have NIG-AU map 'Head Office Denver' to NIG-US in the legacy SCE ledger before closing the pair.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller counterparty is unresolved and the invoice reference is not on the buyer line, so the match rests on amount and description alone; a human should confirm the rate basis and the seller counterparty mapping."
+ }
+}

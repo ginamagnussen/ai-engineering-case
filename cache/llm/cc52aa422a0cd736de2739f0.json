@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2463,
+  "output": 944,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.8,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.7,
+  "explanation": "NIG-AE invoiced 111,000.00 AED under reference AE-ICINV-00540 (line NIG-AE:ICV-AE-031204), but NIG-DE booked only 94,502.39 AED (line NIG-DE:5100873316), with the description 'Teilfreigabe, Stunden strittig' indicating a partial release with disputed hours. The buyer-to-seller ratio of 0.85137 is close to the 15% withholding pattern, but the explicit dispute wording makes a deliberate under-booking the more likely explanation, so the WHT reading is a secondary possibility that cannot be verified from the evidence.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Escalate to the group controller to obtain written confirmation from NIG-DE and NIG-AE on the disputed hours for P-25002 and whether any withholding tax applies, and leave the 16,497.61 AED difference open until that is resolved.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer's description states that hours are disputed, which is a commercial judgement; the 15% WHT ratio match is not exact (0.85137 vs 0.85) and cannot be verified from the evidence, so a human must confirm whether this is a dispute or a withholding-tax deduction."
+ }
+}

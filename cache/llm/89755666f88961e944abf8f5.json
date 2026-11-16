@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 1139,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.33,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-AU:77540 (AUD 18,400, ref AU/IC/2026/0706) is booked against 'Head Office Denver', which does not resolve to a valid intercompany partner, while the buyer line NIG-US:4471182 carries the same reference and amount and is correctly booked against NIG-AU. The USD gap of 38.27 (12,344.38 vs 12,382.65) is translation at different posting-date rates on an identical AUD amount, so it is not a booking error.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on line NIG-AU:77540 from 'Head Office Denver' to NIG-US so the pair matches, with no change to the AUD amount.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify counterparty on NIG-AU:77540 from unresolved 'Head Office Denver' to NIG-US; no amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

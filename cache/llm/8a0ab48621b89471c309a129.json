@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2456,
+  "output": 512,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.47,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-019019 (GBP 17,755.50) is 95% of NIG-UK's receivable NIG-UK:1900045390 (GBP 18,690.00). The buyer description says 'net of WHT 5%', the invoice reference 9000010860 matches, and the ratio fits a 5% withholding rate. Both lines are in period, in the same currency, and booked against the correct counterparty, so FX, timing and miscoding do not apply. The difference of GBP 934.50 (USD 1,197.35 at the invoice-date rate) is the withheld tax.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the GBP 934.50 withheld amount to a WHT payable account and confirm the 5% rate applies to this service charge, then provide the WHT certificate to NIG-UK.",
+  "adjustment_amount": 934.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up the NIG-SA IC payable to NIG-UK by GBP 934.50, crediting the IC payable and debiting WHT receivable or expense, so it agrees to the invoice of GBP 18,690.00.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that a 5% rate is the correct WHT rate for this recharge (services) under the Saudi rules, and that the WHT is actually remitted. The ledger evidence alone cannot verify this."
+ }
+}

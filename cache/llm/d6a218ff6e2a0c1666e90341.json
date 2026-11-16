@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 987,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.4,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked line NIG-SA:ICV-SA-018953 at 15,162.00 USD net of 5% Saudi WHT against NIG-US line NIG-US:4471091 (15,960.00 USD, same invoice INV-US-100396). The 798.00 USD gap equals exactly 5% of the invoice, the ratio is 0.95, and the buyer description states 'net of WHT 5%'.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to NIG-US to 15,960.00 USD and record the 798.00 USD withheld as Saudi WHT payable, after confirming the WHT certificate and treaty position.",
+  "adjustment_amount": 798.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Dr IC payable to NIG-US 798.00 USD / Cr Saudi WHT payable 798.00 USD, so the IC payable reflects the gross invoice of 15,960.00 USD.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

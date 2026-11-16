@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2707,
+  "output": 446,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.97,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer-only line NIG-DE:5100873364 posted 2026-10-13 already matched in M0010 carries the same reference AE-ICINV-00560 as NIG-DE:5100873387 (AED 99,000, posted 2026-10-17), so the invoice was booked twice by NIG-DE. No seller line exists for the second booking; the nearest unmatched NIG-AE lines (ICV-AE-031365 AED 33,000, ICV-AE-031208 AED 181,224) are for NIG-SA and do not match.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm with NIG-DE AP that NIG-DE:5100873387 duplicates NIG-DE:5100873364 and reverse it.",
+  "adjustment_amount": 99000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse duplicate IC payable NIG-DE:5100873387 (AED 99,000, ref AE-ICINV-00560) against the AE01 IC payable account.",
+  "model_requests_review": true,
+  "review_reason": "Description differs in name (J.Brown vs James Becker on the seller line) and the original line's amount is not shown; confirm the first booking's amount equals AED 99,000 before reversing."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 747,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.29,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-DE line NIG-DE:5100873457 invoices EUR 79,210.00 (RE-2026-000336), and NIG-SA line NIG-SA:ICV-SA-019011 books EUR 75,249.50 against the same reference. That buyer amount equals 95% of the invoice, the ratio matches the 5% Saudi services withholding rate, and the buyer description explicitly says 'net of WHT 5%'.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to gross up ICV-SA-019011 to EUR 79,210.00 and record the EUR 3,960.50 withholding as a Saudi WHT receivable or payable, after confirming the WHT certificate and payment to the Saudi authority.",
+  "adjustment_amount": 3960.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-SA to gross up the IC payable to the invoiced EUR 79,210.00 and book the EUR 3,960.50 WHT as a tax balance, not as a reduction of the IC payable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

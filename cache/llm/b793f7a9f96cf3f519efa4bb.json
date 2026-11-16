@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 1079,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.97,
+ "output": {
+  "category": "timing",
+  "confidence": 0.85,
+  "explanation": "Seller line NIG-AU:77534 (AUD 60,850, posted 2026-10-27, in period) matches buyer line NIG-US:4471203 (AUD 60,850, posted 2026-11-02, after period end) on reference AU/IC/2026/0733, with a buyer-to-seller ratio of 1.0 and zero difference at the invoice-date rate. The USD gap (40,474.99 vs 41,052.45) reflects the rate at posting rather than a billing difference, so no correction is needed this period. The seller's legacy ERP books the counterparty as 'Head Office Denver', which is unresolved, so the mapping should be confirmed.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Carry the item as a cut-off difference into the November 2026 reconciliation and confirm that NIG-AU's legacy counterparty 'Head Office Denver' maps to NIG-US in the master data.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller-side counterparty label 'Head Office Denver' is unresolved in the legacy SCE ledger, and the case cannot confirm from the evidence that it maps to the correct intercompany partner."
+ }
+}

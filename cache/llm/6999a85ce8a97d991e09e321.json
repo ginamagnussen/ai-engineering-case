@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2594,
+  "output": 968,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.1,
+ "output": {
+  "category": "other",
+  "confidence": 0.35,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031415 books 390456 SAR (104122.90 USD) for P-23110 subcontract geotech analysis, posted 2026-10-31 under invoice SA-ICINV-00595, but no seller line matches that amount. The closest unmatched NIG-UK receivable (NIG-UK:1900045276) is 25200 GBP (32015.34 USD) for P-23110 secondment, a different service at only 0.3075 of the target, so the evidence does not explain the gap.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-UK should confirm whether it issued an invoice for SA-ICINV-00595 on P-23110 and, if not, NIG-AE should provide the supporting documents for the subcontract charge before the close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No seller invoice matches the buyer amount, and the only same-project candidate is a different service type. The case cannot be classified from the evidence (possible unbilled subcontract, accrual without invoice, or a mis-associated project), so a human must resolve it."
+ }
+}

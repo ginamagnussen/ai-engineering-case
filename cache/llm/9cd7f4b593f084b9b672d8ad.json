@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2604,
+  "output": 1881,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 11.73,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.65,
+  "explanation": "NIG-SA booked ICV-SA-018979 at an implied rate of 4.595755 SAR/GBP, exactly the 2026 budget rate (0.0% deviation), while the seller's GBP 210,780.00 invoice (NIG-UK line 1900045367) is carried at the invoice-date rate, giving a USD 13,203.26 difference. The buyer's implied ratio of 0.95137 is close to a 5% Saudi WHT pattern, which is the main alternative explanation, so the rate basis is probably the cause but this needs confirmation.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA confirm whether the subcontract was booked at the 2026 budget rate and check the supplier payment remittance for any 5% WHT deduction before restating the payable at the invoice-date rate.",
+  "adjustment_amount": 13203.26,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Restate the NIG-SA IC payable from the budget rate to the invoice-date rate so it matches the GBP 210,780.00 receivable in NIG-UK; the USD 13,203.26 difference is the proposed correcting amount, pending confirmation that no WHT applies.",
+  "model_requests_review": true,
+  "review_reason": "The ratio 0.95137 is close to a 5% WHT pattern while the rate match to budget is exact, so the two explanations cannot be separated from the evidence provided."
+ }
+}

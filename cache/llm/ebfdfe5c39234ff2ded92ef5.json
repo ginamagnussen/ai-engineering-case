@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2911,
+  "output": 343,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.6,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.92,
+  "explanation": "Buyer line NIG-US:4471184 is an IC payable of SAR 33,000 (USD 8,800.11) described as an accrual for seconded staff O.Fischer P-24050 with 'invoice not received', reference ACCR-OCT26, posted 2026-10-31. None of the 4 unmatched NIG-SA seller lines matches by amount or description (nearest candidates are for other staff, projects and counterparties NIG-AU/NIG-AE), so NIG-SA has not invoiced this cost.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm whether the O.Fischer P-24050 secondment for October is billable and issue the IC invoice to NIG-US, otherwise keep the accrual as an open reconciling item.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2597,
+  "output": 427,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.57,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-UK receivable NIG-UK:1900045347 (GBP 15,580 = USD 19,946.30) and NIG-SA payable NIG-SA:ICV-SA-018960 (SAR 71,601.86 = USD 19,094.07) share reference 9000010873 and project P-24050. The buyer's implied rate of 4.595755 matches the 2026 budget rate exactly (0.0% deviation), versus 4.3-4.9% deviation from the daily, invoice-date and month-end rates. The USD difference of 852.23 is therefore a rate-basis difference, not a business difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA revalue the payable at the invoice-date rate instead of the budget rate, and confirm the rate table configuration in Dynamics 365.",
+  "adjustment_amount": 852.23,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue the NIG-SA IC payable ICV-SA-018960 from the budget rate to the invoice-date rate, increasing the payable by USD 852.23 and booking the offset to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}
