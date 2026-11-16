@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 372,
+  "cache_read": 0,
+  "cache_write": 2599
+ },
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019050 is a GBP 6,600.00 (USD 8,504.03) month-end accrual dated 2026-10-31 for P-25031 UK structural calcs, explicitly marked 'invoice not received' with reference ACCR-OCT26. NIG-UK has no matching receivable. The two nearest unmatched NIG-UK lines (GBP 1,520 to NIG-AU and GBP 25,200 to NIG-AE) belong to other partners and projects, with ratios of 0.23 and 3.76.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether the P-25031 structural calcs work was performed in October and, if so, issue the GBP 6,600 invoice to NIG-SA; otherwise NIG-SA should reverse the accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

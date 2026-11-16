@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 422,
+  "cache_read": 0,
+  "cache_write": 2447
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked payable NIG-SA:ICV-SA-018966 at EUR 13,119.50 against NIG-DE receivable NIG-DE:5100873432 of EUR 13,810.00 for invoice RE-2026-000380, a ratio of 0.95 consistent with 5% Saudi WHT on services. The buyer description explicitly states 'net of WHT 5%', and the difference of USD 740.15 (EUR 690.50) is the withheld tax, not an error.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-SA should provide the WHT certificate/remittance evidence to NIG-DE, and NIG-DE should reclassify EUR 690.50 from the IC receivable to a withholding tax receivable/expense so the IC balances agree.",
+  "adjustment_amount": 690.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "In NIG-DE: debit WHT receivable (or tax expense) EUR 690.50, credit IC receivable NIG-SA EUR 690.50 for invoice RE-2026-000380, supported by NIG-SA's WHT certificate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

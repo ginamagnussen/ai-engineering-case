@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 818,
+  "cache_read": 0,
+  "cache_write": 2112
+ },
+ "output": {
+  "category": "other",
+  "confidence": 0.45,
+  "explanation": "Seller line NIG-AU:77519 (AUD 12,640.00 / USD 8,393.21, ref AU/IC/2026/0730, posted 2026-10-26) is a NEOM Utilities Package 3 project recharge booked against free-text counterparty 'Head Office Denver'. The legacy SCE ledger counterparty could not be resolved to a group entity code, so no buyer ledger was searched (0 lines). The NEOM project reference also suggests the Saudi entity could be the intended recipient. We cannot tell whether this is a missing buyer booking, a miscoded counterparty or a master-data mapping gap.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm the intended intercompany recipient of invoice AU/IC/2026/0730 (Denver head office or the Saudi project entity) and correct the counterparty mapping in the legacy ledger, then rerun matching against that entity's payables.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Counterparty is unresolved and no buyer lines were searched, so the true category (missing_buyer vs miscoded_counterparty vs mapping issue) cannot be verified from the evidence."
+ }
+}

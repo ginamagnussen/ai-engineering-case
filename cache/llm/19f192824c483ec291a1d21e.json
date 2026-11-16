@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 791,
+  "cache_read": 0,
+  "cache_write": 2412
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.65,
+  "explanation": "NIG-US:4471101 (receivable) and NIG-AU:77501 (payable) agree exactly at USD 11,200.00, carry the same reference INV-US-100363 and project P-24050, and were both posted on 2026-10-20, so the difference at the invoice-date rate is 0.0. The only break is the counterparty: NIG-AU's legacy SCE ledger booked the payable to free text 'Head Office Denver', which could not be resolved to the expected partner NIG-US. This looks like a counterparty coding or master-data mapping gap, not a booking error. The case evidence does not confirm that 'Head Office Denver' is NIG-US.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that 'Head Office Denver' refers to NIG-US, then have NIG-AU recode line 77501 to the NIG-US intercompany partner code and add a mapping for this free-text value in the legacy SCE ledger.",
+  "adjustment_amount": 11200.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify the NIG-AU IC payable of USD 11,200.00 (INV-US-100363) from the unresolved counterparty 'Head Office Denver' to partner NIG-US; amounts are unchanged.",
+  "model_requests_review": true,
+  "review_reason": "The evidence does not confirm that 'Head Office Denver' maps to NIG-US; master-data ownership of this legacy counterparty text needs human confirmation before recoding."
+ }
+}

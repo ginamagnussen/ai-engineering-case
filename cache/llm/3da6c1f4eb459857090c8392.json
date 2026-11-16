@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 807,
+  "cache_read": 0,
+  "cache_write": 2438
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked IC payable NIG-SA:ICV-SA-018933 at GBP 38,560.50 against NIG-UK's receivable NIG-UK:1900045315 of GBP 40,590.00 for the same invoice reference 9000010933. The ratio is exactly 0.95, consistent with 5% Saudi WHT on services, and the buyer description explicitly says 'net of WHT 5%'. The USD difference at the invoice-date rate is 2,571.44.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to GBP 40,590.00 and recognise the GBP 2,029.50 withheld as a WHT liability to ZATCA, then provide the WHT certificate to NIG-UK so it can clear the balance against a WHT tax receivable or expense.",
+  "adjustment_amount": 2029.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA: Dr expense/clearing GBP 2,029.50, Cr IC payable NIG-UK GBP 2,029.50, with the withheld amount reclassified to WHT payable on settlement. NIG-UK: on receipt of the WHT certificate, Dr WHT receivable/tax expense GBP 2,029.50, Cr IC receivable NIG-SA GBP 2,029.50.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

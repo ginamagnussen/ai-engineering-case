@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 403,
+  "cache_read": 0,
+  "cache_write": 2423
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-UK invoiced NIG-AU GBP 4,440.00 for the Sophie Brown secondment (NIG-UK:1900045483, ref 9000010777, P-24017). NIG-AU booked the same GBP 4,440.00 with the same reference (NIG-AU:77551) but against counterparty NIG-DE instead of NIG-UK. The ratio is 1.0 and the difference at the invoice-date rate is zero; the small USD gap (5,684.49 vs 5,720.90) comes only from translation timing.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclass payable line 77551 from counterparty NIG-DE to NIG-UK so that it matches the NIG-UK receivable.",
+  "adjustment_amount": 4440.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-AU, debit IC payable – NIG-DE and credit IC payable – NIG-UK for GBP 4,440.00 (invoice 9000010777, secondment P-24017).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 953,
+  "cache_read": 0,
+  "cache_write": 2600
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.86,
+  "explanation": "NIG-SA:ICV-SA-018979 books SAR 968,693.25 against NIG-UK:1900045367 (GBP 210,780.00) for the same invoice (ref 9000010966). The buyer's implied rate of 4.595755 matches the 2026 budget rate exactly (0.0% deviation) but sits 4.863% below the invoice-date daily rate, which leaves a USD 13,203.26 gap. The 0.95137 ratio only looks like 5% WHT by coincidence: the SAR amount is the full gross GBP amount translated at the budget rate, not a net-of-tax booking.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should revalue the IC payable for invoice 9000010966 from the 2026 budget rate to the GBP/SAR daily rate at the invoice date, so it agrees to GBP 210,780.00.",
+  "adjustment_amount": 13203.26,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-SA increases the IC payable to NIG-UK by the SAR equivalent of USD 13,203.26, retranslating GBP 210,780.00 at the invoice-date rate instead of the budget rate 4.595755, with the offset booked to FX difference.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

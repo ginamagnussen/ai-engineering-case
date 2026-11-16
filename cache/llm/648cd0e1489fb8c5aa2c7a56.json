@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 929,
+  "cache_read": 0,
+  "cache_write": 2353
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.65,
+  "explanation": "Seller line NIG-AU:77450 (AUD 27,720.00, ref AU/IC/2026/0667, secondment O. Hassan P-24017) has the free-text counterparty 'Germany', which did not resolve to an entity code, so it could not be matched. Buyer line NIG-DE:5100873367 carries the same reference, the same AUD 27,720.00 and the same project, and is correctly coded to NIG-AU. The only USD gap (18,302.13 vs 18,455.42) comes from translating the same AUD amount on different posting dates (11 vs 13 Oct); it is not a real difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on line 77450 from 'Germany' to NIG-DE, or the group controller should add a 'Germany' to NIG-DE mapping for the legacy SCE ledger, then re-run matching against NIG-DE:5100873367.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction is needed. Only the counterparty code on NIG-AU:77450 changes, from 'Germany' to NIG-DE.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

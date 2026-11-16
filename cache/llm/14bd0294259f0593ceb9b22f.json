@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 650,
+  "cache_read": 0,
+  "cache_write": 2620
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.75,
+  "explanation": "NIG-UK line NIG-UK:1900045276 (posted 2026-10-10) is a GBP 25,200.00 (USD 32,015.34) IC receivable from NIG-AE for the Felix Patel secondment (120h @ 210, P-23110, ref 9000010824). None of the 2 unmatched NIG-AE lines fits. ICV-AE-031254 is a USD 14,800 NIG-US secondment for H.Brown, and ICV-AE-031415 is a SAR 390,456 geotech subcontract at a ratio of 3.25. No other line carries the same reference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm receipt of NIG-UK invoice 9000010824 and book the IC payable to NIG-UK in the October 2026 period, or confirm it was received and posted after period end.",
+  "adjustment_amount": 25200.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-AE: Dr secondment cost (P-23110) / Cr IC payable to NIG-UK, GBP 25,200.00, for invoice 9000010824.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

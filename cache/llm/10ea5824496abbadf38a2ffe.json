@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 768,
+  "cache_read": 0,
+  "cache_write": 2470
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.5,
+  "explanation": "Seller line NIG-AE:ICV-AE-031334 (AED 37,000, secondment Lukas Nasser, P-25019, ref AE-ICINV-00488) was paired with buyer line NIG-SA:ICV-SA-019017 (AED 31,350, seconded staff J.Becker, P-24017, ref AE-ICINV-00565), but the employee, project and invoice reference all differ. The 0.8473 ratio does not match 5% WHT, which would give AED 35,150. The buyer line therefore looks like a WHT-net booking of a different invoice (00565), and invoice AE-ICINV-00488 appears to have no buyer booking at NIG-SA.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm whether invoice AE-ICINV-00488 (AED 37,000) was received and book it, likely net of 5% WHT if it applies. Line ICV-SA-019017 should be re-matched against seller invoice AE-ICINV-00565.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pairing appears incorrect because employee, project and invoice reference differ. It must be verified that NIG-SA has no booking for AE-ICINV-00488 and that a seller line for AE-ICINV-00565 exists before any entry is proposed. The WHT treatment of the AED 37,000 invoice also needs confirmation."
+ }
+}

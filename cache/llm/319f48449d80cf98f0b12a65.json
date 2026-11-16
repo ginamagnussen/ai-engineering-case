@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 731,
+  "cache_read": 0,
+  "cache_write": 2938
+ },
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-AE booked an IC receivable NIG-AE:ICV-AE-031365 for AED 33,000 (USD 8,985.57) on 2026-10-27 to NIG-SA for the James Becker secondment (60h @ 550, P-24017, ref AE-ICINV-00565). None of NIG-SA's 4 unmatched lines matches it, and no line elsewhere carries the same reference. The nearest candidates relate to other partners and projects: the NIG-UK GBP 6,600 structural calcs accrual, the NIG-US L.Rahman accrual, and AE-ICINV-00586 BIM coordination. No amount near a net-of-WHT figure appears either.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm receipt of invoice AE-ICINV-00565 and book the IC payable to NIG-AE for AED 33,000 in October 2026, or accrue it if the invoice is still in approval.",
+  "adjustment_amount": 33000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA: Dr secondment cost (P-24017) / Cr IC payable NIG-AE AED 33,000 for invoice AE-ICINV-00565.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

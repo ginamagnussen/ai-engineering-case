@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 895,
+  "cache_read": 0,
+  "cache_write": 2614
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "NIG-AU:77459 (AUD 3,386.29, USD 2,231.06) and NIG-SA:ICV-SA-018846 (SAR 8,800.00, USD 2,346.70) carry the same invoice SA-ICINV-00524 and project P-25031 for the J. Hassan secondment. The buyer's implied rate of 0.384806 matches the 2026 budget rate exactly (0.0% deviation) but is -5.202% off the invoice-date daily rate, which explains the USD 122.08 gap. The 0.948 ratio looks close to 5% WHT, but Saudi WHT applies only when the Saudi entity pays; here NIG-SA is the seller, so WHT does not apply.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should revalue payable line 77459 from the 2026 budget rate to the SAR/AUD daily rate at the invoice date for SA-ICINV-00524, so the payable equals SAR 8,800.00.",
+  "adjustment_amount": 122.08,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AU's IC payable to NIG-SA by the AUD equivalent of USD 122.08 (rebook SAR 8,800 at the invoice-date rate instead of the budget rate), with the offset to the FX difference or cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

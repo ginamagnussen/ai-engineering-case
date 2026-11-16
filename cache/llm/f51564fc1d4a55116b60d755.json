@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 418,
+  "cache_read": 0,
+  "cache_write": 2435
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-AE booked payable NIG-AE:ICV-AE-031359 for GBP 45,900.00 with invoice reference 9000010879, matching seller line NIG-UK:1900045408 exactly (ratio 1.0, zero USD difference at the invoice-date rate). However, the payable is booked against NIG-SA (NorthStar Infrastructure Saudi Arabia Co.) instead of NIG-UK, even though its own description reads 'subcontract UK'. The mismatch is purely a counterparty coding error.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should reclassify payable ICV-AE-031359 from IC partner NIG-SA to NIG-UK in Dynamics 365 before the October close.",
+  "adjustment_amount": 45900.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-AE, debit IC payable – NIG-SA GBP 45,900.00 and credit IC payable – NIG-UK GBP 45,900.00 (invoice 9000010879, P-24102 geotech analysis).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

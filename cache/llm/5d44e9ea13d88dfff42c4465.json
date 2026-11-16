@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 616,
+  "cache_read": 0,
+  "cache_write": 2471
+ },
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.93,
+  "explanation": "NIG-AE:ICV-AE-031243 booked AUD 13,080.00 against invoice AU/IC/2026/0654. NIG-AU:77446 shows AUD 31,080.00, which matches the description (168h @ 185 = 31,080). The evidence flags adjacent digits transposed (31→13), with the same reference, currency and counterparty, postings 2 days apart, and a computed difference of USD 11,825.10, so this is a keying error with no business reason.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should post a correcting entry increasing its IC payable to NIG-AU by AUD 18,000.00 so the balance agrees to invoice AU/IC/2026/0654 at AUD 31,080.00.",
+  "adjustment_amount": 18000.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "In NIG-AE, debit secondment/staff cost and credit IC payable to NIG-AU for AUD 18,000.00, correcting the mis-keyed AUD 13,080.00 to the invoiced AUD 31,080.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

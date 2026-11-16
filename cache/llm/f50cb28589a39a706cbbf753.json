@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 401,
+  "cache_read": 0,
+  "cache_write": 2421
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-US invoiced NIG-SA USD 14,440.00 for the M. Smith secondment (NIG-US:4471068, INV-US-100374), and NIG-SA booked the identical amount and reference on NIG-SA:ICV-SA-018943, but against counterparty NIG-UK ('NorthStar Infrastructure UK Ltd') instead of NIG-US. The ratio is 1.0, the USD difference is 0.0 and both lines posted in period, so the only break is the partner coding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclass the IC payable on ICV-SA-018943 from intercompany partner NIG-UK to NIG-US in Dynamics 365 before the October close.",
+  "adjustment_amount": 14440.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-SA: Dr IC payable – NIG-UK USD 14,440.00 / Cr IC payable – NIG-US USD 14,440.00 (reference INV-US-100374).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 756,
+  "cache_read": 0,
+  "cache_write": 2437
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-UK:1900045457 invoices NIG-SA GBP 8,400.00 for the D. Becker secondment (P-24088). NIG-SA:ICV-SA-019035 books GBP 7,980.00 against the same reference 9000010808 and is described as 'net of WHT 5%'. The 0.95 ratio matches the 5% Saudi WHT rate on services, so the GBP 420.00 gap (USD 539.85 at the invoice-date rate) is withholding tax, not an error.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should obtain the WHT certificate from NIG-SA and reclassify GBP 420 from the IC receivable to withholding tax expense or a recoverable tax asset, so both sides agree at GBP 7,980.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-UK, debit withholding tax expense (or WHT recoverable) GBP 420 and credit the IC receivable from NIG-SA GBP 420 for the 5% Saudi WHT withheld on invoice 9000010808.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

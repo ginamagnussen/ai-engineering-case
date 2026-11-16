@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 731,
+  "cache_read": 0,
+  "cache_write": 2565
+ },
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-AU:77563 carries the same invoice INV-US-100352 for L-2023-02 October interest as NIG-US:4471196 (USD 40,729.17), but it was booked as AUD 58,772.25 at an implied rate of 1.443001. That rate matches the 2026 budget rate exactly (0.0% deviation) and is 2.89% off the invoice-date daily rate. This leaves a USD 1,177.21 shortfall at the invoice-date rate. Both lines are in period with no counterparty mismatch, and the 0.9711 ratio has no withholding-rate link, so the gap is explained by the rate basis.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should revalue payable NIG-AU:77563 at the invoice-date daily AUD/USD rate instead of the 2026 budget rate, so it equals USD 40,729.17, and book the difference to FX.",
+  "adjustment_amount": 1177.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-AU, increase the IC payable to NIG-US for INV-US-100352 by the AUD equivalent of USD 1,177.21 at the invoice-date rate. Book the offset to FX difference or interest expense, so the payable translates to USD 40,729.17.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

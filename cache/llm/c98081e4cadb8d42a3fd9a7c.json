@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 449,
+  "cache_read": 0,
+  "cache_write": 2437
+ },
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "NIG-US invoiced USD 1,680.00 (NIG-US:4471058, INV-US-100423, 8h @ 210 secondment of L. Müller, P-24017), but NIG-AE booked only USD 1,523.83 (NIG-AE:ICV-AE-031288) against the same reference. The buyer's description reads 'partial accept, hours disputed pending PM approval'. The USD 156.17 gap (ratio 0.90704) is the contested portion. Both lines are in USD, so FX is not a factor. The ratio does not match a withholding-tax rate, and there is no counterparty mismatch.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-AE should get PM approval of the disputed hours and confirm the accepted amount with NIG-US, which should then either issue a credit note for the rejected hours or NIG-AE should book the remaining USD 156.17.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer is intentionally contesting USD 156.17 of hours charged under INV-US-100423. Whether NIG-US credits the amount or NIG-AE accepts it depends on PM approval of the hours, which is a business judgement."
+ }
+}

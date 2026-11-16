@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 921,
+  "cache_read": 0,
+  "cache_write": 2896
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.65,
+  "explanation": "Buyer line NIG-US:4471144 (AUD 12,640.00, P-25019 cost estimating, posted 2026-10-28) matches seller line NIG-AU:77519 exactly in AUD amount, project P-25019 and service (AU/IC/2026/0730, posted 2026-10-26). The seller line went unmatched because NIG-AU booked the counterparty as the free text 'Head Office Denver', which did not resolve to an intercompany entity code. The small USD gap (8,393.21 vs 8,481.44) comes only from translating the same AUD amount on different dates, so it is not a real difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm that 'Head Office Denver' means NIG-US, recode NIG-AU:77519 to the NIG-US intercompany partner, and have the group controller add the alias to the counterparty mapping so its other 'Head Office Denver' lines resolve.",
+  "adjustment_amount": 12640.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reclassify the counterparty on NIG-AU:77519 (AUD 12,640.00) from unresolved 'Head Office Denver' to NIG-US; no change to the amount.",
+  "model_requests_review": true,
+  "review_reason": "The evidence does not confirm that 'Head Office Denver' is NIG-US. This could be a master-data mapping gap rather than a true miscoding, so a human should verify the counterparty before the lines are paired."
+ }
+}

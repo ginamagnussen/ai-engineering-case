@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 443,
+  "cache_read": 0,
+  "cache_write": 2400
+ },
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031254 (USD 14,800.00, posted 2026-10-13, ref INV-US-100392, 'Seconded staff H.Brown P-24050') carries the same invoice reference as NIG-AE:ICV-AE-031240 (posted 2026-10-10), which is already matched to NIG-US in M0219. No unmatched NIG-US seller line supports it: the only candidate, NIG-US:4471046 (USD 1,760, ratio 0.1189), is booked against NIG-AU. This indicates NIG-AE booked invoice INV-US-100392 twice.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm against the AP subledger that INV-US-100392 was entered twice, then reverse the duplicate payable line ICV-AE-031254.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AE: Dr IC payable NIG-US / Cr secondment cost (or original expense account) USD 14,800.00 to reverse the duplicate booking ICV-AE-031254 of INV-US-100392.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

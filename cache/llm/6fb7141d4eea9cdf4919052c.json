@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 469,
+  "cache_read": 0,
+  "cache_write": 2436
+ },
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-US invoiced USD 1,000.00 (NIG-US:4471065, INV-US-100368, secondment O. Nasser 8h @ 125), but NIG-AE booked only USD 785.35 (NIG-AE:ICV-AE-031302), leaving a USD 214.65 difference (ratio 0.78535). The buyer's description states 'partial accept, hours disputed pending PM approval', and both lines are in USD, so FX is ruled out; the ratio matches no withholding rate and the counterparty is correct.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-AE project manager and NIG-US should agree the hours on P-25002, then either NIG-AE books the remaining USD 214.65 or NIG-US issues a credit note for the agreed amount.",
+  "adjustment_amount": 214.65,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Pending dispute resolution: either NIG-AE increases the IC payable to NIG-US by USD 214.65, or NIG-US credits USD 214.65 against INV-US-100368 on its IC receivable from NIG-AE.",
+  "model_requests_review": true,
+  "review_reason": "The buyer is contesting the hours charged. Which side corrects depends on the PM approval outcome, which is a commercial judgement not verifiable from the ledger."
+ }
+}

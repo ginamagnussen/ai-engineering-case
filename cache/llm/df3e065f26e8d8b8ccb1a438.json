@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 675,
+  "cache_read": 0,
+  "cache_write": 2438
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.94,
+  "explanation": "NIG-UK invoiced NIG-SA GBP 49,840.00 (NIG-UK:1900045234) for the P-24017 Riyadh Metro design review, and NIG-SA booked GBP 47,348.00 (NIG-SA:ICV-SA-018850) against the same reference 9000010931. The buyer-to-seller ratio of 0.95 matches the 5% Saudi services withholding rate, and the buyer description states 'net of WHT 5%'. The GBP 2,492.00 gap (USD 3,169.77) is the withheld tax, not an FX, timing or counterparty issue.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should obtain the WHT certificate from NIG-SA and reclassify GBP 2,492.00 from the IC receivable to WHT tax expense or a recoverable tax credit, leaving GBP 47,348.00 as the reconciling IC balance.",
+  "adjustment_amount": 2492.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-UK, debit WHT tax expense or WHT recoverable and credit the IC receivable from NIG-SA for GBP 2,492.00 (5% Saudi WHT on the services invoice for reference 9000010931), supported by NIG-SA's WHT certificate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

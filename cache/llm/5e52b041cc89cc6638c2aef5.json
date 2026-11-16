@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 751,
+  "cache_read": 0,
+  "cache_write": 2113
+ },
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "Seller line NIG-AU:77513 (AUD 88,890.00 / USD 58,907.40, ref AU/IC/2026/0711, P-24050 structural calcs recharge) is booked against the free-text counterparty 'Head Office Denver', which the legacy SCE ledger mapping could not resolve to a group entity code. Because the buyer is unresolved, zero buyer lines were searched and no lines elsewhere carry the same reference, so we cannot tell whether this is a genuine missing buyer booking or a matching failure caused by the unmapped alias.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Map 'Head Office Denver' to the correct US group entity code in the counterparty master, then rerun matching against that entity's unmatched IC payables for reference AU/IC/2026/0711 and confirm with the buyer whether the AUD 88,890.00 invoice was received.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Counterparty alias is unresolved and no buyer search was performed. A human must confirm which entity 'Head Office Denver' refers to before deciding between missing_buyer, timing or another category."
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 394,
+  "cache_read": 0,
+  "cache_write": 2915
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-SA receivable NIG-SA:ICV-SA-018861 (SAR 159,600, ref SA-ICINV-00562, secondment C. Turner P-25031) has an exact buyer match in NIG-AU:77468: same reference, amount, currency and project. However, NIG-AU booked that payable against 'Head Office Denver', which does not resolve to NIG-SA. The buyer booked the invoice but against the wrong intercompany partner.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclass payable line NIG-AU:77468 from counterparty 'Head Office Denver' to NIG-SA and correct the vendor mapping in the legacy SCE ledger.",
+  "adjustment_amount": 159600.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the SAR 159,600 IC payable (ref SA-ICINV-00562) from counterparty Head Office Denver/unresolved to NIG-SA; there is no change to the amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

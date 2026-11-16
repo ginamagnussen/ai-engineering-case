@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 696,
+  "cache_read": 0,
+  "cache_write": 2588
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.8,
+  "explanation": "NIG-SA payable NIG-SA:ICV-SA-018876 (AED 162,504.00, USD 44,248.21) is booked against NIG-UK. However, its reference AE-ICINV-00592, its description 'subcontract AE', and the AED currency all point to an invoice issued by NIG-AE. None of the 2 unmatched NIG-UK receivables is close in amount: the nearest are GBP 25,200 (ratio 0.72) and GBP 1,520 (ratio 0.04), both of which are booked to other partners.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm with NIG-AE that invoice AE-ICINV-00592 sits in NIG-AE's IC receivables, then reclassify the payable's counterparty from NIG-UK to NIG-AE.",
+  "adjustment_amount": 162504.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, debit IC payable – NIG-UK AED 162,504.00 and credit IC payable – NIG-AE AED 162,504.00 to move invoice AE-ICINV-00592 to the correct partner.",
+  "model_requests_review": true,
+  "review_reason": "The NIG-AE receivable for AE-ICINV-00592 is not in the case evidence, so the correct counterparty must be confirmed before reclassifying."
+ }
+}

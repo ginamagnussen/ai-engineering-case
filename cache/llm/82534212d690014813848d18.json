@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 819,
+  "cache_read": 0,
+  "cache_write": 2905
+ },
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.7,
+  "explanation": "Buyer line NIG-US:4471097 (AUD 7,050.00, ref AU/IC/2026/0698, P-24050 cost estimating) has an exact twin on the seller side: NIG-AU:77470 (AUD 7,050.00, same reference and project, ratio 1.0002). The seller line did not auto-match because its counterparty is booked as free text 'Head Office Denver', which the master data could not resolve to NIG-US. The small USD difference (4,709.96 vs 4,708.98) comes only from translation, and the AUD amounts agree exactly.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on line 77470 from 'Head Office Denver' to the NIG-US intercompany partner code, and the group controller should add this alias to the counterparty mapping so the pair matches against NIG-US:4471097.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction. Reclassify the counterparty on NIG-AU:77470 (AUD 7,050.00) to NIG-US; the amounts already agree.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

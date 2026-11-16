@@ -1,0 +1,22 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4,
+  "output": 513,
+  "cache_read": 0,
+  "cache_write": 2445
+ },
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked IC payable NIG-SA:ICV-SA-018989 at EUR 11,970.00 against NIG-DE's receivable NIG-DE:5100873413 of EUR 12,600.00 for the same invoice RE-2026-000314 (staff secondment P-25031). The buyer-to-seller ratio of 0.95 matches Saudi 5% WHT on services, and the buyer description explicitly states 'net of WHT 5%'. The remaining EUR 630.00 (USD 674.27 at the invoice-date rate) is tax withheld and remitted to the Saudi authority, not a missing payable.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the EUR 630.00 withheld tax so the full EUR 12,600.00 IC payable is reflected (or cleared via the WHT liability), and provide the WHT certificate to NIG-DE so it can recognise the tax credit/receivable instead of leaving an open IC difference.",
+  "adjustment_amount": 630.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-SA: gross up the IC payable to NIG-DE by EUR 630.00 against the WHT payable to the Saudi tax authority; NIG-DE: on receipt of the WHT certificate, reclassify EUR 630.00 from IC receivable to WHT tax receivable/expense.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}
