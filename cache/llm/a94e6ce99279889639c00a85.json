@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 564,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.01,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "Seller NIG-AE line ICV-AE-031359 invoiced AED 39,780.00 (USD 10,831.70) under AE-ICINV-00954. Buyer NIG-SA line ICV-SA-018985 booked AED 37,791.00 (USD 10,290.11) with the same invoice reference and the description 'net of WHT 5%', giving a ratio of 0.95 that matches 5% withholding and a USD 541.59 difference. Counterparty is correct, both postings are in period and the currency is the same, so this is not a timing, FX or miscoding issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the AED 1,989.00 withholding tax as a payable to the tax authority, or as a WHT receivable/IC payable to NIG-AE as appropriate, so its IC payable equals the gross invoice of AED 39,780.00, and confirm the WHT certificate with NIG-AE.",
+  "adjustment_amount": 1989.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA to gross up the IC payable to NIG-AE by AED 1,989.00 (credit IC payable, debit the WHT expense/receivable account) so it agrees to invoice AE-ICINV-00954. WHT is then settled to the tax authority and treated per the applicable policy.",
+  "model_requests_review": true,
+  "review_reason": "The 5% rate is consistent with Saudi WHT on services, but the applicability of WHT on this intra-group design review recharge and the correct treatment of the withheld amount should be confirmed by tax/group controller."
+ }
+}

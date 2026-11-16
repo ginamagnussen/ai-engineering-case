@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 996,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.23,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "The seller NIG-SA line NIG-SA:ICV-SA-018830 (SAR 176,400, invoice SA-ICINV-00668) and the buyer line NIG-UK:1900045307 (SAR 176,040) carry the same invoice reference and description (P-24017). The buyer amount is the seller amount with adjacent digits transposed, a pattern consistent with keying error, and the SAR 360 gap (USD 96.00 at invoice-date rate) does not match any withholding rate (ratio 0.99796).",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to correct the keyed amount on NIG-UK:1900045307 from SAR 176,040 to SAR 176,400 so it matches the SA invoice, and confirm the correction with NIG-SA.",
+  "adjustment_amount": 360.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Increase NIG-UK IC payable to NIG-SA by SAR 360 (USD 96.00 at invoice-date rate) to correct the transposed amount from 176,040 to 176,400.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 1108,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.93,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-UK's IC receivable NIG-UK:1900045457 is 8,400.00 GBP for secondment P-24088, and NIG-SA's IC payable NIG-SA:ICV-SA-019035 is 7,980.00 GBP, which is exactly 95% of the invoice and described as net of 5% WHT. The 420.00 GBP gap matches the Saudi 5% services withholding rate, and the invoice reference 9000010808 appears on both lines, so no counterparty or timing issue exists. The difference is 539.85 USD at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the IC payable to 8,400.00 GBP and record the 420.00 GBP withheld as a WHT liability to the Saudi tax authority, supported by the WHT certificate.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable by 420.00 GBP (Cr IC payable to NIG-UK, Dr expense or clearing as appropriate) and recognise 420.00 GBP as WHT payable to the Saudi tax authority so the IC balance agrees to 8,400.00 GBP.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

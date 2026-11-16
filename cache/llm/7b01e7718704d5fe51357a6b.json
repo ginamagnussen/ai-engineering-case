@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2462,
+  "output": 601,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.22,
+ "output": {
+  "category": "timing",
+  "confidence": 0.93,
+  "explanation": "NIG-AU line NIG-AU:77566 (AUD 13,200, posted 2026-10-30, in period) matches NIG-AE line NIG-AE:ICV-AE-031485 (AUD 13,200, posted 2026-11-08, after period end) on invoice reference AU/IC/2026/0738, with a buyer-to-seller ratio of 1.0 and zero USD difference at invoice-date rate. The buyer's posting falls 9 days after cut-off, so the difference is a cut-off effect rather than an error. The seller's counterparty field is unresolved in the legacy ledger, but the buyer side resolves to NIG-AU, which is the expected partner.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "No correction this period; confirm NIG-AE's October accrual or cut-off treatment and let the pair clear in November, and ask the NIG-AU legacy SCE ledger team to fix the unresolved counterparty master data on line 77566.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

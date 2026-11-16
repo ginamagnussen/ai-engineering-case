@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 409,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.37,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "Seller NIG-AE:ICV-AE-031373 invoiced AED 63,000 (60h @ 1,050) under reference AE-ICINV-00829, but buyer NIG-US:4471123 booked AED 60,300 under the same reference, a USD 735.18 shortfall. The digits are adjacent-transposed (63,000 vs 60,300), the seller amount agrees with 60h x 1,050, and there is no counterparty mismatch, cut-off issue, currency difference or WHT-consistent ratio (0.957).",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should correct payable NIG-US:4471123 from AED 60,300 to AED 63,000 to agree to invoice AE-ICINV-00829.",
+  "adjustment_amount": 2700.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase IC payable to NIG-AE on NIG-US:4471123 by AED 2,700 (Dr secondment expense / Cr IC payable NIG-AE) to correct the transposed amount to AED 63,000.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

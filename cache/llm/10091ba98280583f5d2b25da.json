@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2448,
+  "output": 1044,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.63,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK line NIG-UK:1900045230 books GBP 106,190.00 as the seller invoice, and NIG-SA line NIG-SA:ICV-SA-018839 books GBP 100,880.50 on the same reference 9000010591. The buyer ratio of 0.95 matches a 5% withholding rate exactly, and the buyer description states 'net of WHT 5%', so the buyer deducted withholding tax from the intercompany payable. The USD difference of 6,737.81 at invoice-date rate is therefore the withheld amount, not a rate or posting error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the IC payable to GBP 106,190.00, record the GBP 5,309.50 withholding as a Saudi WHT liability to be remitted, and confirm the WHT certificate is on file for NIG-UK.",
+  "adjustment_amount": 5309.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA: Dr IC payable (P-24017 subcontract, NIG-UK) GBP 5,309.50 offset by Cr WHT payable GBP 5,309.50 to restore the gross invoice amount; the WHT remains a liability to the tax authority, not a reduction of the intercompany balance.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

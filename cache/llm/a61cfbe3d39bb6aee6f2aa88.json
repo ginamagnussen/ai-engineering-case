@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 1461,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.21,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both lines carry AUD 20,290.00 and the invoice reference matches (AU/IC/2026/0720 vs 20260720), so the USD gap of 148.72 (NIG-US 13,621.69 vs NIG-AU 13,472.97) comes from the rate basis, not the amount. The difference at the invoice-date rate is 0.0, so NIG-US booked at a different rate than the invoice date. The NIG-AU receivable line NIG-AU:77523 has an unresolved counterparty ('Head Office Denver') that should be checked in master data.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US revalue IC payable line NIG-US:4471161 to the October invoice-date AUD/USD rate, and have the group controller confirm the NIG-AU receivable counterparty mapping for 'Head Office Denver'.",
+  "adjustment_amount": 148.72,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-US IC payable to NIG-AU by USD 148.72 to align with the invoice-date rate, offsetting to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

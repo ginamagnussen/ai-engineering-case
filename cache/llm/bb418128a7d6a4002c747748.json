@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2443,
+  "output": 524,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.36,
+ "output": {
+  "category": "wht",
+  "confidence": 0.82,
+  "explanation": "NIG-UK receivable NIG-UK:1900045413 is GBP 11,100.00 for the secondment of Hannah Rahman (P-24088), while NIG-SA payable NIG-SA:ICV-SA-019009 is GBP 10,545.00 with the same reference 9000010806. The buyer/seller ratio of 0.95 matches 5% withholding, and the buyer description says 'net of WHT 5%'. The difference is USD 709.23 at the invoice-date rate; both lines are in period and the counterparties are correct.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm that the 5% Saudi WHT on the secondment (GBP 555.00) was actually remitted, then record the WHT as a receivable/withholding balance on the NIG-UK side and clear the difference with a WHT certificate.",
+  "adjustment_amount": 555.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-UK, book GBP 555.00 to WHT receivable/tax credit against the IC receivable to clear the difference, once NIG-SA confirms remittance and provides the certificate. NIG-SA then settles the IC payable at the gross amount via the WHT liability.",
+  "model_requests_review": true,
+  "review_reason": "A 5% WHT rate on secondment/personnel services should be confirmed by tax as the correct treatment (services rate vs. other), and the remittance must be verified; this cannot be confirmed from the ledger evidence alone."
+ }
+}

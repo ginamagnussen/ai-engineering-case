@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2425,
+  "output": 387,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.91,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.96,
+  "explanation": "NIG-SA's IC payable NIG-SA:ICV-SA-018943 (USD 14,440.00) carries the correct invoice reference INV-US-100374 and matches NIG-US:4471068 exactly in amount (ratio 1.0, difference 0.0), but it is booked against NIG-UK instead of the seller NIG-US. The mismatch is a counterparty coding error on the buyer side, not an amount, FX or timing issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should recode IC payable NIG-SA:ICV-SA-018943 from counterparty NIG-UK to NIG-US and confirm that NIG-UK's books show no matching entry.",
+  "adjustment_amount": 14440.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify the IC payable of USD 14,440.00 on NIG-SA:ICV-SA-018943 from the NIG-UK intercompany account to the NIG-US intercompany account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

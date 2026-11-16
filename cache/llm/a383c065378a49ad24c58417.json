@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2911,
+  "output": 453,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.78,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.55,
+  "explanation": "Seller line NIG-DE:5100873471 (EUR 9,900, ref RE-2026-000712, Al-Mansouri 60 hrs, P-24102) has no buyer match. NIG-AU:77583 is EUR 9,900 for the same staff member and project, but its reference is RE-2026-000711 instead of 000712, and it is booked against NIG-DE. Amount, currency, description and project all agree, so this is most likely a reference keying error rather than a missing booking.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm with NIG-AU that line 77583 relates to invoice RE-2026-000712 and correct its reference, then match it to NIG-DE:5100873471.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount adjustment; correct the reference on NIG-AU:77583 from RE-2026-000711 to RE-2026-000712 so the lines can be matched.",
+  "model_requests_review": true,
+  "review_reason": "The reference differs by one digit; it must be verified that RE-2026-000711 is not a separate invoice (for example another month's secondment) already booked or still outstanding at NIG-DE. If 000711 is a distinct invoice, this case becomes missing_buyer."
+ }
+}

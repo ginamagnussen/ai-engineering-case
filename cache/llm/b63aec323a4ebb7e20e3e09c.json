@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2460,
+  "output": 734,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.31,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.8,
+  "explanation": "NIG-AU:77435 matches NIG-SA:ICV-SA-018802 exactly: SAR 7,600.00 (USD 2,026.69), invoice ref SA-ICINV-00697, project P-23110, F. Brown secondment, zero USD difference and posted 4 days later within the period. The only break is the counterparty: the NIG-AU legacy SCE ledger booked it to an unresolved free-text partner 'KSA branch' rather than the IC partner code NIG-SA, so the line could not auto-match.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode payable line 77435 to IC partner NIG-SA and map the legacy alias 'KSA branch' to NIG-SA in the SCE ledger counterparty master data to prevent recurrence.",
+  "adjustment_amount": 7600.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify NIG-AU IC payable SAR 7,600.00 (ref SA-ICINV-00697) from unresolved counterparty 'KSA branch' to IC partner NIG-SA; no change to amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

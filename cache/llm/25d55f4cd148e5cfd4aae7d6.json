@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2602,
+  "output": 1306,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.3,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.75,
+  "explanation": "Both lines carry reference AU/IC/2026/0671 and the buyer's implied rate of 0.616988 matches the 2026 budget rate exactly (0.0% deviation), while the difference against the invoice-date rate is -31.47 USD. NIG-AU's seller line has an unresolved counterparty field ('Germany'), though the buyer's AU01 resolves to NIG-AU via master data and no counterparty mismatch is flagged.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm the group FX policy for IC balances; if the invoice-date rate applies, NIG-DE should post a 31.47 USD equivalent FX true-up, and NIG-AU should correct the counterparty field on line NIG-AU:77425 to NIG-AU master data.",
+  "adjustment_amount": -31.47,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-DE IC payable from budget-rate basis to invoice-date rate, FX difference of 31.47 USD, only if group policy requires invoice-date rate.",
+  "model_requests_review": true,
+  "review_reason": "The rate basis (budget rate versus invoice-date rate) is a policy judgement, and the seller-side counterparty 'Germany' is unresolved in the NIG-AU ledger."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 497,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.02,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "Seller NIG-AU line 77479 invoiced AUD 31,920.00 (USD 21,013.57) for secondment P-25031, while buyer NIG-SA line ICV-SA-018927 booked AUD 30,324.00 (USD 19,962.90) with the same reference AU/IC/2026/0761. The buyer/seller ratio of 0.95 matches 5% withholding, and the buyer description explicitly says 'net of WHT 5%'; the USD difference is 1,050.67.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the AUD 1,596.00 withholding tax as a WHT payable/receivable and gross up the IC payable to AUD 31,920.00, obtaining the WHT certificate for NIG-AU.",
+  "adjustment_amount": 1596.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Dr WHT expense/receivable (or cost) and Cr IC payable to NIG-AU for AUD 1,596.00 at NIG-SA to gross up the payable to the invoiced AUD 31,920.00 and recognise the withheld tax.",
+  "model_requests_review": true,
+  "review_reason": "Secondment charges may not be subject to the 5% services WHT rate, and the seller's counterparty is booked as 'KSA branch' (unresolved); tax should confirm WHT applicability and treatment before posting."
+ }
+}

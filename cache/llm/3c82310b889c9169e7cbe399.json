@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2488,
+  "output": 1090,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.54,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "Invoice AU/IC/2026/0722 (NIG-AU line NIG-AU:77510) is AUD 35,280.00, but NIG-SA line NIG-SA:ICV-SA-019012 is AUD 33,516.00, a difference of AUD 1,764.00 that equals exactly 5% of the invoice. The buyer description explicitly says 'net of WHT 5%', the ratio is 0.95, and the invoice reference is on the buyer line, so this is Saudi withholding tax on services rather than an error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up its IC payable to AUD 35,280.00, record the AUD 1,764.00 as Saudi WHT payable, and attach the WHT certificate or remittance evidence to the pair so it can be closed.",
+  "adjustment_amount": 1764.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Gross up NIG-SA IC payable by AUD 1,764.00 to the invoiced AUD 35,280.00, with the offsetting credit to Saudi WHT payable (5% on services), so the buyer's liability and tax withheld are both recorded.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

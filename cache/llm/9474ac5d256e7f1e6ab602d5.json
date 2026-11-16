@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2588,
+  "output": 394,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.88,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "Seller line NIG-US:4471026 (USD 9,900, INV-US-100390, Fischer secondment P-24017) has no matched buyer line. NIG-UK:1900045253 matches on amount (9,900 USD, ratio 1.0), project P-24017, staff name and counterparty NIG-US, but its reference is invus100396 rather than INV-US-100390. This looks like a reference keying error on the buyer side, not a missing booking, but no listed category covers a reference mismatch and the pairing cannot be fully verified.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Confirm that NIG-UK:1900045253 is the payable for INV-US-100390, then correct its reference and match the pair.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Reference differs (invus100396 vs INV-US-100390) although amount, project, staff name and counterparty align; a human should confirm the pairing and rule out a different invoice (e.g. a duplicate or second month of the secondment) before matching."
+ }
+}

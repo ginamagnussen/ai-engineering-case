@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2601,
+  "output": 417,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.79,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.85,
+  "explanation": "NIG-DE line NIG-DE:5100873391 (EUR 90,190, USD 96,165.99, ref RE-2026-000360, project recharge P-24050 BIM coordination) has no matching NIG-UK payable. The two unmatched NIG-UK lines searched are unrelated: NIG-UK:1900045511 is an AED accrual for NIG-AE and NIG-UK:1900045253 is a USD 9,900 secondment for NIG-US. No lines with the same reference were found elsewhere.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm receipt of invoice RE-2026-000360 and book the EUR 90,190 IC payable to NIG-DE for P-24050 in October, or accrue it if the invoice is not yet processed.",
+  "adjustment_amount": 90190.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-UK to book Dr project cost (P-24050 BIM coordination) / Cr IC payable NIG-DE for EUR 90,190 against reference RE-2026-000360.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

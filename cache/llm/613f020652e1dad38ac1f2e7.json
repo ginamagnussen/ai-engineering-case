@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 503,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.38,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-018914 (EUR 43,842.50) is 95% of NIG-DE's receivable NIG-DE:5100873360 (EUR 46,150.00) on the same invoice RE-2026-000748. The ratio matches 5% withholding tax and the buyer description states 'net of WHT 5%'. Both lines are in period with the same currency and the counterparty resolves correctly, so the gap (USD 2,478.03 at the invoice-date rate) is the WHT amount.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the EUR 2,307.50 withheld amount to a WHT payable account against the IC payable and confirm the WHT certificate with NIG-DE so the IC balances agree.",
+  "adjustment_amount": 2307.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Dr IC payable NIG-DE / Cr WHT payable (tax authority) EUR 2,307.50 at NIG-SA to restore the gross IC payable of EUR 46,150.00; NIG-DE to record the WHT as a receivable or tax credit.",
+  "model_requests_review": true,
+  "review_reason": "Whether WHT applies at 5% to this engineering service charge between a German seller and a Saudi buyer, and who bears the tax, should be confirmed by tax. The evidence only shows the ratio and the description."
+ }
+}

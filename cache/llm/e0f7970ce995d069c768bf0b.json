@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 402,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.72,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-AU invoiced AUD 25,080.00 on NIG-AU:77471 (152h @ 165 = 25,080, ref AU/IC/2026/0746), while NIG-DE booked AUD 25,800.00 on NIG-DE:5100873410 against the same invoice reference. Both lines are in the same currency and counterparty, so FX and miscoding are ruled out. The digit-pattern check flags adjacent transposed digits (080 vs 800), giving a USD difference of -476.42 at the invoice-date rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should correct the IC payable on document 5100873410 from AUD 25,800.00 to AUD 25,080.00 to match invoice AU/IC/2026/0746.",
+  "adjustment_amount": -720.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reduce the NIG-DE IC payable to NIG-AU by AUD 720.00 (debit IC payable, credit secondment expense) to correct the transposed amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

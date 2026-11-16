@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2436,
+  "output": 827,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.74,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-US seller line NIG-US:4471035 (INV-US-100442) is 7600.00 USD, and NIG-SA buyer line NIG-SA:ICV-SA-018820 is 7220.00 USD with the description 'net of WHT 5%'. The 380.00 USD difference is exactly 5% of the invoice, the buyer-to-seller ratio is 0.95, and the invoice reference appears on the buyer line, with both lines posted within 2 days in period.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up ICV-SA-018820 to the full 7600.00 USD invoice and record the 380.00 USD withheld as Saudi WHT payable to the tax authority, with the matching WHT certificate retained for NIG-US.",
+  "adjustment_amount": 380.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Gross up NIG-SA IC payable ICV-SA-018820 by 380.00 USD to 7600.00 USD and credit 380.00 USD to WHT payable (5% Saudi services WHT on secondment fee).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

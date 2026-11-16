@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2621,
+  "output": 742,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 10.17,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK booked IC receivable NIG-UK:1900045276 (ref 9000010824, GBP 25,200.00 / USD 32,015.34) on 2026-10-10 for the secondment of Felix Patel (120h @ 210, P-23110), but NIG-AE has no matching payable. Only 2 unmatched NIG-AE lines exist, and neither fits. NIG-AE:ICV-AE-031332 is SAR 97,524 owed to NIG-SA (ratio 0.8123, different reference and service). NIG-AE:ICV-AE-031254 is USD 14,800 owed to NIG-US (ratio 0.4623). No line anywhere carries the same reference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm receipt of NIG-UK invoice 9000010824 and book the IC payable to NIG-UK for GBP 25,200.00 in the October 2026 period.",
+  "adjustment_amount": 25200.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-AE, debit secondment/project cost P-23110 and credit IC payable to NIG-UK for GBP 25,200.00, referencing NIG-UK invoice 9000010824.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

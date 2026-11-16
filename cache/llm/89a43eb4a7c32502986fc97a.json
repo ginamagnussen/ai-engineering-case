@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 879,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 11.82,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-018927 books AUD 30,324.00 against NIG-AU invoice AU/IC/2026/0761 (NIG-AU:77479, AUD 31,920.00). The buyer-to-seller ratio is 0.95, matching the 5% Saudi WHT on services, and the buyer description says 'net of WHT 5%'. The AUD 1,596.00 gap (USD 1,050.67 at the invoice-date rate) is withholding tax, not a keying or currency error; both lines share the reference and posting date of 2026-10-18.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-SA should provide the WHT remittance certificate for AUD 1,596.00, and NIG-AU should then reclassify that amount from the IC receivable to WHT recoverable or tax expense, and map the 'KSA branch' counterparty text to NIG-SA in its legacy ledger master data.",
+  "adjustment_amount": 1596.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "In NIG-AU, debit WHT recoverable or withholding tax expense AUD 1,596.00 and credit IC receivable NIG-SA AUD 1,596.00, supported by NIG-SA's WHT certificate. This leaves both IC balances at AUD 30,324.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

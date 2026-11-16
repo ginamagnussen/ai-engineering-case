@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2443,
+  "output": 711,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.23,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-UK booked EUR 7,577.61 (NIG-UK:1900045354) against NIG-DE invoice RE-2026-000669 for EUR 8,800.00 (NIG-DE:5100873388). The buyer's own description states 'partial accept, hours disputed pending PM approval'. The gap is EUR 1,222.39 (USD 1,309.93), a ratio of 0.86109. Both lines share the same currency, invoice reference and counterparties and were posted in period, which rules out FX, timing and miscoding, and UK payables carry no withholding tax.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-UK project management should confirm the accepted hours for Priya Rahman (P-25019) with NIG-DE, and NIG-DE should then either issue a credit note or NIG-UK should book the remaining payable, with the disputed balance tracked on the IC dispute log until resolved.",
+  "adjustment_amount": 1222.39,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Disputed amount pending PM approval. If the hours are accepted, NIG-UK books an additional IC payable to NIG-DE of EUR 1,222.39. If they are rejected, NIG-DE issues a credit note reducing its IC receivable from NIG-UK by the agreed amount.",
+  "model_requests_review": true,
+  "review_reason": "Intentional short-booking over contested hours: it is a commercial judgement which side adjusts, and by how much, once PM approval is obtained."
+ }
+}

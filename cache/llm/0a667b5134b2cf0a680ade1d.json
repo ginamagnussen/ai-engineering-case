@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 1392,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 9.09,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.72,
+  "explanation": "Both lines carry the same AUD 1,320.00 for secondment P-24088 and matching reference 0650, and the invoice reference is found on the buyer line, so this is one invoice. The USD gap of 4.73 (871.90 on NIG-AU:77422 vs 867.17 on NIG-US:4471048) arises from translation at different rates, since the difference at the invoice-date rate is 0.00. The seller's counterparty text 'Head Office Denver' is unresolved in the legacy SCE ledger, but the counterparty mismatch check is false.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Confirm the group closing and average rates used for translating both entities, and document the 4.73 USD translation difference as a rate-basis variance with no local-currency correction; also fix the NIG-AU legacy counterparty mapping so 'Head Office Denver' resolves to NIG-US.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

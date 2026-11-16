@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2132,
+  "output": 900,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.87,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-UK line NIG-UK:1900045447 (AED 16,800, USD 4,574.47, posted 2026-10-28) carries reference aeicinv00827, the same reference as NIG-UK:1900045440 already matched in M0038 (posted 2026-10-27). No seller line is unmatched, so the buyer appears to have booked the same NIG-AE invoice twice.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Confirm that NIG-UK:1900045440 carries the same AED 16,800 amount and that NIG-AE invoiced aeicinv00827 only once, then reverse NIG-UK:1900045447 in SAP S/4HANA.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse the duplicate NIG-UK IC payable booking of AED 16,800 (USD 4,574.47) for invoice aeicinv00827 posted 2026-10-28.",
+  "model_requests_review": true,
+  "review_reason": "The matched twin's amount and the seller's single invoicing of aeicinv00827 are not shown in the evidence and must be verified before reversal."
+ }
+}

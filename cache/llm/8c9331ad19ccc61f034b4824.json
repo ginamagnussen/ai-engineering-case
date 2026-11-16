@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 3191,
+  "output": 429,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.23,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-SA line ICV-SA-018847 (SAR 25,200, USD 6,720.08, ref SA-ICINV-00584, secondment Olivia Turner) has no buyer line at NIG-AU among the 4 unmatched buyer lines searched. The nearby SA-ICINV-00585 (NIG-AU:77465, SAR 33,000) has a different reference and description, and the same-reference line AE-ICINV-00584 is an unrelated NIG-AE/NIG-SA recharge. No duplicate or amount-based candidate fits.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to confirm receipt of invoice SA-ICINV-00584 and book the IC payable of SAR 25,200 for the Olivia Turner secondment (P-24088) in October if it relates to this period.",
+  "adjustment_amount": 25200.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Buyer NIG-AU to debit secondment cost (P-24088) and credit IC payable to NIG-SA for SAR 25,200 (about USD 6,720.08).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

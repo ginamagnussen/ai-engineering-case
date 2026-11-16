@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2582,
+  "output": 912,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 9.97,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.92,
+  "explanation": "Both lines carry the same invoice reference RE-2026-000751 for P-24088 geotechnical work. NIG-DE invoiced EUR 17,220.00 (NIG-DE:5100873407), and NIG-UK booked GBP 15,781.90 (NIG-UK:1900045370) at an implied rate of 0.916487. That rate matches the 2026 budget rate exactly (0.0% deviation) but is 7.872% off the invoice-date daily rate. The computed difference of USD -1,442.12 at the invoice-date rate is fully explained by this rate basis; counterparty and period are correct.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should revalue the payable for RE-2026-000751 from the 2026 budget rate to the invoice-date daily EUR/GBP rate, so the GBP equivalent of EUR 17,220.00 agrees with NIG-DE's receivable.",
+  "adjustment_amount": -1442.12,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-UK's IC payable to NIG-DE for RE-2026-000751 by the GBP equivalent of USD 1,442.12, restating EUR 17,220.00 at the invoice-date rate instead of the budget rate 0.916487, with the offset to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

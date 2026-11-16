@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2465,
+  "output": 356,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.67,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-SA receivable NIG-SA:ICV-SA-018861 and NIG-AU payable NIG-AU:77468 match on reference SA-ICINV-00562, amount SAR 159,600 (USD 42,560.53) and the secondment description for C. Turner on P-25031, with zero difference. NIG-AU booked the payable against 'Head Office Denver', which does not resolve to any group entity, instead of the expected partner NIG-SA.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on ledger line 77468 from 'Head Office Denver' to NIG-SA so the pair eliminates on consolidation.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify the counterparty on NIG-AU:77468 from 'Head Office Denver' to NIG-SA; no amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

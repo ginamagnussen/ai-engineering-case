@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2428,
+  "output": 547,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.5,
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "NIG-AU:77519 (AUD 12,640.00, USD 8,393.21) and NIG-US:4471144 (AUD 12,640.00, USD 8,481.44) match in local currency with ratio 1.0 and no difference at the invoice-date rate. The seller booked the counterparty as 'Head Office Denver' (unresolved), the buyer line has no invoice reference, and the USD gap of 88.23 looks like a rate-basis effect rather than a true amount difference. No listed category cleanly fits, since this is essentially a master-data/counterparty-label and reference gap on an otherwise agreeing pair.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU correct the counterparty on NIG-AU:77519 to NIG-US (replacing the unresolved 'Head Office Denver' mapping), and have NIG-US add reference AU/IC/2026/0730 to NIG-US:4471144 so the pair matches.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount adjustment; update counterparty mapping on the seller line and add the invoice reference on the buyer line. The USD translation difference of 88.23 is a rate-basis effect to be confirmed.",
+  "model_requests_review": true,
+  "review_reason": "Amounts agree in AUD, but the seller counterparty is unresolved and the buyer line lacks the invoice reference. The USD difference of 88.23 reflects different translation rates and needs confirmation, so a human should verify the pairing and the rate basis."
+ }
+}

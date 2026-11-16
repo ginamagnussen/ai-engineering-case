@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2419,
+  "output": 423,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.03,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-US invoiced NIG-AE USD 16,800.00 for the T. Nasser secondment (NIG-US:4471084, INV-US-100411, P-24088). NIG-AE booked the identical amount with reference 100411 one day later (NIG-AE:ICV-AE-031287), but against counterparty 'NorthStar Infrastruktur GmbH' (NIG-DE) instead of NIG-US. Amount, currency, invoice reference and project all match with zero difference, so the only error is the partner coding.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should reclass the IC payable on ICV-AE-031287 from intercompany partner NIG-DE to NIG-US and confirm the vendor master mapping, so no similar miscoding recurs.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-AE: debit IC payable – NIG-DE USD 16,800.00 and credit IC payable – NIG-US USD 16,800.00 (reclass of secondment invoice INV-US-100411).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

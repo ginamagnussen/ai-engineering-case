@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 1176,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.22,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-AU seller line NIG-AU:77479 invoices AUD 31,920.00 (ref AU/IC/2026/0761), and buyer line NIG-SA:ICV-SA-018927 books AUD 30,324.00, which is exactly 95% of the invoice and is described as net of 5% WHT. The AUD 1,596.00 gap equals the 5% withholding, and the USD 1,050.67 difference at invoice-date rates is a translation effect of the same gap, so no FX or split issue applies.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up the NIG-SA IC payable to AUD 31,920.00 and book the AUD 1,596.00 withheld as Saudi WHT payable, after confirming the WHT certificate and treatment with Saudi tax; NIG-AU should check that its legacy SCE ledger counterparty 'KSA branch' is mapped to NIG-SA.",
+  "adjustment_amount": 1596.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Gross up NIG-SA IC payable by AUD 1,596.00 to match the invoice and record the 5% WHT as a tax payable to the Saudi authority.",
+  "model_requests_review": true,
+  "review_reason": "Confirm the 5% WHT certificate and whether the withheld amount is recorded as a tax liability or recoverable; the seller's counterparty as booked ('KSA branch') is unresolved in the legacy ledger, though the reference matches."
+ }
+}

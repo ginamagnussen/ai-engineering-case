@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2449,
+  "output": 676,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.91,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "Seller NIG-UK line NIG-UK:1900045257 invoices 42,920.00 GBP for P-24017, but buyer NIG-AE line NIG-AE:ICV-AE-031254 books only 39,086.56 GBP (ratio 0.91068), a gap of 4,818.21 USD at the invoice-date rate. The buyer's description states 'partial accept, hours disputed pending PM approval', which indicates an intentional partial booking rather than a keying, FX, or timing error.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Obtain the project manager's decision on the disputed hours for P-24017 and have NIG-UK and NIG-AE agree whether the disputed amount is credited, re-invoiced, or still payable before the close is finalised.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer has deliberately contested part of the charge pending PM approval, so the outcome and any correcting entry depend on a commercial decision that cannot be verified from the ledger evidence."
+ }
+}

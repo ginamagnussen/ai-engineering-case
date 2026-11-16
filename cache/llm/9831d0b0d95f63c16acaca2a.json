@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2419,
+  "output": 661,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.29,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-AE's IC payable line ICV-AE-031267 (21,280.00 USD, ref 100438) is booked against NIG-DE (NorthStar Infrastruktur GmbH) instead of NIG-US, although the invoice reference INV-US-100438 appears on the line and the amount matches NIG-US line 4471049 exactly (ratio 1.0, difference 0.00 USD). The description (Secondment Mohammed Smith P-24050) confirms it is the same invoice, so this is a partner-code error, not a timing or amount issue.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Reclassify NIG-AE line ICV-AE-031267 from counterparty NIG-DE to NIG-US so it matches NIG-US line NIG-US:4471049, and confirm NIG-DE holds no offsetting entry for this invoice.",
+  "adjustment_amount": 21280.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclass 21,280.00 USD IC payable from counterparty NIG-DE to NIG-US in NIG-AE; no P&L or net balance change at group level.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

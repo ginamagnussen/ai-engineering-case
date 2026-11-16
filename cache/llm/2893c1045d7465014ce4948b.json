@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2475,
+  "output": 489,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.59,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031401 is AED 16,800.00 for the Al-Mansouri secondment, while NIG-SA payable NIG-SA:ICV-SA-019030 is AED 15,960.00, a ratio of 0.95 that matches 5% WHT (USD 228.72 difference). The buyer description says 'net of WHT 5%' and the invoice reference 837 is found on the buyer line, so this is a withholding deduction rather than a pricing or FX difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the AED 840.00 withholding tax as a WHT payable and gross up the IC payable to AED 16,800.00, after confirming that 5% is the correct rate for secondment services.",
+  "adjustment_amount": 840.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-AE by AED 840.00 and credit WHT payable (Saudi tax authority) for the same amount, so the IC balance agrees to the AE invoice of AED 16,800.00.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that 5% WHT applies to secondment services under Saudi rules, and that NIG-AE will issue or accept a WHT certificate. The rate is not verifiable from the ledger evidence alone."
+ }
+}

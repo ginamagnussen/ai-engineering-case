@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 448,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.07,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-018815 (GBP 4,218.00) is 95% of NIG-UK's receivable NIG-UK:1900045214 (GBP 4,440.00) for the same reference 9000010537 and project P-25002. The buyer description states 'net of WHT 5%', which matches the ratio, and the gap is USD 284.42 at the invoice-date rate. Both lines are in period with the correct counterparties, so this is a withholding deduction, not a timing or coding issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm the 5% Saudi WHT was remitted and obtain the WHT certificate, then record the GBP 222.00 withheld as a WHT receivable at NIG-UK and as a WHT payable to the tax authority at NIG-SA so the IC balances agree gross.",
+  "adjustment_amount": 222.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-SA, gross up the IC payable to NIG-UK by GBP 222.00 with a credit to the WHT payable to the tax authority; at NIG-UK, record the matching WHT receivable or tax expense, per group policy.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

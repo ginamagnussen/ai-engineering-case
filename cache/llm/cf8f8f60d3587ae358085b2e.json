@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2469,
+  "output": 593,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.49,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "The seller NIG-SA invoice SA-ICINV-00748 (line NIG-SA:ICV-SA-019018) for 46,980 SAR matches buyer line NIG-AE:ICV-AE-031423 on reference, amount, currency and posting date, with the invoice reference found on the buyer line. The only break is that NIG-AE booked the payable against NIG-UK instead of NIG-SA, and the buyer-to-seller ratio is 1.0 with zero difference at the invoice-date rate.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should reclassify the 46,980 SAR payable on line ICV-AE-031423 from counterparty NIG-UK to NIG-SA so it matches the seller receivable before close.",
+  "adjustment_amount": 46980.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify IC payable from NIG-UK to NIG-SA (counterparty correction, no P&L or balance change at group level).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

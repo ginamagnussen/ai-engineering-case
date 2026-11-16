@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2428,
+  "output": 1302,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.48,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.8,
+  "explanation": "NIG-AU line NIG-AU:77519 (IC receivable, AUD 12,640.00, ref AU/IC/2026/0730) is booked against 'Head Office Denver', which does not resolve to a partner, while the NIG-US payable NIG-US:4471144 (AUD 12,640.00) is booked against NIG-AU via master data. The local-currency amounts match exactly, and the USD gap (8,393.21 vs 8,481.44) reflects different translation dates (2 days apart), not a booking difference. The seller's counterparty code is the defect, so the seller should correct it to the buyer entity.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU's Legacy SCE Ledger reclassify line NIG-AU:77519 from 'Head Office Denver' to NIG-US as the IC counterparty, then re-run the pair match for P-25019.",
+  "adjustment_amount": 12640.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reclassify the IC receivable counterparty on NIG-AU:77519 from Head Office Denver to NIG-US; no change to amount or ledger balance in total.",
+  "model_requests_review": true,
+  "review_reason": "The mapping of 'Head Office Denver' to NIG-US is inferred from the case and not confirmed by master data, and the seller's counterparty resolution is unresolved. Confirm the mapping before posting the reclass."
+ }
+}

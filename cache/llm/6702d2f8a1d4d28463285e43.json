@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2435,
+  "output": 593,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.55,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked GBP 9,775.00 on NIG-SA:ICV-SA-018976 against NIG-UK's GBP 11,500.00 invoice on NIG-UK:1900045348 (same reference 9000010496). The buyer/seller ratio of 0.85 matches 15% Saudi withholding on royalties/licences, and the buyer description states 'net of WHT 15%'. The GBP 1,725.00 gap (USD 2,142.38 at the invoice-date rate) is withheld tax, not an error.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should reclassify the GBP 1,725.00 residual receivable to WHT recoverable or tax expense once NIG-SA provides the WHT payment certificate, closing the IC balance.",
+  "adjustment_amount": 1725.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-UK: debit withholding tax receivable/expense GBP 1,725.00, credit IC receivable NIG-SA GBP 1,725.00 (15% Saudi WHT on Bentley OpenRoads licence recharge, ref 9000010496).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

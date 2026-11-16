@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2620,
+  "output": 380,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.35,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019078 is a GBP 62,280.00 (USD 78,116.56) month-end accrual for P-24102 BIM coordination from NIG-UK, referenced ACCR-OCT26 and explicitly marked 'invoice not received'. No matching NIG-UK receivable exists: the two nearest unmatched seller lines are for different projects (P-24088 at ratio 1.1952 and P-24017 booked against NIG-DE at ratio 0.3097), so neither is a plausible match.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether P-24102 BIM coordination services were delivered in October 2026 and either issue the GBP 62,280 invoice or accrue the matching IC receivable, while NIG-SA keeps the accrual and reverses it when the invoice is booked.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

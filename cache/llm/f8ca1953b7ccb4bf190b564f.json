@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2467,
+  "output": 868,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 11.57,
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "NIG-SA invoice SA-ICINV-00741 (NIG-SA:ICV-SA-018955) is SAR 687,960.00, and NIG-AE booked the same reference in SAR (NIG-AE:ICV-AE-031392) as SAR 688,050.00. That is SAR 90 higher, a ratio of 1.00013 and USD -24.0 at the invoice-date rate. Both lines are in SAR, in period and against the correct counterparties, so FX, timing, miscoding and withholding tax are ruled out. No digit pattern was detected, so a keying error is possible but not confirmed.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should check its payable against the SA-ICINV-00741 invoice document and confirm whether SAR 688,050.00 is a keying error or reflects a valid extra charge.",
+  "adjustment_amount": 90.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "If the invoice confirms SAR 687,960.00, reduce the NIG-AE IC payable to NIG-SA by SAR 90.00 (debit IC payable, credit the project P-24050 cost account).",
+  "model_requests_review": true,
+  "review_reason": "The SAR 90 overstatement on the buyer side has no detected digit pattern or stated business reason, so the cause cannot be verified from the evidence and needs confirmation against the source invoice."
+ }
+}

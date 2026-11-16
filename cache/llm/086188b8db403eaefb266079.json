@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 598,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.24,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-018874 of GBP 22,344.00 is exactly 95% of NIG-UK's receivable NIG-UK:1900045265 of GBP 23,520.00, with the same invoice reference 9000010514 and project P-25019. The buyer's description states 'net of WHT 5%', and 5% matches the Saudi withholding rate on services such as this secondment. The GBP 1,176.00 gap (USD 1,478.00 at the invoice-date rate) is therefore withholding tax, not an error by either side.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should obtain the Saudi WHT certificate from NIG-SA and reclassify the GBP 1,176.00 residual on the IC receivable to a WHT recoverable/tax account so the intercompany balances agree.",
+  "adjustment_amount": 1176.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-UK: debit WHT recoverable (or tax expense if not creditable) GBP 1,176.00 and credit the IC receivable from NIG-SA GBP 1,176.00 for invoice 9000010514, supported by NIG-SA's WHT certificate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

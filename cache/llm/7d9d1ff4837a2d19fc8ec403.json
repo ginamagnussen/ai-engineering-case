@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2467,
+  "output": 471,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.49,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.4,
+  "explanation": "Seller NIG-SA:ICV-SA-018955 shows SAR 687,960.00 and buyer NIG-AE:ICV-AE-031392 shows SAR 688,050.00 on the same reference SA-ICINV-00741, both in SAR. The buyer is SAR 90 higher (about USD 24 at the invoice-date rate, ratio 1.00013). Counterparties are correct, both are in period, and there is no FX, WHT or split pattern, and no digit-transposition pattern was detected, so this is a small unexplained difference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to check the booked amount against invoice SA-ICINV-00741 and correct it to the invoiced amount if it was keyed wrongly.",
+  "adjustment_amount": 90.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "If the invoice confirms SAR 687,960.00, reduce the NIG-AE IC payable by SAR 90.00 to match the NIG-SA receivable.",
+  "model_requests_review": true,
+  "review_reason": "The SAR 90 difference has no verifiable cause in the evidence (no digit pattern, no FX or tax explanation); it may be a keying error, a bank charge or a rounding or minor pricing difference, so the invoice must be checked."
+ }
+}

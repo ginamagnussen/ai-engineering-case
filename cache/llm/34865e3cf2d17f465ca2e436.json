@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 941,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.88,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "Seller line NIG-UK:1900045447 invoices GBP 65,380.00 under reference 9000010983, and buyer line NIG-SA:ICV-SA-019031 books GBP 62,111.00 with the description 'net of WHT 5%'. GBP 62,111.00 is exactly 95% of GBP 65,380.00, so the GBP 3,269.00 gap is the 5% Saudi services withholding tax, and the invoice reference matches on the buyer line.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up IC payable ICV-SA-019031 by GBP 3,269.00 to the full GBP 65,380.00 and record the GBP 3,269.00 as WHT payable to the Saudi authority, with the withholding certificate retained for the UK partner.",
+  "adjustment_amount": 3269.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up the NIG-SA IC payable from GBP 62,111.00 to GBP 65,380.00 and credit WHT payable GBP 3,269.00 (5% of GBP 65,380.00).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

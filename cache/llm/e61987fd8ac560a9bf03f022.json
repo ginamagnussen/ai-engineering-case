@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2588,
+  "output": 1281,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.82,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-US:4471026 (INV-US-100390, USD 9,900, P-24017 secondment, 2026-10-02) has no exact buyer match, but NIG-UK:1900045253 carries the same USD 9,900 amount, the same P-24017 secondment description, the same US counterparty via master data, and an in-period posting of 2026-10-07. The likely break is the reference (invus100396 vs INV-US-100390), so this is probably a matched pair that failed on reference rather than a real exception. The other buyer candidate, NIG-UK:1900045511 (AED 126,000 accrual, C.Turner, no invoice), is a different person and amount and does not relate to this seller line.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Confirm with NIG-UK that NIG-UK:1900045253 is the booking of INV-US-100390 and manually match the pair, noting the reference difference, or have NIG-UK correct the reference if the booking is wrong.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No category fits cleanly; the evidence points to a probable reference-only mismatch with an existing buyer line, which a human must confirm before matching."
+ }
+}

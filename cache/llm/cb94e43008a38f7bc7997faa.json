@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 366,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.81,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.8,
+  "explanation": "Seller line NIG-SA:ICV-SA-018931 shows SAR 126,000 (120h @ 1050) while buyer line NIG-DE:5100873419 shows SAR 162,000 on the same invoice reference SA-ICINV-00588. The digits are transposed (126 vs 162), so the buyer is over-booked by SAR 36,000 (USD 9,600.12), and the seller amount agrees with the hours times rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should correct the IC payable on 5100873419 from SAR 162,000 to SAR 126,000 in line with invoice SA-ICINV-00588.",
+  "adjustment_amount": 36000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reduce NIG-DE IC payable to NIG-SA by SAR 36,000 (debit IC payable, credit the original expense or cost account) to correct the transposed amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

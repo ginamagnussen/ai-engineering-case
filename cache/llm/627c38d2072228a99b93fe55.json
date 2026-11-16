@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 853,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.49,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031395 records a 50,000 AED secondment invoice (AE-ICINV-00555), while NIG-SA line NIG-SA:ICV-SA-019056 books 47,500 AED described as net of 5% WHT. The 0.95 buyer-to-seller ratio matches the 5% Saudi services WHT rate, and the 2,500 AED gap (680.73 USD at invoice-date rate) is the withheld amount.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up its IC payable to 50,000 AED and record the 2,500 AED withholding as a tax liability to be remitted to ZATCA, supported by the WHT calculation for invoice AE-ICINV-00555.",
+  "adjustment_amount": 2500.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA Dr expense/IC cost 2,500 AED and Cr IC payable to NIG-AE 2,500 AED to gross up the payable to 50,000 AED, with the 2,500 AED shown as WHT payable to the tax authority.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

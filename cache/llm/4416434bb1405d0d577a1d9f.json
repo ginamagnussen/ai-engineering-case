@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2585,
+  "output": 338,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.04,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.93,
+  "explanation": "NIG-DE line NIG-DE:5100873517 is an IC payable of GBP 840.00 (USD 1,082.33) dated 2026-10-31, described as an accrual for Autodesk AEC licences with the invoice not received (ref ACCR-OCT26). No NIG-UK seller line matches; the two unmatched NIG-UK lines (GBP 1,520 and GBP 25,200) are secondments to NIG-AU and NIG-AE, so they are unrelated.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm whether the Autodesk AEC licence recharge of GBP 840 is due and, if so, issue the invoice (or have NIG-DE reverse the accrual if not recharged).",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

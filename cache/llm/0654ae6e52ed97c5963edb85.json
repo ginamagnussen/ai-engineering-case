@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 509,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.28,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.55,
+  "explanation": "NIG-UK receivable NIG-UK:1900045211 is GBP 48,340.00 while NIG-SA payable NIG-SA:ICV-SA-018801 is GBP 43,840.00, a USD difference of 5,765.35 at the invoice-date rate. Both lines share reference 9000010633, the same posting date, and the same currency, so FX, timing and counterparty miscoding are ruled out. The digit pattern (adjacent digits transposed) points to a keying error, though 48,340 vs 43,840 is a 4,500 gap that is not a pure transposition, and the buyer description says 'subcontract', so a dispute or partial charge cannot be excluded.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to check the original NIG-UK invoice for P-25019 and correct the payable if it was keyed wrongly, or confirm whether a deliberate reduction was made.",
+  "adjustment_amount": 4500.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "If confirmed as a keying error, increase the NIG-SA IC payable to NIG-UK by GBP 4,500.00 to match the invoice of GBP 48,340.00.",
+  "model_requests_review": true,
+  "review_reason": "The 4,500 difference is not a clean transposition and the buyer description differs from the seller's, so a deliberate short-payment or dispute cannot be excluded without the original invoice."
+ }
+}

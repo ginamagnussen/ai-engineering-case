@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2420,
+  "output": 524,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.66,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-SA's payable line NIG-SA:ICV-SA-019069 (GBP 9,405.00) is 95% of NIG-UK's receivable NIG-UK:1900045459 (GBP 9,900.00), which matches a 5% withholding rate, and its description says 'net of WHT 5%'. The invoice reference 9000010486 matches on both lines, the currency is the same, and both lines are in period with the counterparty correctly resolved, so the GBP 495.00 gap (about USD 619.60) is the withholding tax.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the GBP 495.00 withheld amount to a WHT payable account against the NIG-UK IC payable, and NIG-UK should record it as a WHT receivable/tax credit, once the WHT certificate is confirmed.",
+  "adjustment_amount": 495.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable to GBP 9,900.00 by crediting the IC payable to NIG-UK and debiting the WHT-related account for GBP 495.00 (or reclassify to a WHT payable); NIG-UK to record the WHT receivable on its side.",
+  "model_requests_review": true,
+  "review_reason": "The 5% rate was applied to IT shared services; the applicable Saudi WHT rate and the treatment of the gap (gross-up versus WHT receivable at NIG-UK) should be confirmed by tax."
+ }
+}

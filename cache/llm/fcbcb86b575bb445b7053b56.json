@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2419,
+  "output": 380,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.78,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.96,
+  "explanation": "Seller line NIG-US:4471084 (USD 16,800, INV-US-100411, secondment T. Nasser P-24088) matches buyer line NIG-AE:ICV-AE-031287 exactly (ratio 1.0, difference 0.0, invoice reference 100411 found). However, NIG-AE booked the payable against NIG-DE (NorthStar Infrastruktur GmbH) instead of the expected NIG-US, so the IC balance is on the wrong partner.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should reclassify payable ICV-AE-031287 from counterparty NIG-DE to NIG-US and confirm the vendor master mapping.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reverse the IC payable of USD 16,800 from the NIG-DE partner account and rebook it to the NIG-US partner account at NIG-AE; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

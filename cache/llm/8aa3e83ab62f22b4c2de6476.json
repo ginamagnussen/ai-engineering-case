@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2622,
+  "output": 415,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.67,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-US line NIG-US:4471064 (USD 2,640.00, secondment Khalid Haddad 24h @ 110, P-25019, ref INV-US-100417) has no buyer booking at NIG-AE. Of the 2 unmatched NIG-AE lines searched, none fits: NIG-AE:ICV-AE-031337 (USD 18,480, different person and project, 7x the amount) and NIG-AE:ICV-AE-031228 (SAR, different partner NIG-SA). No lines elsewhere share the reference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm receipt of invoice INV-US-100417 and book the USD 2,640.00 secondment charge to IC payable with NIG-US as counterparty.",
+  "adjustment_amount": 2640.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Book IC payable of USD 2,640.00 at NIG-AE against NIG-US for secondment of Khalid Haddad (P-25019), debiting the appropriate secondment cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2558,
+  "output": 350,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.44,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "Buyer line NIG-UK:1900045253 (USD 9,900, ref invus100396) has no matched seller line, but the nearest unmatched seller line NIG-US:4471026 (USD 9,900, ref INV-US-100390) has identical amount, currency, counterparty and project P-24017/F. Fischer. Only the invoice reference differs (100396 vs 100390), which looks like a reference keying error rather than a missing booking, but it is not a defined category.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Confirm with NIG-UK AP that invoice invus100396 corresponds to INV-US-100390, correct the reference, and manually match the two lines.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Amount, project and employee match but invoice references differ (100396 vs 100390); a human should confirm it is the same invoice and not a separate one before matching."
+ }
+}

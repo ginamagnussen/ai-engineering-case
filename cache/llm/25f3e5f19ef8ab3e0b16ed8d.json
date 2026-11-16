@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2423,
+  "output": 429,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.08,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "NIG-DE payable NIG-DE:5100873387 (AED 99,000, posted 2026-10-17, ref AE-ICINV-00560, 'Personalgestellung J.Brown P-24017') carries the same invoice reference as NIG-DE:5100873364 (posted 2026-10-13), which is already matched to NIG-AE's receivable in M0007. The only unmatched NIG-AE seller line (AE-ICINV-00488, AED 37,000, ratio 0.37) is a different invoice booked against NIG-SA, so it does not explain this line. The second booking appears to be a double entry of the same secondment invoice by NIG-DE.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should confirm that 5100873387 duplicates 5100873364 for invoice AE-ICINV-00560 and reverse the second posting before close.",
+  "adjustment_amount": 99000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse duplicate IC payable NIG-DE:5100873387 (Dr IC payable NIG-AE / Cr secondment expense AED 99,000).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

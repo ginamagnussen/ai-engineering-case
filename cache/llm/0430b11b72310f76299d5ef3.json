@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2872,
+  "output": 809,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.73,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.75,
+  "explanation": "NIG-AU line NIG-AU:77454 is an AUD 39,400.00 (USD 26,013.85) receivable from NIG-US for the P-25002 geotech recharge, posted 2026-10-11. None of the 4 unmatched NIG-US lines carries reference AU/IC/2026/0739 or matches the amount. The closest, NIG-US:4471173 (SAR 79,800, ratio 0.818), is an accrual for seconded staff P.Becker on P-25002 against NIG-SA, which is a different service, currency and counterparty. NIG-US therefore appears not to have booked the invoice.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should locate invoice AU/IC/2026/0739 and book the IC payable to NIG-AU for AUD 39,400.00 in the October 2026 period.",
+  "adjustment_amount": 39400.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "In NIG-US, debit project cost P-25002 (geotech analysis) and credit IC payable to NIG-AU for AUD 39,400.00, reference AU/IC/2026/0739.",
+  "model_requests_review": true,
+  "review_reason": "NIG-US accrual NIG-US:4471173 also references project P-25002, though it is booked against NIG-SA. Please confirm it is unrelated and does not cover this AU charge before booking, to avoid a double cost."
+ }
+}

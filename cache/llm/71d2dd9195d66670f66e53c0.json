@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 1159,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.17,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "Buyer line NIG-DE:5100873494 is booked at 26,208.00 GBP against seller line NIG-UK:1900045437 at 26,280.00 GBP on the same reference 9000010930 and project P-25002, with the correct counterparty NIG-UK and both lines in period. The 72.00 GBP gap matches the adjacent-digit transposition of the last two digits (80 keyed as 08), and the invoice reference is present on the buyer line, so this is a keying error with no business reason. The USD translation difference is not the driver.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Correct the NIG-DE IC payable line NIG-DE:5100873494 from 26,208.00 GBP to 26,280.00 GBP to match the seller invoice, and confirm the keying fix in SAP ECC.",
+  "adjustment_amount": 72.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Increase NIG-DE IC payable (P-25002, ref 9000010930) by 72.00 GBP to correct transposed digits from 26,208.00 to 26,280.00 GBP.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

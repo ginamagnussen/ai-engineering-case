@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2448,
+  "output": 413,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.53,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-DE:5100873326 invoiced EUR 3,360.00 (RE-2026-000298) for seconded staff on P-25031, while buyer NIG-SA:ICV-SA-018863 booked EUR 2,360.00 against the same invoice reference. Same currency, same counterparty, in period, and a single digit differs (3 vs 2 in the thousands place), so this is a keying error, not FX, WHT or timing; the difference is USD 1,068.90 at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA to correct the IC payable ICV-SA-018863 from EUR 2,360.00 to EUR 3,360.00 after confirming against invoice RE-2026-000298.",
+  "adjustment_amount": 1000.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Increase NIG-SA IC payable to NIG-DE by EUR 1,000.00 (debit expense/seconded staff cost, credit IC payable NIG-DE) to match the invoiced EUR 3,360.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

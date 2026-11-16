@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2590,
+  "output": 410,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.45,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-UK invoiced GBP 21,000.00 (NIG-UK:1900045228, USD 26,681.76), while NIG-AE booked AED 94,518.90 (NIG-AE:ICV-AE-031221, USD 25,736.55) against the same invoice reference 9000010813. The buyer's implied rate of 4.5009 matches the 2026 budget rate exactly (0.0% deviation) and is 3.5% away from the invoice-date rate. The USD gap of 945.21 is therefore a rate-basis difference, not a business difference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have NIG-AE rebook the payable at the invoice-date rate instead of the budget rate and book the resulting FX difference in the P&L.",
+  "adjustment_amount": 945.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase the NIG-AE IC payable by the USD 945.21 difference (the AED equivalent at the invoice-date rate) so it agrees with the NIG-UK receivable, with the offset to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

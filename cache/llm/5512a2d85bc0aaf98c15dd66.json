@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 1192,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.3,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "NIG-SA line ICV-SA-018931 invoices 126,000 SAR (120h @ 1,050 for P-24017, ref SA-ICINV-00588), and the buyer NIG-DE line 5100873419 books 162,000 SAR under the same reference. The implied rates are identical (3.75 SAR/USD on both sides), so this is not an FX difference, and the 36,000 SAR excess matches a transposition of the leading digits (126 vs 162) with no business reason or withholding pattern (ratio 1.28571 is not a WHT rate).",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to correct payable 5100873419 from 162,000 SAR to 126,000 SAR, reversing the 36,000 SAR overstatement, and confirm the secondment invoice SA-ICINV-00588 is unchanged.",
+  "adjustment_amount": -36000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "NIG-DE reduces IC payable to NIG-SA by 36,000 SAR (about 9,600.12 USD at invoice-date rate) to match the 126,000 SAR invoice.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2558,
+  "output": 383,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.48,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045350 is GBP 3,800.00 (USD 4,719.45 at the invoice-date rate), while NIG-US payable NIG-US:4471108 is USD 4,657.09 under the same reference 9000010531 and project P-24102. The buyer's implied rate of 1.22555 matches the 2026 budget rate exactly (0.0% deviation), so the USD 62.36 difference comes from the buyer using the budget rate instead of the invoice-date rate.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to revalue payable NIG-US:4471108 from the budget rate to the invoice-date rate so it reflects GBP 3,800.00.",
+  "adjustment_amount": 62.36,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase the NIG-US IC payable (and the related expense or FX account) by USD 62.36 to restate GBP 3,800.00 at the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

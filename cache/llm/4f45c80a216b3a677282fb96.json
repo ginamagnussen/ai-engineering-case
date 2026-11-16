@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2423,
+  "output": 1021,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.31,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-DE line NIG-DE:5100873387 books an IC payable of 99,000 AED to NIG-AE under reference AE-ICINV-00560 on 2026-10-17. The same reference is already matched in M0007 via NIG-DE:5100873364 (posted 2026-10-13), so the invoice appears to be booked twice on the buyer side. The nearest unmatched seller line, NIG-AE:ICV-AE-031334 (37,000 AED, different reference AE-ICINV-00488), does not match the amount (ratio 0.3737), so it is not a candidate for this line.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm that the M0007 twin NIG-DE:5100873364 carries the same 99,000 AED amount on AE-ICINV-00560, then reverse the duplicate payable NIG-DE:5100873387 in SAP ECC.",
+  "adjustment_amount": -99000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse the duplicate IC payable booking of AE-ICINV-00560 in NIG-DE (SAP ECC) so the invoice is recorded once.",
+  "model_requests_review": true,
+  "review_reason": "The duplicate link relies on a matching reference and the M0007 twin's amount is not shown in the evidence, so the amount should be verified before reversing."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2473,
+  "output": 499,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.18,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-SA's payable line NIG-SA:ICV-SA-019081 is 26,600 AED against NIG-AE's receivable NIG-AE:ICV-AE-031427 of 28,000 AED, a ratio of 0.95 that matches 5% withholding tax. The buyer description states 'net of WHT 5%' and cites the same invoice reference AE-ICINV-00836. The USD difference at the invoice-date rate is 381.21, and both lines are in the same currency and period with the correct counterparty.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the 1,400 AED withholding tax as a WHT liability to the tax authority and gross up the IC payable to 28,000 AED, after confirming that WHT applies to this secondment charge.",
+  "adjustment_amount": 1400.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr expense/WHT receivable-clearing, Cr IC payable to NIG-AE (1,400 AED) at NIG-SA, with a matching Cr WHT payable to the tax authority so the IC payable equals the invoice of 28,000 AED.",
+  "model_requests_review": true,
+  "review_reason": "The 5% rate and its applicability to a secondment (services) charge should be confirmed by tax, and it must be agreed whether NIG-AE will receive a WHT certificate or the amount is treated as a shortfall."
+ }
+}

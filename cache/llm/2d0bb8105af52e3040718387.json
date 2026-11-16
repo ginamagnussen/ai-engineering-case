@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 406,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.37,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-UK receivable NIG-UK:1900045437 is GBP 26,280.00 and NIG-DE payable NIG-DE:5100873494 is GBP 26,208.00 for the same reference 9000010930 and project P-25002, so the buyer is short by GBP 72.00. Both lines are in period, in the same currency, with the correct counterparties, and the digit pattern shows adjacent digits transposed (280 vs 208). The ratio of 0.99726 does not fit any WHT rate and there is no business reason for the difference.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should correct the payable NIG-DE:5100873494 to GBP 26,280.00 after confirming against the NIG-UK invoice.",
+  "adjustment_amount": 72.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Increase the NIG-DE IC payable to NIG-UK by GBP 72.00 (debit project cost/expense, credit IC payable) to correct the transposed digits from 26,208.00 to 26,280.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

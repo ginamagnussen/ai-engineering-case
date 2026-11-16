@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2482,
+  "output": 515,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.03,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-AE:ICV-AE-031406 shows AED 64,116.00 and buyer line NIG-SA:ICV-SA-019048 shows AED 60,910.20 on the same reference AE-ICINV-00919. The buyer/seller ratio of 0.95 matches 5% withholding, the buyer description says 'net of WHT 5%', and the difference is USD 872.91 at the invoice-date rate. Both lines are in period and the counterparty is correctly coded, so timing and miscoding are ruled out.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the AED 3,205.80 withheld tax as a WHT payable and gross up the IC payable to AED 64,116.00 to match the seller invoice, and confirm the WHT certificate is issued to NIG-AE.",
+  "adjustment_amount": 3205.8,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr WHT expense/receivable (or cost) and Cr IC payable to NIG-AE AED 3,205.80 in NIG-SA, to gross up the IC payable to the invoiced amount and recognise the WHT liability to the tax authority.",
+  "model_requests_review": true,
+  "review_reason": "Whether WHT of 5% applies to a UAE-to-Saudi BIM coordination service recharge should be confirmed by tax, and the treatment of the withheld amount (recoverable vs cost) is a judgement call."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 979,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.48,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "The buyer line NIG-SA:ICV-SA-018932 is booked at EUR 7,980.00, which is exactly 95% of the seller's EUR 8,400.00 on NIG-DE:5100873371 (ratio 0.95), and its description states 'net of WHT 5%'. The EUR 420.00 gap is therefore the Saudi 5% withholding on services, not an FX, timing, or pricing difference, and the invoice reference RE-2026-000671 matches on both sides.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to EUR 8,400.00 and record the EUR 420.00 withheld as a WHT liability to be remitted to the Saudi tax authority, after confirming the withholding certificate is on file.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Dr IC services expense / Cr IC payable to NIG-DE EUR 420.00 to gross up to the invoiced amount, with the EUR 420.00 credited to the Saudi WHT payable account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2480,
+  "output": 459,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.53,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "Buyer line NIG-SA:ICV-SA-019041 (AED 19,938.60) is 95% of seller line NIG-AE:ICV-AE-031367 (AED 20,988.00), matching a 5% withholding rate. The buyer description states 'net of WHT 5%', the invoice reference AE-ICINV-00589 matches, and counterparty and period are consistent. The USD difference at invoice-date rate is 285.74.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the AED 1,049.40 withholding tax to a WHT payable/receivable account against the IC payable, and confirm the WHT certificate and rate with NIG-AE and tax.",
+  "adjustment_amount": 1049.4,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr WHT clearing / Cr IC payable NIG-AE in NIG-SA books for the AED 1,049.40 withheld, so the IC payable equals the invoiced AED 20,988.00 and the WHT liability is recorded separately.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that 5% is the correct WHT rate for an environmental survey (services) under Saudi rules and that WHT was actually withheld and remitted, rather than being an intentional short-payment."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 332,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.68,
+ "output": {
+  "category": "timing",
+  "confidence": 0.9,
+  "explanation": "NIG-AU booked receivable NIG-AU:77534 for AUD 60,850 on 2026-10-27, and NIG-US booked the matching payable NIG-US:4471203 for the same AUD 60,850 on 2026-11-02, six days later and after period end. Reference AU/IC/2026/0733 matches and the buyer counterparty code 500 resolves to NIG-AU via master data. The ratio is 1.0, so the only gap is cut-off. The USD difference of about 577 comes from the different translation dates and rates, not from a real discrepancy.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "No correction is needed for October; confirm NIG-US:4471203 is recognised in November, or accrue it in October if the group cut-off policy requires.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

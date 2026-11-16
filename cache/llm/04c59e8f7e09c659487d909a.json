@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2463,
+  "output": 455,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.85,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-AE:ICV-AE-031204 invoiced AED 111,000 (120h @ 925) for the Noura Brown secondment, while buyer NIG-DE:5100873316 booked AED 94,502.39 (ratio 0.85137), a USD 4,492.13 shortfall at the invoice-date rate. The buyer description 'Teilfreigabe, Stunden strittig' (partial approval, hours disputed) shows the buyer deliberately booked less. The ratio does not match a clean 15% WHT, since 0.85137 is not 0.85, and a secondment is not a royalty. Currency, counterparty and period all match.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Have NIG-DE and NIG-AE resolve the disputed hours for P-25002 (approved vs. invoiced 120h) and then book the agreed difference, or issue a credit note if the dispute is upheld.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Dispute over hours requires human decision; the AED 16,497.61 difference cannot be adjusted until the project timesheets are verified and both entities agree. A partial WHT effect cannot be fully excluded."
+ }
+}

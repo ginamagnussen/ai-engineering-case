@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2623,
+  "output": 403,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.34,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "NIG-US payable line NIG-US:4471200 (GBP 16,800.00, 'Seconded staff J.Haddad P-24017', posted 2026-10-31) carries seller reference 9000010810. That reference was already booked on NIG-US:4471166 (posted 2026-10-30) and matched in M0214. No unmatched NIG-UK receivable is close in amount: the nearest lines are at ratios 1.479 and 0.0901 and belong to other counterparties, so this looks like a second booking of the same invoice by the buyer.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm that NIG-US:4471200 duplicates NIG-US:4471166 (both reference 9000010810) and reverse the second booking.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse duplicate IC payable NIG-US:4471200 to NIG-UK: debit IC payable NIG-UK, credit the original expense or secondment cost account, GBP 16,800.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

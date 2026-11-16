@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2410,
+  "output": 633,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.28,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.92,
+  "explanation": "Seller line NIG-US:4471144 (INV-US-100426, 11,200.00 USD) matches buyer line NIG-UK:1900045481 on invoice reference and amount, with zero FX difference and a 2-day posting gap. The buyer booked the payable against counterparty AE01, which resolves to NIG-AE, while the invoice is from NIG-US, so the IC balance sits with the wrong partner.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to reclassify the 11,200.00 USD payable (NIG-UK:1900045481) from counterparty NIG-AE to NIG-US so it matches the NIG-US receivable before close.",
+  "adjustment_amount": 11200.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclass IC payable of 11,200.00 USD from NIG-AE to NIG-US in NIG-UK ledger; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

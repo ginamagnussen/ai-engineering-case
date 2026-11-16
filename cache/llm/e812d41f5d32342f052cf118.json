@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 455,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.52,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-UK receivable NIG-UK:1900045330 is GBP 19,500.00 (USD 24,516.38) for Microsoft 365 E5 licences. NIG-SA payable NIG-SA:ICV-SA-018952 is GBP 16,575.00 (USD 20,901.41), described as 'net of WHT 15%', and the buyer-to-seller ratio of 0.85 matches a 15% royalty/licence withholding rate. The invoice reference is found on the buyer line, so the USD 3,677.46 difference is the withheld tax.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the GBP 3,375.00 withholding tax as a liability to the Saudi tax authority and gross up the IC payable to GBP 19,500.00, with WHT certificate support to NIG-UK for credit claims.",
+  "adjustment_amount": 3375.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-SA, debit the expense or WHT clearing account and credit the IC payable to NIG-UK for GBP 3,375.00 so the payable equals the invoice of GBP 19,500.00, with the WHT payable to the tax authority booked separately.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 518,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.12,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-SA invoiced SAR 126,000 (SA-ICINV-00588, 120h @ 1050, consistent with the line total) on NIG-SA:ICV-SA-018931, but NIG-DE booked SAR 162,000 on NIG-DE:5100873419 with the same reference and project P-24017. The evidence flags adjacent transposed digits (126 vs 162), giving a USD 9,600.12 overstatement on the buyer side. There is no FX, withholding or timing explanation, since both sides are in SAR and posted in period.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should correct document 5100873419 to SAR 126,000, in line with invoice SA-ICINV-00588, before the October close.",
+  "adjustment_amount": -36000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "NIG-DE to reduce the IC payable to NIG-SA and the related secondment cost by SAR 36,000 (from 162,000 to 126,000).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

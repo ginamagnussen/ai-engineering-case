@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2468,
+  "output": 398,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.19,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.96,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031244 and NIG-SA payable NIG-SA:ICV-SA-018876 match on reference AE-ICINV-00592, amount (AED 162,504) and posting date (2026-10-11), with a USD difference of 0. However, NIG-SA booked the payable against NIG-UK instead of the expected NIG-AE, so the pair cannot eliminate on the IC partner.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify payable NIG-SA:ICV-SA-018876 from counterparty NIG-UK to NIG-AE and confirm that NIG-UK's books do not carry a mirror receivable.",
+  "adjustment_amount": 162504.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, reverse the IC payable to NIG-UK of AED 162,504 and rebook it as an IC payable to NIG-AE for the same amount (reference AE-ICINV-00592).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2593,
+  "output": 861,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.3,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019060 is a 2,640.00 USD accrual for seconded staff L.Rahman (P-25019) explicitly marked 'invoice not received', with no NIG-US seller line of that amount or project in the search. The two nearest NIG-US seller lines, NIG-US:4471046 (1,760.00 USD, P-25002) and NIG-US:4471026 (9,900.00 USD, P-24017), relate to different projects and amounts, so neither is a plausible match.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm whether an invoice for P-25019 (L.Rahman secondment) exists or will be issued; if none is forthcoming, NIG-SA should reverse accrual ICV-SA-019060 in the November close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The accrual may be valid pending an unissued NIG-US invoice; whether it should be reversed or left open cannot be verified from the evidence provided."
+ }
+}

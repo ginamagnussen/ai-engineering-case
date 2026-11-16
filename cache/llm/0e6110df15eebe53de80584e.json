@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2568,
+  "output": 1061,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.7,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "Both lines reference RE-2026-000662 for EUR 4,400.00: NIG-DE's IC receivable (line NIG-DE:5100873381) is USD 4,716.93 at the invoice-date rate, while NIG-US's IC payable (line NIG-US:4471097) is USD 4,942.08, which equals the 2026 budget rate of 1.1232 (0.0% deviation). The USD 225.15 difference is fully explained by the rate basis, with the buyer's ratio of 1.04773 matching the invoice-date rate deviation of 4.773%.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to restate the IC payable for RE-2026-000662 from the 2026 budget rate to the invoice-date rate, reducing it by USD 225.15 to USD 4,716.93, unless group policy permits budget-rate booking for intercompany items.",
+  "adjustment_amount": -225.15,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-US IC payable for RE-2026-000662 by USD 225.15 to restate from budget rate 1.1232 to the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

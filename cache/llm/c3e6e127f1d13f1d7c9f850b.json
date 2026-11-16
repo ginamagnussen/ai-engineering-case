@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2479,
+  "output": 503,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.55,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "Seller NIG-AU:77441 invoiced AUD 16,800.00 (ref AU/IC/2026/0752) and buyer NIG-SA:ICV-SA-018843 booked AUD 15,960.00 on the same reference, a ratio of 0.95 consistent with 5% WHT. The buyer description states 'net of WHT 5%', and the difference is about USD 559.37 at the invoice-date rate. The currencies match, so this is not an FX issue, and both counterparties resolve correctly.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the AUD 840.00 withheld as a WHT payable to the tax authority and gross up the IC payable to AUD 16,800.00, and should supply the WHT certificate to NIG-AU.",
+  "adjustment_amount": 840.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "At NIG-SA, Dr expense/WHT receivable-recharge as appropriate and Cr IC payable to NIG-AU AUD 840.00 so the payable equals the invoiced AUD 16,800.00, with the withheld amount recorded as WHT payable on settlement.",
+  "model_requests_review": true,
+  "review_reason": "Tax should confirm that 5% WHT applies to a secondment recharge between NIG-SA and NIG-AU, and how the withholding is treated (creditable or cost) before the adjustment is posted."
+ }
+}

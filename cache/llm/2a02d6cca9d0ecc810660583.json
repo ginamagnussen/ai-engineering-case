@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 3191,
+  "output": 1165,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.93,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.6,
+  "explanation": "NIG-SA invoiced SA-ICINV-00584 (line NIG-SA:ICV-SA-018847, 25200 SAR, secondment P-24088, 24h x 1050 which reconciles) on 2026-10-09, but none of the four unmatched NIG-AU buyer lines fits. The closest SAR line, NIG-AU:77465 (33000 SAR, ref SA-ICINV-00585, P-23110), differs in project, amount and invoice reference, and the NIG-AE line sharing the reference text (ref AE-ICINV-00584, P-24017) is a different invoice already matched in M0019.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to confirm whether invoice SA-ICINV-00584 for P-24088 (25200 SAR) was booked in the Legacy SCE ledger and, if not, to accrue or book the payable in October 2026.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No buyer line matches on amount, project or reference; the seller line could be unbooked, booked under another reference, or booked to a different counterparty, and this cannot be verified from the evidence provided."
+ }
+}

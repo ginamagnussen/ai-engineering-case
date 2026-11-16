@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 1108,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.49,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "Both lines are in AUD and reference the same invoice AU/IC/2026/0746 (P-25019). NIG-DE booked 25,800.00 AUD against NIG-AU's 25,080.00 AUD, a 720.00 AUD difference that is exactly the digit transposition pattern (\"080\" vs \"800\") with no withholding or FX explanation, since the ratio of 1.02871 is not a withholding rate and the currencies match.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to correct the keying error on line NIG-DE:5100873410 from 25,800.00 AUD to 25,080.00 AUD so it matches the seller invoice, and confirm the change with the AP team.",
+  "adjustment_amount": -720.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reduce NIG-DE IC payable and the related secondment expense by 720.00 AUD to correct the transposed amount to the invoiced 25,080.00 AUD.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

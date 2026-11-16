@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2488,
+  "output": 482,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.47,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-019012 (AUD 33,516) is 95% of NIG-AU's receivable NIG-AU:77510 (AUD 35,280) for the same invoice AU/IC/2026/0722, and its description states 'net of WHT 5%'. The ratio matches the 5% withholding rate for services, and the difference is USD 1,160.88 at the invoice-date rate. Both lines are in period, with no counterparty mismatch.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-SA should confirm the WHT remittance and provide the withholding certificate, and NIG-AU should record the AUD 1,764.00 as a WHT receivable (or tax credit) against the IC receivable.",
+  "adjustment_amount": 1764.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "NIG-AU: Dr WHT receivable / foreign tax credit AUD 1,764.00, Cr IC receivable NIG-SA AUD 1,764.00 to clear the withheld amount. Alternatively NIG-SA grosses up the payable and books a WHT payable of the same amount.",
+  "model_requests_review": true,
+  "review_reason": "Confirm the 5% services WHT rate is applicable to this secondment charge and that the withholding was actually remitted to the tax authority before clearing the difference."
+ }
+}

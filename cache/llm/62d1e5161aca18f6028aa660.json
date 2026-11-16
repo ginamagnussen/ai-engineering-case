@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2443,
+  "output": 962,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.26,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK invoiced GBP 11,100 (line NIG-UK:1900045413, ref 9000010806) and NIG-SA booked GBP 10,545 (line NIG-SA:ICV-SA-019009), which is exactly 95% of the invoice, matching the 5% Saudi services WHT rate. The buyer description states 'net of WHT 5%', and the invoice reference appears on the buyer line, so the GBP 555 gap is withholding tax, not an FX, timing or keying difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up its IC payable to GBP 11,100 and record the GBP 555 as a Saudi WHT liability to be remitted, after confirming the WHT certificate and that NIG-UK can claim the credit.",
+  "adjustment_amount": 555.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable by GBP 555 to the invoiced GBP 11,100, with GBP 555 credited to the Saudi WHT payable account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

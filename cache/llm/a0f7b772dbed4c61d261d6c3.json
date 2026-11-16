@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2481,
+  "output": 526,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.3,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-AE:ICV-AE-031330 shows AED 135,108.00 and buyer line NIG-SA:ICV-SA-018993 shows AED 128,352.60 for the same invoice AE-ICINV-00580, a ratio of 0.95. The buyer description says 'net of WHT 5%', which matches the ratio, leaving a USD 1,839.43 difference at the invoice-date rate. Both lines are in the same currency and period, and the counterparties resolve correctly, so FX, timing and miscoding are ruled out.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm that WHT was actually withheld and remitted, obtain the WHT certificate, and book the 5% withheld amount as a WHT payable/receivable so the IC payable agrees to the invoice at AED 135,108.00.",
+  "adjustment_amount": 6755.4,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA to increase the IC payable to NIG-AE by AED 6,755.40 and credit WHT payable to the tax authority, so the IC balance equals the gross invoice. NIG-AE to recognise the WHT as a tax receivable/expense if applicable.",
+  "model_requests_review": true,
+  "review_reason": "Whether 5% WHT applies to this recharge (a services recharge between a UAE seller and a Saudi buyer) and its treatment on the seller side should be confirmed by tax. The evidence does not show the WHT was remitted."
+ }
+}

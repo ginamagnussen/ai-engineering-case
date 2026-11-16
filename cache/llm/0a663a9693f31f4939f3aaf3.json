@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 399,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.27,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "NIG-AU receivable NIG-AU:77485 is AUD 6,470.00 (USD 4,310.96) and NIG-US payable NIG-US:4471080 is AUD 4,670.00 (USD 3,111.62), both with reference AU/IC/2026/0713, project P-25002 and same posting date. The USD difference is 1,199.34; the digits 6470 vs 4670 are transposed, with no WHT, FX, timing or counterparty explanation (buyer resolves to NIG-AU via master data).",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US confirm the invoice amount of AUD 6,470.00 and correct payable NIG-US:4471080 from AUD 4,670.00.",
+  "adjustment_amount": 1800.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase the NIG-US IC payable to NIG-AU by AUD 1,800.00 (from 4,670.00 to 6,470.00), with the offsetting debit to the project cost account for P-25002.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

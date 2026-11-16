@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 723,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.51,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "Both lines carry reference RE-2026-000725 and the same EUR 6,600.00 amount, and the seller NIG-DE correctly books against NIG-UK (GB01). The buyer line NIG-UK:1900045296 is booked against US01 (NIG-US) instead of NIG-DE, so the IC payable sits with the wrong partner. The USD amount differences come only from translation at different rates and are not a substantive difference.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to reclassify IC payable line NIG-UK:1900045296 from counterparty US01 (NIG-US) to NIG-DE before the October 2026 close is finalised.",
+  "adjustment_amount": 6600.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Reclassify IC payable of EUR 6,600.00 (ref RE-2026-000725, line NIG-UK:1900045296) from NIG-US to NIG-DE in NIG-UK's ledger; no change to amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

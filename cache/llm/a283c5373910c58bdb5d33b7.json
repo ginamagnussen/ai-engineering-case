@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2491,
+  "output": 768,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.39,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-018808 invoices 107,676.00 SAR (28,713.96 USD) under SA-ICINV-00740, and NIG-AE line NIG-AE:ICV-AE-031234 books 93,360.16 SAR (24,896.35 USD) against the same reference. The buyer description states 'partial accept, hours disputed pending PM approval', and the difference of 3,817.61 USD at invoice-date rate is consistent with an intentional partial booking rather than a keying or FX error.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Obtain the project manager's ruling on the disputed hours for P-24050 and then either agree a credit note from NIG-SA for the rejected portion or have NIG-AE book the remaining balance as payable.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer has intentionally contested part of the charge pending PM approval, so the outcome depends on a commercial decision that cannot be verified from the ledger evidence."
+ }
+}

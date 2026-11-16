@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2581,
+  "output": 391,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.48,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-AU line NIG-AU:77577 is a USD 48,000.00 IC payable accrual dated 2026-10-31 for the October management fee, described as 'invoice not received' (ref ACCR-OCT26). No NIG-US seller line matches it; the nearest unmatched lines (NIG-US:4471093 at 18,480 and NIG-US:4471064 at 2,640) are secondments to NIG-AE and unrelated.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to issue the October 2026 management fee invoice to NIG-AU (or confirm the amount), so the accrual can be matched, or have NIG-US accrue the receivable before close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The counterparty 'US HQ' was resolved by LLM rather than master data, and the evidence does not show whether NIG-US intends to invoice this fee or the amount agreed, so confirmation with NIG-US is needed."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2558,
+  "output": 408,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.17,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.92,
+  "explanation": "NIG-UK:1900045350 invoices GBP 3,800.00 (USD 4,719.45 at the invoice-date rate) for the L. Smith secondment P-24102. NIG-US:4471108 booked USD 4,657.09 under the same reference 9000010531, which implies a rate of 1.22555, exactly the 2026 budget rate (0.0% deviation) instead of the invoice-date daily rate (-1.321%). That leaves a USD 62.36 difference; counterparty, reference and period all agree.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should revalue the IC payable on line 4471108 to the invoice-date daily rate, per group FX policy for IC invoices.",
+  "adjustment_amount": 62.36,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-US: increase IC payable to NIG-UK by USD 62.36 (to USD 4,719.45), with the offset to secondment cost or FX difference per policy, so GBP 3,800 is translated at the invoice-date rate rather than the budget rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

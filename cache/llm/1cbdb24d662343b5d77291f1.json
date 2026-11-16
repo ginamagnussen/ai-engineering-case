@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 388,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.32,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.96,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031302 and NIG-SA payable NIG-SA:ICV-SA-018922 match on amount (AED 196,524 / USD 53,511.52), currency and reference AE-ICINV-00912, so there is no value difference. However, NIG-SA booked the payable against NIG-DE (NorthStar Infrastruktur GmbH) instead of the invoicing entity NIG-AE.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify payable NIG-SA:ICV-SA-018922 from counterparty NIG-DE to NIG-AE so it eliminates against NIG-AE:ICV-AE-031302.",
+  "adjustment_amount": 196524.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, reverse the IC payable booked to NIG-DE and rebook the same AED 196,524 to NIG-AE, leaving the total unchanged.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

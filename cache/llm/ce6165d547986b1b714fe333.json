@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2621,
+  "output": 934,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 12.4,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.55,
+  "explanation": "Seller line NIG-US:4471093 (INV-US-100454, USD 18,480.00, secondment Isabel Nasser 168h @ 110, P-25031) has no matched payable. However, NIG-AE:ICV-AE-031337 matches it on amount (USD 18,480.00, ratio 1.0), counterparty (NIG-US), employee and project (I.Nasser P-25031) and period, but carries reference 100458 instead of 100454. This looks like a wrong-digit keying error in the reference rather than the amount, which is why the rules did not match the pair.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should check the NIG-US invoice document and, if it is INV-US-100454, correct the reference on ICV-AE-031337 from 100458 to INV-US-100454 so the pair auto-matches.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction is needed; this is a reference-only fix on NIG-AE:ICV-AE-031337 (100458 to INV-US-100454).",
+  "model_requests_review": true,
+  "review_reason": "The reference digits differ (100454 vs 100458). Someone must confirm that no separate NIG-US invoice 100458 exists, for example another secondment period, before the lines are treated as the same invoice. The case also does not fit amount_typo cleanly, because the keying error is in the reference, not the amount."
+ }
+}

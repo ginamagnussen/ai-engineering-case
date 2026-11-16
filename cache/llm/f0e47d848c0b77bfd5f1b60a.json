@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 406,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.62,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-SA invoiced SAR 42,000.00 (NIG-SA:ICV-SA-018859, SA-ICINV-00656, 60h @ 700), while NIG-AE booked SAR 31,478.94 (NIG-AE:ICV-AE-031260), about 75% of the invoice, a USD 2,805.65 shortfall. Both lines are in the same currency, the invoice reference matches, and the buyer's description says 'partial accept, hours disputed pending PM approval', so this is an intentional partial booking and not an FX, timing or keying issue.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-AE's project manager should confirm the approved hours for P-24050 and NIG-SA should issue a credit note or NIG-AE should book the remaining amount once the dispute is resolved.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Dispute over the seconded hours is pending PM approval; the outcome is a judgement call and cannot be verified from the ledger evidence, so no adjustment should be booked yet."
+ }
+}

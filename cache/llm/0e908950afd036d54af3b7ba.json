@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2569,
+  "output": 1193,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.62,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.88,
+  "explanation": "Both lines carry INV-US-100352 and the same period (posting 2026-10-31), and the seller line NIG-US:4471196 is USD 40729.17 while the buyer line NIG-AU:77563 is AUD 58772.25, which is USD 39551.96 at the implied rate 1.443001. The USD gap of 1177.21 matches the buyer's rate exactly at the 2026 budget rate (0.0% deviation) but sits about 2.89% off the invoice-date, posting-date and month-end rates, so the difference comes from the rate basis rather than a booking error.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU restate the AUD IC payable for INV-US-100352 at the invoice-date rate under group policy and book the resulting difference of about USD 1177.21 to FX, unless the group controller accepts the budget rate for IC balances.",
+  "adjustment_amount": 1177.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU IC payable (loan interest L-2023-02, Oct-26) from the 2026 budget rate to the invoice-date rate and post the USD 1177.21 difference to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

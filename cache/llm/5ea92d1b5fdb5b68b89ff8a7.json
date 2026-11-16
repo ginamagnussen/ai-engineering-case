@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2911,
+  "output": 1496,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.59,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-DE seller line NIG-DE:5100873471 (RE-2026-000712, EUR 9,900, P-24102 Al-Mansouri, posted 2026-10-27) matches NIG-AU:77583 on amount, currency, counterparty (Northstar GmbH resolved to NIG-DE), person, project code and in-period posting (2026-10-31), but that line references INV RE-2026-000711 instead of RE-2026-000712. The single-digit reference difference suggests a keying error, yet the evidence does not confirm whether 77583 pays invoice 712 or a separate invoice 711 that would leave 712 unbooked on the buyer side.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to confirm from the source invoice whether NIG-AU:77583 settles RE-2026-000712 and, if so, correct its reference so the pair can be matched in the next run.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer reference differs by one digit from the seller invoice, so the match depends on whether 711 is a separate invoice; a human must verify against the source documents before the pair is closed."
+ }
+}

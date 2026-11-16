@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 393,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.28,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-UK's IC payable NIG-UK:1900045296 (EUR 6,600, ref RE-2026-000725) was booked against partner US01 (NIG-US), but the invoice NIG-DE:5100873327 (EUR 6,600) was issued by NIG-DE. Amount, currency and reference match exactly (ratio 1.0), so the only error is the counterparty code; the small USD difference (7,141.79 vs 7,087.74) is only a translation-rate effect from the different posting dates.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should recode payable NIG-UK:1900045296 from NIG-US (US01) to NIG-DE and confirm that no NIG-US receivable is left open against it.",
+  "adjustment_amount": 6600.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Reclassify IC payable NIG-UK:1900045296 of EUR 6,600 from counterparty NIG-US to NIG-DE; no change to the amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

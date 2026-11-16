@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2480,
+  "output": 1073,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.86,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019041 books 19,938.60 AED against NIG-AE:ICV-AE-031367 at 20,988.00 AED, a ratio of 0.95 that equals exactly 1 minus the 5% Saudi services WHT, and the description says 'net of WHT 5%'. The 1,049.40 AED gap (USD 285.74 at invoice-date rate) is the withheld tax, not a timing, FX, or keying error, and both lines carry the same reference AE-ICINV-00589 with the correct counterparty.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to 20,988.00 AED and record the 1,049.40 AED withholding as a Saudi WHT payable to ZATCA, after confirming the withholding was actually made and remitted.",
+  "adjustment_amount": 1049.4,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Debit IC subcontract expense / credit IC payable to NIG-AE by 1,049.40 AED so the payable equals the gross invoice, and credit WHT payable for the 5% withholding (approx. USD 285.74).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

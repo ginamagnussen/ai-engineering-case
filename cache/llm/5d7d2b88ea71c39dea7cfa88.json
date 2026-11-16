@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2484,
+  "output": 397,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.25,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "Buyer line NIG-SA:ICV-SA-019026 (AED 235,843.20) is 95% of seller line NIG-AE:ICV-AE-031389 (AED 248,256.00), a ratio consistent with 5% WHT. The description states 'net of WHT 5%', the invoice reference AE-ICINV-00888 matches, both lines are in AED and in period, and the USD difference is 3,379.89.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm the 5% WHT was actually withheld and a WHT certificate was obtained, then record the withheld amount as a WHT receivable/payable so the IC payable is restored to the gross invoice amount.",
+  "adjustment_amount": 12412.8,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA to book the AED 12,412.80 withheld tax to the IC payable to NIG-AE (gross-up to AED 248,256.00) against a WHT liability to the tax authority; NIG-AE to book WHT receivable on remittance if applicable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

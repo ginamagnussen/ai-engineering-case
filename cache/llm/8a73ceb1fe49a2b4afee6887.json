@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2592,
+  "output": 687,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.62,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-AE:ICV-AE-031252 books AED 36,592.32 against NIG-UK:1900045259 for GBP 8,130.00. Both lines carry the same reference 9000010627, the same counterparties and project P-24017, and were posted one day apart. The buyer's implied rate of 4.5009 AED/GBP matches the 2026 budget rate exactly (0.0% deviation), but is 2.493% below the invoice-date daily rate. This leaves a USD 254.80 difference (ratio 0.97507) that is fully explained by the rate basis.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should revalue the IC payable using the daily GBP/AED rate at the invoice date (2026-10-08) instead of the 2026 budget rate, and align its IC FX policy for invoice translation.",
+  "adjustment_amount": 254.8,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AE's IC payable to NIG-UK for invoice 9000010627 by the AED equivalent of USD 254.80, so the GBP 8,130.00 invoice is translated at the invoice-date rate. Book the offset to the FX difference or project cost account per policy.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

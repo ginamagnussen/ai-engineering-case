@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2481,
+  "output": 1053,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.86,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-AE line ICV-AE-031434 invoiced AED 379,728.00 for P-25031 (ref AE-ICINV-00576), while NIG-SA line ICV-SA-019055 booked AED 360,741.60, which is exactly 95% of the invoice and matches a 5% Saudi services WHT. The buyer's description states 'net of WHT 5%' and the invoice reference is found on the buyer line, so no cut-off, counterparty, or keying issue applies.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA confirm the 5% WHT (AED 18,986.40) was withheld and recorded as a Saudi tax liability, with the IC payable grossed up to AED 379,728.00 and the WHT certificate retained for NIG-AE.",
+  "adjustment_amount": 18986.4,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Gross up NIG-SA IC payable by AED 18,986.40 to the invoiced AED 379,728.00, with the same amount recorded as withholding tax payable to the Saudi authority (ZATCA) on settlement.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

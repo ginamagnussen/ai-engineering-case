@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2432,
+  "output": 445,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.77,
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "NIG-AU:77513 (AUD 88,890, USD 58,907.40) and NIG-US:4471142 (AUD 88,890, USD 59,126.07) agree in local currency and project P-24050, and the buyer posted 3 days later in period. The seller line's counterparty 'Head Office Denver' did not resolve in master data, and the references differ (AU/IC/2026/0711 vs 20260712), so the pair did not auto-match. The USD gap of about 218.67 is only a translation-rate difference between the two ledgers, not a real amount difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU recode the counterparty on NIG-AU:77513 from 'Head Office Denver' to NIG-US and confirm the reference link to NIG-US:4471142.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The case fits several categories (miscoded_counterparty on the seller side, minor FX translation difference, reference mismatch) and none is verifiable from the evidence alone. 'Head Office Denver' is unresolved but plausibly NIG-US, so a human should confirm the mapping and the USD rate basis."
+ }
+}

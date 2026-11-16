@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2586,
+  "output": 1446,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.04,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.88,
+  "explanation": "Both lines reference P-25031 / INV 9000010566 with matching counterparties; NIG-DE booked EUR 5,902.98 against NIG-UK's GBP 5,410.00 (line NIG-UK:1900045434), an implied rate of 1.091124 that equals the 2026 budget rate (0.0% deviation). The invoice-date and posting-date daily rates deviate by -8.934%, and the USD gap of 609.43 at the invoice-date rate is consistent with the buyer using the budget rate instead of the actual rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to restate the IC payable NIG-DE:5100873474 to the invoice-date daily rate (or book the 609.43 USD FX difference to FX gain/loss) so both sides agree at the actual rate.",
+  "adjustment_amount": 609.43,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Restate NIG-DE IC payable from the 2026 budget rate to the invoice-date daily rate and book the 609.43 USD difference to FX gain/loss, pending confirmation of the rate basis required by group policy.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

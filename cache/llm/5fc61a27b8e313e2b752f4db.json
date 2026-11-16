@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2861,
+  "output": 567,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.47,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.3,
+  "explanation": "NIG-AU line NIG-AU:77455 (AUD 1,320.00, 'Secondment Aisha Clarke 8h @ 165 - P-24102', ref AU/IC/2026/0663) has no buyer line with the same reference. NIG-US:4471069 has the same AUD 1,320.00 amount, the same project P-24102 and the same staff member, but it is booked to counterparty 500 (resolved NIG-AU) under reference auic20260661. That line does not match the seller line through the ordinary rules, which points to a reference keying or numbering issue rather than a miscoded counterparty.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to confirm whether NIG-US:4471069 relates to invoice AU/IC/2026/0663 or to a different invoice, AU/IC/2026/0661, and correct the reference or book the missing invoice accordingly.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer line NIG-US:4471069 matches on amount, project and staff member but carries reference auic20260661 instead of AU/IC/2026/0663. It may be a reference typo (matching pair), a separate invoice for a different 8h period (so the buyer booking for 0663 is missing), or a case where the 0661 invoice already matched elsewhere. The evidence does not settle which, and the miscoded_counterparty label is a weak fit because the counterparty resolves correctly to NIG-AU. A human must verify the references and the seller's invoice list."
+ }
+}

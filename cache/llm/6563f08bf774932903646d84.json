@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2483,
+  "output": 996,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.05,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031299 is AED 236,556.00 (USD 64,411.83) and NIG-SA line NIG-SA:ICV-SA-018959 is AED 224,728.20, a buyer-to-seller ratio of 0.95 that matches a 5% Saudi services withholding. The buyer description states 'net of WHT 5%', the invoice reference AE-ICINV-00960 appears on both lines, and both are in period. The USD difference at invoice-date rate is 3,220.59.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the full AED 236,556.00 as the IC payable to NIG-AE and book the AED 11,827.80 withholding as a WHT liability to the Saudi tax authority, then confirm the WHT certificate and treatment with tax.",
+  "adjustment_amount": 11827.8,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Gross up NIG-SA IC payable by AED 11,827.80 to AED 236,556.00 and recognise the same amount as WHT payable to the Saudi tax authority.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

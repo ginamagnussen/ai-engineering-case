@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2861,
+  "output": 1868,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.73,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.55,
+  "explanation": "NIG-AU line NIG-AU:77455 (1320 AUD, P-24102, posted 2026-10-12) has no seller-side match, but NIG-US:4471069 (1320 AUD, same P-24102 secondment description, posted 2026-10-14, in period) appears to be the buyer booking. It is booked against counterparty code 500, which master data resolves to NIG-AU, yet its reference auic20260661 differs from AU/IC/2026/0663, so the deterministic match failed; the USD gap (881.87 vs 869.68, ratio 1.014) reflects USD translation only, since both sides carry the same AUD amount.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm that NIG-US:4471069 is the booking for invoice AU/IC/2026/0663 and correct the counterparty code and reference so the pair matches, with no AUD amount adjustment.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer line matches on amount, currency, description and period, but the reference and counterparty code differ and the buyer line was not found by the matching rules; a human should confirm the link before the pair is closed."
+ }
+}

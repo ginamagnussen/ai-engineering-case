@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2404,
+  "output": 963,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.03,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "The NIG-UK receivable NIG-UK:1900045403 and the NIG-DE payable NIG-DE:5100873461 share reference 9000010470 and the same GBP 2380.00 amount, and the invoice reference is found on the buyer line. The buyer booked the payable against NIG-AU instead of the seller NIG-UK, and the USD difference (3011.82 vs 2997.59) is explained by the 2-day posting-date rate gap rather than the invoice-date rate, which shows zero difference.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to reclassify payable line NIG-DE:5100873461 (GBP 2380.00) from counterparty AU01/NIG-AU to UK intercompany partner NIG-UK in the SAP ECC ledger.",
+  "adjustment_amount": 2380.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclassify NIG-DE IC payable of GBP 2380.00 (ref 9000010470) from NIG-AU to NIG-UK so it matches the NIG-UK receivable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

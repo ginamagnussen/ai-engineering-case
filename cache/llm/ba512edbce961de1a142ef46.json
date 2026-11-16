@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2925,
+  "output": 379,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.94,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.82,
+  "explanation": "NIG-DE line NIG-DE:5100873496 (EUR 86,980.00, approx. USD 94,469.85, ref RE-2026-000365, project recharge P-24088 design review) has no matching NIG-SA line. NIG-SA's 3 unmatched payables (ICV-SA-019058, 019050, 019060) belong to other counterparties, references and projects and do not resemble this amount, and no line elsewhere carries the same reference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm receipt of invoice RE-2026-000365 and book the IC payable of EUR 86,980.00 to NIG-DE for P-24088 in October if it is valid.",
+  "adjustment_amount": 86980.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-SA to debit project cost P-24088 and credit IC payable to NIG-DE for EUR 86,980.00, matching invoice RE-2026-000365.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

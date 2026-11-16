@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 1165,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.93,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.8,
+  "explanation": "NIG-AU line 77419 (ref AU/IC/2026/0745) invoices AUD 16,800.00 and NIG-DE line 5100873317 books AUD 16,700.00 against the same invoice reference, with counterparty, period and posting date all matching (1 day apart). The gap is exactly one digit (6 vs 7 in the thousands place), the ratio is 0.99405, and both sides are in AUD, so this is not an FX effect and no business reason such as a split, dispute or WHT is evidenced.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should verify the keyed amount against invoice AU/IC/2026/0745 and correct line 5100873317 to AUD 16,800.00 (or post a AUD 100.00 correcting IC payable entry if the original posting is retained).",
+  "adjustment_amount": 100.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase NIG-DE IC payable to NIG-AU by AUD 100.00 (correct 16,700.00 to 16,800.00) with the offsetting entry to the intercompany clearing/expense account used for P-25019 secondment charge.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2363,
+  "output": 385,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.97,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-DE booked an IC payable accrual of AED 42,000 (NIG-DE:5100873523, ACCR-OCT26) for the D.Rahman secondment on P-25019, with the description stating the invoice was not received. The only unmatched NIG-AE line, NIG-AE:ICV-AE-031334 (AED 37,000, Lukas Nasser, billed to NIG-SA), is a different person and counterparty and so is not a match.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm whether a D.Rahman secondment on P-25019 has been worked and, if so, to issue the IC invoice, otherwise NIG-DE should review and reverse the accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No seller invoice exists for D.Rahman; NIG-AE must confirm the work was performed and the accrued AED 42,000 is correct before the accrual is kept or reversed."
+ }
+}

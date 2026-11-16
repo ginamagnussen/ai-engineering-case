@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2603,
+  "output": 340,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.25,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.93,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019050 is a GBP 6,600.00 (USD 8,504.03) IC payable dated 2026-10-31, described as an accrual for P-25031 subcontract structural calcs with the invoice not received. NIG-UK has no matching unmatched receivable: the two nearest lines (NIG-UK:1900045345 at GBP 1,520 and NIG-UK:1900045276 at GBP 25,200) belong to other projects and are booked against NIG-AU and NIG-AE.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm the P-25031 structural calcs work and issue the invoice for GBP 6,600, or confirm it will be billed in November.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

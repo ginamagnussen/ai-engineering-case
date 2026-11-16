@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 533,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.72,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-US invoiced USD 9,900.00 (line NIG-US:4471021, INV-US-100494), consistent with the description 60h @ 165. NIG-AU booked USD 9,090.00 (NIG-AU:77424) against the same reference, and the evidence flags adjacent digits transposed (9900 vs 9090). The USD 810.00 difference has no FX, withholding or cut-off explanation, since both lines are USD, in period and two days apart.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should post a correcting entry increasing its IC payable to NIG-US for INV-US-100494 by USD 810.00 so it agrees with the invoiced USD 9,900.00.",
+  "adjustment_amount": 810.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AU: debit secondment/staff cost USD 810.00 and credit IC payable NIG-US USD 810.00 to correct the transposed keying of INV-US-100494 (9,090.00 to 9,900.00).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

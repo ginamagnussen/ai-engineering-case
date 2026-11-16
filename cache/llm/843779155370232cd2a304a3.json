@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 467,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.71,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-UK line NIG-UK:1900045397 invoices GBP 117,580.00 (ref 9000010615) to NIG-SA, and NIG-SA booked the identical GBP 117,580.00 on NIG-SA:ICV-SA-019003 citing 'INV 9000010615' and 'subcontract UK'. However, the payable is coded to counterparty NIG-US (NorthStar Infrastructure Group Inc.) instead of NIG-UK. The amount matches exactly (ratio 1.0, zero difference at the invoice-date rate), so the small USD gap (147,639.33 vs 148,090.83) is only translation-rate noise.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclass the IC payable on ICV-SA-019003 from counterparty NIG-US to NIG-UK so it matches invoice 9000010615 in the October 2026 close.",
+  "adjustment_amount": 117580.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-SA, debit IC payable – NIG-US GBP 117,580.00 and credit IC payable – NIG-UK GBP 117,580.00 (counterparty reclass only, no P&L impact).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

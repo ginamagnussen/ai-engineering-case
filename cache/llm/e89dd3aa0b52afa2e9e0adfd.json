@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 1114,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.8,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "NIG-UK line NIG-UK:1900045211 invoices 48,340.00 GBP for P-25019 under reference 9000010633, while NIG-SA line NIG-SA:ICV-SA-018801 books 43,840.00 GBP against the same reference. The 4,500.00 GBP gap is exactly what adjacent-digit transposition of 48340 to 43840 produces, the ratio 0.90691 matches no withholding rate, and both sides carry the same implied USD rate (1.2813), so this is not an FX or WHT difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Correct the keying error on NIG-SA:ICV-SA-018801 from 43,840.00 GBP to 48,340.00 GBP in Dynamics 365 F&O, with the posting kept in the October 2026 period.",
+  "adjustment_amount": 4500.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA increases its IC payable to NIG-UK for P-25019 by 4,500.00 GBP (approx. 5,765.35 USD at invoice-date rate) to correct the transposed digits.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

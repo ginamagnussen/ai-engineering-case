@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2435,
+  "output": 401,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.49,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-018986 (USD 15,960) is USD 840 lower than NIG-US's receivable NIG-US:4471103 (USD 16,800) for the same invoice INV-US-100439. The buyer ratio of 0.95 matches the 5% services WHT rate and the buyer description says 'net of WHT 5%'. Counterparties, currency and period all agree, so this is not FX, timing or a miscoding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the USD 840 withheld as a WHT payable to the tax authority and gross up the IC payable to USD 16,800, retaining the WHT certificate for NIG-US to claim credit.",
+  "adjustment_amount": 840.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Dr WHT expense/clearing, Cr IC payable to NIG-US USD 840 at NIG-SA so the IC payable equals the invoiced USD 16,800, with the withheld tax recorded as WHT payable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

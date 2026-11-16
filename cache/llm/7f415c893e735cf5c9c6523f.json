@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2545,
+  "output": 419,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.77,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045266 is GBP 2,100.00 (USD 2,639.28 at the invoice-date rate) and NIG-US payable NIG-US:4471057 is USD 2,573.65 under the same reference 9000010451. The USD 65.63 difference (ratio 0.97513) is fully explained by the buyer using the 2026 budget rate (implied 1.225548, 0.0% deviation) instead of the invoice-date rate (2.487% deviation). Counterparty, dates and period all agree, and the ratio is not consistent with a withholding rate.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should re-translate payable NIG-US:4471057 at the invoice-date GBP/USD rate instead of the budget rate and book the difference.",
+  "adjustment_amount": 65.63,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-US IC payable to NIG-UK by USD 65.63 (debit software licence expense or FX variance, credit IC payable) to move from the budget rate to the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

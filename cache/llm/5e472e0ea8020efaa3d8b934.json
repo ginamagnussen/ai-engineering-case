@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2433,
+  "output": 1251,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.81,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.8,
+  "explanation": "NIG-AU line NIG-AU:77482 and NIG-US line NIG-US:4471082 both carry AUD 25,080.00 on reference AU/IC/2026/0675, so the local-currency amounts agree. The USD gap of 216.19 (16,818.40 vs 16,602.21) arises from translation at different rates on posting dates two days apart, since the difference at invoice-date rate is 0.0. The seller line also carries the unresolved counterparty 'Head Office Denver' in the legacy SCE ledger, which should map to NIG-AU.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Confirm the rate basis used by each entity for translation, accept the USD 216.19 as an FX translation difference, and have the legacy SCE ledger counterparty for NIG-AU:77482 mapped to NIG-AU in master data.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller-side counterparty 'Head Office Denver' is unresolved in the legacy ERP, and the group should confirm the consolidation rate policy before accepting the USD difference without adjustment."
+ }
+}

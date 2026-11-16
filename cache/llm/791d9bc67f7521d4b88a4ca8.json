@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2898,
+  "output": 1478,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.98,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "NIG-US:4471069 (AUD 1,320.00, 'Seconded staff A.Clarke P-24102') matches NIG-AU:77455 (AUD 1,320.00, 'Secondment Aisha Clarke 8h @ 165 - P-24102') on amount, person, and project, and both lines are in period. The USD values differ (buyer 881.87 vs seller 869.68, a 12.19 gap), which points to the translation rate basis rather than a different invoice, but the references differ (auic20260661 vs AU/IC/2026/0663) and the deterministic matcher did not pair them.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm that NIG-US:4471069 and NIG-AU:77455 refer to the same invoice and that NIG-US translated the AUD invoice at a rate other than the invoice-date rate, then link the pair manually.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller line was not matched by the deterministic rules and the references do not agree, so the pairing and the USD rate basis need human confirmation before closing the item."
+ }
+}

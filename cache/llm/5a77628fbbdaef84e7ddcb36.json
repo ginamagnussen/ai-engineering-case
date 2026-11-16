@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 408,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.74,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-DE booked IC receivable NIG-DE:5100873469 for EUR 9,900.00 (60 hours seconded staff, RE-2026-000305), while NIG-UK booked IC payable NIG-UK:1900045403 for EUR 7,682.05 on the same reference, same currency and same date. The buyer description states 'partial accept, hours disputed pending PM approval', so the shortfall (about USD 2,370.10 at the invoice-date rate; buyer/seller ratio 0.776) is an intentional partial booking and not an FX, timing, WHT or keying issue.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Have NIG-UK obtain project manager approval on the disputed hours and agree with NIG-DE whether to accept the full invoice or issue a credit note for the contested hours.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Dispute over the hours charged requires business resolution between NIG-UK and NIG-DE; no correcting entry should be booked until the outcome of the PM approval is known."
+ }
+}

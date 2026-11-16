@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2898,
+  "output": 486,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.63,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.72,
+  "explanation": "Buyer line NIG-US:4471069 (AUD 1,320.00, USD 881.87) matches seller line NIG-AU:77455 (AUD 1,320.00, USD 869.68) on amount, currency, project P-24102 and the Aisha Clarke secondment. The nominal AUD amounts are identical and the counterparty resolves to NIG-AU, so the only gap is the USD translation: 881.87 vs 869.68. The references differ (auic20260661 vs AU/IC/2026/0663), so this was not paired automatically.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm NIG-US:4471069 is the same invoice as NIG-AU:77455, then align the USD translation to the invoice-date rate (12 Oct) and link the two lines.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No change to the AUD amount; if the rate is confirmed, revalue the NIG-US payable to the invoice-date AUD/USD rate (about USD 12.19 difference), or treat it as an FX revaluation difference.",
+  "model_requests_review": true,
+  "review_reason": "The match rests on amount, project and description rather than a shared reference, and the reference numbers differ (0661 vs 0663). The USD difference is a rate or translation effect, so a human should confirm the pairing and the rate basis."
+ }
+}

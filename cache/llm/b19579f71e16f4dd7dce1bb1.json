@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2471,
+  "output": 962,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.22,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-AE invoiced 33,000 AED (line NIG-AE:ICV-AE-031365, AE-ICINV-00565), and NIG-SA booked 31,350 AED on NIG-SA:ICV-SA-019017, which is exactly 95% of the invoice and is described as net of 5% WHT. The 449.28 USD gap at the invoice-date rate equals the withheld 1,650 AED, so the buyer has not grossed up its IC payable or recorded the withholding liability.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to 33,000 AED for invoice AE-ICINV-00565 and book the 1,650 AED withheld as a Saudi WHT payable to the tax authority, with the matching certificate on file.",
+  "adjustment_amount": 1650.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr Expense (secondment cost) 1,650 AED / Cr WHT payable (Saudi tax authority) 1,650 AED, so NIG-SA's IC payable is 33,000 AED and matches the seller; approx. 449.28 USD at invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2483,
+  "output": 848,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 9.08,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA:ICV-SA-018834 booked AED 347,472.00 against NIG-AE invoice AE-ICINV-00924 (NIG-AE:ICV-AE-031219, AED 365,760.00) on the same date with the same project. The 0.95 ratio matches Saudi 5% WHT on services, and the buyer description explicitly says 'net of WHT 5%'. The AED 18,288.00 gap (USD 4,979.64 at the invoice-date rate) is withholding tax, not a booking error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to AED 365,760 and record the AED 18,288 withheld as a WHT liability to ZATCA; NIG-AE should then clear the same amount from its IC receivable to WHT expense or a tax receivable once it gets the WHT certificate.",
+  "adjustment_amount": 18288.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA: Dr expense/clearing AED 18,288 / Cr IC payable NIG-AE AED 18,288 to show the gross invoice, with the WHT reclassified to a WHT payable to the Saudi tax authority; on net settlement, NIG-AE: Dr WHT expense/receivable AED 18,288 / Cr IC receivable NIG-SA AED 18,288.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

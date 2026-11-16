@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 916,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 12.36,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-018914 (EUR 43,842.50) carries the same invoice reference RE-2026-000748 as NIG-DE's receivable NIG-DE:5100873360 (EUR 46,150.00). The buyer-to-seller ratio is exactly 0.95, and the buyer description states 'net of WHT 5%', which fits Saudi WHT on services (structural calcs). The EUR 2,307.50 gap (USD 2,478.03 at the invoice-date rate) is withholding tax, not a keying or FX error; both lines are in period and booked to the correct counterparties.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-SA should gross up the IC payable to EUR 46,150.00 with an offsetting WHT liability to ZATCA and send the WHT certificate to NIG-DE, which then reclassifies EUR 2,307.50 from IC receivable to WHT receivable or tax expense.",
+  "adjustment_amount": 2307.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-SA: Dr expense/clearing EUR 2,307.50, Cr IC payable NIG-DE EUR 2,307.50 (gross up), with the WHT payable to ZATCA recognised on settlement. NIG-DE: on receipt of the WHT certificate, Dr WHT receivable/tax expense EUR 2,307.50, Cr IC receivable NIG-SA EUR 2,307.50.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

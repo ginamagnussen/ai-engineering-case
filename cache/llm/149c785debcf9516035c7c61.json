@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2566,
+  "output": 407,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.11,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-UK:1900045278 invoiced GBP 11,900.00 (USD 14,952.11) and buyer NIG-DE:5100873399 booked EUR 12,984.37 (USD 13,929.89) under the same reference 9000010467. The buyer's implied rate of 1.091124 matches the 2026 budget rate exactly (0.0% deviation), versus -6.7% to -9.2% for the actual daily and month-end rates, so the USD difference of 1,007.03 is explained by the rate basis.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Have NIG-DE rebook or revalue the payable at the invoice-date rate instead of the budget rate so it agrees with the NIG-UK receivable.",
+  "adjustment_amount": 1007.03,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue the NIG-DE IC payable (EUR 12,984.37) from the 2026 budget rate to the invoice-date rate, increasing the payable by USD 1,007.03 with the offset to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

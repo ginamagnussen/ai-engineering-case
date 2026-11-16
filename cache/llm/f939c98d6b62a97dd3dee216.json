@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2423,
+  "output": 915,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.09,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-US line NIG-US:4471155 invoiced a management fee of 71,000 USD (INV-US-100393), and NIG-SA line NIG-SA:ICV-SA-019051 booked 56,800 USD described as net of 20% WHT. The buyer-to-seller ratio of 0.8 matches the 20% withholding rate, and the 14,200 USD gap equals the invoice-date-rate difference, with the same invoice reference on both sides.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm the 14,200 USD Saudi WHT was withheld and remitted, record it as a WHT liability, and gross up its IC payable to 71,000 USD so it agrees to NIG-US.",
+  "adjustment_amount": 14200.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Gross up NIG-SA IC payable from 56,800 to 71,000 USD and credit WHT payable 14,200 USD (expense gross, WHT liability recognised).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

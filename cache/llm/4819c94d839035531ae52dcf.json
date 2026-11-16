@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 839,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.64,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "Seller line NIG-US:4471065 invoices USD 1,000.00 (INV-US-100368, secondment P-25002), while buyer line NIG-AE:ICV-AE-031302 books USD 785.35 with the description 'partial accept, hours disputed pending PM approval', leaving a USD 214.65 gap. The buyer's ratio of 0.78535 is not consistent with a withholding rate, and the currency is the same, so this is not FX, WHT, or a keying error.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Obtain the project manager's decision on the disputed secondment hours for P-25002; if the disputed USD 214.65 is rejected, keep the dispute open and document it, and if accepted, NIG-AE should book the remaining USD 214.65 payable.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer intentionally booked less pending PM approval of disputed hours; the outcome is a commercial judgement that cannot be verified from the ledger evidence."
+ }
+}

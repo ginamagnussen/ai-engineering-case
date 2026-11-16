@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2585,
+  "output": 724,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.51,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-DE line NIG-DE:5100873517 is an IC payable accrual of GBP 840.00 (USD 1,082.33) to NIG-UK for Autodesk AEC UK licences, booked with reference ACCR-OCT26 as 'invoice not received'. The two nearest unmatched NIG-UK receivables (NIG-UK:1900045345 for GBP 1,520.00 and NIG-UK:1900045276 for GBP 25,200.00) are secondment invoices with different descriptions and amounts, so neither is a plausible match.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm whether the Autodesk licence invoice for GBP 840.00 has been or will be issued, and if not, reverse the NIG-DE accrual in the November close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

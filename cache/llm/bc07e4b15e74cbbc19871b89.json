@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2462,
+  "output": 410,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.31,
+ "output": {
+  "category": "timing",
+  "confidence": 0.9,
+  "explanation": "NIG-AU invoiced AUD 13,200.00 (AU/IC/2026/0738, secondment H. Walsh P-25019) on 2026-10-30 (NIG-AU:77566), while NIG-AE booked the identical AUD 13,200.00 against the same reference on 2026-11-08 (NIG-AE:ICV-AE-031485), 9 days later and after period end. The ratio is 1.0 and the difference at the invoice-date rate is 0.0. The USD gap (8,604.82 vs 8,569.57) arises only from the different posting-date translation rates, so this is a cut-off timing difference. The seller's counterparty text 'NS UAE' was unresolved, but it is consistent with NIG-AE.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Treat as in-transit for October and confirm the item clears in the November IC reconciliation; if NIG-AE should have recognised the cost in October under group cut-off policy, it should accrue the payable for period end.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

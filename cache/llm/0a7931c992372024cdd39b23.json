@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 1016,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.46,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.92,
+  "explanation": "Both lines carry AUD 27,720.00 under reference AU/IC/2026/0667 with the same invoice reference on the buyer line, and the counterparty resolves to NIG-AU. NIG-DE line 5100873367 is booked at USD 18,455.42, while NIG-AU line 77450 is at USD 18,302.13, a USD 153.29 gap that is zero at the invoice-date rate, so NIG-DE used a different rate basis. The seller's counterparty field reads 'Germany' and is unresolved, a master-data issue that does not change the match.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Have NIG-DE restate its IC payable for invoice AU/IC/2026/0667 to the invoice-date rate and clear the USD 153.29 difference, and ask NIG-AU to correct the 'Germany' counterparty code on its line.",
+  "adjustment_amount": 153.29,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-DE to reduce IC payable to NIG-AU by USD 153.29 (booked USD 18,455.42 vs invoice-date-rate USD 18,302.13) via FX revaluation of the AUD 27,720.00 balance.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

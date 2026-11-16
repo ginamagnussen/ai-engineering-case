@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2568,
+  "output": 423,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.69,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-DE invoiced RE-2026-000662 for EUR 4,400.00 (USD 4,716.93 at the invoice-date rate), while NIG-US booked USD 4,942.08 on the same reference (NIG-US:4471097). The buyer's implied rate of 1.1232 matches the 2026 budget rate exactly (0.0% deviation), versus 4.8% off the daily rate at buyer posting and 4.8% off at invoice date, so the USD 225.15 gap is a rate-basis difference.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US rebook the payable at the invoice-date rate instead of the budget rate, or document the budget-rate policy and book the USD 225.15 difference to FX variance.",
+  "adjustment_amount": 225.15,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-US IC payable to NIG-DE by USD 225.15 (from 4,942.08 to 4,716.93) with the offset to FX gain/loss, so it agrees with the EUR 4,400.00 invoice at the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

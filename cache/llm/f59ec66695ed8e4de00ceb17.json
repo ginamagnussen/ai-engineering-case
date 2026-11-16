@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2558,
+  "output": 1056,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.48,
+ "output": {
+  "category": "other",
+  "confidence": 0.8,
+  "explanation": "NIG-UK line 1900045253 (IC payable, 9900.00 USD, 'Seconded staff F.Fischer P-24017', posted 2026-10-07) matches NIG-US line 4471026 (IC receivable, 9900.00 USD, 'Secondment Felix Fischer 60h @ 165 - P-24017', INV-US-100390, posted 2026-10-02, in period) exactly on amount, project code, person and period. The only difference is the reference (invus100396 vs INV-US-100390), which likely prevented the deterministic match, so this looks like a reference-format mismatch rather than a true missing or wrong booking.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Confirm with NIG-UK that invus100396 refers to INV-US-100390 and, if so, link NIG-UK:1900045253 to NIG-US:4471026 and correct the buyer reference so the pair clears without an adjustment.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pairing rests on matching amount, project and person, but the invoice references do not match, so a human should confirm the invoice link before clearing the pair."
+ }
+}

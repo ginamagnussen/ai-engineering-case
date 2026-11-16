@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2430,
+  "output": 948,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.72,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-UK receivable NIG-UK:1900045344 is GBP 29,010.00 and NIG-DE payable NIG-DE:5100873419 is GBP 29,001.00 for the same reference 9000010555 (P-24017), posted two days apart with the invoice reference found on the buyer line. The GBP difference of 9.00 matches the adjacent-digit transposition of 10 to 01 in the last digits, with no business reason or dispute evidence, and both lines are in period with the same counterparty pairing.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Correct NIG-DE:5100873419 from GBP 29,001.00 to GBP 29,010.00 to agree to the NIG-UK invoice, after confirming the transposition against the invoice.",
+  "adjustment_amount": 9.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Increase NIG-DE IC payable (P-24017, ref 9000010555) by GBP 9.00 to correct the transposed amount 29,001 to 29,010.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2582,
+  "output": 1245,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.83,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.8,
+  "explanation": "Both lines reference P-24088 (reference 9000010918) and the counterparty resolves correctly. NIG-DE booked the GBP 76,510.00 invoice in EUR 83,481.86 at the 2026 budget rate (implied 1.091124, 0.0% deviation), while the daily invoice-date rate deviates by -9.112%, so the USD difference of 8,889.94 at invoice-date rate is a rate-basis effect rather than a missing or duplicate booking.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Have NIG-DE restate the IC payable line NIG-DE:5100873424 to the invoice-date rate (or the group-mandated transaction rate) and book the FX difference, after the group controller confirms which rate basis applies to intercompany settlements.",
+  "adjustment_amount": 8889.94,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-DE IC payable from budget-rate translation to invoice-date rate and post the resulting FX difference of USD 8,889.94 equivalent in NIG-DE books.",
+  "model_requests_review": true,
+  "review_reason": "Using the budget rate for intercompany postings is a policy question; the group controller must confirm whether the invoice-date rate is mandatory before NIG-DE posts the correction."
+ }
+}

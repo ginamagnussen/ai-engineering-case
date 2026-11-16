@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2475,
+  "output": 382,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.41,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-SA payable line NIG-SA:ICV-SA-019006 (AED 39,060.00, ref AE-ICINV-00927) matches NIG-AE receivable NIG-AE:ICV-AE-031394 exactly in amount, currency and invoice reference, posted one day apart, but is booked against counterparty NIG-AU instead of NIG-AE. The description itself says 'subcontract AE', confirming the partner should be NIG-AE.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclass the payable on line ICV-SA-019006 from intercompany partner NIG-AU to NIG-AE in the October 2026 period.",
+  "adjustment_amount": 39060.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, debit IC payable – NIG-AU AED 39,060.00 and credit IC payable – NIG-AE AED 39,060.00 (ref AE-ICINV-00927).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2642,
+  "output": 1100,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.63,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-AU booked a second IC payable of 19,500.00 GBP to NS UK (NIG-UK) on line NIG-AU:77484 under reference 9000010767, posted 2026-10-16. The same reference is already matched in M0168 on NIG-AU:77462 (posted 2026-10-13), and no unmatched NIG-UK receivable of 19,500 GBP exists (the nearest candidates are 25,200 and 1,520 GBP), so the second booking appears to be a duplicate with no seller invoice behind it. The twin's amount is not shown in the evidence, and the counterparty was resolved by LLM rather than master data, so both need confirmation.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that NIG-AU:77462 carries the same 19,500.00 GBP amount under reference 9000010767, then reverse NIG-AU:77484 in the Legacy SCE Ledger and inform NIG-UK that the invoice is booked once.",
+  "adjustment_amount": 19500.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse duplicate IC payable to NS UK (NIG-UK) on NIG-AU:77484, reference 9000010767, which duplicates the already matched line NIG-AU:77462 (approx. 25,024.74 USD).",
+  "model_requests_review": true,
+  "review_reason": "The twin line's amount is not in the evidence and the counterparty was resolved by LLM; a human should confirm the duplicate before reversing the entry in the legacy ledger."
+ }
+}

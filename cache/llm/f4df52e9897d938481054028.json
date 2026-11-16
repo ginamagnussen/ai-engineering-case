@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2486,
+  "output": 1106,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.8,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "NIG-AE line ICV-AE-031208 invoiced 181,224.00 AED on AE-ICINV-00599, while NIG-SA line ICV-SA-018823 booked 118,224.00 AED against the same reference, a gap of 63,000 AED (17,154.27 USD at invoice-date rate). The digit pattern shows adjacent digits transposed (181,224 vs 118,224), counterparty resolves correctly to NIG-AE, and no withholding-rate or dispute signal is present.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to correct the keying error on ICV-SA-018823 by increasing the IC payable from 118,224.00 AED to 181,224.00 AED so it matches the NIG-AE invoice.",
+  "adjustment_amount": 63000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA to post an additional IC payable of 63,000 AED (about 17,154.27 USD) to NIG-AE to correct the transposed amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2623,
+  "output": 409,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.59,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-US line 4471200 (GBP 16,800, ref 9000010810, posted 2026-10-31) has no seller counterpart. The same reference 9000010810 is already matched in M0214 to NIG-US:4471166 (posted 2026-10-30), so line 4471200 looks like a second booking of the same invoice. The two unmatched NIG-UK lines (25,200 and 1,520 GBP) have different references and amounts and do not fit.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm 4471200 is a duplicate of 4471166 (ref 9000010810) and reverse it in NIG-US if confirmed.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse duplicate IC payable line NIG-US:4471200 (debit IC payable to NIG-UK, credit the original expense or clearing account) for GBP 16,800.",
+  "model_requests_review": true,
+  "review_reason": "The twin line's amount is not shown in the evidence, so the duplicate cannot be fully verified; a human should confirm that the amounts match before the reversal."
+ }
+}

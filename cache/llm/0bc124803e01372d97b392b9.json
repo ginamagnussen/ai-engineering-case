@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2410,
+  "output": 342,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.08,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-UK payable NIG-UK:1900045481 (USD 11,200) matches NIG-US receivable NIG-US:4471144 (USD 11,200) on reference INV-US-100426, description and amount, with zero difference. However, NIG-UK booked it against partner AE01 (NIG-AE) instead of NIG-US, so the intercompany elimination with NIG-US fails.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should reclassify payable NIG-UK:1900045481 from counterparty NIG-AE (AE01) to NIG-US.",
+  "adjustment_amount": 11200.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify the IC payable of USD 11,200 on NIG-UK:1900045481 from counterparty NIG-AE to NIG-US; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

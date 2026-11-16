@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2448,
+  "output": 520,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.16,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045230 is GBP 106,190.00 (USD 134,756.17) and NIG-SA payable NIG-SA:ICV-SA-018839 is GBP 100,880.50 (USD 127,247.64), both under reference 9000010591. The buyer/seller ratio of 0.95 matches 5% withholding, and the buyer description says 'net of WHT 5%'. The USD 6,737.81 gap is therefore withholding tax booked by the buyer, not an FX or timing difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the GBP 5,309.50 WHT withheld as a payable to the tax authority, gross up the IC payable to GBP 106,190.00, and confirm the WHT certificate is supplied to NIG-UK.",
+  "adjustment_amount": 5309.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Dr WHT expense/receivable (per tax treatment) and Cr IC payable to NIG-UK GBP 5,309.50 at NIG-SA so the IC payable equals the invoice of GBP 106,190.00, with the WHT liability recognised separately.",
+  "model_requests_review": true,
+  "review_reason": "Tax treatment needs confirmation: WHT 5% on a UK-to-Saudi engineering services recharge and who bears the WHT cost (gross-up vs. seller absorbing) should be validated by group tax."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2599,
+  "output": 424,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.61,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-DE invoiced RE-2026-000656 for EUR 21,280.00 (USD 23,058.16) and NIG-SA booked it as SAR 89,630.24 (USD 23,901.70) under the same reference, leaving a USD 843.54 difference. The buyer's implied rate of 4.211947 matches the 2026 budget rate exactly (0.0% deviation), versus 3.66% at the invoice-date rate, so the buyer used the wrong rate basis. Counterparty, period and description all align, so there is no other explanation.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should revalue the payable at the invoice-date EUR/SAR rate instead of the budget rate and post the FX correction.",
+  "adjustment_amount": 843.54,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-SA IC payable ICV-SA-018816 by the USD 843.54 difference (SAR equivalent at the invoice-date rate) and book it against FX gain/loss, so the payable agrees with the NIG-DE EUR 21,280.00 receivable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

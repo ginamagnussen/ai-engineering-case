@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2427,
+  "output": 766,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.95,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-AU posted the same invoice reference 9000010777 (P-24017) for GBP 4440.00, matching the NIG-UK receivable NIG-UK:1900045483 in amount, but booked the counterparty as NIG DE (resolved NIG-DE) instead of NIG-UK. The buyer-to-seller ratio is 1.0 and the difference at invoice-date rate is 0.0, so the case is a partner coding error, not an amount or FX issue; the USD gap of 5720.90 vs 5684.49 reflects the different posting dates and rates.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to reclassify NIG-AU:77551 from counterparty NIG-DE to NIG-UK in the Legacy SCE Ledger so it matches NIG-UK:1900045483.",
+  "adjustment_amount": 4440.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclassify the IC payable of GBP 4440.00 in NIG-AU from partner NIG-DE to partner NIG-UK; no change to the total payable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

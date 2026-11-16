@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2875,
+  "output": 421,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.08,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-US invoiced NIG-AU USD 1,760.00 (line NIG-US:4471046, INV-US-100430, secondment Mohammed O'Connor 16h @ 110, P-25002, posted 2026-10-09 in period), but no NIG-AU payable carries this reference. The nearest unmatched NIG-AU payables (NIG-AU:77465, 77484, 77458) are with other partners, cover other staff and projects, and sit at ratios of 5.0x to 21.4x the target, so none is a plausible match. No duplicate or post-period line was found.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm receipt of INV-US-100430 and book the IC payable to NIG-US for USD 1,760.00 in October 2026. If the invoice was never received, NIG-US should resend it.",
+  "adjustment_amount": 1760.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AU: debit secondment cost (project P-25002) and credit IC payable to NIG-US for USD 1,760.00, ref INV-US-100430.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

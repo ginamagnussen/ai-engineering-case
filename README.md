@@ -8,7 +8,7 @@ NIG has six legal entities running five different finance systems (ERPs). Every 
 - **Claude** classifies, explains and proposes a fix for the exceptions that remain.
 - **An accountant** approves every proposal in a review screen, with a full audit trail.
 
-> Cluster: **FIN · Finance**. Status: working prototype (M1–M3 done); the documents and demo video are in progress.
+> Cluster: **FIN · Finance**. Status: working prototype and evaluation done (M1–M4); the design document, executive summary and demo video are in progress.
 
 ---
 
@@ -46,7 +46,7 @@ The brief asks us to choose one painful operational workflow, build a working pr
 | M1 | Mock data generator: 6 entities, 5 ERP formats, 12 break types, answer key | ✅ |
 | M2 | Core pipeline: ingestion, entity resolution, rule matching, LLM classification, evaluation | ✅ |
 | M3 | Review UI: queue, case detail, approve/override/escalate, alias confirmation, audit log | ✅ |
-| M4 | Evaluation deep-dive: failure analysis, cost and model comparison | ⏳ |
+| M4 | Evaluation: held-out test set, model comparison and cascade, calibration, failure analysis ([report](docs/evaluation.md)) | ✅ |
 | M5 | Technical design document and executive summary | ⏳ |
 | M6 | Demo video | ⏳ |
 | M7 | Submission | ⏳ |
@@ -99,26 +99,27 @@ flowchart LR
 
 ---
 
-## 4. Current results (mock October 2026 close)
+## 4. Results (mock October 2026 close)
 
-Measured with `python -m recon.run` against the generator's answer key: 344 transactions, 701 ledger lines, 90 real breaks.
+Scored against the generator's answer key. There are two datasets:
+- **development** (seed 42): used while building
+- **held-out** (seed 2027): an independent test, scored after all fixes
 
-| Metric | Rules only | Rules + Claude |
-|---|---|---|
-| Match precision (auto-matches that are correct) | 100% | **100%** (249/249) |
-| Auto-matchable transactions matched | 88% | **95%** (100% after 2 human alias confirmations) |
-| Breaks surfaced as a case | 100% | **100%** (90/90) |
-| Exception classification accuracy | 87% | **95%** (87/92) |
-| Accuracy of cases eligible for auto-accept | n/a | **97%** (72/74) |
-| Cases routed to a human | 100% | **27%** (28/105) |
-| Model cost per monthly run | $0 | **≈ $3** (Opus 5.5; ≈ $0.03 per case) |
+Full analysis is in **[docs/evaluation.md](docs/evaluation.md)**.
 
-**Known weak spots:**
-- Withholding tax: the model gets 90% and the rules get 93%.
-- An amount-only matching false positive, observed and fixed: a net-of-tax amount coincided with another invoice's gross amount.
-- Partner names the model rightly refused to guess.
+| Metric | Rules only (no model) | Rules + Claude Opus 5.5, held-out | Development |
+|---|---|---|---|
+| Match precision (auto-matches that are correct) | 100% | **100%** (245/245) | 100% |
+| Auto-matchable transactions matched | 83% | **96%** | 93% (98% after 2 name confirmations) |
+| Real breaks surfaced as a case | 100% | **100%** (102/102) | 100% |
+| Exception classification accuracy | 96% | **99.0%** (101/102; 95% CI 94.7–99.8) | 100% |
+| Accuracy of cases auto-accepted without review | n/a | **100%** (85/85) | 100% |
+| Cases routed to a human | 100% | **21%** | 27% |
+| Model cost per monthly run | $0 | **$2.55** (≈ $0.02 per case) | $2.62 |
 
-Details and analysis will follow in the design document.
+- **Model choice.** Opus, Sonnet and Haiku 5.5 all classify at 98–100%. Opus sends half as many cases to people as Sonnet, and reviewer time costs far more than tokens. **Recommended:** a Haiku-then-Opus cascade. It matches Opus's accuracy with the lowest review rate, at 47–64% lower cost.
+- **Failures found and fixed.** The evaluation surfaced six defects in our own pipeline, including reference matching that silently never worked for 2 of 6 entities. Most model "errors" were upstream bugs that the model had flagged as suspicious.
+- **Honest caveat.** On this synthetic data, a hand-written rules classifier is close behind the model, because the break types are known in advance. The model's measured value lies in resolving partner names, explanations, correcting entries and routable confidence. Its value on unanticipated real-world breaks is the first thing the pilot must prove.
 
 ---
 
@@ -140,7 +141,9 @@ streamlit run app.py           # review UI at http://localhost:8501
 | `python data_gen/generate_mock_data.py` | Regenerate the mock data (seed 42, deterministic) |
 | `python -m recon.run --no-llm` | Never call the API; replay cached answers only |
 | `python -m recon.run --limit 5` | At most 5 new API calls (smoke test) |
-| `python -m recon.run --prune-cache` | Remove cached answers the current run no longer uses |
+| `python -m recon.run --prune-cache` | Remove cached answers the current run no longer uses (careful: also drops other datasets/models answers) |
+| `python -m recon.experiments` | Model comparison (Opus / Sonnet / Haiku), calibration, threshold sweep, cascade |
+| `RECON_DATA=data_holdout RECON_OUT=out_holdout python -m recon.run` | Run on the held-out set (generate it first with `--seed 2027 --out data_holdout`) |
 
 To make live model calls, put `ANTHROPIC_API_KEY=...` in a `.env` file in the project root (it's gitignored). The model and effort can be changed with `RECON_MODEL` and `RECON_EFFORT`.
 
@@ -162,10 +165,11 @@ recon/
   llm.py         API wrapper: structured outputs, disk cache, cost tracking
   review.py      decisions + append-only audit log
   evaluate.py    scoring against the answer key
+  experiments.py model comparison, calibration, threshold sweep, cascade
   run.py         CLI / pipeline entry point
 app.py           Streamlit review UI
 cache/llm/       committed model answers (reproducible demo)
-docs/            design document + executive summary (M5)
+docs/            evaluation report (M4); design document + executive summary (M5)
 ```
 
 All company, people and transaction data is fictional and generated by `data_gen/`.

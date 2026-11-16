@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2432,
+  "output": 399,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.24,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "Seller line NIG-SA:ICV-SA-018831 (SAR 50,000, ref SA-ICINV-00664) matches buyer line NIG-US:4471068 exactly in amount, currency and reference, with a USD difference of 0.0. The buyer booked the payable against counterparty code 300, which resolves to NIG-DE instead of NIG-SA, so the payable sits in the wrong IC partner account and will not eliminate against NIG-SA.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should reclassify payable NIG-US:4471068 from counterparty NIG-DE (code 300) to NIG-SA and confirm the partner mapping in Oracle EBS.",
+  "adjustment_amount": 50000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the IC payable of SAR 50,000 on NIG-US:4471068 from NIG-DE to NIG-SA; no P&L impact. Check that NIG-DE has no offsetting entry for this amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

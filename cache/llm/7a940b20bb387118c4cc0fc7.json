@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2475,
+  "output": 905,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.25,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-AE invoiced 16,800 AED (line NIG-AE:ICV-AE-031401, ref AE-ICINV-00837) and NIG-SA booked 15,960 AED (line NIG-SA:ICV-SA-019030), a buyer-to-seller ratio of exactly 0.95 that matches the 5% Saudi services WHT. The invoice reference is on the buyer line, the counterparty resolves correctly, and the 228.72 USD difference is the 840 AED withheld at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to gross up the IC payable to 16,800 AED and record the 840 AED withholding as a Saudi WHT payable to be remitted to ZATCA, with NIG-AE confirming its receivable is settled gross.",
+  "adjustment_amount": 840.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Debit NIG-SA IC payable (expense/secondment cost) 840 AED to gross up to 16,800 AED; credit WHT payable 840 AED.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

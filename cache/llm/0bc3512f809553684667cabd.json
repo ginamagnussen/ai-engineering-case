@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2924,
+  "output": 476,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.75,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "Seller line NIG-SA:ICV-SA-018937 (SAR 97,524, ref SA-ICINV-00610, P-23110 design review) has no buyer match. NIG-AE:ICV-AE-031332 is an IC payable for the same SAR 97,524 against NIG-SA, project P-23110 and 'design review', but its reference is 'saicinv00614' rather than 610. The reference may be a keying or format error, or a different invoice. Separately, NIG-AE holds an IC receivable with reference AE-ICINV-00610 (AED 85,572, P-25019) against NIG-SA, which looks like a reference collision from a different entity's numbering rather than a buyer booking.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have NIG-AE confirm whether ICV-AE-031332 (ref saicinv00614) is the payable for SA-ICINV-00610, and correct the reference or match it manually if so.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Amount, project and description match exactly but the reference differs (00614 vs 00610), so the pairing cannot be verified from the evidence and no existing category fits cleanly. Possible alternatives are a reference typo or a second invoice. A human should confirm before matching."
+ }
+}

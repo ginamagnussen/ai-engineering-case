@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2620,
+  "output": 412,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.03,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-AE:ICV-AE-031324 invoiced AED 49,500 (USD 13,478.35) and buyer line NIG-AU:77521 booked AUD 19,449.29 (USD 12,914.72) against the same invoice reference AE-ICINV-00511. The implied AUD/AED rate matches the 2026 budget rate exactly (0.0% deviation), versus -3.86% at the invoice-date rate, so the USD gap of 520.26 is explained by the buyer using the budget rate instead of the invoice-date rate.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should rebook the payable at the invoice-date rate instead of the 2026 budget rate so it agrees with the AED 49,500 invoice.",
+  "adjustment_amount": 520.26,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase the NIG-AU IC payable (AE-ICINV-00511) by the USD 520.26 rate difference, with the offset to FX gain/loss, to move from the budget rate to the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

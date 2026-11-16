@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 351,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.13,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "Seller line NIG-US:4471041 (USD 50,890.00, INV-US-100520) matches buyer line NIG-AU:77430 exactly in amount and currency (ratio 1.0, difference 0.0), and the invoice reference is found on the buyer line. The buyer booked the counterparty as 'NS UAE' (unresolved) instead of NIG-US, so the pair did not match automatically.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on IC payable line 77430 from 'NS UAE' to NIG-US so it matches NIG-US:4471041.",
+  "adjustment_amount": 50890.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify IC payable NIG-AU:77430 of USD 50,890.00 from counterparty 'NS UAE' to NIG-US; no change to the amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

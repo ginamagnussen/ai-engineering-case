@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2925,
+  "output": 1449,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.34,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "NIG-SA invoiced 105,000 SAR (SA-ICINV-00663, ICV-SA-018837) for Daniel Smith secondment P-24017 (168h @ 625), but no NIG-AU line carries reference 00663. The nearest candidate, NIG-AU:77450, is an IC payable for exactly 105,000 SAR (28,000.35 USD) to NIG KSA (resolved NIG-SA) with the same staff member and project P-24017, but it cites INV SA-ICINV-00664, which is not among the seller lines in this case.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU confirm whether NIG-AU:77450 is the P-24017 charge and, if so, correct its reference to SA-ICINV-00663, or have NIG-SA confirm that SA-ICINV-00664 is a separate invoice and that 00663 is unbooked on the buyer side.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The amount, counterparty and project match point to a reference error (possible miscoding within the buyer ledger), but the buyer line cites a different invoice number and no seller invoice 00664 is in the case, so it cannot be verified from the evidence."
+ }
+}

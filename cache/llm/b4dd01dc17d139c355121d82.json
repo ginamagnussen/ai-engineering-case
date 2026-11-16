@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 923,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.24,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked the P-24050 site supervision invoice (reference 9000010901) at GBP 32,195.50 against NIG-UK's receivable of GBP 33,890.00 (line NIG-UK:1900045237), a buyer-to-seller ratio of 0.95 that matches the 5% Saudi services withholding rate, and the buyer description explicitly says 'net of WHT 5%' (line NIG-SA:ICV-SA-018828). The 5% difference of GBP 1,694.50 is therefore withheld tax, not an error, and both lines are in period.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the IC payable to GBP 33,890.00 and post the GBP 1,694.50 withholding as a WHT payable to the Saudi tax authority, with NIG-UK's receivable left unchanged.",
+  "adjustment_amount": 1694.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Dr IC expense/subcontract cost (P-24050) 1,694.50 GBP; Cr WHT payable (Saudi tax authority) 1,694.50 GBP, grossing the NIG-SA IC payable up to the invoiced 33,890.00 GBP.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

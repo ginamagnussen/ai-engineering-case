@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2615,
+  "output": 541,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.16,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.5,
+  "explanation": "Buyer line NIG-AU:77583 (EUR 9,900.00, USD 10,338.27, ref 'INV RE-2026-000711') matches seller line NIG-DE:5100873471 (EUR 9,900.00, USD 10,417.97, ref RE-2026-000712) on amount, currency, employee Al-Mansouri and project P-24102. The only differences are the reference number (000711 vs 000712, likely a keying slip) and a USD gap of 79.70 that comes from the rate basis used on each side. The USD gap is rate-driven, but the reference mismatch means a pairing is not certain.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm with NIG-AU that line 77583 relates to NIG-DE invoice RE-2026-000712, correct the reference, and align the USD translation to the invoice-date rate.",
+  "adjustment_amount": 79.7,
+  "adjustment_currency": "USD",
+  "adjustment_description": "After confirming the pairing, restate the NIG-AU payable at the invoice-date rate so that USD 10,338.27 agrees to the seller's USD 10,417.97, an increase of USD 79.70, and correct the reference to RE-2026-000712.",
+  "model_requests_review": true,
+  "review_reason": "The invoice reference differs (000711 vs 000712) and the seller line has no confirmed buyer link. The pairing rests on matching amount, employee and project, and the USD gap is a rate difference. A human should confirm that RE-2026-000711 is not a separate invoice."
+ }
+}

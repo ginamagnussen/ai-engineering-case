@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2906,
+  "output": 371,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.5,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-US line NIG-US:4471184 is a period-end accrual of SAR 33,000.00 (USD 8,800.11) dated 2026-10-31 for seconded staff O.Fischer on P-24050, explicitly marked 'invoice not received' with reference ACCR-OCT26. None of the 3 unmatched NIG-SA receivables relates to this charge. The nearest lines are for other staff, projects and partners (NIG-AU, NIG-AE), with ratios of 0.45 to 2.96. NIG-SA has therefore not yet invoiced this secondment.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm whether the O.Fischer secondment on P-24050 is billable for October 2026 and issue the IC invoice to NIG-US; otherwise NIG-US should reverse the accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

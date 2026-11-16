@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 691,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.58,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-018922 posts the IC payable of AED 196,524.00 (USD 53,511.52) against NIG-DE, but the seller invoice NIG-AE:ICV-AE-031302 (same reference AE-ICINV-00912, same amount and currency) is owed to NIG-AE. The invoice reference appears on the buyer line, the amounts match exactly (ratio 1.0, zero USD difference), and the postings are 2 days apart within the period, so this is a wrong partner code rather than a timing or amount issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Reclassify NIG-SA:ICV-SA-018922 from NIG-DE to NIG-AE so it matches the NIG-AE receivable AE-ICINV-00912 for AED 196,524.00, and confirm NIG-DE holds no offsetting balance for this invoice.",
+  "adjustment_amount": 196524.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reclass IC payable P-24017 (AE-ICINV-00912) of AED 196,524.00 in NIG-SA from counterparty NIG-DE to counterparty NIG-AE; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

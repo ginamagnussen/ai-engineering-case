@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2475,
+  "output": 398,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.0,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-AU:77446 invoiced AUD 31,080.00 (168h @ 185 = 31,080) for the Brown secondment, reference AU/IC/2026/0654. Buyer NIG-AE:ICV-AE-031243 booked AUD 13,080.00 against the same reference, a ratio of 0.42085 and a USD difference of 11,825.10. The digit pattern shows adjacent digits transposed, same currency, same counterparty and in period, so this is a keying error rather than FX, WHT or timing.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should correct the payable ICV-AE-031243 from AUD 13,080.00 to AUD 31,080.00 after confirming against the invoice.",
+  "adjustment_amount": 18000.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase NIG-AE IC payable to NIG-AU by AUD 18,000.00 (from 13,080.00 to 31,080.00) and debit the related expense or recharge account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

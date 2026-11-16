@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2617,
+  "output": 1013,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.61,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.72,
+  "explanation": "NIG-UK line NIG-UK:1900045352 is an IC receivable of 19480.00 GBP (24193.38 USD) to NIG-DE for project P-24017 Riyadh Metro Line 7 QA/QC, reference 9000010594, with no NIG-DE payable found. The two nearest unmatched NIG-DE lines do not fit: NIG-DE:5100873331 is 31920 AUD to NIG-AU with a different reference, and NIG-DE:5100873497 is a 9490 GBP accrual for a different project (P-25031) with no invoice, so neither is the same invoice.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should confirm whether the NIG-UK invoice for P-24017 (ref 9000010594) was received and, if so, book the matching IC payable of 19480 GBP; if it was not received, NIG-UK should confirm the invoice was sent to NIG-DE.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Only two unmatched NIG-DE lines were searched and neither matches on project, reference or amount, so it cannot be verified whether the buyer booked this invoice under another reference or in another period."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 358,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.24,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-UK payable NIG-UK:1900045269 (AED 117,600; USD 32,021.30) references AE-ICINV-00851 and matches NIG-AE receivable NIG-AE:ICV-AE-031225 exactly in amount and currency, with a USD difference of 0. However, NIG-UK booked it against partner US01 (NIG-US) instead of NIG-AE, so the automatic match failed.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should recode the payable on NIG-UK:1900045269 from partner US01 (NIG-US) to NIG-AE so it matches the seller receivable.",
+  "adjustment_amount": 117600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reclassify IC payable NIG-UK:1900045269 of AED 117,600 from counterparty NIG-US to NIG-AE; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

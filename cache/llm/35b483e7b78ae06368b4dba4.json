@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2586,
+  "output": 1295,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.63,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Invoice NIG-UK:1900045358 (GBP 3,800.00, reference 9000010525) is booked by NIG-AU as AUD 6,720.19 at an implied rate of 1.768471, which matches the 2026 budget rate exactly (0.0% deviation) and deviates by -6.4% from the invoice-date rate. The counterparty is correctly resolved to NIG-UK and the difference of 302.64 USD is explained by the rate basis, not by a missing or duplicate booking.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to revalue the IC payable at the invoice-date rate (or the group-mandated IC rate) and record the FX difference of 302.64 USD, or have the group controller confirm that the budget-rate basis is acceptable for October 2026.",
+  "adjustment_amount": 302.64,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU IC payable for P-23110 from the 2026 budget rate to the invoice-date rate, recognising the 302.64 USD difference in NIG-AU's FX result.",
+  "model_requests_review": true,
+  "review_reason": "Whether the group's IC policy requires invoice-date rates or permits budget rates is a policy question I cannot verify from the evidence, so the group controller should confirm the required rate basis before the adjustment is posted."
+ }
+}

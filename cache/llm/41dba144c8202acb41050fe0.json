@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 1101,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.38,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-AE invoiced 49,500.00 AED (AE-ICINV-00515, ICV-AE-031310) and NIG-US booked 45,900.00 AED (NIG-US:4471105) against the same reference and P-25019. The buyer amount is the seller amount with the adjacent digits 9 and 5 transposed, and the 60h x 825 = 49,500 calculation supports the seller figure, so the difference of 980.24 USD at the invoice-date rate is a keying error rather than an FX or withholding effect.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to correct IC payable NIG-US:4471105 from 45,900.00 AED to 49,500.00 AED so it matches the NIG-AE invoice, and confirm the correction is posted in October 2026.",
+  "adjustment_amount": 3600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase NIG-US IC payable to NIG-AE by 3,600.00 AED (45,900.00 to 49,500.00 AED) to correct the transposed amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

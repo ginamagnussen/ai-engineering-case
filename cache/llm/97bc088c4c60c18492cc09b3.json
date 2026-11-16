@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2875,
+  "output": 373,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.77,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-US booked IC receivable NIG-US:4471046 (USD 1,760.00, INV-US-100430, secondment of Mohammed O'Connor 16h @ 110, P-25002) against NIG-AU. None of the 4 unmatched NIG-AU buyer lines searched has this reference, and no line elsewhere carries it. The nearest candidates (NIG-AU:77465, 77484, 77458) are other partners, other projects and unrelated amounts, so none is a plausible match.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm receipt of the P-25002 secondment invoice INV-US-100430 and book the IC payable of USD 1,760.00 to NIG-US.",
+  "adjustment_amount": 1760.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AU to debit secondment expense (project P-25002) and credit IC payable to NIG-US for USD 1,760.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

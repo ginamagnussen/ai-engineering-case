@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2542,
+  "output": 1228,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.35,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "NIG-US booked IC payable line NIG-US:4471190 at USD 26,349.32, which equals GBP 21,500 at the 2026 budget rate of 1.22555 (0.0% deviation). The seller NIG-UK line NIG-UK:1900045520 is USD 27,702.53 at the invoice-date rate, so the USD 1,353.21 gap is the rate basis (-4.885%), not a missing or split booking. The 0.95115 ratio is close to 5% withholding but is not exact, and the budget-rate match is the stronger explanation.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US revalue IC payable NIG-US:4471190 from the 2026 budget rate to the invoice-date rate and book the USD 1,353.21 difference through FX or IC settlement, per group IC policy.",
+  "adjustment_amount": 1353.21,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-US IC payable to NIG-UK by USD 1,353.21 (from 26,349.32 to 27,702.53) to restate at the invoice-date rate, with the offset to FX result.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

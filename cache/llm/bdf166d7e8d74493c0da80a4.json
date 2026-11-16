@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 392,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.03,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-AE:ICV-AE-031310 shows AED 49,500 (60h @ 825) for invoice AE-ICINV-00515, while buyer line NIG-US:4471105 references the same invoice but books AED 45,900, a USD 980.24 shortfall. The currency, counterparty and period all match, and the digits 49,500 vs 45,900 are transposed, with the seller amount agreeing with the 60h x 825 calculation. The ratio of 0.92727 does not match a WHT rate, so this is a keying error on the buyer side.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should correct the IC payable on reference aeicinv00515 from AED 45,900 to AED 49,500.",
+  "adjustment_amount": 3600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase the NIG-US IC payable to NIG-AE by AED 3,600 (from 45,900 to 49,500), debiting the secondment expense account, to correct the transposed digits.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

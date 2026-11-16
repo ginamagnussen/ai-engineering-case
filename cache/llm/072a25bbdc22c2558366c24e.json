@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2673,
+  "output": 434,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.84,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer-only line NIG-AU:77458 (EUR 35,280.00, posted 2026-10-12) carries reference RE-2026-000310, which is already matched in M0067 to NIG-AU:77432 (posted 2026-10-07). No seller line exists for it, and the nearest unmatched NIG-DE lines (EUR 86,980 and EUR 90,190) have different references and are not plausible matches. This indicates NIG-AU booked the same invoice twice.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm NIG-AU:77458 duplicates NIG-AU:77432 (same reference RE-2026-000310) and reverse it, reducing the IC payable to NIG-DE.",
+  "adjustment_amount": 35280.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Reverse duplicate IC payable NIG-AU:77458 (debit IC payable to NIG-DE, credit the original expense or clearing account) for EUR 35,280.00.",
+  "model_requests_review": true,
+  "review_reason": "The amount of the already-matched twin NIG-AU:77432 is not shown in the evidence, so it must be confirmed that it is identical before reversing."
+ }
+}

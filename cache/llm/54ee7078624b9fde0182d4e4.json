@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2454,
+  "output": 488,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.95,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "Seller NIG-DE line NIG-DE:5100873381 invoiced EUR 8,400.00 (RE-2026-000328) for seconded staff; buyer NIG-SA line NIG-SA:ICV-SA-018928 booked EUR 7,980.00 with the description 'net of WHT 5%'. The buyer-to-seller ratio of 0.95 matches 5% withholding, the invoice reference matches, and the USD difference is 446.10 at the invoice-date rate; counterparties and period are consistent.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the EUR 420.00 withheld tax as an IC payable to NIG-DE (or confirm WHT remittance and provide the certificate) so the IC balance agrees with the invoice.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Dr WHT expense/receivable (or tax clearing) and Cr IC payable NIG-DE EUR 420.00 at NIG-SA, to gross up the payable to the invoiced EUR 8,400.00 until WHT is settled and documented.",
+  "model_requests_review": true,
+  "review_reason": "Confirm 5% WHT is the correct rate for seconded staff services and that the WHT certificate and treatment (gross-up vs. creditable tax) are agreed between the entities."
+ }
+}

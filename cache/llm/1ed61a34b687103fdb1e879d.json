@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2581,
+  "output": 1063,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.42,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.82,
+  "explanation": "NIG-AU line NIG-AU:77577 is a 48,000.00 USD accrual (ACCR-OCT26) for October management fee to US HQ, noted as 'invoice not received', and no NIG-US receivable matches it. The two nearest unmatched NIG-US lines (NIG-US:4471093 at 18,480 USD and NIG-US:4471064 at 2,640 USD) are secondment invoices to NIG-AE, not management fees, so they do not explain the accrual.",
+  "responsible_entity": "both",
+  "recommended_action": "Ask NIG-US to confirm whether the October 2026 management fee was charged and to issue the invoice, and have NIG-AU keep the accrual only if the fee is contractually due, otherwise reverse it.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The counterparty 'US HQ' was resolved to NIG-US by LLM rather than master data, the buyer runs on a legacy ERP, and whether the management fee is chargeable this period is a judgement the evidence cannot settle."
+ }
+}

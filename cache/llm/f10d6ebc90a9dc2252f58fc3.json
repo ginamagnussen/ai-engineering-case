@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2455,
+  "output": 557,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.35,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-DE invoiced EUR 3,800.00 for 40 hours of seconded staff (L. Rahman, P-24050, RE-2026-000653) on line NIG-DE:5100873357. NIG-SA booked only EUR 3,094.90 on NIG-SA:ICV-SA-018877, and its description says 'partial accept, hours disputed pending PM approval'. The ratio of 0.81445 does not match any Saudi WHT rate, and both lines are in EUR, so this is a deliberate short booking of about USD 757.21 rather than an FX or withholding difference.",
+  "responsible_entity": "both",
+  "recommended_action": "Escalate to the NIG-DE and NIG-SA project managers for P-24050 to agree the approved hours, then have NIG-DE issue a credit note or NIG-SA book the remaining amount, depending on the outcome.",
+  "adjustment_amount": 705.1,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Pending resolution, either NIG-SA books an additional EUR 705.10 IC payable to NIG-DE, if the hours are accepted, or NIG-DE issues a EUR 705.10 credit note against RE-2026-000653, if the hours are rejected.",
+  "model_requests_review": true,
+  "review_reason": "The buyer has explicitly disputed the hours billed, so which side corrects depends on the project managers' approval of the hours."
+ }
+}

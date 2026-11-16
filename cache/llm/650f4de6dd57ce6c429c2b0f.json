@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2620,
+  "output": 736,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.32,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.92,
+  "explanation": "NIG-AU:77521 carries the same invoice reference (AE-ICINV-00511) and description (secondment E. Fischer, P-25019) as NIG-AE:ICV-AE-031324 for AED 49,500.00. NIG-AU booked AUD 19,449.29, an implied rate of 0.392915 that matches the 2026 budget rate exactly (0.0% deviation) but is 3.86% off the invoice-date daily rate. This leaves a USD 520.26 gap (USD 13,478.35 vs 12,914.72). The counterparty is correct and posting is in period, so the gap comes from the rate basis rather than quantity or price.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should revalue payable line 77521 from the 2026 budget rate to the invoice-date (2026-10-20) daily AED/AUD rate so it agrees with the AED 49,500.00 invoice, and post the difference to FX.",
+  "adjustment_amount": 520.26,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AU IC payable to NIG-AE for AE-ICINV-00511 by the AUD equivalent of USD 520.26. This restates AED 49,500.00 at the invoice-date rate instead of the budget rate, with the offset to FX difference / expense.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

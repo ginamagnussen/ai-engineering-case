@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2426,
+  "output": 400,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.25,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-DE's IC payable NIG-DE:5100873345 (GBP 252,430, ref 9000010649) is booked against partner AU01 (NIG-AU), but the invoice came from NIG-UK (NIG-UK:1900045240, same GBP 252,430 and same reference). Amounts and currency match (ratio 1.0), so the only break is the wrong counterparty. The USD gap of 1,814.97 between the two lines is a translation difference on the booking date, not a business difference.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should recode the IC payable on NIG-DE:5100873345 from NIG-AU (AU01) to NIG-UK (UK01) and confirm NIG-AU has no offsetting entry.",
+  "adjustment_amount": 252430.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclassify the IC payable of GBP 252,430 in NIG-DE from counterparty NIG-AU to counterparty NIG-UK, with no change to the amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

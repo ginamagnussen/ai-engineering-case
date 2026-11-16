@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2480,
+  "output": 526,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.2,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031455 is AED 50,544.00 and NIG-SA payable NIG-SA:ICV-SA-019046 is AED 48,016.80, the same invoice reference AE-ICINV-00957. The buyer/seller ratio of 0.95 matches 5% WHT, and the buyer description says 'net of WHT 5%'. The USD difference of 688.14 at the invoice-date rate is the withheld tax, so the buyer has recorded the invoice net of WHT.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the AED 2,527.20 withheld tax as a WHT payable to the tax authority and gross up the IC payable to AED 50,544.00, and NIG-AE should confirm the WHT certificate is received.",
+  "adjustment_amount": 2527.2,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, Dr WHT expense/receivable (per tax treatment) and Cr IC payable to NIG-AE for AED 2,527.20 to bring the payable to the invoiced gross AED 50,544.00, with the WHT liability recognised per local tax rules.",
+  "model_requests_review": true,
+  "review_reason": "The 5% WHT rate on a subcontract/structural calcs recharge needs tax confirmation, since the description reads like a service charge, and the treatment of the WHT cost (gross-up versus recoverable) is a tax judgement."
+ }
+}

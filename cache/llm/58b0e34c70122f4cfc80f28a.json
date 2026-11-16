@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2878,
+  "output": 458,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.99,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.35,
+  "explanation": "Seller line NIG-AU:77506 (AUD 21,280, USD 14,141.62, ref AU/IC/2026/0681, Secondment Omar Nasser P-23110) has no matched buyer line. NIG-DE:5100873443 has the same AUD 21,280, project P-23110 and the same person (Personalgestellung O.Nasser), booked against AU01 (resolved NIG-AU) on 2026-10-22 under ref 20260686. The USD difference of 45.96 (ratio 0.9968) is only a rate basis difference, but the reference differs (20260686 vs 0681), so a reference typo is possible.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm that NIG-DE:5100873443 is the buyer booking of invoice AU/IC/2026/0681, correct its reference, and align the USD rate to the invoice-date rate.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pairing is inferred from the matching amount, project and person, but the references differ (0681 vs 0686 digits) and the currency and amount are identical, so the classification is closer to a reference mismatch than a true FX difference. A human must confirm the match and the category."
+ }
+}

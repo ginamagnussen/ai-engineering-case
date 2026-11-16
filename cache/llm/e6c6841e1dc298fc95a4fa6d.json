@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2471,
+  "output": 502,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.52,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-019017 (AED 31,350) is 95% of NIG-AE's receivable NIG-AE:ICV-AE-031365 (AED 33,000), a gap of AED 1,650 (USD 449.28 at the invoice-date rate). The buyer's description says 'net of WHT 5%', the ratio matches 5%, and the invoice reference AE-ICINV-00565 matches on both lines. Counterparties are correct and both lines are in period, so this is withholding rather than a timing, FX or miscoding issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm the WHT is applicable to the secondment services and book the AED 1,650 withheld to a WHT payable account, with the certificate sent to NIG-AE, so the IC payable is restored to the gross invoice amount.",
+  "adjustment_amount": 1650.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, increase the IC payable by AED 1,650 and credit WHT payable for the same amount, so the IC payable equals the gross invoice of AED 33,000.",
+  "model_requests_review": true,
+  "review_reason": "Whether 5% WHT legitimately applies to secondment/staff-recharge services should be confirmed by tax, since the 5% rate is the Saudi services rate and the evidence does not confirm the treatment."
+ }
+}

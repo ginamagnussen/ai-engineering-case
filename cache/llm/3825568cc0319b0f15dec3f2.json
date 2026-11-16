@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 799,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.31,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-US line NIG-US:4471035 and buyer NIG-AU line NIG-AU:77434 carry the same reference INV-US-100448, the same USD 28,080.00 amount, and the same posting date (2026-10-07), with zero difference at invoice-date rate. The buyer line is booked against 'Head Office Denver', which does not resolve in master data, while the expected counterparty is NIG-US, so the amount is fine and only the partner code is wrong.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to recode the counterparty on legacy SCE ledger line NIG-AU:77434 from 'Head Office Denver' to NIG-US so it matches the seller line, after confirming that Denver is NIG-US's head office.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify the IC payable NIG-AU:77434 (USD 28,080.00) counterparty to NIG-US; no amount adjustment required.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

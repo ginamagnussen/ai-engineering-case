@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2621,
+  "output": 404,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.84,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK booked IC receivable NIG-UK:1900045276 for GBP 25,200 (USD 32,015.34) for the Felix Patel secondment against NIG-AE, posted 2026-10-10. NIG-AE has no matching IC payable: no line elsewhere shares reference 9000010824, and the two nearest unmatched NIG-AE lines (ICV-AE-031332 at 26,006.73 USD, ICV-AE-031254 at 14,800 USD) carry different partners, references and descriptions and do not fit by amount.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm receipt of the NIG-UK secondment invoice 9000010824 and book the IC payable of GBP 25,200 in October if valid.",
+  "adjustment_amount": 25200.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-AE to book Dr secondment expense (project P-23110) / Cr IC payable NIG-UK for GBP 25,200 against invoice 9000010824.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

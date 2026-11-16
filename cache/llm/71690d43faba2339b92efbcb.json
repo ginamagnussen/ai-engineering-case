@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2455,
+  "output": 411,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.61,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-DE invoiced EUR 6,600.00 (NIG-DE:5100873334, RE-2026-000650) for seconded staff. NIG-SA booked EUR 6,270.00 (NIG-SA:ICV-SA-018867), a ratio of 0.95 that matches 5% WHT, and its description says 'net of WHT 5%'. The invoice reference was found on the buyer line, counterparties match, and both lines are in period, so this is not timing or a miscoding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the EUR 330.00 withheld tax to a WHT payable account and confirm the WHT certificate is remitted to NIG-DE, so the IC payable is restated to the gross invoice amount.",
+  "adjustment_amount": 330.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Increase NIG-SA IC payable to NIG-DE by EUR 330.00 and credit WHT payable (Saudi authority) for the same amount, so the IC balance equals the gross invoice of EUR 6,600.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

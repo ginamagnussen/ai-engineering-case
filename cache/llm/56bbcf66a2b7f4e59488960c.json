@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2463,
+  "output": 786,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.97,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "NIG-AE invoiced AED 111,000.00 for the Noura Brown secondment (120h @ 925, ref AE-ICINV-00540, line NIG-AE:ICV-AE-031204), but NIG-DE booked only AED 94,502.39 against the same reference (NIG-DE:5100873316), a USD 4,492.13 gap. The buyer's description reads 'Teilfreigabe, Stunden strittig' (partial approval, hours disputed), so the shortfall is an intentional partial booking. The 0.85137 ratio is close to but not exactly 85%, and a German buyer would not apply Saudi withholding tax, so the evidence's 15% WHT match looks coincidental.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-DE and NIG-AE should agree the disputed secondment hours on P-25002 using timesheets, then either NIG-AE issues a credit note or NIG-DE books the remaining balance.",
+  "adjustment_amount": 16497.61,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Disputed difference of AED 16,497.61 (111,000.00 invoiced less 94,502.39 booked). Once the dispute is resolved, either NIG-AE credits this amount or NIG-DE books the additional IC payable; no entry until then.",
+  "model_requests_review": true,
+  "review_reason": "The buyer is contesting the invoiced hours, and the resolution is a commercial judgement between NIG-DE and NIG-AE. Also, the booked amount does not equal a whole number of hours at AED 925, so the basis of NIG-DE's partial approval should be confirmed."
+ }
+}

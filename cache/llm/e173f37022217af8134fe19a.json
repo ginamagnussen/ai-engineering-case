@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 1048,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.18,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked IC payable ICV-SA-019005 at 8,882.50 GBP, which is exactly 95% of NIG-UK's 9,350.00 GBP receivable NIG-UK:1900045366 (ratio 0.95, 5% Saudi services WHT), and the description states 'net of WHT 5%'. The invoice reference 9000010890 is found on both lines and the 467.50 GBP gap (600.55 USD at invoice-date rate) is withholding tax, not a dispute or keying error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up the NIG-SA IC payable to 9,350.00 GBP and book the 467.50 GBP (600.55 USD at invoice-date rate) as Saudi WHT payable to the tax authority, then confirm the WHT certificate is on file for NIG-UK.",
+  "adjustment_amount": 600.55,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify withheld Saudi WHT of 467.50 GBP (600.55 USD at invoice-date rate) from the IC payable to WHT payable so the IC balance agrees to the gross 9,350.00 GBP invoice.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

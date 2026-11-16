@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2481,
+  "output": 510,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.34,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-AE:ICV-AE-031368 shows AED 85,572.00 (USD 23,300.40) and buyer line NIG-SA:ICV-SA-019018 shows AED 81,293.40 (USD 22,135.38) under the same reference AE-ICINV-00610. The buyer/seller ratio of 0.95 matches 5% withholding tax, and the buyer description says 'net of WHT 5%'. The USD difference of 1,165.02 is therefore the withheld amount, not an FX or keying error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the withheld 5% as a WHT payable to the tax authority and settle the IC payable gross, and confirm that WHT applies to this recharge and obtain the WHT certificate for NIG-AE.",
+  "adjustment_amount": 4278.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-AE by AED 4,278.60 (5% of AED 85,572.00) with the offsetting credit to WHT payable/recoverable per local treatment, so the IC balance agrees with the seller's gross invoice.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that 5% WHT is applicable to this recharge (services between UAE and Saudi entities) and how the withheld amount should be treated (gross-up or tax payable), as this is a tax judgement."
+ }
+}

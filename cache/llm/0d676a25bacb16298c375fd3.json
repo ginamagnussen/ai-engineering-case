@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2481,
+  "output": 929,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.18,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "Seller line NIG-AE:ICV-AE-031330 (AED 135,108.00) and buyer line NIG-SA:ICV-SA-018993 (AED 128,352.60) share reference AE-ICINV-00580, and the buyer/seller ratio is 0.95, consistent with a 5% Saudi withholding. The buyer's description states 'net of WHT 5%', and the USD gap of 1,839.43 is the withheld amount at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up the NIG-SA IC payable by AED 6,755.40 to AED 135,108.00 and record the withheld amount as a Saudi WHT payable to the tax authority, after confirming the withholding certificate.",
+  "adjustment_amount": 6755.4,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr IC payable (NIG-AE subcontract, P-24017) 6,755.40 AED / Cr Saudi WHT payable 6,755.40 AED, to restore the gross invoice amount of 135,108.00 AED.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

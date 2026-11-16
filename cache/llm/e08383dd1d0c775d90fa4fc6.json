@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2432,
+  "output": 401,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.61,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-US payable line NIG-US:4471068 (SAR 50,000.00 / USD 13,333.50) carries the NIG-SA invoice reference SA-ICINV-00664 and the same secondment description (F. Brown, P-23110), but it is booked to counterparty code '300', which resolves to NIG-DE instead of NIG-SA. Amounts match exactly (ratio 1.0, zero USD difference) and both lines posted in period, so the only break is the partner coding.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should reclassify line 4471068 from intercompany partner NIG-DE (code 300) to NIG-SA so it matches NIG-SA:ICV-SA-018831.",
+  "adjustment_amount": 50000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "In NIG-US, debit IC payable – NIG-DE and credit IC payable – NIG-SA for SAR 50,000.00 (USD 13,333.50) for invoice SA-ICINV-00664.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 581,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.74,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "Both lines carry invoice reference 9000010601 in GBP. Seller line NIG-UK:1900045235 shows GBP 35,340.00, while buyer line NIG-SA:ICV-SA-018846 shows GBP 35,240.00. A single digit differs (GBP 100, about USD 126.37 at the invoice-date rate), the ratio of 0.99717 does not match any Saudi WHT rate, and there is no currency, cut-off or counterparty issue, which points to a keying error by the buyer.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should check the invoice copy for 9000010601 and, if it confirms GBP 35,340.00, post a GBP 100.00 correction that increases its IC payable to NIG-UK.",
+  "adjustment_amount": 100.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA: Dr P-24102 subcontract cost / Cr IC payable NIG-UK GBP 100.00 to bring invoice 9000010601 up to the invoiced GBP 35,340.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

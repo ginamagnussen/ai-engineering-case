@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2568,
+  "output": 458,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.23,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-US line NIG-US:4471097 booked invoice RE-2026-000662 (EUR 4,400.00 from NIG-DE:5100873381) at USD 4,942.08. The implied rate of 1.1232 matches the 2026 budget rate exactly (0.0% deviation) and differs by 4.773% from the invoice-date daily rate. At the invoice-date rate the seller amount is USD 4,716.93, so NIG-US is overstated by USD 225.15. Reference, project P-23110 and counterparty all agree, and the postings are one day apart.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should remeasure the payable for RE-2026-000662 at the invoice-date daily rate instead of the 2026 budget rate, and confirm the Oracle EBS rate type setting for IC invoices.",
+  "adjustment_amount": -225.15,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce the NIG-US IC payable to NIG-DE for RE-2026-000662 by USD 225.15, from USD 4,942.08 to USD 4,716.93 (EUR 4,400 at the invoice-date rate), with the offset to the secondment cost or FX account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

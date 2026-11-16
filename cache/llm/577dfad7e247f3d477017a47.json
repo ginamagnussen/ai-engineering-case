@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2363,
+  "output": 647,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.88,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-DE line NIG-DE:5100873523 is a month-end accrual (ref ACCR-OCT26) of AED 42,000 (USD 11,436.18) for the secondment of D. Rahman on P-25019, explicitly marked 'invoice not received'. NIG-AE has no matching receivable. The only nearby unmatched seller line, NIG-AE:ICV-AE-031334 (AED 37,000, ratio 0.881), is billed to NIG-SA for a different secondee (Lukas Nasser), so it is not this charge.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm whether D. Rahman's October secondment hours on P-25019 are billable to NIG-DE and issue the AED 42,000 invoice (or tell NIG-DE the correct amount), after which NIG-DE reverses the accrual against the actual invoice.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

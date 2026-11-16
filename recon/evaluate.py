@@ -20,6 +20,31 @@ from . import config
 AUTO = {"clean", "fuzzy_ref", "split", "timing"}
 
 
+def case_truth(cases: list[dict]) -> list[str]:
+    """True break category per case ('auto:<cat>' if rules should have matched it, 'unknown' if none)."""
+    lab = pd.read_csv(config.GROUND_TRUTH / "labels.csv", dtype=str, keep_default_na=False)
+    line_tx = {k: r.tx_id for r in lab.itertuples()
+               for k in (r.seller_line_ids + "|" + r.buyer_line_ids).split("|") if k}
+    cat = dict(zip(lab.tx_id, lab.category))
+    out = []
+    for c in cases:
+        txs = [line_tx[k] for k in c["line_keys"] if k in line_tx]
+        t = cat[txs[0]] if txs else "unknown"
+        out.append(f"auto:{t}" if t in AUTO else t)
+    return out
+
+
+def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
+    """95% Wilson score interval for a proportion - honest error bars for small samples."""
+    if n == 0:
+        return (0.0, 0.0)
+    p = k / n
+    d = 1 + z * z / n
+    centre = (p + z * z / (2 * n)) / d
+    half = z * ((p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5) / d
+    return (round(centre - half, 3), round(centre + half, 3))
+
+
 def _pct(a: int, b: int) -> str:
     return f"{a}/{b} ({100 * a / b:.1f}%)" if b else "n/a"
 

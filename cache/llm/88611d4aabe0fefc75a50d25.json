@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2449,
+  "output": 792,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.81,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-DE invoiced EUR 5,040.00 (NIG-DE:5100873302, RE-2026-000646) for the secondment of Grace Smith. NIG-SA booked EUR 4,788.00 (NIG-SA:ICV-SA-018807) against the same reference and counterparty, two days later and within the period. The buyer-to-seller ratio of 0.95 matches the 5% Saudi withholding tax on services, and the buyer's description says 'net of WHT 5%'; the EUR 252.00 gap equals USD 272.66 at the invoice-date rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should obtain the Saudi WHT certificate from NIG-SA and clear the EUR 252.00 residual on the IC receivable to a WHT tax receivable or WHT expense account.",
+  "adjustment_amount": 252.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "In NIG-DE, debit WHT tax receivable (or WHT expense if no credit is available) EUR 252.00 and credit the IC receivable from NIG-SA EUR 252.00. This reflects the 5% withholding tax NIG-SA retained and remits to ZATCA, and it brings the IC balances into agreement at EUR 4,788.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

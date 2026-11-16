@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2579,
+  "output": 623,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.55,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.92,
+  "explanation": "NIG-AE:ICV-AE-031445 books AED 21,424.28 against NIG-UK:1900045410 (GBP 4,760.00) with the same invoice reference 9000010475. The implied rate of 4.500899 AED/GBP matches the 2026 budget rate exactly (0.0% deviation) and differs by -2.921% from the invoice-date daily rate, which leaves a USD 175.50 gap. The buyer-to-seller ratio of 0.97079 does not match a withholding rate, and the UAE buyer does not apply Saudi WHT.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should revalue the IC payable ICV-AE-031445 from the 2026 budget rate to the GBP/AED daily rate at the invoice date so that it agrees with the GBP 4,760.00 receivable.",
+  "adjustment_amount": 175.5,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AE's IC payable to NIG-UK by the AED equivalent of USD 175.50, the gap between the budget rate and the invoice-date rate, and post the offset to FX difference/P&L, so that the payable reflects GBP 4,760.00 at the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 439,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.29,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked IC payable NIG-SA:ICV-SA-018922 for AED 196,524.00 (USD 53,511.52) against NorthStar Infrastruktur GmbH (NIG-DE), but it carries the seller's invoice reference AE-ICINV-00912 and matches NIG-AE receivable NIG-AE:ICV-AE-031302 exactly (ratio 1.0, zero USD difference, 2 days apart). The description 'subcontract AE' also points to NIG-AE as the true partner, so only the counterparty coding is wrong.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify payable ICV-SA-018922 from intercompany partner NIG-DE to NIG-AE in the October 2026 period so it matches invoice AE-ICINV-00912.",
+  "adjustment_amount": 196524.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, debit IC payable – NIG-DE and credit IC payable – NIG-AE for AED 196,524.00 to move invoice AE-ICINV-00912 to the correct counterparty.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2486,
+  "output": 404,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.07,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-AE line NIG-AE:ICV-AE-031208 shows AED 181,224 while buyer NIG-SA line NIG-SA:ICV-SA-018823 shows AED 118,224 under the same reference AE-ICINV-00599. Both are in period, in the same currency, with the counterparty correctly coded, and the digits are transposed (181 vs 118), leaving a USD 17,154.27 difference at the invoice-date rate. The ratio of 0.652 does not match any WHT rate and there is no timing or FX basis.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA verify the invoice AE-ICINV-00599 amount and correct the payable from AED 118,224 to AED 181,224.",
+  "adjustment_amount": 63000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase the IC payable in NIG-SA against NIG-AE by AED 63,000 (about USD 17,154.27) to match the invoiced AED 181,224, with the debit to the related project cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

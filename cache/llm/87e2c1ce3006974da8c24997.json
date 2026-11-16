@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2641,
+  "output": 1034,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.41,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.6,
+  "explanation": "NIG-DE line 5100873375 (GBP 13,070, P-24017, posted 2026-10-14) carries reference 9000010968, the same reference as NIG-DE:5100873346 (posted 2026-10-09), which is already matched in M0175. No NIG-UK seller line matches the 13,070 GBP amount; the nearest unmatched seller lines (1,520 and 25,200 GBP) are unrelated secondments with ratios of 0.1178 and 1.9333. The evidence points to a second booking of the same invoice, but the twin's description and amount were not fully compared, so a reviewer should confirm.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm that NIG-DE:5100873375 duplicates the invoice already matched in M0175, and if so reverse it in NIG-DE's SAP ECC ledger.",
+  "adjustment_amount": -13070.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse the duplicate IC payable to NIG-UK for P-24017 (ref 9000010968) in NIG-DE, reducing IC payable by GBP 13,070.",
+  "model_requests_review": true,
+  "review_reason": "Duplicate status rests on a shared reference and an automated 'possible duplicate' flag; the twin's full details were not compared and the reversal would change the NIG-DE payable balance."
+ }
+}

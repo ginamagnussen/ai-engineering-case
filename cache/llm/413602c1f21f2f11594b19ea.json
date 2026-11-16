@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2595,
+  "output": 1271,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.78,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.55,
+  "explanation": "NIG-SA line ICV-SA-019063 accrues 7,500 USD for seconded staff P-25019 with 'invoice not received', and no NIG-US seller line matches that amount. The closest NIG-US line for P-25019 is INV-US-100417 (line NIG-US:4471064) at 2,640 USD, which is booked against counterparty 400 (resolved to NIG-AE) rather than NIG-SA, so a miscoded counterparty is also possible.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-US should confirm whether INV-US-100417 (2,640 USD, P-25019) was meant for NIG-SA and whether further P-25019 billing is pending, and NIG-SA should true up or reverse the 7,500 USD accrual once the invoice is received.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Evidence supports both accrual_no_invoice and miscoded_counterparty for the P-25019 charge, and the 2,640 vs 7,500 difference cannot be resolved from the case alone."
+ }
+}

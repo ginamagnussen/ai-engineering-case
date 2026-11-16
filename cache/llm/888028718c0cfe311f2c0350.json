@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 997,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.05,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-AE line ICV-AE-031373 invoices AE-ICINV-00829 at 63,000.00 AED, while NIG-US line 4471123 books the same reference at 60,300.00 AED, a 2,700.00 AED shortfall (735.18 USD at the invoice-date rate). The buyer ratio of 0.95714 matches no withholding rate, the digits 63000 and 60300 are an adjacent transposition, and the invoice reference is present on the buyer line, so this is a keying error rather than WHT or a dispute.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US correct the Oracle EBS IC payable entry 4471123 from 60,300.00 AED to 63,000.00 AED, adding 2,700.00 AED to the payable and the matching expense, and confirm the correction against the AE-ICINV-00829 invoice.",
+  "adjustment_amount": 2700.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase NIG-US IC payable and related secondment expense by 2,700.00 AED (about 735.18 USD) to correct the transposed amount 60,300 to 63,000.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

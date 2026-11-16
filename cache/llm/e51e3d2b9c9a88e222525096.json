@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2484,
+  "output": 449,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.58,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-AE:ICV-AE-031203 shows AED 310,716.00 (USD 84,604.86) and buyer line NIG-SA:ICV-SA-018814 shows AED 295,180.20 (USD 80,374.62) under the same reference AE-ICINV-00906. The buyer/seller ratio of 0.95 matches a 5% withholding rate and the buyer description says 'net of WHT 5%'. The USD difference of 4,230.24 is therefore withholding tax, not an FX or counterparty issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the 5% WHT as a withholding tax payable to the authority and gross up the IC payable to the invoiced amount, confirming that the services WHT rate applies and that a WHT certificate will be issued to NIG-AE.",
+  "adjustment_amount": 15535.8,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, debit WHT expense/receivable-equivalent per tax treatment and credit IC payable to NIG-AE for AED 15,535.80 so the payable equals the invoiced AED 310,716.00, with the WHT liability recorded separately.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 391,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 2.89,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.85,
+  "explanation": "NIG-US line NIG-US:4471041 (USD 50,890.00, INV-US-100520, P-23110) matches NIG-AU line NIG-AU:77430 on amount, invoice reference and project code, with zero difference at invoice-date rate and posting one day apart. The buyer line is booked against 'NS UAE', which is unresolved in the legacy SCE ledger, so the intercompany partner is wrong rather than the amount.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should re-point IC payable NIG-AU:77430 from 'NS UAE' to NIG-US in the legacy SCE ledger and confirm the counterparty mapping so the pair clears.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Counterparty 'NS UAE' is unresolved and could indicate a legacy SCE mapping issue or an entity that legitimately should be involved; NIG-AU should confirm the correct partner before reclassifying."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2945,
+  "output": 999,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.35,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.6,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031334 invoices 37,000 AED (10,074.73 USD) for the secondment of Lukas Nasser on P-25019, but no NIG-SA payable matches that amount. The closest candidate, NIG-SA:ICV-SA-019060, is a 2,640 USD accrual for 'L.Rahman' on the same project with the same ACCR-OCT26 reference, which points to a different person and a different amount, so it does not clear the invoice.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm whether the Nasser secondment (AE-ICINV-00488) was booked and check whether ICV-SA-019060 relates to it or to a different secondee, then either book the 37,000 AED payable or correct the accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The candidate accrual on P-25019 (ICV-SA-019060) has a different name and amount, so it cannot be confirmed as a match or ruled out without checking the secondment records."
+ }
+}

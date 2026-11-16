@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2366,
+  "output": 413,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.21,
+ "output": {
+  "category": "other",
+  "confidence": 0.5,
+  "explanation": "Buyer line NIG-AU:77450 (SAR 105,000, ref INV SA-ICINV-00664) has no matching seller line. The only unmatched seller line, NIG-SA:ICV-SA-018837 (SAR 105,000, ref SA-ICINV-00663, P-24017), has identical amount, currency, project and secondment description, but the invoice reference differs by one digit (00663 vs 00664). This is most likely a reference keying error on the buyer side, but a second invoice cannot be ruled out from the evidence.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm with NIG-SA whether SA-ICINV-00664 exists as a separate invoice; if not, correct the buyer reference to SA-ICINV-00663 and match to NIG-SA:ICV-SA-018837.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Amounts match exactly but invoice references differ (00663 vs 00664); cannot verify from evidence whether this is a reference typo or a distinct invoice, and no category fits cleanly."
+ }
+}

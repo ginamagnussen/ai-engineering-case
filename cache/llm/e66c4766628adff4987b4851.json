@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2597,
+  "output": 482,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.44,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-UK:1900045357 books GBP 4,399.12 against NIG-AE invoice AE-ICINV-00862 (NIG-AE:ICV-AE-031297, AED 19,800.00 secondment of I. Wang, P-25019). The buyer's implied rate of 0.222178 matches the 2026 budget rate exactly (0.0% deviation) but deviates 2.587% from the invoice-date daily rate. This produces a USD difference of -139.45 at invoice-date rates, with the buyer overstated by a ratio of 1.02587. Counterparty, reference and period all agree, so the gap is purely the rate basis.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should revalue the payable for AE-ICINV-00862 from the 2026 budget rate to the AED/GBP daily rate at the invoice date, per group IC policy, and post the difference to FX.",
+  "adjustment_amount": -139.45,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-UK's IC payable to NIG-AE by the equivalent of USD 139.45 in GBP, so that AED 19,800 is translated at the invoice-date daily rate instead of the budget rate; book the offset to FX gain/loss or to secondment cost.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2427,
+  "output": 379,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.72,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "Seller line NIG-UK:1900045483 (GBP 4,440.00, secondment Sophie Brown, P-24017) matches buyer line NIG-AU:77551 on amount, currency and reference 9000010777, with a ratio of 1.0. The buyer booked the payable against NIG-DE instead of NIG-UK, so the pair did not match automatically. The USD difference of 0.0 at the invoice-date rate shows there is no FX or amount issue.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclassify payable NIG-AU:77551 from counterparty NIG-DE to NIG-UK and correct the partner mapping in the legacy SCE ledger.",
+  "adjustment_amount": 4440.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclassify the IC payable of GBP 4,440.00 in NIG-AU from counterparty NIG-DE to NIG-UK; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

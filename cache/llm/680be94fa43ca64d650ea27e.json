@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 618,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.14,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "Seller NIG-AE invoice AE-ICINV-00851 (line NIG-AE:ICV-AE-031225) and buyer line NIG-UK:1900045269 match exactly on 117,600.00 AED (32,021.30 USD), the invoice reference, and the secondment description for P-24050, with a 1-day posting gap and no FX difference. The buyer booked the payable against US01 (NIG-US) instead of the expected NIG-AE counterparty, so the balance sits with the wrong partner.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Reclassify the 117,600.00 AED IC payable in NIG-UK:1900045269 from NIG-US to NIG-AE so it pairs with NIG-AE:ICV-AE-031225, and correct the NIG-US partner balance accordingly.",
+  "adjustment_amount": 117600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reclass IC payable from NIG-US to NIG-AE in NIG-UK ledger for invoice AE-ICINV-00851 (P-24050 secondment).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

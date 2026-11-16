@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2573,
+  "output": 420,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.8,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "Buyer line NIG-AE:ICV-AE-031337 (USD 18,480.00, 'Seconded staff I.Nasser P-25031', ref 100458) has an exact-amount seller line NIG-US:4471093 (USD 18,480.00, 'Secondment Isabel Nasser 168h @ 110 - P-25031', ref INV-US-100454). Amount, currency, project and person all agree, so this is a pairing failure, not a real difference. The only discrepancy is the reference (100458 vs INV-US-100454), which is why the deterministic rules did not match them.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm that NIG-AE ref 100458 corresponds to NIG-US INV-US-100454, then manually match the two lines and have NIG-AE correct the vendor invoice reference.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "No category fits a clean match with zero variance. The reference mismatch (100458 vs INV-US-100454) cannot be verified from the evidence alone, so a human should confirm the pairing before matching manually."
+ }
+}

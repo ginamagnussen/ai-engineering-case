@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 416,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.76,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031228 (SAR 135,756.00, posted 2026-10-08) carries seller invoice reference SA-ICINV-00763, which was already booked by NIG-AE on NIG-AE:ICV-AE-031214 (posted 2026-10-05) and matched in M0113. No unmatched NIG-SA seller line supports it: the only candidate, SA-ICINV-00663 (SAR 105,000), is billed to NIG-AU and has a ratio of 0.7734.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm that ICV-AE-031228 is a second posting of SA-ICINV-00763 against the line already matched in M0113, and reverse it.",
+  "adjustment_amount": 135756.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse NIG-AE duplicate IC payable ICV-AE-031228 to NIG-SA for SAR 135,756.00 (Dr IC payable NIG-SA, Cr subcontract/QA-QC cost).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

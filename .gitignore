@@ -26,3 +26,7 @@ personal case notes.odt
 
 # Demo state written by the review UI (human-confirmed aliases); repo ships the baseline
 data/reference/alias_overrides.csv
+
+# Held-out evaluation dataset and its outputs (regenerate: see docs/evaluation.md)
+data_holdout/
+out_holdout/

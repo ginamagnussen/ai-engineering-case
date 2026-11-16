@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 532,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.51,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-US line NIG-US:4471123 booked AED 60,300 against invoice AE-ICINV-00829, while NIG-AE line NIG-AE:ICV-AE-031373 shows AED 63,000, which the description supports (60h @ 1,050 = 63,000). Both lines are in AED, so FX is not a factor. The digit pattern shows adjacent digits transposed (63,000 to 60,300), giving a USD 735.18 difference, and the 0.957 ratio matches no withholding rate.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should correct its IC payable for AE-ICINV-00829 from AED 60,300 to AED 63,000 in the October 2026 period.",
+  "adjustment_amount": 2700.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-US: increase the IC payable to NIG-AE by AED 2,700 (Dr secondment cost / Cr IC payable NIG-AE) to correct the transposed keying of 60,300 to 63,000.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

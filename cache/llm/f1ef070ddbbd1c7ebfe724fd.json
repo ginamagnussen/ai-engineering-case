@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 409,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.09,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-AE invoiced AED 49,500.00 (60h @ 825, AE-ICINV-00515, line NIG-AE:ICV-AE-031310), but NIG-US booked AED 45,900.00 on NIG-US:4471105 with the matching reference, the same currency and the correct counterparty. The amounts differ only by transposed adjacent digits (49,500 vs 45,900), a difference of USD 980.24. The seller's line is supported by the hours × rate calculation, and there is no FX, withholding or dispute explanation.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should correct payable line 4471105 by increasing it AED 3,600.00 to the invoiced AED 49,500.00 before the October 2026 close.",
+  "adjustment_amount": 3600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-US: debit secondment cost / credit IC payable to NIG-AE for AED 3,600.00 to correct the transposed booking of invoice AE-ICINV-00515 (45,900 to 49,500).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

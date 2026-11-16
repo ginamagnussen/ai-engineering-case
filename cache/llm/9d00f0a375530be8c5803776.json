@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2603,
+  "output": 1218,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.93,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "Both lines reference SA-ICINV-00693 for P-24050 and the counterparty resolves correctly to NIG-SA. NIG-UK booked GBP 38,383.25 against SAR 176,400 (implied 0.217592), which matches the 2026 budget rate exactly (0.0% deviation) rather than the invoice-date rate, giving a USD difference of -1,302.73 at invoice-date rate.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to restate the IC payable to the group invoice-date rate (or confirm the group policy allows budget-rate booking) and have the group controller confirm the rate basis for this line.",
+  "adjustment_amount": -1302.73,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue the NIG-UK IC payable from the 2026 budget rate to the invoice-date rate, reducing the USD payable by 1,302.73.",
+  "model_requests_review": true,
+  "review_reason": "Whether the group reconciles IC balances at budget rate or invoice-date rate is a policy decision that the evidence cannot confirm."
+ }
+}

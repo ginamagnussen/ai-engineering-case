@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2472,
+  "output": 503,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.91,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-018996 (AUD 26,334.00) is 95% of NIG-AU's receivable NIG-AU:77485 (AUD 27,720.00) for the same invoice reference AU/IC/2026/0766. The buyer description says 'net of WHT 5%', matching the 5% ratio and the USD 912.86 difference at the invoice-date rate. The counterparty is correctly NIG-AU, so this is not a miscoding, and both lines are in period.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the withheld 5% as a WHT payable to the tax authority and gross up the IC payable to AUD 27,720.00, with NIG-SA confirming the WHT applies to secondment services and issuing the certificate to NIG-AU.",
+  "adjustment_amount": 1386.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Dr WHT expense/receivable (or relevant WHT account) and Cr IC payable to NIG-AU for AUD 1,386.00 at NIG-SA, so the IC payable equals the seller receivable of AUD 27,720.00.",
+  "model_requests_review": true,
+  "review_reason": "Seller line has an unresolved counterparty ('KSA branch'), and the WHT treatment (5% on secondment services) and who bears the tax should be confirmed by tax before grossing up."
+ }
+}

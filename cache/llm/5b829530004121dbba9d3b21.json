@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2908,
+  "output": 1073,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 14.29,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.55,
+  "explanation": "Buyer line NIG-DE:5100873443 (AUD 21,280.00, 'Personalgestellung O.Nasser P-23110', 22 Oct) mirrors seller line NIG-AU:77506 (AUD 21,280.00, secondment Omar Nasser 152h @ 140, P-23110, 21 Oct): same currency, amount, person and project. The only value gap is in USD translation (14,141.62 vs 14,095.66, a difference of USD 45.96, ratio 1.0033), which comes from different posting-date rates. However, the references also differ: buyer 20260686 vs seller AU/IC/2026/0681. That mismatch, more than FX, may be why the auto-match failed.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Manually match NIG-DE:5100873443 to NIG-AU:77506, translate both sides at the invoice-date rate, and have NIG-DE confirm the invoice reference (0681 vs 0686).",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No correction in AUD, since both sides are AUD 21,280.00. The USD 45.96 translation gap should be cleared in consolidation by using the invoice-date rate for both lines.",
+  "model_requests_review": true,
+  "review_reason": "The AUD amounts are identical, so the gap may be purely a reference-matching issue (buyer ref 20260686 vs seller AU/IC/2026/0681) rather than a true FX difference. A human should confirm both lines refer to the same invoice before the manual match."
+ }
+}

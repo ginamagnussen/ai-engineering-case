@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 398,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.82,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-DE:5100873438 is EUR 21,910.00 and buyer line NIG-UK:1900045375 is EUR 21,190.00 for the same invoice RE-2026-000374, same currency, same posting date, with the reference found on the buyer line. The digits 91 and 19 are transposed, leaving a USD 774.36 shortfall at the invoice-date rate; the ratio of 0.96714 does not match any WHT rate and there is no cut-off or counterparty issue.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should correct the IC payable on RE-2026-000374 from EUR 21,190.00 to EUR 21,910.00 after confirming against the invoice copy.",
+  "adjustment_amount": 720.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Increase NIG-UK IC payable to NIG-DE by EUR 720.00 (Dr project cost / Cr IC payable NIG-DE) to correct the transposed amount on RE-2026-000374.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

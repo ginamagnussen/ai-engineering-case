@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 1328,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.29,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.72,
+  "explanation": "Both lines carry reference AU/IC/2026/0678 and the same 28,120 AUD amount with a ratio of 1.0, and they were posted one day apart in period. The seller line NIG-AU:77543 is booked against 'Head Office Denver', which is unresolved, while the buyer NIG-US:4471197 correctly names NIG-AU, so the seller's counterparty appears miscoded. The USD difference of 58.49 (18,865.43 vs 18,923.92) is a translation-rate effect and does not change the AUD match.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU re-code seller line NIG-AU:77543 from 'Head Office Denver' to NIG-US in the Legacy SCE Ledger, after confirming that Denver Head Office maps to NIG-US, and then re-run the pair match.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The evidence does not show that 'Head Office Denver' maps to NIG-US; the mapping must be confirmed from the legacy ERP master data before re-coding."
+ }
+}

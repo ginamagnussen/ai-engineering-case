@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2142,
+  "output": 403,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.27,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer line NIG-DE:5100873331 (AUD 31,920.00, posted 2026-10-08, ref AU/IC/2026/0756, staff secondment S.Smith P-25019) has no seller counterpart, and the evidence flags it as a possible duplicate of NIG-DE:5100873329 (posted 2026-10-07, same reference AU/IC/2026/0756), which is already matched in M0052. NIG-DE appears to have booked the same NIG-AU invoice twice one day apart, and no unmatched NIG-AU seller lines remain to support a second charge.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should confirm that line 5100873331 duplicates the invoice already matched in M0052 and then reverse it.",
+  "adjustment_amount": 31920.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reverse duplicate IC payable NIG-DE:5100873331 to NIG-AU: debit IC payable NIG-AU and credit secondment expense, AUD 31,920.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

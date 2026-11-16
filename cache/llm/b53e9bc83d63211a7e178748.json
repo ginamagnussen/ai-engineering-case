@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2479,
+  "output": 424,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.46,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-SA booked payable NIG-SA:ICV-SA-018930 at AED 19,800.00 against NIG-AE invoice AE-ICINV-00936 (NIG-AE:ICV-AE-031313) of AED 19,080.00. The currency, counterparty and reference match, and the postings are one day apart in period. The digit pattern shows adjacent digits transposed (19080 vs 19800), and the ratio of 1.03774 does not fit withholding tax since the buyer overstated rather than reduced the amount. The difference is USD -196.05 (AED 720.00).",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should correct payable ICV-SA-018930 from AED 19,800.00 to AED 19,080.00 to agree with invoice AE-ICINV-00936.",
+  "adjustment_amount": -720.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, debit the IC payable to NIG-AE and credit project cost/subcontract expense for AED 720.00, reducing the booked payable to the invoiced AED 19,080.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

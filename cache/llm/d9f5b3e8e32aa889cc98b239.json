@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2459,
+  "output": 475,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.99,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-AE invoiced AED 66,000.00 (AE-ICINV-00516, secondment 80h @ 825, P-25019) while NIG-US booked AED 48,781.62 on line NIG-US:4471051 against the same reference, a ratio of 0.73912 and a USD 4,688.39 difference. Both sides are in AED with the correct counterparty, and the buyer description explicitly states 'partial accept, hours disputed pending PM approval', so this is an intentional short-booking rather than FX, WHT or a keying error.",
+  "responsible_entity": "both",
+  "recommended_action": "Escalate to the NIG-US and NIG-AE project managers for P-25019 to agree the approved secondment hours, then either have NIG-AE issue a credit note or NIG-US book the remaining payable.",
+  "adjustment_amount": 17218.38,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Pending dispute resolution: either NIG-AE credits AED 17,218.38 (or the agreed disputed portion) against AE-ICINV-00516, or NIG-US books an additional AED 17,218.38 IC payable to NIG-AE once the hours are approved.",
+  "model_requests_review": true,
+  "review_reason": "Disputed charge: hours contested pending PM approval, so the correct settlement amount and which side adjusts is a business judgement."
+ }
+}

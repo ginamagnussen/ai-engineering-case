@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 807,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.2,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "Seller NIG-DE line 5100873438 (RE-2026-000374) is EUR 21,910.00 and buyer NIG-UK line 1900045375 is EUR 21,190.00, same currency, same reference, same posting date, and the counterparty is correctly resolved to NIG-DE. The EUR 720.00 difference is divisible by 9 and matches the adjacent-digit transposition of 21910 to 21190, with no FX or withholding pattern and no business reason in the descriptions.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to correct the keying error on IC payable line 1900045375 from EUR 21,190.00 to EUR 21,910.00 so it matches the NIG-DE receivable.",
+  "adjustment_amount": 720.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Increase NIG-UK IC payable to NIG-DE for RE-2026-000374 by EUR 720.00 to correct the transposed digits (21,190 to 21,910).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

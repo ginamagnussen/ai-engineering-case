@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 445,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.49,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045238 is GBP 2,240.00 (USD 2,849.24) for secondment P-24088, while NIG-SA payable NIG-SA:ICV-SA-018834 is GBP 2,128.00 (USD 2,706.28), a ratio of 0.95 that matches 5% WHT on services. The buyer's description says 'net of WHT 5%', the invoice reference 9000010783 matches, both lines are in period and the counterparties are correct. The USD 142.47 difference is the withheld tax.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the GBP 112.00 WHT as a liability owed to the tax authority and obtain a WHT certificate for NIG-UK, so the IC payable is restored to the gross GBP 2,240.00.",
+  "adjustment_amount": 112.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-UK by GBP 112.00 and credit WHT payable by the same amount (gross-up of the net-booked invoice); NIG-UK to hold the WHT certificate for the tax credit claim.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

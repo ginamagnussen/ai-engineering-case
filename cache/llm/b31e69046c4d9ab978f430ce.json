@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2872,
+  "output": 1158,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.0,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.6,
+  "explanation": "NIG-AU line NIG-AU:77454 (AUD 39,400 / USD 26,013.85, ref AU/IC/2026/0739, project P-25002 geotech analysis) has no matching NIG-US payable among the 4 unmatched buyer lines searched, and no line elsewhere shares its reference. The closest candidate, NIG-US:4471173 (SAR 79,800 accrual for seconded staff P-25002 to NIG-SA), has a different counterparty, currency, amount and description, so it does not match, though the shared project code is worth a check.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should search its ledger for an invoice or booking for project P-25002 geotech analysis from NIG-AU (AUD 39,400, ref AU/IC/2026/0739) and, if none exists, book the IC payable to NIG-AU; NIG-AU should confirm the invoice was sent to NIG-US.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Confidence is limited because the buyer may have booked this invoice under a different counterparty or project code, and the P-25002 reference overlaps with an NIG-US accrual to NIG-SA; a human must confirm whether the NIG-SA accrual is unrelated before any entry is posted."
+ }
+}

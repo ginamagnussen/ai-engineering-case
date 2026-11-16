@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 389,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.21,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.93,
+  "explanation": "NIG-AU line NIG-AU:77471 shows AUD 25,080.00 (152h @ 165 = 25,080), while NIG-DE line NIG-DE:5100873410 for the same invoice AU/IC/2026/0746 is booked at AUD 25,800.00. Both are in AUD, in period, with the correct counterparty, and the digits are transposed (25,080 vs 25,800), leaving a USD 476.42 difference at the invoice-date rate with no business reason.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should correct the IC payable on 5100873410 from AUD 25,800.00 to AUD 25,080.00 to match the seller invoice.",
+  "adjustment_amount": 720.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reduce NIG-DE IC payable to NIG-AU (and the related expense) by AUD 720.00, correcting 25,800.00 to 25,080.00 per invoice AU/IC/2026/0746.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

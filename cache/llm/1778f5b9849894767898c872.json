@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2621,
+  "output": 1287,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.12,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-US line NIG-US:4471093 (INV-US-100454, USD 18,480.00, P-25031 secondment) has no matching buyer line under its reference. The nearest unmatched NIG-AE line, NIG-AE:ICV-AE-031337 (USD 18,480.00, ref 100458, same P-25031 description, in period, counterparty resolved to NIG-US via master data), matches on amount, project, person and period, so it is probably the buyer side and the mismatch looks like a reference-keying difference rather than a missing booking. The evidence does not confirm this, so the case is left as other.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm that NIG-AE:ICV-AE-031337 relates to INV-US-100454 and, if so, link the pair manually and correct the buyer reference to INV-US-100454 without any amount adjustment.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The candidate buyer line matches on amount, project and person but not on reference, and the deterministic rules did not link it, so a human must confirm the pairing before closing the item."
+ }
+}

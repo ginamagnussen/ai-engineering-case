@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2459,
+  "output": 756,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 10.52,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "Seller line NIG-AU:77437 and buyer line NIG-AE:ICV-AE-031248 match exactly: AUD 27,720.00, reference AU/IC/2026/0778, project P-24088, both in period, two days apart, with zero difference at the invoice-date rate. The pair most likely missed auto-matching because the seller's counterparty text 'NS UAE' did not resolve in master data. The USD 27.44 gap (18,486.47 vs 18,459.03) is only translation at different posting-date rates on an identical AUD amount.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Confirm that 'NS UAE' refers to NIG-AE, add it as a counterparty alias in the master-data mapping for the legacy SCE ledger, then force-match the pair with no ledger correction.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller counterparty 'NS UAE' is unresolved in master data, so a human must confirm it maps to NIG-AE before the pair is matched and the alias is added."
+ }
+}

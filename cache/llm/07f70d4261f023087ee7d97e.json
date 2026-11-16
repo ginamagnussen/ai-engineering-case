@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2446,
+  "output": 958,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.31,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked IC payable ICV-SA-018991 at 78,907 GBP against NIG-UK receivable 1900045400 at 83,060 GBP for the same invoice reference 9000010579, a ratio of 0.95 that matches the 5% Saudi services WHT. The description states 'net of WHT 5%', and the difference of 4,153 GBP is the withheld amount, so no counterparty or timing issue exists.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the IC payable to 83,060 GBP and book the 4,153 GBP WHT as a payable to the Saudi tax authority, confirming the WHT return and payment treatment.",
+  "adjustment_amount": 4153.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA: Dr expense/IC payable 4,153 GBP (gross-up to 83,060 GBP); Cr WHT payable (Saudi tax authority) 4,153 GBP.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

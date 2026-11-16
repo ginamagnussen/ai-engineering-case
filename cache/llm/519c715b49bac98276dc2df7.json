@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2602,
+  "output": 586,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.05,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.88,
+  "explanation": "NIG-DE booked IC payable NIG-DE:5100873497 for GBP 9,490.00 (USD 11,903.12) on 2026-10-31, reference ACCR-OCT26. The description reads 'Accrual - P-25031 Leistungen UK - Statik - invoice not received', and NIG-UK has no matching receivable. The nearest unmatched NIG-UK lines (NIG-UK:1900045352 GBP 19,480, ratio 2.03; NIG-UK:1900045272 GBP 74,290 to NIG-SA, ratio 7.84) relate to different projects, P-24017 and P-24088, and do not correspond.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether the P-25031 structural engineering (Statik) services were delivered in October and issue the invoice, or else NIG-DE should reverse the accrual; at group level, eliminate the accrual against a matching seller-side accrual.",
+  "adjustment_amount": 9490.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "If NIG-UK confirms the services were delivered in October: NIG-UK books an IC receivable / accrued revenue of GBP 9,490 against NIG-DE for P-25031 so both sides eliminate. Otherwise, NIG-DE reverses the GBP 9,490 accrual.",
+  "model_requests_review": true,
+  "review_reason": "Neither the accrual amount nor delivery of the P-25031 services can be verified from NIG-UK's ledger. Confirmation from NIG-UK is needed before choosing between a seller-side booking and reversal of the accrual."
+ }
+}

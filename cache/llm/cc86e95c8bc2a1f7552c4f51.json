@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 427,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.71,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.55,
+  "explanation": "NIG-US invoiced 11,400 USD (NIG-US:4471187, INV-US-100441) for the secondment of Chen Nasser, 120h @ 95, project P-25002. NIG-UK's payable (NIG-UK:1900045523) is an 8,400 USD accrual for a different person (P.Hassan) on project P-25019, marked 'invoice not received', so it does not reference the seller's invoice. The 3,000 USD difference is not explained by FX, WHT or a keying error, and the two lines may not relate to the same charge.",
+  "responsible_entity": "both",
+  "recommended_action": "Ask NIG-UK to confirm whether INV-US-100441 (Chen Nasser, P-25002) was received and booked, and whether the Hassan P-25019 accrual is a separate charge NIG-US has not yet invoiced.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The lines differ in person and project, so they may not be a true pair. The case could be a missing_buyer for INV-US-100441 plus a separate unmatched accrual, and this cannot be verified from the evidence."
+ }
+}

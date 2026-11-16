@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2602,
+  "output": 848,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.41,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-DE line NIG-DE:5100873497 is an IC payable accrual of 9490.00 GBP (11903.12 USD) to NIG-UK for P-25031 Statik, flagged 'invoice not received' with reference ACCR-OCT26. No seller invoice was found, and the nearest unmatched NIG-UK receivables (NIG-UK:1900045352 at 19480.00 GBP and NIG-UK:1900045272 at 74290.00 GBP) relate to different projects and amounts, so they do not match.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-UK should confirm whether P-25031 services were delivered and whether an invoice will be issued; if not invoiced by close, NIG-DE should reverse the 9490.00 GBP accrual in November or keep it only with documented delivery evidence.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Whether the P-25031 service was actually received and whether the accrual should stand cannot be verified from the case evidence."
+ }
+}

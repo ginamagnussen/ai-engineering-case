@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2603,
+  "output": 424,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.35,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-SA:ICV-SA-018999 is SAR 176,400 (USD 47,040.59) and buyer line NIG-UK:1900045428 is GBP 38,383.25 (USD 48,496.47) for the same invoice SA-ICINV-00693 and the same secondment (P-24050). The buyer's implied rate of 0.217592 matches the 2026 budget rate exactly (0.0% deviation), whereas it deviates 2.769% from the invoice-date rate, so the USD difference of -1,302.73 at the invoice-date rate is a rate-basis effect.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Have NIG-UK rebook the payable at the invoice-date rate instead of the budget rate, or confirm the group policy on rate basis, so the IC balances agree.",
+  "adjustment_amount": 1302.73,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-UK IC payable 1900045428 from the budget rate to the invoice-date rate, reducing the payable by about USD 1,302.73 (the FX difference against the IC account).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

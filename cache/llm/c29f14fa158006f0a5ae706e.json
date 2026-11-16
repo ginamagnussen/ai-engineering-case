@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 1018,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.54,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.85,
+  "explanation": "NIG-AU line NIG-AU:77424 is booked at 9,090.00 USD against NIG-US receivable NIG-US:4471021 at 9,900.00 USD on the same reference INV-US-100494, a difference of 810.00 USD. The digit pattern (adjacent digits transposed) and the buyer-to-seller ratio of 0.91818, which does not match any withholding rate, point to a keying error rather than WHT or a dispute.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should correct line NIG-AU:77424 from 9,090.00 to 9,900.00 USD in the legacy SCE ledger so it matches the invoice INV-US-100494.",
+  "adjustment_amount": 810.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase the NIG-AU IC payable to NIG-US and the matching IC expense by 810.00 USD to correct the transposed amount (9,090 to 9,900).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

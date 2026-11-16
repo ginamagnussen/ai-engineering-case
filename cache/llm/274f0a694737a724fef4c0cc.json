@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2420,
+  "output": 990,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.75,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked the NIG-UK IT shared services invoice (reference 9000010486) at GBP 9,405 against the GBP 9,900 receivable on NIG-UK line NIG-UK:1900045459, a buyer-to-seller ratio of 0.95 that matches a 5% withholding rate, and the buyer description states 'net of WHT 5%'. Counterparty and invoice reference match on both sides, so the gap is withholding tax rather than an error or dispute.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up IC payable ICV-SA-019069 to GBP 9,900 and record the GBP 495 withheld as Saudi WHT payable, confirming the WHT certificate and remittance support the 5% rate.",
+  "adjustment_amount": 495.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable by GBP 495 to the invoiced GBP 9,900, with the withheld GBP 495 recorded as Saudi WHT payable (or tax receivable if already remitted and recoverable).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

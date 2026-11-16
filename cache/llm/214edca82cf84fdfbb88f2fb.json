@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2463,
+  "output": 726,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.2,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.82,
+  "explanation": "NIG-SA invoice SA-ICINV-00644 (line NIG-SA:ICV-SA-019035, SAR 138,600 for the Daniel Garcia secondment on P-25002) matches NIG-AU:77587 exactly: same reference, same SAR amount, ratio 1.0, zero USD difference, posted 2 days apart and within the period. The only break is that NIG-AU's legacy SCE ledger booked the payable against the free-text partner 'KSA branch', which master data cannot resolve to NIG-SA, so the line failed auto-matching.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the IC partner on line 77587 from 'KSA branch' to NIG-SA, and master data should add a 'KSA branch' → NIG-SA alias mapping for the legacy SCE ledger so future postings resolve.",
+  "adjustment_amount": 138600.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclassify the NIG-AU IC payable of SAR 138,600 (ref SA-ICINV-00644) from the unresolved partner 'KSA branch' to IC partner NIG-SA. No change to the amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

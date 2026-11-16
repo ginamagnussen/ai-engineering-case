@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 1090,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.89,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.82,
+  "explanation": "NIG-UK booked a GBP 35,340.00 IC receivable (line NIG-UK:1900045235) and NIG-SA booked GBP 35,240.00 against the same reference 9000010601 (line NIG-SA:ICV-SA-018846), a GBP 100.00 shortfall on the buyer side. Both currencies are GBP, so the USD gap of 126.37 is only the conversion of the same 100 GBP at the invoice-date rate, not an FX basis difference, and the counterparty resolves correctly with both lines in period. The single differing digit with a round 100 GBP gap points to a keying error with no business reason in the evidence.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should check the subcontract invoice against P-24102 and correct ICV-SA-018846 from GBP 35,240.00 to GBP 35,340.00 if the invoice confirms 35,340.00.",
+  "adjustment_amount": 100.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Increase NIG-SA IC payable ICV-SA-018846 by GBP 100.00 (approximately USD 126.37 at the invoice-date rate) to match the NIG-UK receivable of GBP 35,340.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

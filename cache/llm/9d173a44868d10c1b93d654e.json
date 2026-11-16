@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2898,
+  "output": 1094,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 11.6,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "Buyer line NIG-US:4471069 (AUD 1,320.00, 'Seconded staff A.Clarke P-24102') matches seller line NIG-AU:77455 (AUD 1,320.00, 'Secondment Aisha Clarke 8h @ 165 - P-24102') in currency, amount, employee and project. The only differences are the USD translation (881.87 at the buyer vs 869.68 at the seller, ratio 0.9862, about USD 12.19), consistent with NIG-US converting at its 14 Oct posting-date rate instead of the 12 Oct invoice-date rate, and a reference mismatch (auic20260661 vs AU/IC/2026/0663) that likely blocked the automatic match.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm the invoice is AU/IC/2026/0663, not a separate 0661, then correct the reference and retranslate the AUD 1,320.00 payable at the invoice-date rate so it pairs with NIG-AU:77455.",
+  "adjustment_amount": 12.19,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce NIG-US's USD carrying value of IC payable NIG-US:4471069 by USD 12.19 (from 881.87 to 869.68) by applying the invoice-date AUD/USD rate, with the offset to FX gain/loss, and update the reference to AU/IC/2026/0663.",
+  "model_requests_review": true,
+  "review_reason": "The reference on the buyer line (0661) differs from the seller invoice (0663), so the pairing is not fully verified; a separate invoice 0661 may exist and should be ruled out before the match is confirmed. The rate basis behind the USD 12.19 difference should also be confirmed against group FX policy."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2462,
+  "output": 389,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.25,
+ "output": {
+  "category": "timing",
+  "confidence": 0.93,
+  "explanation": "Seller line NIG-AU:77566 (AUD 13,200, posted 2026-10-30) and buyer line NIG-AE:ICV-AE-031485 (AUD 13,200, posted 2026-11-08, after period end) share reference AU/IC/2026/0738 and the same amount, with a ratio of 1.0 and a 0.00 USD difference at the invoice-date rate. The buyer posted 9 days later, after period end, so this is a cut-off difference. The small USD gap (8,604.82 vs 8,569.57) comes from translation rates only. The seller's counterparty text 'NS UAE' is unresolved, but the buyer's booking against NIG-AU resolves correctly.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "No correction is needed for October; NIG-AE should confirm the November posting, and NIG-AU should tidy the 'NS UAE' counterparty label in its legacy ledger.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

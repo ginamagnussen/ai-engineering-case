@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2600,
+  "output": 1199,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.76,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both lines reference AE-ICINV-00794 and carry the same posting date (2026-10-21). NIG-DE line NIG-DE:5100873428 booked EUR 3199.99 (USD 3395.99) against NIG-AE line NIG-AE:ICV-AE-031361 for AED 13200 (USD 3594.23), and the implied rate of 0.242423 matches the 2026 budget rate exactly (0.0% deviation), while the invoice-date and posting-date daily rates differ by -5.515%. The USD 198.24 gap is therefore explained by NIG-DE translating at the budget rate rather than the invoice-date rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm with the group controller that budget-rate booking is the agreed IC translation basis, and if so record the USD 198.24 FX difference in NIG-DE at group consolidation rather than correcting the local EUR payable.",
+  "adjustment_amount": 198.24,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Recognise the USD 198.24 rate-basis difference (budget rate vs invoice-date rate) as an FX difference in consolidation; no change to the NIG-DE local ledger line is proposed unless policy requires it.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

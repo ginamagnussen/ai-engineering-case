@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2409,
+  "output": 366,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.43,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.96,
+  "explanation": "NIG-US line NIG-US:4471103 (INV-US-100448, USD 3,000) matches NIG-DE line NIG-DE:5100873423 on reference, amount, currency and project P-25031 (secondment of T. Becker), with a USD 0.00 difference. However, NIG-DE booked the payable against NIG-AE (AE01) instead of NIG-US, so the pair did not match automatically.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should reclassify payable NIG-DE:5100873423 from counterparty AE01 (NIG-AE) to NIG-US so it eliminates against NIG-US:4471103.",
+  "adjustment_amount": 3000.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-DE, reverse the IC payable booked to NIG-AE for USD 3,000 and rebook it to NIG-US under the same reference INV-US-100448.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

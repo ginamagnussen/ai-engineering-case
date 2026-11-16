@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2469,
+  "output": 451,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.01,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-SA invoice SA-ICINV-00748 (line NIG-SA:ICV-SA-019018, SAR 46,980.00 / USD 12,528.16) is matched by NIG-AE payable NIG-AE:ICV-AE-031423 with the same reference, amount, currency and posting date (ratio 1.0, USD difference 0.0). However, NIG-AE booked the payable against NorthStar Infrastructure UK Ltd (NIG-UK) instead of NIG-SA, and its own description ('subcontract SA') points to the Saudi entity.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should reclass the SAR 46,980.00 IC payable on line ICV-AE-031423 from intercompany partner NIG-UK to NIG-SA before the October 2026 close.",
+  "adjustment_amount": 46980.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "In NIG-AE: debit IC payable – NIG-UK SAR 46,980.00 and credit IC payable – NIG-SA SAR 46,980.00 (invoice SA-ICINV-00748), moving the balance to the correct counterparty.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2479,
+  "output": 1011,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.97,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-AE invoiced AED 19,080.00 (line NIG-AE:ICV-AE-031313, ref AE-ICINV-00936) and NIG-SA booked AED 19,800.00 (line NIG-SA:ICV-SA-018930) against the same reference, counterparty and period, one day apart. The digit pattern is an adjacent transposition (19080 vs 19800), the currencies are identical so no FX basis applies, and the ratio of 1.03774 is not a withholding rate, so this is a keying error with the USD difference of -196.05 at invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to correct the IC payable line NIG-SA:ICV-SA-018930 from AED 19,800.00 to AED 19,080.00 in Dynamics 365 F&O and confirm the correction against the AE-ICINV-00936 invoice.",
+  "adjustment_amount": -720.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reduce NIG-SA IC payable to NIG-AE by AED 720.00 (19,800.00 booked less 19,080.00 invoiced) to correct the transposed amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

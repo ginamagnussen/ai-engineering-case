@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 388,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.65,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-AU line NIG-AU:77504 booked AED 159,060.00 against seller invoice AE-ICINV-00796 (NIG-AE:ICV-AE-031327) of AED 159,600.00, which is 152h @ 1,050. The digits 6-0 are transposed (ratio 0.99662, USD 147.03 difference). Both lines are in the same currency, in period, and against the correct counterparty, so there is no FX, timing or WHT explanation.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should correct payable line 77504 from AED 159,060.00 to AED 159,600.00 to agree to invoice AE-ICINV-00796.",
+  "adjustment_amount": 540.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-AU: increase IC payable to NIG-AE by AED 540.00 (debit secondment cost, credit IC payable NIG-AE) to correct the transposed keying of invoice AE-ICINV-00796.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

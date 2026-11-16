@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 422,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.94,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-019005 (GBP 8,882.50) is 95% of NIG-UK's receivable NIG-UK:1900045366 (GBP 9,350.00). The ratio matches 5% withholding tax, the description says 'net of WHT 5%', and the invoice reference 9000010890 appears on both lines. The USD difference of 600.55 at the invoice-date rate is the withheld amount, not a currency or timing issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm the WHT remittance to the Saudi tax authority, provide the WHT certificate to NIG-UK, and record the withheld amount as a WHT receivable at NIG-UK so the IC balance clears.",
+  "adjustment_amount": 467.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-UK, reclassify GBP 467.50 from the IC receivable to a WHT receivable (recoverable tax) once the certificate is received; no change to NIG-SA's IC payable beyond a matching WHT payable to the tax authority.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

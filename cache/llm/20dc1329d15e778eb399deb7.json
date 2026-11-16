@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 410,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.01,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU:77450 (AUD 27,720.00, USD 18,302.13) and NIG-DE:5100873367 (AUD 27,720.00, USD 18,455.42) match on reference AU/IC/2026/0667, currency, local amount, project P-24017 and description (secondment of O. Hassan). Both lines are in period, the buyer ratio is 1.0, and the counterparty resolves to NIG-AU via master data (AU01). The only difference is a USD translation gap of about 153.29, which is caused by the posting-date rates, not by a rate or amount error.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Confirm that the pair is a valid match and that the USD gap of about 153.29 is only translation at different posting-date rates; no correcting entry is needed.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pair appears fully matched in local currency with no real discrepancy, so it fits none of the exception categories. It was probably left over because the seller counterparty 'Germany' was unresolved, and a human should confirm it can be cleared."
+ }
+}

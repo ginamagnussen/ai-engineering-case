@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2905,
+  "output": 724,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.17,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-US line NIG-US:4471173 is an IC payable accrual of 79,800 SAR (21,280.27 USD) for seconded staff P.Becker under P-25002, marked 'invoice not received', with no seller receivable found. None of the three nearest unmatched NIG-SA receivables fits: they carry different projects and amounts (ICV-SA-018937, ICV-SA-018847, ICV-SA-018855) and their ratios to target are far from 1.0.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm whether an invoice for P-25002 (Becker secondment) will be issued and when; if none is expected in October, NIG-US should reverse the accrual in the November close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

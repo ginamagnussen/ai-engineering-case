@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2597,
+  "output": 1098,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.76,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031297 invoices AED 19,800 and NIG-UK line NIG-UK:1900045357 books GBP 4,399.12 against the same reference AE-ICINV-00862, with the buyer's implied rate of 0.222178 matching the 2026 budget rate (0.0% deviation). The invoice-date rate gives a difference of -139.45 USD, so the gap comes from the rate basis rather than a different invoice or amount.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to restate the IC payable to the invoice-date rate (or confirm the group policy permits budget-rate booking) and align the counterparty code AE01 to NIG-AE master data.",
+  "adjustment_amount": -139.45,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-UK IC payable for AE-ICINV-00862 from the 2026 budget rate to the invoice-date rate, a USD difference of -139.45 per the evidence.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2603,
+  "output": 718,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.79,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019050 is an IC payable of 6,600.00 GBP (8,504.03 USD) with reference ACCR-OCT26, described as an accrual for P-25031 structural calcs with the invoice not received. The two nearest NIG-UK seller lines (NIG-UK:1900045345 at 1,520.00 GBP and NIG-UK:1900045276 at 25,200.00 GBP) relate to different secondment projects and amounts, so neither matches this accrual.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether a subcontract invoice for P-25031 structural calcs (6,600.00 GBP) will be issued, and NIG-SA should keep the October accrual and reverse it when the invoice is booked.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

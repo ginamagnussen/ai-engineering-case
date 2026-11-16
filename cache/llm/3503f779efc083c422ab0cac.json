@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2486,
+  "output": 602,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.33,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "NIG-SA booked payable NIG-SA:ICV-SA-018823 at AED 118,224.00 against seller receivable NIG-AE:ICV-AE-031208 of AED 181,224.00 for the same invoice AE-ICINV-00599, in the same currency and one day apart. The leading digits '81' were keyed as '18', which is an adjacent-digit transposition. The ratio of 0.65236 matches no withholding rate, and nothing points to a business reason, so this is a keying error. The gap is AED 63,000, or USD 17,154.27 at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should check invoice AE-ICINV-00599 and post a correcting entry that raises the IC payable to NIG-AE by AED 63,000.00 so it matches the invoiced AED 181,224.00.",
+  "adjustment_amount": 63000.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-SA, increase the IC payable to NIG-AE for invoice AE-ICINV-00599 by AED 63,000.00, from 118,224.00 to 181,224.00, with the offsetting entry to the P-25031 QA/QC subcontract cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

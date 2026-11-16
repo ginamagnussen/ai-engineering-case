@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2908,
+  "output": 491,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.15,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "Buyer line NIG-DE:5100873443 (AUD 21,280, 'Personalgestellung O.Nasser P-23110') has the same AUD amount, project and person as seller line NIG-AU:77506 (AUD 21,280, 'Secondment Omar Nasser 152h @ 140'), and the counterparty resolves to NIG-AU/NIG-DE. The only difference is the USD translation (14,095.66 vs 14,141.62, ratio 1.0033), which reflects a different rate basis, so there is no real transaction difference; the pair was left unmatched probably due to the different reference (20260686 vs AU/IC/2026/0681) and the one-day posting gap.",
+  "responsible_entity": "group controller",
+  "recommended_action": "Manually match NIG-DE:5100873443 to NIG-AU:77506 and confirm the USD difference is purely from the translation rate (NIG-DE posted 2026-10-22 vs NIG-AU 2026-10-21).",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "This is a likely pair match with identical local-currency amounts, so the category is more of a translation-rate residual than a genuine FX booking difference. A human should confirm the match and the rate source, since the references differ and the USD difference is not calculated against a rate table in the evidence."
+ }
+}

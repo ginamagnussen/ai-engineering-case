@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 360,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.27,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-UK:1900045364 (GBP 5,700, secondment Noura Hassan, P-24088) matches buyer line NIG-AU:77488 on amount, currency and reference 9000010547, with a USD difference of 0.00 at the invoice-date rate. However, NIG-AU booked the counterparty as 'KSA branch', which does not resolve in master data, instead of NIG-UK.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on line NIG-AU:77488 from 'KSA branch' to NIG-UK and add a master-data mapping for the legacy SCE ledger.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify NIG-AU:77488 (GBP 5,700) from the unresolved 'KSA branch' counterparty to NIG-UK; no change in amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

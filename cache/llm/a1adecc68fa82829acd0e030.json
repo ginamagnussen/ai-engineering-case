@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2661,
+  "output": 1031,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.1,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.72,
+  "explanation": "NIG-UK (line NIG-UK:1900045272) invoiced GBP 74,290 (USD 93,367.67) to NIG-SA for P-24088 A8 Autobahn Bridge Rehab site supervision on 2026-10-09, but NIG-SA has no matching payable. The two unmatched NIG-SA lines do not fit: the GBP 62,280 accrual (NIG-SA:ICV-SA-019078) is for P-24102 BIM coordination and the USD 7,500 accrual (NIG-SA:ICV-SA-019063) is for P-25019 secondment to NIG-US, and no lines share the reference 9000010647.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm whether invoice 9000010647 for P-24088 was received and, if so, post the IC payable to NIG-UK, otherwise escalate to NIG-UK for re-validation of the recharge.",
+  "adjustment_amount": 74290.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Proposed NIG-SA booking of IC payable to NIG-UK for P-24088 invoice 9000010647 if receipt is confirmed; no adjustment if the charge is not valid for October.",
+  "model_requests_review": true,
+  "review_reason": "Could be a missed booking, a misdirected accrual, or a charge that should not be recognised; the evidence does not show which, and confirming invoice receipt requires NIG-SA input."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 1903,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 9.62,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.82,
+  "explanation": "Seller NIG-AU invoiced 6470.00 AUD on AU/IC/2026/0713 (line NIG-AU:77485), but buyer NIG-US booked 4670.00 AUD (NIG-US:4471080), a 1800.00 AUD shortfall (1199.34 USD at invoice-date rate). The buyer amount is the seller amount with the leading digits 6 and 4 transposed, the invoice reference matches on both lines, and the ratio of 0.72179 is not consistent with any withholding rate, so there is no business reason for the gap. The seller line's counterparty is unresolved ('Head Office Denver'), so that record needs checking even though the buyer side resolves correctly to NIG-AU.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Have NIG-US correct the keying error by increasing the IC payable on AU/IC/2026/0713 from 4670.00 to 6470.00 AUD, and have the group controller fix the unresolved counterparty on NIG-AU:77485 in the legacy SCE ledger.",
+  "adjustment_amount": 1800.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase NIG-US IC payable for P-25002 QA/QC inspection (ref AU/IC/2026/0713) by 1800.00 AUD (1199.34 USD at invoice-date rate) to correct the transposed amount 4670 to 6470.",
+  "model_requests_review": true,
+  "review_reason": "The seller-side counterparty on NIG-AU:77485 is unresolved in the legacy SCE ledger and should be verified before the correction is posted; the amount itself is not in dispute."
+ }
+}

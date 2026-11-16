@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2905,
+  "output": 318,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.21,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.93,
+  "explanation": "NIG-US line NIG-US:4471173 is an IC payable of SAR 79,800 (USD 21,280.27) posted 2026-10-31 as 'Accrual - Seconded staff P.Becker P-25002 - invoice not received', reference ACCR-OCT26, against NIG-SA. None of the 3 unmatched NIG-SA lines searched relates to P-25002 or P.Becker, and none is close in amount, so NIG-SA has not invoiced this cost.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm the P.Becker secondment hours for P-25002 and issue the IC invoice, or confirm it will be billed in November.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}
