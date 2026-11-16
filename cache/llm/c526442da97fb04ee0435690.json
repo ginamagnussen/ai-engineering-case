@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2132,
+  "output": 351,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.62,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "NIG-UK line 1900045447 (AED 16,800 / USD 4,574.47, posted 2026-10-28, ref aeicinv00827) has no seller counterpart, but the same reference aeicinv00827 is already matched in M0038 via NIG-UK:1900045440 posted 2026-10-27. This indicates NIG-UK booked the NIG-AE invoice twice.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Confirm 1900045447 duplicates 1900045440 and reverse it (or debit-note it) in NIG-UK's IC payable.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse duplicate IC payable line NIG-UK:1900045447 against NIG-AE (AED 16,800, approx. USD 4,574.47), debiting IC payable and crediting the original expense/clearing account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

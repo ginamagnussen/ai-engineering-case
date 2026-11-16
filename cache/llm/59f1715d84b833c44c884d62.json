@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2586,
+  "output": 676,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.96,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.92,
+  "explanation": "NIG-AU:77492 (AUD 6,720.19) and NIG-UK:1900045358 (GBP 3,800.00) carry the same invoice reference 9000010525 and project P-23110, and were posted one day apart within the period. The buyer's implied rate of 1.768471 AUD/GBP matches the 2026 budget rate exactly (0.0% deviation) but is 6.4% off the invoice-date daily rate. This produces a USD 302.64 shortfall (ratio 0.936) that is explained entirely by the rate basis.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should revalue the IC payable on line 77492 from the 2026 budget rate to the GBP/AUD daily rate at the invoice date, so that it equals GBP 3,800.00.",
+  "adjustment_amount": 302.64,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AU's IC payable to NIG-UK (invoice 9000010525) by the AUD equivalent of USD 302.64, restating GBP 3,800.00 at the invoice-date rate instead of the budget rate, with the offset to secondment cost or FX.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

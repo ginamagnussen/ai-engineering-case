@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2599,
+  "output": 1051,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.08,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "NIG-SA booked RE-2026-000656 (line NIG-SA:ICV-SA-018816) at an implied rate of 4.211947 SAR/EUR, which matches the 2026 budget rate exactly (0.0% deviation) and not the invoice-date daily rate (3.658% deviation). The seller line NIG-DE:5100873307 is EUR 21,280.00, and the invoice reference appears on both lines, so the USD gap of -843.54 at invoice-date rate is explained by the rate basis, not a missing or duplicate booking.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm whether group policy allows IC payables to be booked at the budget rate; if not, have NIG-SA revalue the payable to the invoice-date rate and clear the difference against NIG-DE's receivable.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Whether the budget-rate booking is acceptable or requires revaluation depends on the group FX policy, which is not in the case evidence."
+ }
+}

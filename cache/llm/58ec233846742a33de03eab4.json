@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2875,
+  "output": 998,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.27,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-US line NIG-US:4471046 (INV-US-100430, 1760.00 USD, secondment of Mohammed O'Connor P-25002, posted 2026-10-09) has no matching NIG-AU booking. None of the four unmatched NIG-AU lines shares its reference or amount, and the nearest candidates (NIG-AU:77465, 77484, 77458) are different invoices with ratios of 5x to 21x, so they do not explain it as FX or a split.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to confirm whether INV-US-100430 was received and booked in the legacy SCE ledger, and if not, post the missing 1760 USD IC payable to NIG-US.",
+  "adjustment_amount": 1760.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AU to book IC payable to NIG-US for INV-US-100430 secondment P-25002, 1760.00 USD, if the invoice is confirmed as valid and unbooked.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

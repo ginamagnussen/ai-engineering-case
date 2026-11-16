@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2446,
+  "output": 505,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.24,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-UK receivable NIG-UK:1900045400 is GBP 83,060.00 while NIG-SA payable NIG-SA:ICV-SA-018991 is GBP 78,907.00 on the same reference 9000010579. The buyer/seller ratio of 0.95 matches 5% withholding and the buyer description says 'net of WHT 5%'; the gap is USD 5,214.72 at the invoice-date rate. Both lines are in period, same currency, and counterparties are correct, so this is not FX, timing or miscoding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable by the withheld GBP 4,153.00 and book a WHT payable, and confirm the 5% rate and obtain/issue the WHT certificate.",
+  "adjustment_amount": 4153.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Dr WHT expense/receivable or cost as per policy, Cr WHT payable GBP 4,153.00 so that the IC payable is grossed up to GBP 83,060.00 and settles in full with NIG-UK.",
+  "model_requests_review": true,
+  "review_reason": "The 5% WHT rate is cited on the buyer line but is not verified against the service type or treaty, and the withheld amount's tax treatment needs confirmation. Note that the 5% matches the Saudi services rate, though the invoice is for geotech analysis."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2464,
+  "output": 1088,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.11,
+ "output": {
+  "category": "timing",
+  "confidence": 0.75,
+  "explanation": "NIG-AE line ICV-AE-031479 for AUD 8,800 (reference AU/IC/2026/0712) was posted on 2026-11-03, after the October period end, while NIG-AU line 77553 for the same AUD 8,800 sits in period on 2026-10-29. The amounts and invoice reference agree and the buyer's counterparty resolves to NIG-AU, but the seller line's counterparty is booked as 'NS UAE' and remains unresolved in the legacy SCE ledger.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Leave the October balances uncorrected as a cut-off difference, confirm NIG-AE's November posting is dated to the service period, and ask NIG-AU to fix the unresolved 'NS UAE' counterparty on line 77553 in the legacy ledger.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The seller-side counterparty 'NS UAE' is unresolved in the legacy ledger and could not be verified from the evidence. It may point to NIG-AE, which would make this a miscoded_counterparty issue on the seller side rather than pure timing."
+ }
+}

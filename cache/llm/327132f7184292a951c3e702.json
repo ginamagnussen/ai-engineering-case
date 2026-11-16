@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2455,
+  "output": 414,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.46,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-DE invoiced EUR 3,800.00 (NIG-DE:5100873357, RE-2026-000653) for 40 hours of seconded staff, but NIG-SA booked only EUR 3,094.90 (NIG-SA:ICV-SA-018877), a ratio of 0.81445 and a USD 757.21 difference at the invoice-date rate. The buyer line states 'partial accept, hours disputed pending PM approval'. Both lines are in the same currency and period, the invoice reference matches, and the counterparties are correct, so FX, timing and miscoding do not explain the gap.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA's project manager confirm the approved hours for P-24050 and agree the outcome with NIG-DE, issuing a credit note or accepting the full invoice.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "This is an intentional partial acceptance pending project manager approval; whether to accept the full charge or issue a credit note is a business judgement, so no adjustment should be booked yet."
+ }
+}

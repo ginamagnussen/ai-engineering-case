@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2925,
+  "output": 500,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.7,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.8,
+  "explanation": "Seller line NIG-SA:ICV-SA-018837 (SAR 105,000, secondment D. Smith, P-24017, ref SA-ICINV-00663) is billed to NIG-AU and has no buyer match. Buyer line NIG-AU:77450 has the same amount (SAR 105,000 / USD 28,000.35), the same description (seconded staff d.smith p-24017) and a booked counterparty of NIG KSA (NIG-SA), but the reference is SA-ICINV-00664 instead of 00663. This points to a reference keying error on the buyer side rather than a missing booking; the counterparty is correct, so the miscoded-counterparty category is only a loose fit.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU confirm that line 77450 is the booking of invoice SA-ICINV-00663, correct its reference, and confirm that no separate invoice 00664 exists in NIG-SA, then re-run the match.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The match rests on amount and description with a one-digit reference mismatch (00663 vs 00664). The category does not fit cleanly, since counterparty resolves correctly, so an accountant should verify that 00664 is not a separate invoice and choose between miscoded_counterparty and other."
+ }
+}

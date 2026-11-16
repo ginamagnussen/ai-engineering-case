@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2622,
+  "output": 899,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.95,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.72,
+  "explanation": "NIG-US (line NIG-US:4471064, USD 2,640.00, ref INV-US-100417, posted 2026-10-10 in period) invoiced NIG-AE for secondment P-25019 (Khalid Haddad, 24h at 110), but NIG-AE has no matching IC payable. The two unmatched NIG-AE payables found are different items: NIG-AE:ICV-AE-031337 (USD 18,480.00, P-25031, I. Nasser) and NIG-AE:ICV-AE-031228 (USD 36,202.05, P-24017), and neither shares the reference or the person/project, and no lines elsewhere carry the same reference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm receipt of INV-US-100417 and book the IC payable of USD 2,640.00 for P-25019 in October, or identify where the invoice was booked if it sits under another reference.",
+  "adjustment_amount": 2640.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-AE to book IC payable to NIG-US for secondment P-25019 (Khalid Haddad, 24h @ 110) if the invoice is confirmed as valid and owed.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

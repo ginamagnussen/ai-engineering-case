@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 940,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.27,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-UK:1900045364 (IC receivable, 5,700.00 GBP) and NIG-AU:77488 (IC payable, 5,700.00 GBP) share reference 9000010547 and describe the same secondment (P-24088), with a one-day posting gap and zero difference at invoice-date rate. The buyer line is booked to 'KSA branch', which is unresolved in master data, while the expected counterparty is NIG-UK; the USD gap of 48.90 (7,093.14 vs 7,142.04) comes only from posting-date rates, not from a booking error.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to change the counterparty on NIG-AU:77488 from 'KSA branch' to NIG-UK in the legacy SCE ledger so the line matches the seller's receivable.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify the 5,700.00 GBP IC payable from the unresolved 'KSA branch' counterparty to NIG-UK; no change in amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

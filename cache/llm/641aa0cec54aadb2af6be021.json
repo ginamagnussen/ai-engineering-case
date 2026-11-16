@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2985,
+  "output": 1422,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.04,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.55,
+  "explanation": "NIG-AU line NIG-AU:77465 (33,000 SAR, 8,800.11 USD) carries reference SA-ICINV-00585, which is already matched in M0128 via NIG-AU:77453 posted 2026-10-11, so the same invoice appears to be booked twice on the buyer side. No unmatched NIG-SA seller line equals 33,000 SAR (nearest candidates are 25,200, 14,800 and 97,524 SAR), and the amount of 77453 is not in this case, so the duplicate cannot be fully confirmed.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Compare NIG-AU:77465 with NIG-AU:77453 and SA-ICINV-00585; if both lines carry the same invoice, reverse 77465 in NIG-AU, otherwise confirm whether it is a valid split line.",
+  "adjustment_amount": 33000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse NIG-AU payable line 77465 (33,000 SAR) if confirmed as a duplicate booking of SA-ICINV-00585 already matched in M0128.",
+  "model_requests_review": true,
+  "review_reason": "Could be a duplicate or a split of the same invoice; the amount on the already-matched line 77453 is not provided, and the description references P-23110, which is also linked to a different seller invoice (SA-ICINV-00610) that may be a miscoding."
+ }
+}

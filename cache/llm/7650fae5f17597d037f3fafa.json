@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2483,
+  "output": 522,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.1,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031219 is AED 365,760.00 (USD 99,592.79) and NIG-SA payable NIG-SA:ICV-SA-018834 is AED 347,472.00 (USD 94,613.15), a USD 4,979.64 gap. The buyer/seller ratio is 0.95, matching 5% withholding, and the buyer description says 'net of WHT 5%'. The invoice reference AE-ICINV-00924 matches, both lines are in the same currency and period, and the counterparty is correct.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the AED 18,288.00 withholding tax as a WHT payable/receivable to the tax authority and gross up the IC payable to AED 365,760.00 to agree with NIG-AE, after confirming WHT applies to this service.",
+  "adjustment_amount": 18288.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, credit the IC payable to NIG-AE by AED 18,288.00 and debit WHT expense or receivable (or credit WHT payable) per the group tax treatment, so the IC payable equals AED 365,760.00.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that 5% WHT is applicable to this environmental survey service and agree who bears the WHT cost (NIG-SA or NIG-AE) before posting. The amounts are consistent with the evidence."
+ }
+}

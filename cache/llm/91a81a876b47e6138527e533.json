@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2908,
+  "output": 1338,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.5,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-DE line NIG-DE:5100873443 (21,280 AUD, 'Personalgestellung O.Nasser P-23110', posted 2026-10-22) matches NIG-AU:77506 (21,280 AUD, 'Secondment Omar Nasser 152h @ 140 - P-23110', posted 2026-10-21, both in period) on amount, project, and person, so this looks like a missed rematch rather than a true exception. The seller's counterparty 'NIG DE' resolves to NIG-DE via master data, and the references differ (AU/IC/2026/0681 vs 20260686), which likely caused the deterministic match to fail.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm that NIG-AU invoice AU/IC/2026/0681 is the source of NIG-DE line 5100873443 and, if so, manually link the two lines and close the exception with no adjustment.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The match rests on amount, project and person agreement, but the reference numbers differ and the seller counterparty label is non-standard, so a human must verify the invoice link before closing."
+ }
+}

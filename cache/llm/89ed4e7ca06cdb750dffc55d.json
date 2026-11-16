@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 1127,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.86,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-SA invoiced 42,000 SAR (line NIG-SA:ICV-SA-018859, ref SA-ICINV-00656) and NIG-AE booked 31,478.94 SAR (line NIG-AE:ICV-AE-031260), a buyer-to-seller ratio of 0.7495 and a USD gap of 2,805.65 at the invoice-date rate. The buyer's description states a partial acceptance with hours disputed pending PM approval, and the ratio is not consistent with a withholding rate, so this is an intentional under-booking rather than an FX, keying or WHT difference.",
+  "responsible_entity": "both",
+  "recommended_action": "Obtain the project manager's decision on the disputed hours for P-24050 and then either have NIG-SA issue a credit note for the unaccepted portion or have NIG-AE book the balance, with the agreed split documented before close.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer has intentionally contested part of the secondment charge, and the outcome depends on a PM approval that is not in the evidence, so the amount to be settled cannot be determined by the model."
+ }
+}

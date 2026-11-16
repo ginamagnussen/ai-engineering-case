@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 508,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.41,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "Buyer line NIG-SA:ICV-SA-019031 (EUR 20,738.50) is 95% of seller line NIG-DE:5100873478 (EUR 21,830.00) on the same invoice reference RE-2026-000754. The buyer description states 'net of WHT 5%', and the ratio is consistent with a 5% withholding rate. The USD difference of 1,148.61 at the invoice-date rate is the withheld tax, not an FX, timing or counterparty issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA record the EUR 1,091.50 withheld amount as a WHT payable to the tax authority and as a payable to NIG-DE (or as a recoverable WHT receivable at NIG-DE), and obtain the WHT certificate.",
+  "adjustment_amount": 1091.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Gross up the NIG-SA IC payable to NIG-DE by EUR 1,091.50 (Dr expense/WHT receivable treatment per policy, Cr IC payable NIG-DE) so it matches the invoiced EUR 21,830.00, with the withholding recorded separately as WHT liability.",
+  "model_requests_review": true,
+  "review_reason": "Confirm 5% is the correct Saudi WHT rate for this service type (geotechnical analysis) and agree which entity bears the WHT cost before posting the gross-up."
+ }
+}

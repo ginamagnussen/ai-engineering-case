@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2363,
+  "output": 1023,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.32,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.6,
+  "explanation": "NIG-DE holds an unmatched accrual of 42,000 AED (line NIG-DE:5100873523, ACCR-OCT26, P-25019, D.Rahman secondment, invoice not received) with no seller invoice found for this person. The only nearby seller line is NIG-AE:ICV-AE-031334 for 37,000 AED (P-25019, Lukas Nasser, 40h @ 925), which is booked to NIG-SA rather than NIG-DE and refers to a different person, so it cannot be confirmed as the same charge.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE and NIG-AE should confirm whether an invoice for the D.Rahman secondment on P-25019 exists or is pending, and NIG-AE should check whether the 37,000 AED line was billed to the wrong partner before any correction is booked.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The accrual is plausibly unbilled, but the nearest seller line on the same project (37,000 AED, booked to NIG-SA) could be a miscoded counterparty or a different secondee. The 5,000 AED difference and the different person cannot be resolved from the evidence."
+ }
+}

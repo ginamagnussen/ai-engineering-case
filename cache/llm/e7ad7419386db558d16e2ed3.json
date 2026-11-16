@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2460,
+  "output": 361,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.16,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-SA:ICV-SA-018802 (SAR 7,600, ref SA-ICINV-00697) matches buyer line NIG-AU:77435 on amount, currency, reference and description (Felix Brown secondment, P-23110), with zero difference. The buyer booked the counterparty as 'KSA branch', which does not resolve to the expected partner NIG-SA, so the IC elimination fails on the partner key only.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on line 77435 from 'KSA branch' to NIG-SA in the legacy SCE ledger and map the alias in master data.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify NIG-AU:77435 (SAR 7,600) from the unresolved 'KSA branch' counterparty to NIG-SA; no amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2615,
+  "output": 1365,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 18.71,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.55,
+  "explanation": "Buyer line NIG-AU:77583 (EUR 9,900.00, 'seconded staff m.al-mansouri p-24102', posted 2026-10-31) has the same EUR amount, employee and project as seller line NIG-DE:5100873471 (EUR 9,900.00, 'Personalgestellung Mohammed Al-Mansouri 60 Std - P-24102', posted 2026-10-27). The only monetary difference is in USD (10,338.27 vs 10,417.97, ratio 1.0077), which comes from translating at different posting-date rates rather than the invoice-date rate. The buyer also cites reference RE-2026-000711 instead of the seller's RE-2026-000712, which is likely a one-digit reference keying slip that blocked the automatic match.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm against the NIG-DE invoice that the correct reference is RE-2026-000712 and correct it, and the group controller should match the pair and book the USD translation difference to group FX at the invoice-date rate.",
+  "adjustment_amount": 79.7,
+  "adjustment_currency": "USD",
+  "adjustment_description": "No EUR correction is needed, since both sides show EUR 9,900.00. Consolidation should eliminate both lines at the invoice-date (2026-10-27) rate and post the USD 79.70 translation difference to FX gain/loss. NIG-AU should also amend its reference from RE-2026-000711 to RE-2026-000712.",
+  "model_requests_review": true,
+  "review_reason": "The reference mismatch (000711 vs 000712) cannot be verified from the evidence. A human should confirm that RE-2026-000711 is not a separate genuine invoice before treating this as the same invoice with only a rate-basis difference."
+ }
+}

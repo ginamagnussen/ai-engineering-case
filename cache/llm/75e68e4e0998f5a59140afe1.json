@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2602,
+  "output": 314,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 2.95,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.93,
+  "explanation": "NIG-DE line NIG-DE:5100873497 is an IC payable accrual of GBP 9,490.00 (USD 11,903.12) posted 2026-10-31 with reference ACCR-OCT26, described as 'invoice not received' for P-25031 UK statics services. No NIG-UK seller line matches; the two nearest unmatched lines (GBP 19,480.00 and GBP 74,290.00) relate to other projects and are not plausible matches.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm whether P-25031 work was performed in October and issue the invoice, or otherwise confirm the accrual should remain until invoicing.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

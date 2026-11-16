@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2465,
+  "output": 319,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 2.43,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-AU line NIG-AU:77513 for AED 7,600 (USD 2,069.40) matches NIG-AE invoice AE-ICINV-00831 by amount, currency, reference (aeicinv00831) and project P-25002, with zero USD difference and a 5-day posting lag. The buyer booked the payable against 'NS UAE', which is unresolved in master data, while the expected counterparty is NIG-AE.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Reclass NIG-AU:77513 counterparty from 'NS UAE' to NIG-AE in the legacy SCE ledger so the pair matches the NIG-AE receivable ICV-AE-031308.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

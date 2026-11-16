@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2595,
+  "output": 336,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.54,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019063 is a USD 7,500.00 IC payable on 2026-10-31, described as an accrual for seconded staff F.Al-Qahtani (P-25019) with the invoice not received. The two nearest unmatched NIG-US lines (NIG-US:4471064 at 2,640.00 and NIG-US:4471093 at 18,480.00) are secondments to NIG-AE for other staff, so neither corresponds to this accrual.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm the F.Al-Qahtani secondment hours for P-25019 and issue the IC invoice to NIG-SA, or accrue the receivable in October if the service was rendered.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

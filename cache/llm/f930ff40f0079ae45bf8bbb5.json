@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2464,
+  "output": 292,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.53,
+ "output": {
+  "category": "timing",
+  "confidence": 0.95,
+  "explanation": "Seller NIG-AU:77553 booked the secondment invoice AU/IC/2026/0712 for AUD 8,800 on 2026-10-29 (in period). Buyer NIG-AE:ICV-AE-031479 booked the identical AUD 8,800 on 2026-11-03, after period end, with the same reference and a ratio of 1.0. The USD difference of about 0.08 is only a rounding effect, so this is a cut-off difference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "No correction is needed for October; NIG-AE should confirm the invoice is accrued or recognised in November and the pair clears on that posting.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

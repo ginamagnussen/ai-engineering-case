@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 486,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.95,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked GBP 19,950.00 (NIG-SA:ICV-SA-018869) against NIG-UK's GBP 21,000.00 secondment invoice (NIG-UK:1900045253, ref 9000010534). The ratio is 0.95, consistent with Saudi 5% WHT on services, and the buyer description explicitly states 'net of WHT 5%'. The GBP 1,050 gap (USD 1,324.44 at the invoice-date rate) is the withheld tax, not a booking error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify the GBP 1,050 withheld from the IC payable to WHT payable/settlement with NIG-UK and provide the WHT certificate, so NIG-UK can recognise a WHT receivable or tax credit against the IC receivable.",
+  "adjustment_amount": 1050.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA: record the GBP 1,050 WHT so the IC payable to NIG-UK reflects the gross GBP 21,000 with an offsetting WHT liability to the Saudi tax authority. Alternatively, per group policy, NIG-UK credits the IC receivable by GBP 1,050 against a WHT tax receivable once the certificate is received.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

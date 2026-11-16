@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2475,
+  "output": 529,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.22,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-AE line NIG-AE:ICV-AE-031320 shows AED 299,880.00 (USD 81,654.33) and buyer NIG-SA line NIG-SA:ICV-SA-018924 shows AED 284,886.00 (USD 77,571.61) against the same invoice reference AE-ICINV-00871. The buyer/seller ratio of 0.95 matches 5% withholding and the buyer description says 'net of WHT 5%', leaving a USD 4,082.72 difference at the invoice-date rate. Both lines are in period and in the same currency, so this is not FX, timing or a miscoding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should provide the WHT certificate and record the AED 14,994.00 withheld as a WHT payable to the tax authority, with the IC payable restored to the gross invoice amount.",
+  "adjustment_amount": 14994.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase NIG-SA IC payable to AED 299,880.00 by crediting IC payable AED 14,994.00 and debiting WHT receivable/recoverable (or expense, per tax treatment), so the IC balance agrees to NIG-AE's invoice.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that the 5% WHT rate applies to this design review service and whether the withheld tax is recoverable by NIG-AE (credit or gross-up), since the evidence only shows a ratio match."
+ }
+}

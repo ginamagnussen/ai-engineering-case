@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2483,
+  "output": 521,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.98,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031437 is AED 426,672.00 (USD 116,178.52) and NIG-SA payable NIG-SA:ICV-SA-019049 is AED 405,338.40 (USD 110,369.59), a ratio of 0.95 and a USD difference of 5,808.93. The buyer line references AE-ICINV-00880, is described as 'net of WHT 5%', and the ratio matches 5% withholding exactly. Counterparties are correct, both lines are in period and the currency is the same, so this is not FX, timing or a miscoding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should confirm the WHT applies to this recharge, book the withheld AED 21,333.60 to a WHT payable/receivable account, and supply the WHT certificate so the IC payable can be restated to the gross invoice amount.",
+  "adjustment_amount": 21333.6,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-AE by AED 21,333.60 and credit WHT payable to the tax authority for the same amount, so the IC balance equals the gross invoice of AED 426,672.00.",
+  "model_requests_review": true,
+  "review_reason": "Whether 5% WHT is applicable to an environmental survey recharge between these entities should be confirmed by tax. The invoice amount is not in dispute, but the treatment is a tax judgement."
+ }
+}

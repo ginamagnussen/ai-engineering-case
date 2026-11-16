@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2646,
+  "output": 1404,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.27,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.6,
+  "explanation": "NIG-SA invoiced NIG-AE 14,800 SAR for secondment (line NIG-SA:ICV-SA-018855, ref SA-ICINV-00538), but NIG-AE has no matching payable and the reference appears nowhere else in the ledgers. The only candidate with the same nominal amount, NIG-AE:ICV-AE-031254 (14,800 USD, ref INV-US-100392, H.Brown secondment), is booked to NIG-US with a different reference, currency and staff member, so it is probably a different invoice.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm whether SA-ICINV-00538 was received and, if valid, book the 14,800 SAR payable to NIG-SA for P-24102 in the October 2026 close; NIG-US should separately confirm that 031254 belongs to its own invoice INV-US-100392.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Book IC payable to NIG-SA for secondment P-24102 (SA-ICINV-00538) if NIG-AE confirms receipt of the invoice.",
+  "model_requests_review": true,
+  "review_reason": "The equal nominal amount on NIG-AE:ICV-AE-031254 creates a possible miscoded_counterparty or currency-mismatch reading that cannot be verified from the evidence, and the invoice may not have been received by NIG-AE."
+ }
+}

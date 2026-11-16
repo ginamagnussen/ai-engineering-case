@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2366,
+  "output": 1136,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.58,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AU line NIG-AU:77450 (IC payable, 105,000 SAR, 2026-10-08, ref INV SA-ICINV-00664) and NIG-SA line NIG-SA:ICV-SA-018837 (IC receivable, 105,000 SAR, 2026-10-07, ref SA-ICINV-00663) have identical amounts, currency, counterparty (resolved via master data) and project reference P-24017, but the invoice numbers differ by one digit, so the rule match failed. The evidence points to a likely reference keying difference on the buyer side, yet the buyer line may instead be a separate invoice for the same secondment, which I cannot verify from the case.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm with NIG-SA whether SA-ICINV-00664 is a mis-keyed reference for SA-ICINV-00663 and correct the reference in the Legacy SCE Ledger, or identify the separate invoice if one exists.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Invoice reference mismatch (00663 vs 00664) on an otherwise exact match; a human must confirm whether this is one invoice with a keying error or two invoices, since no category fits a reference-only mismatch and the buyer description lacks hours and rate detail to verify."
+ }
+}

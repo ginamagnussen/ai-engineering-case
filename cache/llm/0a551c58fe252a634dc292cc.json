@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2566,
+  "output": 718,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 10.78,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-DE booked the NIG-UK Autodesk licence recharge (ref 9000010467) as EUR 12,984.37 (NIG-DE:5100873399) against the GBP 11,900.00 invoice (NIG-UK:1900045278). The implied rate of 1.091124 matches the 2026 budget rate exactly (0.0% deviation) but is 6.735% below the invoice-date daily rate, leaving a USD 1,007.03 gap. Both sides carry the same reference and counterparty, both posted in period, and no withholding pattern applies.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should revalue the payable on NIG-DE:5100873399 from the 2026 budget rate to the daily GBP/EUR rate at the 2026-10-10 invoice date, so the EUR amount equals GBP 11,900.00 at that rate.",
+  "adjustment_amount": 1007.03,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-DE's IC payable to NIG-UK by the USD 1,007.03 equivalent, converting GBP 11,900.00 at the invoice-date rate instead of the budget rate, with the offset to FX difference / licence cost.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

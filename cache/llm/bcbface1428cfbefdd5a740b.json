@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 1172,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.49,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "Seller NIG-AE invoice AE-ICINV-00854 (line NIG-AE:ICV-AE-031345) is 99,000 AED, and buyer NIG-SA line NIG-SA:ICV-SA-018940 is 94,050 AED, a ratio of 0.95 that matches a 5% withholding rate. The buyer description states 'net of WHT 5%', the invoice reference is found on the buyer line, and the counterparty and posting date agree, so the 4,950 AED gap is withholding tax, not a rate or keying difference (USD difference 1,347.84 at invoice-date rate).",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to 99,000 AED against the secondment expense and record the 4,950 AED Saudi WHT as a payable to the tax authority, supported by the WHT certificate or filing reference.",
+  "adjustment_amount": 4950.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr IC payable/expense gross-up to 99,000 AED; Cr Saudi WHT payable 4,950 AED (5% of 99,000 AED) in NIG-SA",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

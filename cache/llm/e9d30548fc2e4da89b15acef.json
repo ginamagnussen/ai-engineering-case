@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2861,
+  "output": 1367,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 18.63,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "NIG-AU invoice NIG-AU:77455 (AUD 1,320.00, A. Clarke secondment, P-24102, posted 2026-10-12) corresponds to NIG-US payable NIG-US:4471069 (AUD 1,320.00, 'Seconded staff A.Clarke P-24102', posted 2026-10-14). The transaction-currency amounts agree exactly, but the USD values differ (USD 869.68 vs USD 881.87, ratio 1.014), which is consistent with NIG-US translating at its 14 Oct posting-date rate rather than the invoice-date rate. The buyer reference (auic20260661) also differs from the seller invoice number (AU/IC/2026/0663), and that mismatch needs confirming.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm that line 4471069 relates to invoice AU/IC/2026/0663, correct the reference, and re-translate the line at the invoice-date rate so the USD values agree for elimination.",
+  "adjustment_amount": 12.19,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reduce the USD translation of NIG-US payable 4471069 by USD 12.19 (from 881.87 to 869.68) to align with the invoice-date rate, with the offset to FX revaluation; the AUD 1,320.00 amount stays unchanged.",
+  "model_requests_review": true,
+  "review_reason": "The buyer reference ends in 0661 while the seller invoice ends in 0663, so a human should confirm that the NIG-US line is not matched to a different invoice (e.g. 0661) before applying the rate realignment."
+ }
+}

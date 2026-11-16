@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2587,
+  "output": 1195,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.61,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-UK invoiced GBP 1,000.00 (line NIG-UK:1900045346) and buyer NIG-AU booked AUD 1,768.47 (line NIG-AU:77520) under the same reference 9000010543. The buyer's implied rate of 1.76847 matches the 2026 budget rate exactly (0.0% deviation), while the invoice-date, posting-date and month-end rates deviate by roughly 6.8% to 8.3%, so the USD 85.49 difference is explained by the rate basis used.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU restate the IC payable to the invoice-date rate (or the group-approved IC rate) and confirm the budget-rate basis is permitted under group FX policy.",
+  "adjustment_amount": 85.49,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU IC payable from the 2026 budget rate to the invoice-date rate so the payable matches the GBP 1,000.00 invoice, recognising the USD 85.49 difference as an FX adjustment.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

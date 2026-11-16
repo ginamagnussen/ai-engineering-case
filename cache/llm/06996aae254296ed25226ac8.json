@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2545,
+  "output": 421,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.86,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.92,
+  "explanation": "NIG-UK:1900045266 invoices GBP 2,100.00 (USD 2,639.28 at invoice-date rate), while NIG-US:4471057 books USD 2,573.65 under the same reference 9000010451. The buyer's implied rate of 1.225548 matches the 2026 budget rate exactly (0.0% deviation) rather than the invoice-date daily rate (-2.487%), leaving a USD 65.63 difference that is fully explained by rate basis. No withholding pattern applies because this is a UK seller.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should revalue payable line 4471057 from the 2026 budget rate to the invoice-date daily rate, increasing the payable by USD 65.63 to USD 2,639.28.",
+  "adjustment_amount": 65.63,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-US, increase the IC payable to NIG-UK for invoice 9000010451 by USD 65.63, posting the offset to FX difference or licence expense, so the payable equals GBP 2,100 at the invoice-date rate.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

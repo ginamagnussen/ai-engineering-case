@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2483,
+  "output": 529,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.29,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031243 is AED 228,420.00 (USD 62,196.48) and NIG-SA payable NIG-SA:ICV-SA-018880 is AED 216,999.00 (USD 59,086.66) for the same invoice reference AE-ICINV-00942. The buyer/seller ratio of 0.95 matches 5% withholding, the buyer description says 'net of WHT 5%', and the USD difference is 3,109.82. Both lines are in period, in the same currency, and with matching counterparties, so this is not timing, FX or miscoding.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the AED 11,421.00 withheld amount as a WHT payable to the tax authority (gross up the IC payable to the invoiced amount) and confirm that a WHT certificate is issued to NIG-AE.",
+  "adjustment_amount": 11421.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-AE by AED 11,421.00 and credit WHT payable for the same amount, so the IC payable equals the invoiced AED 228,420.00.",
+  "model_requests_review": true,
+  "review_reason": "Confirm that WHT applies to this intercompany recharge (5% services rate is consistent for BIM coordination) and that the withholding is actually remitted, since the AE-to-SA service nature cannot be verified from the ledger evidence alone."
+ }
+}

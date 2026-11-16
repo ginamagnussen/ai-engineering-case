@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2482,
+  "output": 434,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.68,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-SA:ICV-SA-019021 shows SAR 231,336.00 and buyer line NIG-AE:ICV-AE-031434 shows SAR 233,136.00 against the same invoice reference SA-ICINV-00752. The buyer is higher by SAR 1,800 (USD 480.01 at the invoice-date rate), and the digits 13 and 31 are transposed. Both lines are in period, the counterparties are correct, and the ratio of 1.00778 does not fit a withholding or FX pattern, so this is a keying error on the buyer side.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should correct the IC payable on ICV-AE-031434 from SAR 233,136.00 to SAR 231,336.00 after confirming against invoice SA-ICINV-00752.",
+  "adjustment_amount": 1800.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Debit IC payable to NIG-SA and credit the project cost account (P-24050) at NIG-AE for SAR 1,800 to reduce the buyer booking to the invoiced SAR 231,336.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

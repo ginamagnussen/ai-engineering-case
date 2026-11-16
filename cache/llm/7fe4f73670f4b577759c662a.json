@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2558,
+  "output": 908,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 12.64,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "Buyer line NIG-UK:1900045253 (USD 9,900.00, 'Seconded staff F.Fischer P-24017', ref invus100396) matches seller line NIG-US:4471026 (USD 9,900.00, 'Secondment Felix Fischer 60h @ 165 - P-24017', ref INV-US-100390) exactly on amount (ratio 1.0), currency, employee, project and resolved counterparties. The only difference is the reference: 100396 versus 100390. This looks like a reference keying error rather than an amount or FX issue. It has no exact category, so it is classed as other; amount_typo is the nearest alternative.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm against the received invoice that the correct reference is INV-US-100390, correct the reference on line 1900045253, and pair it with NIG-US:4471026.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction needed. Only the buyer reference changes, from invus100396 to INV-US-100390.",
+  "model_requests_review": true,
+  "review_reason": "The evidence cannot rule out that INV-US-100396 is a separate invoice NIG-US has not yet booked. A human should confirm the reference before force-matching."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2623,
+  "output": 995,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.76,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-US:4471200 (16,800.00 GBP, ref 9000010810, posted 2026-10-31) carries the same reference as NIG-US:4471166, which is already matched to the NIG-UK seller invoice in M0214, so the buyer appears to have booked the same invoice twice. No unmatched NIG-UK receivable of 16,800 GBP exists; the nearest candidates (NIG-UK:1900045276 at 25,200 GBP and NIG-UK:1900045345 at 1,520 GBP) do not fit the amount.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm with NIG-US that ref 9000010810 is the same invoice as M0214 and, if so, reverse NIG-US:4471200 in Oracle EBS.",
+  "adjustment_amount": -16800.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse the duplicate IC payable to NIG-UK for ref 9000010810 (P-24017, seconded staff J.Haddad) booked on NIG-US:4471200.",
+  "model_requests_review": true,
+  "review_reason": "The duplicate call rests on a matching reference and the M0214 match; a human should confirm that the M0214 invoice is the same charge and that the 16,800 GBP is not a separate secondment before reversing."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2642,
+  "output": 435,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.55,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer line NIG-AU:77484 (GBP 19,500, posted 2026-10-16, ref 9000010767) has no seller counterpart, and it carries the same reference 9000010767 as NIG-AU:77462 (posted 2026-10-13), which is already matched in M0168. The two unmatched NIG-UK secondment lines (25,200 and 1,520 GBP) do not relate to a Bentley licence charge, so this appears to be the same invoice booked twice by NIG-AU.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm NIG-AU:77484 duplicates NIG-AU:77462 (M0168) and reverse it in NIG-AU.",
+  "adjustment_amount": 19500.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse the duplicate IC payable NIG-AU:77484 (GBP 19,500) against the expense or asset account originally charged, leaving NIG-AU:77462 as the valid booking.",
+  "model_requests_review": true,
+  "review_reason": "The twin's amount is not shown in the evidence, so the duplicate match relies on the shared reference only. Confirm that the two lines are for the same invoice before reversing."
+ }
+}

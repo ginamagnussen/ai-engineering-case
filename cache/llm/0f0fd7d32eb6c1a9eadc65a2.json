@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2652,
+  "output": 899,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.71,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.75,
+  "explanation": "NIG-AE line NIG-AE:ICV-AE-031254 (14,800 USD, ref INV-US-100392, posted 2026-10-13) carries the same reference as NIG-AE:ICV-AE-031240, already matched in M0216 (posted 2026-10-10), so the buyer appears to have booked NIG-US invoice INV-US-100392 twice. No seller receivable is open for this amount; the nearest unmatched seller lines (NIG-US:4471026 for 9,900 and NIG-US:4471046 for 1,760) do not correspond to it. The evidence does not show the amount of the twin line, so equality of the two bookings is unverified.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm that NIG-AE:ICV-AE-031240 and NIG-AE:ICV-AE-031254 both reference INV-US-100392 for 14,800 USD, and if so reverse the second line NIG-AE:ICV-AE-031254 in Dynamics 365 F&O.",
+  "adjustment_amount": 14800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reverse the duplicate IC payable booking to NIG-US for INV-US-100392 (line NIG-AE:ICV-AE-031254), leaving the original booking on NIG-AE:ICV-AE-031240 in place.",
+  "model_requests_review": true,
+  "review_reason": "The twin line's amount is not in the evidence, so the duplicate cannot be verified from the case data; the matched twin in M0216 must be checked before reversing."
+ }
+}

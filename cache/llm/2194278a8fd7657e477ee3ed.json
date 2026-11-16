@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2918,
+  "output": 1052,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.33,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AE payable NIG-AE:ICV-AE-031332 (97,524.00 SAR, P-23110 subcontract SA - design review, ref saicinv00614, posted 2026-10-21) has an exact-amount, same-currency, same-project candidate on the seller side, NIG-SA:ICV-SA-018937 (97,524.00 SAR, SA-ICINV-00610, posted 2026-10-18). The deterministic match likely failed because the invoice references differ and the posting dates are three days apart, both within period, so this is not a cut-off timing item. Evidence does not confirm the seller line is the invoice behind the buyer booking.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm with NIG-AE whether saicinv00614 is the same invoice as SA-ICINV-00610, and if so link the pair as matched with no adjustment, otherwise have NIG-SA investigate the unmatched seller line.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Exact amount and project match suggest a pairing, but the invoice references differ and the link cannot be verified from the evidence provided."
+ }
+}

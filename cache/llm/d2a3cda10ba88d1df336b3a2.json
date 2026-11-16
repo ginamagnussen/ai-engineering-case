@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2436,
+  "output": 469,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.42,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-US:4471035 shows an IC receivable of USD 7,600 (INV-US-100442) and buyer line NIG-SA:ICV-SA-018820 shows an IC payable of USD 7,220, a USD 380 difference (ratio 0.95, consistent with 5%). The buyer description says 'net of WHT 5%', the invoice reference matches, and there is no FX, cut-off or counterparty issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA confirm the WHT is valid for the secondment services and record the USD 380 withheld as a WHT receivable/payable to the tax authority, with a WHT certificate to NIG-US, so the IC balance is cleared.",
+  "adjustment_amount": 380.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "NIG-SA to book the USD 380 withholding tax difference against the IC payable to NIG-US (Dr IC payable NIG-US 380, Cr WHT payable 380), while NIG-US recognises the WHT as a tax receivable or expense instead of an IC receivable.",
+  "model_requests_review": true,
+  "review_reason": "A 5% WHT rate on secondment services is plausible for Saudi services, but whether WHT applies to this recharge and who bears it needs tax confirmation."
+ }
+}

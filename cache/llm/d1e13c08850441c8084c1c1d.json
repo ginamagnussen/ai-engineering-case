@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2142,
+  "output": 846,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.42,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-DE line NIG-DE:5100873331 (AUD 31,920.00, USD 21,354.80, posted 2026-10-08) carries reference AU/IC/2026/0756, the same reference as NIG-DE:5100873329 already matched in M0052 on 2026-10-07. No unmatched NIG-AU seller lines were found (searched 0), so the second booking has no separate invoice behind it. The twin's amount is not in the case, so the identical amount is not yet verified.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm that NIG-DE:5100873329 carries the same AUD 31,920.00 and that NIG-AU issued only one invoice under AU/IC/2026/0756, then reverse NIG-DE:5100873331 in NIG-DE as a duplicate posting.",
+  "adjustment_amount": 31920.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reverse the duplicate IC payable posting NIG-DE:5100873331 (AUD 31,920.00 / USD 21,354.80) against the IC payable to NIG-AU.",
+  "model_requests_review": true,
+  "review_reason": "The twin's amount is not in the case data and the reversal depends on confirming that no second NIG-AU invoice exists under the same reference."
+ }
+}

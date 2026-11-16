@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2618,
+  "output": 939,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.79,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "Both lines reference AE-ICINV-00834 and the counterparty is correct (NIG-AE). NIG-AU booked AUD 6,600.97 against AED 16,800.00 (implied rate 0.392915), which matches the 2026 budget rate exactly (0.0% deviation) but differs from the invoice-date rate by -3.766%, leaving a USD 172.28 difference at invoice-date rate.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should restate the IC payable NIG-AU:77473 to the invoice-date rate (or the group-mandated rate basis) and post the FX difference through its FX account, with no change to NIG-AE.",
+  "adjustment_amount": 172.28,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU IC payable (line NIG-AU:77473, AUD 6,600.97) from 2026 budget rate to invoice-date rate and book the USD 172.28 difference to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

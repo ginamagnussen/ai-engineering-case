@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2419,
+  "output": 689,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.26,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.94,
+  "explanation": "NIG-AE line ICV-AE-031287 (USD 16,800.00) is booked against NorthStar Infrastruktur GmbH, which resolves to NIG-DE, but the seller invoice NIG-US:4471084 (INV-US-100411, USD 16,800.00) is owed by NIG-US. The amounts match exactly (ratio 1.0, zero difference at invoice-date rate), the invoice reference 100411 appears on the buyer line, and the postings are one day apart and in period, so the counterparty is the only mismatch.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have NIG-AE reclassify line ICV-AE-031287 from NIG-DE to NIG-US so it matches seller line NIG-US:4471084 and clears in the IC reconciliation.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclassify IC payable of USD 16,800.00 (secondment P-24088, invoice INV-US-100411) from counterparty NIG-DE to counterparty NIG-US in NIG-AE's ledger; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

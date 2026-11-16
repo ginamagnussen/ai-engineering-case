@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2435,
+  "output": 478,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.84,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-UK invoiced GBP 2,100.00 (NIG-UK:1900045367, ref 9000010492) for Microsoft 365 E5 licences, but NIG-SA booked GBP 1,785.00 (NIG-SA:ICV-SA-018997) net of 15% WHT, as its description states. The buyer/seller ratio of 0.85 matches the 15% licence/royalty WHT rate, the invoice reference matches, counterparties are correct and both lines are in period. The USD 391.99 difference at the invoice-date rate is the withheld tax of GBP 315.00.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the GBP 315.00 withheld tax to a WHT payable account (and remit it to the Saudi tax authority), and NIG-UK should record the WHT receivable and obtain the withholding certificate so the IC balance is cleared at the gross amount.",
+  "adjustment_amount": 315.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable by GBP 315.00 with a credit to WHT payable, so the IC payable agrees to the GBP 2,100.00 invoice; NIG-UK records the GBP 315.00 as WHT receivable/tax credit.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2441,
+  "output": 1038,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.43,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK invoiced GBP 21,000 (line NIG-UK:1900045253, ref 9000010534) and NIG-SA booked GBP 19,950 (line NIG-SA:ICV-SA-018869), a buyer-to-seller ratio of 0.95 that matches a 5% withholding rate. The NIG-SA description states the amount is net of WHT 5%, and the invoice reference is found on the buyer line, so the GBP 1,050 gap is withholding tax rather than an error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up the NIG-SA IC payable to GBP 21,000 and record the GBP 1,050 withheld as a Saudi WHT liability, confirming the withholding certificate and any treaty relief position.",
+  "adjustment_amount": 1050.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Dr IC expense/secondment cost GBP 1,050; Cr IC payable to NIG-UK GBP 1,050 (gross-up to invoice); WHT payable to tax authority is the offsetting entry for the withheld amount, so net entry is Dr IC payable/cost and Cr WHT payable per NIG-SA tax booking.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

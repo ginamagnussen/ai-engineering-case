@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2459,
+  "output": 481,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.63,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "Seller line NIG-AU:77437 and buyer line NIG-AE:ICV-AE-031248 both show AUD 27,720.00 with the same reference AU/IC/2026/0778 and project P-24088, posted 2 days apart in period. The ratio is 1.0 and the USD difference at the invoice-date rate is 0.00 (the 27.44 gap in the amount_usd fields is only a translation-rate artefact). No fx, timing, split, or typo issue exists, so this looks like a pair that should already match. The only anomaly is that the seller's counterparty is booked as 'NS UAE', which is unresolved in master data, while the expected counterparty is NIG-AU for the buyer.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU map the legacy SCE counterparty 'NS UAE' to NIG-AE in master data, then confirm and clear the pair as matched.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Amounts and references agree, so no correction is needed. The seller-side counterparty label 'NS UAE' is unresolved in the legacy ledger, and the evidence flags no mismatch, so none of the defined categories fits cleanly. A human should confirm the master-data mapping before the pair is cleared."
+ }
+}

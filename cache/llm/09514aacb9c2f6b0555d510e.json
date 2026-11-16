@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2410,
+  "output": 466,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.53,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "Buyer line NIG-US:4471183 (SAR 13,200, ref SA-ICINV-00645, posted 2026-10-31) has no seller counterpart and carries the same reference as NIG-US:4471170, which is already matched in M0146. This indicates NIG-US booked invoice SA-ICINV-00645 twice. The nearest seller line NIG-SA:ICV-SA-018837 (SAR 105,000, NIG-AU, ref SA-ICINV-00663) has a different reference, counterparty and amount, so it is not a candidate.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm with NIG-US AP that NIG-US:4471183 duplicates NIG-US:4471170 and reverse the duplicate payable.",
+  "adjustment_amount": 13200.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse duplicate IC payable line NIG-US:4471183 (ref SA-ICINV-00645) by debiting IC payable and crediting the original expense or clearing account for SAR 13,200.",
+  "model_requests_review": true,
+  "review_reason": "The duplicate is inferred from the shared reference alone. The description differs slightly (T.Smith P-25019), so a human should confirm it is not a separate invoice with a mistyped reference."
+ }
+}

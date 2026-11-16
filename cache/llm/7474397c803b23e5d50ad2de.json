@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2404,
+  "output": 461,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.65,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045403 (GBP 2,380.00, ref 9000010470, Primavera P6 licence recharge) matches NIG-DE payable NIG-DE:5100873461 exactly in amount, currency and reference, and the German description 'Lizenzen Primavera P6 UK' names the UK. However, NIG-DE booked the payable against partner AU01 (NIG-AU) instead of NIG-UK. The USD difference at the invoice-date rate is 0.0; the small USD translation gap (3,011.82 vs 2,997.59) reflects the different posting-date rates only.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should reclass document 5100873461 from trading partner AU01 (NIG-AU) to the NIG-UK trading partner so it eliminates against NIG-UK:1900045403.",
+  "adjustment_amount": 2380.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-DE, debit IC payable – NIG-AU and credit IC payable – NIG-UK for GBP 2,380.00 (ref 9000010470), correcting the counterparty on the Primavera P6 licence recharge.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

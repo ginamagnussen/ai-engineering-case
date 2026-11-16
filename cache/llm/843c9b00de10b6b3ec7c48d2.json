@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2482,
+  "output": 510,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.6,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "Seller NIG-SA:ICV-SA-019021 invoices SAR 231,336.00 and buyer NIG-AE:ICV-AE-031434 books SAR 233,136.00 under the same reference SA-ICINV-00752, in the same currency and period, one day apart. The digits '13' and '31' are transposed, so the buyer overstated the payable by SAR 1,800.00 (USD -480.01 at the invoice-date rate). The ratio of 1.00778 has no FX, withholding or dispute explanation.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should correct the payable on ICV-AE-031434 from SAR 233,136.00 to SAR 231,336.00 to agree with invoice SA-ICINV-00752.",
+  "adjustment_amount": -1800.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "NIG-AE: debit IC payable to NIG-SA and credit project cost P-24050 (environmental survey) for SAR 1,800.00 to reverse the keying error.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

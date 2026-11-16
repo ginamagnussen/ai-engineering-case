@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2484,
+  "output": 987,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.06,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-AE seller line NIG-AE:ICV-AE-031389 invoices 248,256.00 AED for P-24050 geotech analysis, and buyer line NIG-SA:ICV-SA-019026 books 235,843.20 AED with the description 'net of WHT 5%'. The buyer-to-seller ratio is 0.95, exactly consistent with a 5% withholding, and the 12,412.80 AED gap equals 3,379.89 USD at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the IC payable to 248,256.00 AED and record the 12,412.80 AED withheld as Saudi WHT payable to ZATCA, supported by the WHT certificate.",
+  "adjustment_amount": 12412.8,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Dr IC payable (NIG-AE) 12,412.80 AED; Cr Saudi WHT payable 12,412.80 AED, grossing the buyer balance up to the invoiced 248,256.00 AED.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

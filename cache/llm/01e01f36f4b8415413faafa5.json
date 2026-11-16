@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 804,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.71,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-SA booked IC payable ICV-SA-018952 at 16,575.00 GBP against the NIG-UK receivable 1900045330 at 19,500.00 GBP, a ratio of 0.85 that matches a 15% withholding rate, and the description states 'net of WHT 15%'. The invoice reference 9000010499 appears on the buyer line, the counterparty resolves correctly to NIG-UK, and the postings are in period, so the 2,925.00 GBP gap (3,677.46 USD at invoice-date rate) is withholding tax rather than an error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm NIG-SA has remitted the 15% WHT (2,925.00 GBP) and holds the withholding certificate, then record the gross-up as a WHT liability so the IC balance is agreed to the invoiced gross amount.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

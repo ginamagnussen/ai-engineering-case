@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2593,
+  "output": 387,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.53,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-SA booked an accrual NIG-SA:ICV-SA-019060 for USD 2,640.00 dated 2026-10-31 (ref ACCR-OCT26, 'Seconded staff L.Rahman P-25019 - invoice not received') against NIG-US. NIG-US has no matching receivable: the two nearest unmatched seller lines (NIG-US:4471046 USD 1,760 and NIG-US:4471026 USD 9,900) relate to other employees, projects and counterparties (NIG-AU, NIG-UK). This is a buyer-side accrual for a cost the seller has not yet invoiced.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm whether the L.Rahman secondment on P-25019 is billable for October and issue the invoice for USD 2,640, or tell NIG-SA to reverse the accrual if no charge is due.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

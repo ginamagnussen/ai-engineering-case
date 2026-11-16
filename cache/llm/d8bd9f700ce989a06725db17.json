@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2566,
+  "output": 976,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.15,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both lines carry reference 9000010467 and describe the same Autodesk AEC licence recharge, with the seller NIG-UK invoicing 11,900.00 GBP (line NIG-UK:1900045278) and the buyer NIG-DE booking 12,984.37 EUR (line NIG-DE:5100873399). The buyer's implied rate of 1.091124 matches the 2026 budget rate exactly (0.0% deviation), while it deviates about -6.7% from the invoice-date rate and -6.9% from the posting-date rate, and the invoice-date difference is 1,007.03 USD.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm whether group policy requires IC transactions to be translated at the invoice-date rate; if so, NIG-DE should revalue the payable to the invoice-date rate, otherwise document the budget-rate difference as an accepted FX variance.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The difference is explained by the translation rate basis, but whether the budget rate is acceptable for IC balances is a group policy decision that cannot be verified from the case evidence."
+ }
+}

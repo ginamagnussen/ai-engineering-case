@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2132,
+  "output": 360,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.34,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.9,
+  "explanation": "Buyer line NIG-UK:1900045447 (AED 16,800.00, ref aeicinv00827, posted 2026-10-28) carries the same invoice reference as NIG-UK:1900045440 (posted 2026-10-27), which is already matched to NIG-AE in M0038. No unmatched NIG-AE seller lines exist, so this second booking of the seconded-staff charge is a duplicate payable in NIG-UK.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm that document 1900045447 duplicates 1900045440 for invoice aeicinv00827 and reverse it in the October 2026 period.",
+  "adjustment_amount": 16800.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse duplicate IC payable 1900045447 to NIG-AE: debit IC payable NIG-AE, credit seconded staff cost, AED 16,800.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 502,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.83,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045265 is GBP 23,520.00 (USD 29,559.94) and NIG-SA payable NIG-SA:ICV-SA-018874 is GBP 22,344.00 (USD 27,910.56) for the same invoice reference 9000010514. The buyer/seller ratio of 0.95 matches 5% WHT and the buyer description says 'net of WHT 5%'. The difference is USD 1,478.00 at the invoice-date rate; counterparties match and both lines are in period.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable by GBP 1,176.00 to the invoice amount and book the withheld tax to a WHT payable account, with a WHT certificate sent to NIG-UK.",
+  "adjustment_amount": 1176.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Dr WHT expense/recoverable and Cr IC payable NIG-UK GBP 1,176.00 at NIG-SA, restoring the payable to the invoiced GBP 23,520.00 and recording the withheld 5% as WHT payable to the tax authority.",
+  "model_requests_review": true,
+  "review_reason": "Confirm WHT applicability and rate: 5% is the services rate, and it is unclear whether secondment charges are subject to it. Tax should confirm the treatment and who bears the cost."
+ }
+}

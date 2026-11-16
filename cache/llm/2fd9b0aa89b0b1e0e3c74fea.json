@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2579,
+  "output": 858,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.27,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.86,
+  "explanation": "NIG-AE booked the Bentley OpenRoads licence line (ICV-AE-031445, AED 21,424.28, implied rate 4.500899) at the 2026 budget rate, which is an exact match (0.0% deviation), while the NIG-UK invoice (9000010475, GBP 4,760) is 2.921% away from the invoice-date rate. The USD difference of 175.50 at invoice-date rate is therefore an FX basis difference, not a missing or duplicate booking, and the counterparty and reference match.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to revalue the IC payable to the invoice-date rate (or confirm the group policy allows budget-rate booking) and post the 175.50 USD FX difference to its FX result account.",
+  "adjustment_amount": 175.5,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AE IC payable from budget rate to invoice-date rate and book the FX difference of 175.50 USD to the FX gain/loss account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

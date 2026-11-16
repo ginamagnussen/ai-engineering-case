@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2465,
+  "output": 759,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 10.39,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.8,
+  "explanation": "Seller line NIG-AE:ICV-AE-031308 and buyer line NIG-AU:77513 match exactly: AED 7,600.00 (USD 2,069.40), ratio 1.0, zero difference, and the same invoice AE-ICINV-00831 (booked as 'aeicinv00831'), both posted in period. The only break is the counterparty: the legacy SCE ledger recorded the partner as free-text 'NS UAE', which did not resolve to any entity, while the expected counterparty is NIG-AE. The amounts are correct, so this is a partner-coding and master-data issue rather than a value difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode line 77513 to intercompany partner NIG-AE and add a mapping for 'NS UAE' to NIG-AE in the legacy SCE ledger so future postings resolve automatically.",
+  "adjustment_amount": 7600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reclassify AED 7,600.00 IC payable on NIG-AU line 77513 from unresolved counterparty 'NS UAE' to IC payable to NIG-AE; amounts are unchanged.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 433,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.22,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-UK payable line NIG-UK:1900045269 (AED 117,600, USD 32,021.30) carries invoice reference AE-ICINV-00851 and the same secondment description (N. Rahman, P-24050) as NIG-AE receivable NIG-AE:ICV-AE-031225. However, it is booked against counterparty US01 (NIG-US) instead of NIG-AE. Amounts match exactly (ratio 1.0, zero USD difference) and both postings are in period, so only the counterparty coding is wrong.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should reclassify payable document 1900045269 from trading partner US01 (NIG-US) to NIG-AE in SAP and confirm that the NIG-US IC balance is cleared accordingly.",
+  "adjustment_amount": 117600.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "In NIG-UK, debit IC payable – NIG-US and credit IC payable – NIG-AE for AED 117,600 (USD 32,021.30) to recode invoice AE-ICINV-00851 to the correct partner.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2878,
+  "output": 1609,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.88,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "Seller line NIG-AU:77506 (AUD 21,280.00, Omar Nasser P-23110, ref AU/IC/2026/0681) has an exact AUD-amount, description and in-period match in buyer line NIG-DE:5100873443 (AUD 21,280.00, 'Personalgestellung O.Nasser P-23110', ref 20260686, posted 2026-10-22, counterparty AU01 resolving to NIG-AU). The USD gap (14,141.62 vs 14,095.66) is only translation, since both sides are in AUD, so there is no transactional difference; the deterministic rules most likely missed the pair because the references differ.",
+  "responsible_entity": "both",
+  "recommended_action": "Confirm that NIG-DE:5100873443 and NIG-AU:77506 are the same invoice, link them as a matched pair with a reference-override note, and close the case with no adjustment.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The pairing rests on amount, description and counterparty alone because the references differ; a human should confirm the link before the case is closed."
+ }
+}

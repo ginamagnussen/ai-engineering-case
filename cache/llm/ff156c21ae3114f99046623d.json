@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2409,
+  "output": 715,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.92,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-US invoice INV-US-100448 (line NIG-US:4471103, 3000.00 USD, secondment P-25031) matches NIG-DE line NIG-DE:5100873423 exactly on amount and reference, with a 4-day posting gap and a zero FX difference. The only break is that NIG-DE booked the IC payable against counterparty AE01 (NIG-AE) instead of NIG-US, as the evidence shows.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to reclassify line NIG-DE:5100873423 from counterparty AE01 (NIG-AE) to NIG-US in SAP before the October close is locked, and confirm NIG-AE holds no offsetting entry for this invoice.",
+  "adjustment_amount": 3000.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Reclass 3000.00 USD IC payable on NIG-DE from counterparty NIG-AE to NIG-US (INV-US-100448); no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2419,
+  "output": 397,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.47,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.96,
+  "explanation": "Seller line NIG-US:4471049 (INV-US-100438, USD 21,280.00) matches buyer line NIG-AE:ICV-AE-031267 (USD 21,280.00) on amount, currency, project P-24050 and invoice reference 100438, with a zero difference. The buyer booked the payable against NIG-DE (NorthStar Infrastruktur GmbH) instead of the invoicing entity NIG-US, so the pair did not match automatically.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should reclassify payable NIG-AE:ICV-AE-031267 from counterparty NIG-DE to NIG-US so it eliminates against INV-US-100438.",
+  "adjustment_amount": 21280.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-AE, move the IC payable of USD 21,280.00 from the NIG-DE partner account to the NIG-US partner account (no P&L impact); also confirm NIG-DE has no open balance for this item.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

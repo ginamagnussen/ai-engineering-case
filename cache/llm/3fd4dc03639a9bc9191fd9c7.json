@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2472,
+  "output": 1290,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.23,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-AU invoice AU/IC/2026/0766 (line NIG-AU:77485) is 27,720.00 AUD, and NIG-SA line NIG-SA:ICV-SA-018996 is 26,334.00 AUD, a 1,386.00 AUD shortfall that equals exactly 5% of the invoice. The buyer description states 'net of WHT 5%' and the ratio of 0.95 is consistent with Saudi services withholding, so the buyer withheld tax and paid the seller net. The seller's counterparty label 'KSA branch' is unresolved, though the reference matches and the buyer's counterparty resolves to NIG-AU.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to 27,720.00 AUD and reclass the 1,386.00 AUD withheld to a Saudi WHT payable pending remittance and certificate, and NIG-AU should correct the counterparty master data for 'KSA branch' on line NIG-AU:77485.",
+  "adjustment_amount": 1386.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Dr IC payable (NIG-SA) 1,386.00 AUD; Cr Saudi WHT payable 1,386.00 AUD, so the IC payable equals the gross invoice of 27,720.00 AUD.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2588,
+  "output": 964,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 13.93,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.6,
+  "explanation": "Seller line NIG-US:4471026 (INV-US-100390, USD 9,900.00, secondment F. Fischer P-24017) has no matched buyer line. NIG-UK:1900045253 is an unmatched IC payable to NIG-US for exactly USD 9,900.00 (ratio 1.0) with the same employee and project, but its reference is 'invus100396', apparently a mistyped reference rather than a wrong amount. The amounts agree, so this looks like a reference keying error that blocked the automatic match, not a true missing booking.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm against the received invoice that document 1900045253 relates to INV-US-100390, correct the reference field, and then match it to NIG-US:4471026.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction is needed; only the reference on NIG-UK:1900045253 should be changed from 'invus100396' to INV-US-100390.",
+  "model_requests_review": true,
+  "review_reason": "The mismatch is in the reference, not the amount, so the category fit is imperfect. It also needs confirming that INV-US-100396 is not a separate, genuine NIG-US invoice; if it is, this case would be missing_buyer instead."
+ }
+}

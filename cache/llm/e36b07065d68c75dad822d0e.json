@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 370,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.55,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-AU:77430 books USD 50,890.00 with reference INV-US-100520 and a US QA/QC description for P-23110, matching NIG-US:4471041 exactly (ratio 1.0, zero USD difference, postings one day apart). However, NIG-AU coded the counterparty as 'NS UAE' (unresolved), not the expected NIG-US, so the pair failed rule matching.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclassify line 77430 from counterparty 'NS UAE' to NIG-US and map the legacy SCE ledger counterparty code correctly in master data.",
+  "adjustment_amount": 50890.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-AU, move the USD 50,890.00 IC payable for INV-US-100520 from counterparty 'NS UAE' (UAE entity) to counterparty NIG-US; no change to amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

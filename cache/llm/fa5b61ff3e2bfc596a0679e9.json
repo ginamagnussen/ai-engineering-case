@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2459,
+  "output": 1192,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.14,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both lines carry reference AU/IC/2026/0778 and the same AUD 27,720.00 amount (NIG-AU:77437 and NIG-AE:ICV-AE-031248), and the buyer's counterparty resolves to NIG-AU. The USD gap of 27.44 (18,459.03 vs 18,486.47) is zero at the invoice-date rate, so it comes from NIG-AE translating at a different rate. The seller line's counterparty is booked as 'NS UAE' in the legacy SCE ledger and is unresolved, which is a master-data mapping issue rather than a wrong-partner posting.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have NIG-AE confirm it translated the AUD invoice at the invoice-date rate and ask the group controller to map the legacy 'NS UAE' counterparty code in NIG-AU's SCE ledger to the correct partner.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

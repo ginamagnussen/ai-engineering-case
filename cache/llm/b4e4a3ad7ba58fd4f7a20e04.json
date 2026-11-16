@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2906,
+  "output": 814,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.58,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-US line NIG-US:4471184 is an IC payable accrual of 33,000.00 SAR (8,800.11 USD) to NIG-SA for seconded staff O.Fischer under P-24050, marked 'invoice not received'. None of the three unmatched NIG-SA receivables searched has a matching amount or project, and the nearest (NIG-SA:ICV-SA-018847, 25,200 SAR) is for a different secondee and project (P-24088), so no seller invoice exists to match.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm whether an invoice for P-24050 exists or will be issued for the 33,000 SAR secondment cost, and keep the NIG-US accrual in October pending that invoice.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

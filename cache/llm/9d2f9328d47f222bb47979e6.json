@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2615,
+  "output": 1331,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.63,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "NIG-AU line NIG-AU:77583 (EUR 9,900.00, ref INV RE-2026-000711, P-24102 seconded staff) has an exact-amount, same-project, same-period counterpart in NIG-DE:5100873471 (EUR 9,900.00, ref RE-2026-000712, P-24102, counterparty AU01 resolved to NIG-AU). The only apparent break is the invoice reference (000711 vs 000712), and the USD-equivalent gap (10,338.27 vs 10,417.97) reflects translation, not an invoice-currency difference, so the evidence does not support a clear category.",
+  "responsible_entity": "both",
+  "recommended_action": "Have NIG-AU and NIG-DE confirm the correct invoice number for P-24102 (RE-2026-000711 or RE-2026-000712) and correct the reference on the open line, then re-run matching on the exact EUR 9,900.00 amount.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Probable match on amount, project and description, but the invoice reference differs by one digit and the seller line has not been confirmed as the same invoice; a human must confirm the document before any correction or matching."
+ }
+}

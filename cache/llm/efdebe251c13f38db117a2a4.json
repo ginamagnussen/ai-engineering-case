@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2465,
+  "output": 864,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.38,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-SA invoice SA-ICINV-00562 for SAR 159,600 (line NIG-SA:ICV-SA-018861) matches NIG-AU line NIG-AU:77468 on amount, currency, and invoice reference, with zero difference at the invoice-date rate and posting within 3 days in period. The only break is that the buyer booked the payable against 'Head Office Denver', which does not resolve to a group entity, while the expected counterparty is NIG-SA.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to reclassify line NIG-AU:77468 in the Legacy SCE Ledger from 'Head Office Denver' to NIG-SA so it matches the seller receivable, with no change to amount.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify the IC payable of SAR 159,600 (USD 42,560.53) from the unresolved counterparty 'Head Office Denver' to NIG-SA; no net amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

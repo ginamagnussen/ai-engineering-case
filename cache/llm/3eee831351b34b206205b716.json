@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2600,
+  "output": 486,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.64,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-DE booked invoice AE-ICINV-00794 (secondment M. Smith, P-24017) as EUR 3,199.99 (line NIG-DE:5100873428) against NIG-AE's AED 13,200.00 receivable (NIG-AE:ICV-AE-031361). The buyer's implied rate of 0.242423 EUR/AED matches the 2026 budget rate exactly (0.0% deviation) but is 5.515% off the invoice-date daily rate. This leaves a USD 198.24 difference at the invoice-date rate. Same reference, same posting date and correct counterparty confirm it is the same invoice, translated at the wrong rate basis.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should revalue the IC payable for AE-ICINV-00794 from the 2026 budget rate to the daily AED/EUR rate at the invoice date (2026-10-21) and post the difference as an FX adjustment.",
+  "adjustment_amount": 198.24,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-DE IC payable to NIG-AE by the EUR equivalent of USD 198.24 (re-translate AED 13,200 at the invoice-date daily rate instead of the budget rate), with the offset to FX/expense.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

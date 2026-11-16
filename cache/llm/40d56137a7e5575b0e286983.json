@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 454,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.85,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-UK receivable NIG-UK:1900045420 is GBP 120,260.00 and NIG-AE payable NIG-AE:ICV-AE-031432 is GBP 120,620.00, both with reference 9000010584 and the same currency. The buyer is 360.00 GBP higher (ratio 1.00299, about USD 618.66 on the lines; evidence shows -453.41 at the invoice-date rate), and the digit pattern shows adjacent digits transposed (260 vs 620). Counterparties match, both lines are in period, and the ratio is not consistent with WHT, so this is a keying error by the buyer.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should correct payable ICV-AE-031432 from GBP 120,620.00 to GBP 120,260.00 after confirming against the NIG-UK invoice.",
+  "adjustment_amount": 360.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reduce NIG-AE IC payable ICV-AE-031432 by GBP 360.00 (from 120,620.00 to 120,260.00) to agree with NIG-UK receivable 1900045420; offset to the original expense or cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

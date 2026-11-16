@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2558,
+  "output": 826,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.63,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-UK line 1900045350 is GBP 3,800.00 (USD 4,719.45 at invoice-date rate), and buyer NIG-US line 4471108 is USD 4,657.09 for the same invoice reference 9000010531. The buyer implied rate of 1.22555 matches the 2026 budget rate exactly (0.0% deviation), while the invoice-date rate differs by -1.321%, which explains the USD 62.36 gap. Counterparty, period and reference all agree.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to true up its IC payable to the invoice-date rate by booking USD 62.36 in October 2026, or confirm group policy that IC balances may be carried at budget rate.",
+  "adjustment_amount": 62.36,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-US IC payable to NIG-UK by USD 62.36 so the balance equals GBP 3,800.00 at the invoice-date rate (USD 4,719.45), with the offset to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

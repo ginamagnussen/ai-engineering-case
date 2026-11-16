@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2621,
+  "output": 1104,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.06,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.7,
+  "explanation": "NIG-UK invoiced NIG-AE GBP 25,200 (USD 32,015.34) for the secondment of Felix Patel on P-23110 (line NIG-UK:1900045276), but NIG-AE has no matching IC payable. The nearest NIG-AE candidates do not match: NIG-AE:ICV-AE-031332 (SAR 97,524 to NIG-SA, ratio 0.8123) is a different counterparty and description, and NIG-AE:ICV-AE-031254 (USD 14,800 to NIG-US, P-24050) is a different project, with no shared reference or duplicate evidence.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should confirm whether the NIG-UK secondment invoice for P-23110 was received and book the IC payable in October, or document why it is not owed; in parallel, check whether the SA line on P-23110 is a miscoded secondment.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The same project code P-23110 appears on an NIG-AE line booked to NIG-SA, so the buyer-side booking could be a miscoded counterparty; the evidence cannot confirm this without reviewing the NIG-SA invoice and the NIG-AE posting."
+ }
+}

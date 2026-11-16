@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2463,
+  "output": 346,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 2.98,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019035 (SAR 138,600, reference SA-ICINV-00644, Daniel Garcia secondment P-25002) matches NIG-AU line 77587 on amount, currency, and invoice reference, with zero USD difference at the invoice-date rate. The buyer booked the payable against the free-text counterparty 'KSA branch', which does not resolve to a master-data partner, while the expected counterparty is NIG-SA.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to re-assign line 77587 to counterparty NIG-SA in the Legacy SCE Ledger (or map 'KSA branch' to NIG-SA in its counterparty table) so the pair matches in the next run.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

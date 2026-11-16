@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2595,
+  "output": 475,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.79,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-SA booked an IC payable accrual NIG-SA:ICV-SA-019063 of USD 7,500.00 against NIG-US on 2026-10-31 (ref ACCR-OCT26, 'invoice not received') for seconded staff F. Al-Qahtani on P-25019. No matching NIG-US receivable exists. The two nearest unmatched NIG-US lines (NIG-US:4471064 USD 2,640 and NIG-US:4471093 USD 18,480) are billed to NIG-AE for different staff and are at ratios of 0.352 and 2.464, so neither corresponds to this accrual.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm whether F. Al-Qahtani's October secondment to NIG-SA is billable and issue the invoice (or advise NIG-SA to reverse the accrual), and NIG-SA should reconcile the accrual to the invoice once received.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Accrual amount and billability cannot be verified from seller data. Also, P-25019 appears on a NIG-US invoice to NIG-AE, so the group controller should confirm the secondment is not being charged to the wrong entity."
+ }
+}

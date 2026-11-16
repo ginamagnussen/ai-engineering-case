@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 482,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.09,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.82,
+  "explanation": "NIG-UK receivable NIG-UK:1900045235 is GBP 35,340.00 and NIG-SA payable NIG-SA:ICV-SA-018846 is GBP 35,240.00, both in GBP with the same invoice reference 9000010601 and project P-24102. The difference is GBP 100 (USD 126.37 at the invoice-date rate), with a single digit differing (3 vs 2 in the hundreds place). There is no currency, withholding, timing or counterparty explanation, and the ratio of 0.99717 is not consistent with any WHT rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm the invoice amount against the original NIG-UK invoice 9000010601 and have NIG-SA correct the payable if GBP 35,340.00 is right.",
+  "adjustment_amount": 100.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Increase the NIG-SA IC payable to NIG-UK by GBP 100.00 (Dr expense/project cost, Cr IC payable NIG-UK) to match the invoiced GBP 35,340.00, after verifying the invoice.",
+  "model_requests_review": true,
+  "review_reason": "A GBP 100 shortfall could also be an intentional partial dispute or a seller-side keying error; the invoice amount must be verified against the source document before posting."
+ }
+}

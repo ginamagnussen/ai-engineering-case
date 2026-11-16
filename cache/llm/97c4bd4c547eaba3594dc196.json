@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 602,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.55,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.8,
+  "explanation": "Both lines carry invoice reference AU/IC/2026/0745 in AUD and were posted one day apart, but NIG-DE:5100873317 shows AUD 16,700 against AUD 16,800 on NIG-AU:77419. This is a single-digit difference of AUD 100 (USD 66.22). The seller amount is supported by its description (80h @ 210 = 16,800). The 100 AUD gap does not equal a whole number of hours, there is no withholding pattern, and nothing indicates the charge is contested, so a keying error by the buyer is the most likely cause.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should check the payable against invoice AU/IC/2026/0745 and post a correction increasing the IC payable to NIG-AU by AUD 100.",
+  "adjustment_amount": 100.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "NIG-DE: increase the IC payable to NIG-AU on line 5100873317 by AUD 100, booked against the secondment cost (Personalgestellung K. Hassan, P-25019), so the payable equals the invoiced AUD 16,800.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 4288,
+  "output": 1187,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 15.14,
+ "output": {
+  "items": [
+   {
+    "raw": "Germany",
+    "entity_code": "NIG-DE",
+    "confidence": 0.93,
+    "reasoning": "The country name matches NIG-DE, and the payable lines are in EUR with RE-2026 invoice references, which fits a German issuer."
+   },
+   {
+    "raw": "Head Office Denver",
+    "entity_code": "NIG-US",
+    "confidence": 0.93,
+    "reasoning": "Denver is a US head office, and the payable line is in USD with an INV-US invoice prefix, matching NIG-US."
+   },
+   {
+    "raw": "KSA branch",
+    "entity_code": "NIG-SA",
+    "confidence": 0.72,
+    "reasoning": "'KSA' matches the NIG KSA alias and one line carries a SAR SA-ICINV reference, but another line is a GBP 9000-series (UK-style) reference, so the entries look partly misposted."
+   },
+   {
+    "raw": "London office",
+    "entity_code": "NIG-UK",
+    "confidence": 0.85,
+    "reasoning": "London points to the UK entity NIG-UK, though the only sample line is an AUD receivable that adds no further evidence."
+   },
+   {
+    "raw": "Middle East LLC",
+    "entity_code": "NIG-AE",
+    "confidence": 0.96,
+    "reasoning": "The name matches the legal name 'NorthStar Infrastructure Middle East LLC', and the line is in AED with an AE-ICINV reference."
+   },
+   {
+    "raw": "NS Infrastruktur",
+    "entity_code": "NIG-DE",
+    "confidence": 0.95,
+    "reasoning": "'Infrastruktur' matches the German legal name, and all lines are EUR payables with RE-2026 references."
+   },
+   {
+    "raw": "NS Riyadh",
+    "entity_code": "NIG-SA",
+    "confidence": 0.9,
+    "reasoning": "Riyadh is in Saudi Arabia, and the payable line is in SAR, consistent with NIG-SA."
+   },
+   {
+    "raw": "NS UAE",
+    "entity_code": "NIG-AE",
+    "confidence": 0.75,
+    "reasoning": "The UAE name and an AED aeicinv reference point to NIG-AE, but one USD INV-US line suggests some entries were misposted against this name."
+   },
+   {
+    "raw": "NS UK",
+    "entity_code": "NIG-UK",
+    "confidence": 0.95,
+    "reasoning": "The name matches the UK entity, and the payables are GBP 9000-series references described as UK IT and licence recharges."
+   },
+   {
+    "raw": "US HQ",
+    "entity_code": "NIG-US",
+    "confidence": 0.95,
+    "reasoning": "'US HQ' indicates the US parent, and the payables are in USD with US invoice numbers, including the INV-US prefix."
+   }
+  ]
+ }
+}

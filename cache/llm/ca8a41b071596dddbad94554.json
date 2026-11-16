@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 1120,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.23,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA line ICV-SA-018887 is booked at 2128.00 EUR, which is exactly 95% of the NIG-DE seller invoice RE-2026-000660 line 5100873353 at 2240.00 EUR, and the buyer description states 'net of WHT 5%'. The 112.00 EUR gap is therefore Saudi withholding tax, not a pricing or FX difference, and the invoice reference matches on both sides.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to 2240.00 EUR and record the 112.00 EUR withholding as a WHT payable to the Saudi tax authority, supported by the WHT certificate.",
+  "adjustment_amount": 112.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Debit IC payable (NIG-DE) 112.00 EUR and credit WHT payable (Saudi tax authority) 112.00 EUR so the IC payable equals the gross invoice of 2240.00 EUR (about 120.28 USD at the invoice-date rate).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

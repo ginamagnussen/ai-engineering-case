@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 338,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 2.79,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-SA:ICV-SA-019027 and buyer line NIG-AU:77572 agree on reference SA-ICINV-00692, amount SAR 117,600 (USD 31,360.39) and the secondment description, so the difference is zero. The buyer booked the counterparty as 'KSA branch', which does not resolve in master data, instead of NIG-SA, so the pair failed to match on counterparty.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU recode the counterparty on line 77572 from 'KSA branch' to NIG-SA in the legacy SCE ledger and map the legacy alias in master data.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify the counterparty on NIG-AU:77572 to NIG-SA; no amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

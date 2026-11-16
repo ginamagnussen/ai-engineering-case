@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2925,
+  "output": 1097,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.51,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.78,
+  "explanation": "NIG-DE line NIG-DE:5100873496 records a 86,980.00 EUR IC receivable from SA01 (RE-2026-000365, posted 2026-10-29, in period) with no matching NIG-SA payable. None of the three unmatched NIG-SA buyer lines fits: ICV-SA-019058 (AED 136,944, ratio 0.3947) is a different counterparty and reference, ICV-SA-019050 (GBP 6,600) and ICV-SA-019060 (USD 2,640) are accruals, and no lines elsewhere share the reference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm with NIG-SA whether invoice RE-2026-000365 was received and, if so, book the IC payable to NIG-DE in Dynamics 365 F&O in October 2026.",
+  "adjustment_amount": 86980.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Book IC payable at NIG-SA to NIG-DE for invoice RE-2026-000365 (86,980.00 EUR) if NIG-SA confirms receipt and the charge is accepted; no entry if the charge is rejected.",
+  "model_requests_review": true,
+  "review_reason": "The buyer side has no booking and the invoice's acceptance cannot be verified from the evidence; a human should confirm receipt and whether the charge is accepted or disputed before posting."
+ }
+}

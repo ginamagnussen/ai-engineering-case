@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2449,
+  "output": 406,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.27,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "Seller NIG-UK line NIG-UK:1900045257 invoiced GBP 42,920.00 for P-24017 design review, while buyer NIG-AE line NIG-AE:ICV-AE-031254 booked GBP 39,086.56 (ratio 0.91068), a USD 4,818.21 shortfall at the invoice-date rate. Both are in GBP, in period, with the same reference 9000010641 and correct counterparties, so FX, timing and miscoding are ruled out. The buyer description states 'partial accept, hours disputed pending PM approval', which points to an intentional short-booking.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Have NIG-AE and NIG-UK project managers resolve the disputed hours on P-24017 and either approve the full invoice or issue a credit note for the contested portion.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Dispute over hours is a business judgement pending PM approval; the difference of GBP 3,833.44 should not be booked until the outcome is agreed."
+ }
+}

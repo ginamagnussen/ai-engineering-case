@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2435,
+  "output": 1212,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.75,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK invoiced 11,500.00 GBP (line NIG-UK:1900045348) and NIG-SA booked 9,775.00 GBP (line NIG-SA:ICV-SA-018976), which is exactly 85% of the invoice, consistent with the 15% Saudi WHT on licences. The buyer's description says 'net of WHT 15%', and the 1,725.00 GBP gap equals 2,142.38 USD at the invoice-date rate, matching the computed difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to NIG-UK to 11,500.00 GBP, record the 1,725.00 GBP withheld as a WHT payable to the Saudi tax authority, and obtain the WHT certificate for NIG-UK.",
+  "adjustment_amount": 1725.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable to NIG-UK by 1,725.00 GBP (2,142.38 USD at invoice-date rate) with a matching WHT payable of 1,725.00 GBP to the Saudi tax authority.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

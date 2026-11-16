@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 879,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.52,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-AE line ICV-AE-031228 (135,756 SAR, USD 36,202.05, ref SA-ICINV-00763) carries the same invoice reference as ICV-AE-031214, already matched in M0113 and posted 2026-10-05, so the buyer appears to have booked this invoice twice. The nearest unmatched NIG-SA seller line (ICV-SA-018837, 105,000 SAR, secondment P-24017) has a different description and amount (ratio 0.7734), so it does not explain this line.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm that ICV-AE-031228 duplicates ICV-AE-031214 for SA-ICINV-00763 and, if so, reverse ICV-AE-031228 in NIG-AE; no seller-side action is needed.",
+  "adjustment_amount": 135756.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse the duplicate NIG-AE IC payable booking to NIG-SA for invoice SA-ICINV-00763 (USD equivalent 36,202.05).",
+  "model_requests_review": true,
+  "review_reason": "The evidence does not show the amount of the already-matched twin ICV-AE-031214, so the duplicate match cannot be verified from the case data alone."
+ }
+}

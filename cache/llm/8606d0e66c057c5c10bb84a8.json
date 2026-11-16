@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2582,
+  "output": 1147,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.13,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "Both sides reference RE-2026-000751 (P-24088). NIG-DE line NIG-DE:5100873407 is EUR 17,220.00 and NIG-UK line NIG-UK:1900045370 is GBP 15,781.90, giving an implied rate of 0.916487, which matches the 2026 budget rate exactly (0.0% deviation). The invoice-date rate deviates 7.872% from that budget rate, so the gap is explained by NIG-UK booking at budget rate rather than the transaction-date rate.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Have NIG-UK revalue the IC payable on NIG-UK:1900045370 to the invoice-date rate and post the FX difference, and confirm the group policy requires transaction-date rates for IC balances.",
+  "adjustment_amount": -1442.12,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-UK IC payable for RE-2026-000751 from the 2026 budget rate to the invoice-date rate, reducing the USD-equivalent payable by 1,442.12 USD (per the provided invoice-date rate difference).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

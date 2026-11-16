@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2443,
+  "output": 396,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.27,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-DE receivable NIG-DE:5100873388 is EUR 8,800.00 (80 hours of seconded staff, P-25019), while NIG-UK payable NIG-UK:1900045354 for the same reference RE-2026-000669 is EUR 7,577.61, a ratio of 0.86109 and USD 1,309.93 difference at the invoice-date rate. Both lines are in the same currency and period, the counterparty is correct, and the buyer description states 'partial accept, hours disputed pending PM approval', so this is an intentional short-booking, not FX, timing or a keying error.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-UK and NIG-DE project managers should agree the approved hours for P-25019 and then either NIG-DE issues a credit note or NIG-UK books the remaining amount.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Dispute over hours is pending PM approval; the outcome is a business judgement and no correcting entry should be booked until it is resolved."
+ }
+}

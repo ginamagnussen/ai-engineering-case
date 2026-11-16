@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 539,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.74,
+ "output": {
+  "category": "wht",
+  "confidence": 0.85,
+  "explanation": "NIG-AE booked IC receivable NIG-AE:ICV-AE-031310 at AED 59,256.00 (USD 16,134.82), while NIG-SA booked payable NIG-SA:ICV-SA-018969 at AED 56,293.20 (USD 15,328.08) with the same reference AE-ICINV-00945. The buyer's description says 'net of WHT 5%', and the 0.95 ratio matches a 5% withholding rate, leaving a USD 806.74 difference at the invoice-date rate. Both lines are in period and counterparties are correct, so timing, FX and miscoding are ruled out.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm with NIG-SA that 5% WHT was actually withheld and remitted, then gross up the payable and book the WHT amount to a WHT payable account, obtaining the WHT certificate for NIG-AE.",
+  "adjustment_amount": 2962.8,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, increase IC payable to NIG-AE by AED 2,962.80 (USD 806.74) with a credit to the IC payable and a debit to WHT expense or receivable per local treatment, so the payable equals the AED 59,256.00 invoice.",
+  "model_requests_review": true,
+  "review_reason": "Service type and the 5% rate should be verified for design review services, and the WHT treatment (who bears the cost, whether the tax was remitted, and any gross-up clause) is a judgement call that needs confirmation."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 801,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.68,
+ "output": {
+  "category": "wht",
+  "confidence": 0.94,
+  "explanation": "NIG-SA booked NIG-SA:ICV-SA-019031 at EUR 20,738.50 against NIG-DE's receivable NIG-DE:5100873478 of EUR 21,830.00 for the same invoice RE-2026-000754, giving a ratio of 0.95. This matches Saudi 5% withholding tax on services, and the buyer description explicitly says 'net of WHT 5%' for the geotechnical subcontract. The EUR 1,091.50 gap (USD 1,148.61 at the invoice-date rate) is the tax withheld, not a booking error; counterparty and period are consistent.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should obtain the WHT certificate from NIG-SA and reclassify EUR 1,091.50 of the IC receivable to WHT receivable or tax expense, while NIG-SA confirms the WHT was remitted to ZATCA.",
+  "adjustment_amount": 1091.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "In NIG-DE: debit WHT receivable/tax credit (or income tax expense) EUR 1,091.50 and credit the IC receivable from NIG-SA EUR 1,091.50 for invoice RE-2026-000754, so the remaining receivable of EUR 20,738.50 matches NIG-SA's payable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

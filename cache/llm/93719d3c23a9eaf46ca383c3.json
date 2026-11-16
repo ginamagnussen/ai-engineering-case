@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2641,
+  "output": 419,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.69,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer line NIG-DE:5100873375 (GBP 13,070.00, posted 2026-10-14, ref 9000010968) has no seller counterpart, but its reference matches NIG-DE:5100873346 (posted 2026-10-09), which is already matched to NIG-UK in M0175. The nearest unmatched NIG-UK receivables (GBP 1,520 and GBP 25,200) are booked against other partners and do not match the amount (ratios 0.12 and 1.93). This points to NIG-DE booking the same UK invoice twice.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should confirm that line 5100873375 duplicates invoice 9000010968, already booked as 5100873346 and matched in M0175, and then reverse it.",
+  "adjustment_amount": 13070.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-DE to reverse the duplicate IC payable to NIG-UK for GBP 13,070.00 (line 5100873375, ref 9000010968): debit IC payable NIG-UK, credit the original cost account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

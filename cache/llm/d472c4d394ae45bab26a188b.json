@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2440,
+  "output": 743,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.07,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.92,
+  "explanation": "NIG-SA booked the IC payable for invoice INV 9000010615 (reference found on the buyer line) against NIG-US, while the seller NIG-UK line ICV-key NIG-UK:1900045397 is for NIG-SA, so the expected counterparty is NIG-UK. Both lines carry the same GBP 117,580.00 with a buyer-to-seller ratio of 1.0 and zero difference at the invoice-date rate, and the buyer posted in period 3 days after the seller. The USD amount gap (147,639.33 vs 148,090.83) is only a translation effect of different posting-date rates on the same GBP amount.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should reclassify the GBP 117,580.00 IC payable from counterparty NIG-US to NIG-UK so it matches the seller receivable in the October 2026 close.",
+  "adjustment_amount": 117580.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reclass IC payable GBP 117,580.00 (invoice 9000010615, P-24050 geotech analysis) in NIG-SA from NIG-US to NIG-UK; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

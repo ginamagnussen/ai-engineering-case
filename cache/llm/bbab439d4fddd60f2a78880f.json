@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2467,
+  "output": 1145,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.43,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.5,
+  "explanation": "Both lines carry reference SA-ICINV-00741 and are in SAR, but NIG-AE payable line NIG-AE:ICV-AE-031392 is SAR 688,050 against NIG-SA receivable NIG-SA:ICV-SA-018955 at SAR 687,960, a SAR 90 (about USD 24) overstatement on the buyer side. Because both sides are in SAR, the gap is not explained by a currency translation basis, and the evidence shows no digit pattern or business reason, so a keying error is the most likely cause but the evidence does not rule out a partial charge adjustment.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm the SAR 90 difference against invoice SA-ICINV-00741 and correct the IC payable to SAR 687,960 if it is a keying error.",
+  "adjustment_amount": -90.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "NIG-AE reduces IC payable to NIG-SA by SAR 90 to match the invoiced SAR 687,960.",
+  "model_requests_review": true,
+  "review_reason": "Same-currency SAR difference with no digit pattern or FX explanation; cannot verify whether it is a typo or an undocumented charge adjustment."
+ }
+}

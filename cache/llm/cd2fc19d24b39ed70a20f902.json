@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2433,
+  "output": 909,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.04,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "The seller line NIG-US:4471151 (16,720.00 USD, INV-US-100464) and buyer line NIG-SA:ICV-SA-019038 (15,884.00 USD) share the same reference, and the 836.00 USD gap is exactly 5% of the invoice, matching the buyer_to_seller_ratio of 0.95. The buyer description states 'net of WHT 5%', so the difference is Saudi withholding tax that was not grossed up in the IC payable.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable by 836.00 USD to 16,720.00 USD, recognise the 836.00 USD as withholding tax payable to the Saudi tax authority, and obtain the WHT certificate for the file.",
+  "adjustment_amount": 836.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Debit IC payable to NIG-US 836.00 USD and credit WHT payable (Saudi tax authority) 836.00 USD so the IC payable equals the invoice amount of 16,720.00 USD.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

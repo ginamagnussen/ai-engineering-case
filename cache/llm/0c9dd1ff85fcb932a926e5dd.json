@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2985,
+  "output": 447,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.65,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.82,
+  "explanation": "Buyer line NIG-AU:77465 (SAR 33,000, posted 2026-10-13) carries reference SA-ICINV-00585, which was already matched in M0128 via NIG-AU:77453 (posted 2026-10-11). No unmatched seller line fits, and the nearest candidates (e.g. NIG-SA:ICV-SA-018847 at SAR 25,200) have different references, so this looks like the same invoice booked twice by the buyer.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that NIG-AU:77465 duplicates NIG-AU:77453 on SA-ICINV-00585 and reverse the second posting if so.",
+  "adjustment_amount": 33000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse duplicate IC payable NIG-AU:77465 (SAR 33,000) against the IC payable to NIG-SA, debiting the IC payable and crediting the original expense or clearing account.",
+  "model_requests_review": true,
+  "review_reason": "The amount on the matched twin in M0128 is not shown, so I cannot verify it is identical. The description references a different person (t.brown) and the legacy ledger could hold a genuinely separate charge with a reused reference."
+ }
+}

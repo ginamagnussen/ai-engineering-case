@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2587,
+  "output": 943,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.48,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-AU line NIG-AU:77558 accrues a USD 48,000 management fee for October 2026 with the reference ACCR-OCT26 and the note 'invoice not received', and counterparty NorthStar US resolves to NIG-US by master data. The two nearest unmatched NIG-US seller lines, NIG-US:4471026 (USD 9,900) and NIG-US:4471046 (USD 1,760), are secondment invoices with ratios of 0.2062 and 0.0367 to the target and no management-fee reference, so neither corresponds to this accrual.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm whether the October 2026 management fee has been invoiced or will be, and NIG-AU should keep the accrual for the period if the fee is confirmed or reverse it if no charge is due.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

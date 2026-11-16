@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2142,
+  "output": 358,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.71,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer-only line NIG-DE:5100873331 (AUD 31,920.00, USD 21,354.80, posted 2026-10-08) carries reference AU/IC/2026/0756, the same as NIG-DE:5100873329 posted 2026-10-07 and already matched in M0052. No unmatched NIG-AU seller lines exist, so this looks like a second booking of the same invoice (Personalgestellung S.Smith P-25019).",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should confirm that 5100873331 duplicates 5100873329 and reverse it, and also reverse the duplicate payable if it has not been paid.",
+  "adjustment_amount": 31920.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Reverse duplicate IC payable NIG-DE:5100873331 (AUD 31,920.00) against the NIG-AU IC expense/payable account.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2409,
+  "output": 380,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.51,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.95,
+  "explanation": "NIG-US invoiced NIG-DE USD 3,000.00 for the Tom Becker secondment (INV-US-100448, line NIG-US:4471103). NIG-DE booked the same invoice reference and amount (NIG-DE:5100873423, ratio 1.0, zero USD difference), but against counterparty AE01 (NIG-AE) instead of NIG-US. The only break is the counterparty code on the buyer line.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should reclassify the IC payable on line NIG-DE:5100873423 from trading partner AE01 (NIG-AE) to the NIG-US partner code in SAP before close.",
+  "adjustment_amount": 3000.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Debit IC payable to NIG-AE USD 3,000.00 and credit IC payable to NIG-US USD 3,000.00 at NIG-DE, referencing INV-US-100448.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

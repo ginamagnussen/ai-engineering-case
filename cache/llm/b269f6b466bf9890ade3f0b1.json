@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2601,
+  "output": 869,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.15,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-DE line NIG-DE:5100873391 (RE-2026-000360, EUR 90,190, BIM-Koordination for P-24050) has no matching IC payable in NIG-UK, and its reference does not appear elsewhere. The two nearest unmatched NIG-UK lines do not fit: the AED 126,000 accrual (NIG-UK:1900045511, ratio 0.3568) is for seconded staff and the USD 9,900 line (NIG-UK:1900045253, ratio 0.1029) is for a different person and amount.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm whether invoice RE-2026-000360 was received and, if so, book the missing IC payable of EUR 90,190 against NIG-DE in October 2026.",
+  "adjustment_amount": 90190.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Record IC payable to NIG-DE for invoice RE-2026-000360 (BIM-Koordination, P-24050) in NIG-UK for the October 2026 period.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

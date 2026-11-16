@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2465,
+  "output": 340,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.31,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "Seller line NIG-AE:ICV-AE-031308 (AED 7,600, ref AE-ICINV-00831) matches buyer line NIG-AU:77513 on amount, currency, USD value and invoice reference, with zero difference. The buyer booked the counterparty as 'NS UAE', which does not resolve in master data, instead of NIG-AE, so the pair failed to match on counterparty only.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should recode the counterparty on line 77513 from 'NS UAE' to NIG-AE and add the alias to the legacy ledger mapping so the pair matches.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify counterparty on NIG-AU:77513 from 'NS UAE' to NIG-AE; no amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

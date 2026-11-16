@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2491,
+  "output": 429,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.43,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "Seller line NIG-SA:ICV-SA-018808 invoiced SAR 107,676.00 (USD 28,713.96) under SA-ICINV-00740, while buyer line NIG-AE:ICV-AE-031234 booked SAR 93,360.16 (USD 24,896.35) with the same reference, a ratio of 0.86705 and a USD 3,817.61 gap. Both lines are in SAR, in period and posted to the correct counterparty, so FX, timing and miscoding are excluded. The buyer description states 'partial accept, hours disputed pending PM approval', and no withholding rate fits the ratio.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-AE and NIG-SA project managers should resolve the disputed hours on P-24050 and agree the final chargeable amount before any correcting entry is booked.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Dispute over hours pending PM approval; the outcome is a judgement call and cannot be settled from ledger evidence. The difference is SAR 14,315.84 in transaction currency, as implied by the two line amounts."
+ }
+}

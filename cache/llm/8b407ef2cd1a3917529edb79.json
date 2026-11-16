@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2620,
+  "output": 761,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.63,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.8,
+  "explanation": "NIG-SA carries a GBP 62,280.00 IC payable (line NIG-SA:ICV-SA-019078, ref ACCR-OCT26, USD 78,116.56) for P-24102 BIM coordination, booked as an accrual with the invoice not received. The seller-side search found no NIG-UK receivable for this amount; the two nearest unmatched NIG-UK lines (GBP 74,290 and GBP 19,480) do not correspond to it, so there is no invoice to match.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether the P-24102 BIM coordination work was performed in October 2026 and issue the invoice to NIG-SA; if the work was not performed or is not billable, NIG-SA should reverse the accrual.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Whether the accrued cost is valid for October depends on confirming service delivery and expected billing, which cannot be verified from the ledger evidence provided."
+ }
+}

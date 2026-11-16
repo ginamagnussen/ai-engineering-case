@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 556,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.25,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "NIG-UK:1900045307 records SAR 176,040 against NIG-SA's invoice SA-ICINV-00668 (NIG-SA:ICV-SA-018830) for SAR 176,400, which matches the stated basis of 168h @ 1,050. The difference is SAR 360 (USD 96.0) and fits an adjacent-digit transposition (…400 vs …040); the ratio of 0.99796 does not match any WHT rate, and the same currency, counterparty and reference rule out FX, miscoding and timing.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should correct the payable on document 1900045307 from SAR 176,040 to SAR 176,400 to match invoice SA-ICINV-00668 in the October 2026 period.",
+  "adjustment_amount": 360.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "NIG-UK: increase the IC payable to NIG-SA by SAR 360 (debit secondment cost, credit IC payable NIG-SA) so the payable equals invoice SA-ICINV-00668 at SAR 176,400.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

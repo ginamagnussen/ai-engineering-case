@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 413,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.28,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-SA receivable NIG-SA:ICV-SA-018830 is SAR 176,400 (USD 47,040.59) while NIG-UK payable NIG-UK:1900045307 is SAR 176,040 (USD 46,944.59), a USD 96.00 gap. Both are in SAR, the invoice reference matches, the counterparty is correct, and the digit pattern shows adjacent digits transposed (176,400 vs 176,040), which points to a keying error by the buyer. The amount also agrees with the description (168h x 1,050 = 176,400), so the seller figure is correct.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should correct payable 1900045307 from SAR 176,040 to SAR 176,400 to agree with invoice SA-ICINV-00668.",
+  "adjustment_amount": 360.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Increase NIG-UK IC payable to NIG-SA by SAR 360 (to SAR 176,400) and debit the related secondment cost or expense account for the same amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

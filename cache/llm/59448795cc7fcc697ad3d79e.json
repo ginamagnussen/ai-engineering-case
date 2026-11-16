@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2985,
+  "output": 396,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.64,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer line NIG-AU:77465 (SAR 33,000, posted 2026-10-13, ref SA-ICINV-00585) carries the same invoice reference as NIG-AU:77453 (posted 2026-10-11), which is already matched to the NIG-SA receivable in M0128. No unmatched NIG-SA seller line is close: the nearest, NIG-SA:ICV-SA-018847, has a ratio of 0.76 to this amount. This indicates NIG-AU booked invoice SA-ICINV-00585 twice.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm that 77465 duplicates 77453 for SA-ICINV-00585 and reverse 77465 in the October period.",
+  "adjustment_amount": 33000.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse duplicate IC payable NIG-AU:77465 (SAR 33,000 to NIG-SA): Dr IC payable NIG-SA, Cr secondment cost.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

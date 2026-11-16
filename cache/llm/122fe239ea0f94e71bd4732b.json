@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 427,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.56,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer line NIG-AE:ICV-AE-031228 (SAR 135,756, posted 2026-10-08) carries reference SA-ICINV-00763, which is already matched in M0113 via NIG-AE:ICV-AE-031214 (posted 2026-10-05). No unmatched seller line exists for this reference, so the buyer has booked the same invoice twice. The nearest seller line (NIG-SA:ICV-SA-018837, SAR 105,000) is a secondment charge to NIG-AU with a different description and ratio of 0.77, so it is not a match.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm NIG-AE:ICV-AE-031228 is a duplicate of the already-matched ICV-AE-031214 and reverse it.",
+  "adjustment_amount": 135756.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse duplicate IC payable line NIG-AE:ICV-AE-031228 (ref SA-ICINV-00763) by debiting IC payable to NIG-SA and crediting the original expense/WIP account for SAR 135,756.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

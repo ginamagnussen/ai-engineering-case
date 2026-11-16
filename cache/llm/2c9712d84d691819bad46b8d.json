@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 845,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.21,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.93,
+  "explanation": "Seller NIG-AE line ICV-AE-031327 (AE-ICINV-00796, 159,600 AED) and buyer NIG-AU line 77504 (159,060 AED) share the invoice reference and resolved counterparty, so the pair is correctly matched. The 540 AED gap is exactly a transposition of the adjacent digits 6 and 0 in the amount, and the ratio of 0.99662 has no withholding-rate pattern, so this is a keying error rather than WHT or a dispute.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Ask NIG-AU to correct the transposed amount on Legacy SCE Ledger line 77504 from 159,060 AED to 159,600 AED so it agrees with the seller invoice.",
+  "adjustment_amount": 540.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase NIG-AU IC payable (line 77504) by 540 AED to correct the transposed digits, bringing it from 159,060 AED to 159,600 AED.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2620,
+  "output": 344,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.74,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.9,
+  "explanation": "NIG-SA line ICV-SA-019078 is a GBP 62,280.00 (USD 78,116.56) IC payable dated 2026-10-31, described as an accrual for P-24102 BIM coordination with 'invoice not received'. No NIG-UK seller line exists for it, and the two nearest unmatched NIG-UK lines (1900045272 at GBP 74,290.00 and 1900045352 at GBP 19,480.00) relate to other projects (P-24088, P-24017) and do not match in amount.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm whether the P-24102 BIM coordination work was performed and to issue the invoice (or confirm the amount), and keep the NIG-SA accrual until it is received.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

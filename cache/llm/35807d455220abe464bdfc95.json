@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2592,
+  "output": 1075,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.35,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.85,
+  "explanation": "The seller NIG-UK booked GBP 8,130.00 (USD 10,218.52) and the buyer NIG-AE booked AED 36,592.32 (USD 9,963.72) against the same reference 9000010627, and the counterparty and invoice reference match. The buyer's implied rate of 4.5009 equals the 2026 budget rate exactly (0.0% deviation), while it sits about 2.49% from the invoice-date rate, which accounts for the USD 254.8 difference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to restate the AED payable at the invoice-date rate so it agrees with the GBP 8,130.00 seller receivable, and confirm the group rule that IC balances must use transaction-date rates rather than budget rates.",
+  "adjustment_amount": 254.8,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AE's IC payable from the 2026 budget rate to the invoice-date rate, correcting the USD-equivalent difference of 254.8 against NIG-UK's receivable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

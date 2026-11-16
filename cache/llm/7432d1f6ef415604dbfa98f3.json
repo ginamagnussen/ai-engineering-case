@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2421,
+  "output": 437,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.02,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-DE invoice RE-2026-000725 (line NIG-DE:5100873327, EUR 6,600.00 staff secondment O. Clarke, P-24017) matches NIG-UK payable NIG-UK:1900045296 on reference, project and amount (ratio 1.0, zero USD difference at the invoice-date rate). However, NIG-UK booked the payable against counterparty US01/NIG-US instead of NIG-DE. The USD gap between 7,141.79 and 7,087.74 is only a translation-date effect, since the EUR amounts agree.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should reclassify payable line 1900045296 from IC partner NIG-US (US01) to NIG-DE so it eliminates against NIG-DE receivable 5100873327.",
+  "adjustment_amount": 6600.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "In NIG-UK: debit IC payable – NIG-US EUR 6,600.00 and credit IC payable – NIG-DE EUR 6,600.00 (trading partner reclass, ref RE-2026-000725).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2673,
+  "output": 442,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.02,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "NIG-AU line NIG-AU:77458 (EUR 35,280.00, posted 2026-10-12, ref RE-2026-000310, seconded staff M. Sharma P-25019) carries the same invoice reference as NIG-AU:77432 (posted 2026-10-07), which is already matched to NIG-DE in M0067. No unmatched NIG-DE receivable is anywhere near this amount: the nearest lines are EUR 86,980 and EUR 90,190, at ratios of about 2.5x. This points to the same invoice being booked twice on the payable side.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm that RE-2026-000310 was received only once (the amount of the matched original in M0067 is not shown in the case), then reverse duplicate line NIG-AU:77458 before the October close.",
+  "adjustment_amount": 35280.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Reverse duplicate IC payable NIG-AU:77458 to NIG-DE for EUR 35,280.00 (invoice RE-2026-000310): debit IC payable NIG-DE, credit the cost account originally charged.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

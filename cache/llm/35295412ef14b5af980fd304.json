@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 440,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.85,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-DE line 5100873371 invoiced EUR 8,400.00 (RE-2026-000671, secondment of Chen Hassan, 60 hrs). Buyer NIG-SA line ICV-SA-018932 booked EUR 7,980.00 with the description \"net of WHT 5%\", matching the same invoice reference. The buyer-to-seller ratio of 0.95 is consistent with 5% withholding, leaving a EUR 420.00 gap (about USD 450 at the invoice-date rate).",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the EUR 420.00 withheld tax as a WHT payable or receivable and gross up the IC payable to EUR 8,400.00, and confirm that the 5% rate applies to secondment services and that a WHT certificate exists.",
+  "adjustment_amount": 420.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-DE by EUR 420.00 and credit WHT payable to the Saudi tax authority for the same amount, so the IC balance agrees with the seller's EUR 8,400.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

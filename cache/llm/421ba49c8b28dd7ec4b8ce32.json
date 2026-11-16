@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2434,
+  "output": 376,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.74,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "NIG-US receivable NIG-US:4471021 is 9,900.00 USD (60h @ 165) for INV-US-100494, while NIG-AU payable NIG-AU:77424 is 9,090.00 USD against the same invoice reference. The 810.00 USD difference matches adjacent digits transposed (9,900 vs 9,090). Same currency, in period, no withholding ratio and no counterparty mismatch, so a keying error is the best fit.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should correct payable NIG-AU:77424 from 9,090.00 to 9,900.00 USD to agree with invoice INV-US-100494.",
+  "adjustment_amount": 810.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase the IC payable to NIG-US on NIG-AU:77424 by 810.00 USD (debit expense/WIP, credit IC payable) to match the invoiced 9,900.00 USD.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

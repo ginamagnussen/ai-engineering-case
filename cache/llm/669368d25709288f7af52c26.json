@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 970,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.26,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked EUR 43,842.50 against NIG-DE's invoice RE-2026-000748 for EUR 46,150.00 (line NIG-DE:5100873360), and the buyer's line NIG-SA:ICV-SA-018914 is described as net of 5% WHT. The difference of EUR 2,307.50 equals exactly 5% of the invoice, matching the Saudi services WHT rate and the computed ratio of 0.95.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Gross up NIG-SA's IC payable to EUR 46,150.00 and record the EUR 2,307.50 as a WHT liability to the Saudi tax authority (or a recoverable WHT asset if treaty relief applies), with the payment to NIG-DE reflected correctly.",
+  "adjustment_amount": 2307.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Dr IC payable / expense (gross-up) EUR 2,307.50; Cr WHT payable to ZATCA EUR 2,307.50 in NIG-SA ledger.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2878,
+  "output": 983,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.62,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK line NIG-UK:1900045345 invoices NIG-AU GBP 1,520.00 (USD 1,950.65) for the Chen Clarke secondment (P-24050, ref 9000010818), posted 2026-10-16 within period. None of the four unmatched NIG-AU buyer lines share the reference, the P-24050 secondment number, or the amount; the nearest candidates are unrelated secondments and licence charges with ratios of 4.5x to 19x.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should confirm whether the Chen Clarke secondment (ref 9000010818, P-24050) was received and, if so, book the IC payable to NIG-UK in the legacy SCE ledger, or confirm it was not received and inform NIG-UK.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer booking may be missing from the legacy SCE ledger or the cost may not be valid; the evidence cannot confirm either, so a human should confirm with NIG-AU before any adjustment."
+ }
+}

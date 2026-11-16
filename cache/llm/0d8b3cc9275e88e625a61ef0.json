@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2661,
+  "output": 786,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.21,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK invoiced NIG-SA GBP 74,290.00 (line NIG-UK:1900045272, ref 9000010647, posted 2026-10-09) for the P-24088 A8 Autobahn Bridge Rehab site-supervision recharge, but NIG-SA has no payable for this reference or project. The nearest NIG-SA line, accrual NIG-SA:ICV-SA-019078 for GBP 62,280, relates to a different project and service (P-24102 BIM coordination subcontract). Its ratio of 0.8367 does not match a Saudi WHT rate, so it is not this invoice booked net. The invoice was issued early in October, so a cut-off explanation is unlikely.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should obtain invoice 9000010647 from NIG-UK and book the IC payable of GBP 74,290.00 against NIG-UK in October 2026, applying any Saudi WHT through the proper tax account rather than by netting the payable.",
+  "adjustment_amount": 74290.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-SA: Dr project cost P-24088 (site supervision recharge) / Cr IC payable NIG-UK, GBP 74,290.00, ref 9000010647.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

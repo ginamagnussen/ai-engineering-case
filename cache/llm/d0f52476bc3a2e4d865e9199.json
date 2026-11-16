@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2448,
+  "output": 676,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.17,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA:ICV-SA-018839 books GBP 100,880.50 against seller line NIG-UK:1900045230 for GBP 106,190.00 on the same invoice reference 9000010591. The buyer-to-seller ratio is exactly 0.95, and the buyer description states 'net of WHT 5%', which matches the Saudi 5% withholding rate on services. The gap is GBP 5,309.50, or USD 6,737.81 at the invoice-date rate. Counterparty, currency and period all agree.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should obtain the WHT remittance certificate from NIG-SA and reclassify the withheld GBP 5,309.50 from the IC receivable to a WHT recoverable or tax expense account, clearing the IC difference.",
+  "adjustment_amount": 5309.5,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-UK: Dr WHT recoverable or tax expense GBP 5,309.50, Cr IC receivable NIG-SA GBP 5,309.50, so the receivable matches the NIG-SA payable of GBP 100,880.50. NIG-SA should confirm the WHT has been remitted to ZATCA.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2924,
+  "output": 1291,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.71,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-SA seller line NIG-SA:ICV-SA-018937 (SA-ICINV-00610, SAR 97,524.00, P-23110 design review) has an unmatched NIG-AE buyer line NIG-AE:ICV-AE-031332 with the same amount, currency, counterparty (NIG-SA) and project description, but its reference is saicinv00614 rather than SA-ICINV-00610, so the deterministic match failed on reference. The evidence does not confirm whether these are the same invoice with a reference keying error or two separate invoices of identical value, and the AED line NIG-AE:ICV-AE-031368 relates to a different project (P-25019) and does not explain this case.",
+  "responsible_entity": "both",
+  "recommended_action": "Have NIG-AE and NIG-SA confirm whether saicinv00614 and SA-ICINV-00610 are the same invoice, and if so manually match the lines with a reference correction, otherwise raise the buyer line as an unsupported payable.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Identical amount and project suggest a match, but the invoice reference differs and cannot be verified from the evidence, so a human must confirm the invoice identity before any correction."
+ }
+}

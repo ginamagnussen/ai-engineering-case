@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2479,
+  "output": 1106,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.0,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-AU line 77441 invoiced 16,800 AUD for secondment P-25031, and NIG-SA line ICV-SA-018843 booked 15,960 AUD, which is exactly 95% of the invoice and matches the 5% Saudi services WHT described on the line. The invoice reference AU/IC/2026/0752 is found on the buyer line, the counterparty is consistent, and the 559.37 USD gap at invoice-date rate equals the 840 AUD withheld.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to 16,800 AUD, record the 840 AUD as a Saudi WHT receivable or tax liability per the WHT certificate, and confirm the certificate is filed for NIG-AU.",
+  "adjustment_amount": 840.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Gross up NIG-SA IC payable by 840 AUD to the 16,800 AUD invoice and reclassify the 840 AUD to WHT receivable or tax payable (about 559.37 USD at invoice-date rate).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

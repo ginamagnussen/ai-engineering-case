@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2573,
+  "output": 1139,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.1,
+ "output": {
+  "category": "other",
+  "confidence": 0.6,
+  "explanation": "NIG-AE:ICV-AE-031337 (18480 USD, 'Seconded staff I.Nasser P-25031', posted 2026-10-19) matches NIG-US:4471093 (INV-US-100454, 18480 USD, 'Secondment Isabel Nasser 168h @ 110 - P-25031', posted 2026-10-14) on amount, person, project, and period, and the counterparty resolves to NIG-AE. The references differ (100458 vs INV-US-100454), which likely caused the deterministic match to fail, so this looks like a matching gap rather than a real difference. The second seller candidate (NIG-US:4471064, 2640 USD) is a different secondment and does not explain this line.",
+  "responsible_entity": "both",
+  "recommended_action": "Confirm that buyer document 100458 is the booking of INV-US-100454 for P-25031 and link the two lines as a matched pair, with no correcting entry.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer and seller lines match on amount and project but not on reference, so a human must confirm the invoice-to-document link before the pair is closed."
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2641,
+  "output": 420,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.7,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.88,
+  "explanation": "Buyer-only line NIG-DE:5100873375 (GBP 13,070.00, posted 2026-10-14, ref 9000010968) has the same reference as NIG-DE:5100873346 (posted 2026-10-09), which is already matched to the seller in M0175. No seller line exists for this booking, and the two nearest unmatched NIG-UK lines (GBP 1,520 and GBP 25,200) are for other partners and projects, so this looks like a second booking of the same invoice.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Confirm that 5100873375 duplicates 5100873346 (ref 9000010968) and reverse it in NIG-DE.",
+  "adjustment_amount": 13070.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reverse the duplicate IC payable NIG-DE:5100873375 (Dr IC payable NIG-UK, Cr cost/GR-IR) for GBP 13,070.00.",
+  "model_requests_review": true,
+  "review_reason": "The twin's amount is not shown in the evidence, so I could not confirm that it equals GBP 13,070. A human should check the two postings before reversal."
+ }
+}

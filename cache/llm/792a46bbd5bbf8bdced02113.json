@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2366,
+  "output": 975,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 13.05,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "Buyer line NIG-AU:77450 (SAR 105,000, 'seconded staff d.smith p-24017', posted 2026-10-08) matches seller line NIG-SA:ICV-SA-018837 (SAR 105,000, Daniel Smith secondment 168h @ 625, P-24017, posted 2026-10-07) exactly on amount, currency, project and staff member, with a ratio of 1.0. The only difference is the reference: the buyer cites SA-ICINV-00664 while the seller invoice is SA-ICINV-00663. This looks like a one-digit keying error in the invoice reference rather than in the amount, so no category fits cleanly.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm with NIG-SA that no invoice SA-ICINV-00664 exists for NIG-AU; if confirmed, have NIG-AU correct the reference on line 77450 to SA-ICINV-00663 and manually match it to NIG-SA:ICV-SA-018837.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction is needed. NIG-AU should amend the invoice reference on line 77450 from SA-ICINV-00664 to SA-ICINV-00663.",
+  "model_requests_review": true,
+  "review_reason": "The evidence shows only one unmatched NIG-SA line. Someone must verify that SA-ICINV-00664 is not a separate real invoice, for example one already matched elsewhere, which would make this a potential duplicate or missing seller booking instead of a reference keying error."
+ }
+}

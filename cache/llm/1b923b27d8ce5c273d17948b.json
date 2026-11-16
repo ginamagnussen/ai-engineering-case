@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2602,
+  "output": 443,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.31,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-UK:1900045473 books invoice SA-ICINV-00653 (SAR 15,000.00 from NIG-SA:ICV-SA-019032) as GBP 3,263.88. The implied rate of 0.217592 matches the 2026 budget rate exactly (0.0% deviation), versus 2.135% off the invoice-date daily rate. The difference of USD -85.41 at the invoice-date rate is therefore explained by the rate basis, not by any amount or counterparty issue. The reference, counterparty and posting period all agree.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should revalue the payable on NIG-UK:1900045473 from the 2026 budget rate to the invoice-date daily rate for SA-ICINV-00653, per the group IC FX policy.",
+  "adjustment_amount": -85.41,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Adjust the NIG-UK IC payable to NIG-SA by the USD 85.41 equivalent so that the GBP payable reflects SAR 15,000.00 at the invoice-date rate rather than the budget rate. Book the offset to FX gain/loss.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

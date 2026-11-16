@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2360,
+  "output": 748,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.14,
+ "output": {
+  "category": "accrual_no_invoice",
+  "confidence": 0.85,
+  "explanation": "NIG-UK line NIG-UK:1900045511 is an IC payable accrual of 126,000 AED (34,308.54 USD) against NIG-AE for seconded staff C.Turner (P-23110), marked 'invoice not received'. The only unmatched NIG-AE seller line found, NIG-AE:ICV-AE-031334 (37,000 AED), relates to a different person (Lukas Nasser), a different counterparty (NIG-SA) and a different amount (ratio 0.2937), so it is not the same cost.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to confirm whether the C.Turner secondment was rendered in October 2026 and, if so, issue the IC invoice for 126,000 AED so NIG-UK can release the accrual against it.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

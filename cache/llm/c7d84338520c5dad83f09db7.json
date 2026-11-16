@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2474,
+  "output": 396,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.15,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-AE line NIG-AE:ICV-AE-031327 shows AED 159,600.00 (152h @ 1050 = 159,600), while buyer NIG-AU line NIG-AU:77504 booked AED 159,060.00 against the same reference AE-ICINV-00796. Both are in AED, in period, with the correct counterparty, and the digit pattern shows adjacent digits transposed (9600 vs 9060), leaving a USD 147.03 difference with no FX, WHT or timing explanation.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should correct the IC payable on line NIG-AU:77504 from AED 159,060.00 to AED 159,600.00 to agree with invoice AE-ICINV-00796.",
+  "adjustment_amount": 540.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Increase NIG-AU IC payable to NIG-AE by AED 540.00 (debit secondment expense, credit IC payable) to correct the transposed amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

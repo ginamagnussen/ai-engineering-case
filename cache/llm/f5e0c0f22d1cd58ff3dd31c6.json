@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2442,
+  "output": 1026,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.29,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.92,
+  "explanation": "Both lines carry invoice reference 9000010584 and P-23110, and the counterparty resolves correctly to NIG-UK. NIG-AE booked 120,620.00 GBP against NIG-UK's 120,260.00 GBP, a 360.00 GBP overstatement. The digits 26 and 62 are transposed, the ratio of 1.00299 is not a withholding rate, and the difference is not explained by FX basis.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to correct ICV-AE-031432 from 120,620.00 GBP to 120,260.00 GBP to match the NIG-UK invoice, and confirm the keying error was not caused by a separate business charge.",
+  "adjustment_amount": -360.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Reduce NIG-AE IC payable ICV-AE-031432 by 360.00 GBP to correct the transposed amount (120,620.00 to 120,260.00 GBP).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

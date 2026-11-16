@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2452,
+  "output": 471,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.4,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA's payable NIG-SA:ICV-SA-018887 (EUR 2,128.00) is 95% of NIG-DE's receivable NIG-DE:5100873353 (EUR 2,240.00) for the same invoice RE-2026-000660. The buyer description states 'net of WHT 5%', and the ratio matches a 5% withholding rate. The difference of USD 120.28 at the invoice-date rate is therefore withheld tax, not a pricing or timing issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the EUR 112.00 withheld amount to a WHT payable account and confirm the WHT certificate with NIG-DE, so the IC payable is restated to the gross EUR 2,240.00.",
+  "adjustment_amount": 112.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Increase NIG-SA IC payable to NIG-DE by EUR 112.00 and credit WHT payable (Saudi tax authority) for the same amount, so the IC balance equals the gross invoice.",
+  "model_requests_review": true,
+  "review_reason": "Seconded staff services at 5% WHT is consistent with Saudi services rate, but the applicable rate and treatment (e.g. possible gross-up or treaty relief) should be confirmed by tax."
+ }
+}

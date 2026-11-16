@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2618,
+  "output": 450,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.81,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.9,
+  "explanation": "NIG-AU:77473 books invoice AE-ICINV-00834 (secondment L. Sharma, P-24102) as AUD 6,600.97, while NIG-AE:ICV-AE-031241 records AED 16,800.00. The buyer's implied rate of 0.392915 matches the 2026 budget rate exactly (0.0% deviation) instead of the invoice-date daily rate (-3.766%). That rate choice explains the USD 172.28 difference (ratio 0.96234); the counterparty, reference and period all agree.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should revalue the payable for AE-ICINV-00834 at the AED/AUD daily rate on the 2026-10-09 invoice date instead of the 2026 budget rate, so it equals AED 16,800.00.",
+  "adjustment_amount": 172.28,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-AU, increase the IC payable to NIG-AE for AE-ICINV-00834 by the equivalent of USD 172.28 so it reflects AED 16,800 at the invoice-date rate, with the offset to secondment cost or FX difference according to group policy.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

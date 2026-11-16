@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 527,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.6,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.88,
+  "explanation": "NIG-SA invoiced SAR 42,000.00 (SA-ICINV-00656, 60h secondment of J. Patel @ 700, P-24050) on line NIG-SA:ICV-SA-018859. NIG-AE booked only SAR 31,478.94 on NIG-AE:ICV-AE-031260 in the same currency, a ratio of 0.7495 and a USD 2,805.65 difference, with the description 'partial accept, hours disputed pending PM approval'. The ratio matches no withholding rate and there is no cut-off or FX effect, so this is an intentional short-booking over contested hours.",
+  "responsible_entity": "both",
+  "recommended_action": "Have the NIG-AE project manager and NIG-SA agree on the approved secondment hours for P-24050, then have NIG-SA issue a credit note or NIG-AE book the balance once agreed.",
+  "adjustment_amount": 10521.06,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Disputed SAR 10,521.06: either NIG-SA credits this portion of SA-ICINV-00656, or NIG-AE books the additional payable once the hours are approved. Do not book until the dispute is resolved.",
+  "model_requests_review": true,
+  "review_reason": "This is a commercial dispute over seconded hours that needs PM approval and agreement between both entities before any adjustment. The booked amount (≈44.97h equivalent) does not map cleanly to whole hours, so the basis of the partial acceptance should be verified."
+ }
+}

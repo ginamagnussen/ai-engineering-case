@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2439,
+  "output": 661,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.97,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked GBP 16,575.00 (NIG-SA:ICV-SA-018952) against NIG-UK's GBP 19,500.00 licence recharge (NIG-UK:1900045330), both referencing invoice 9000010499. The ratio of 0.85 matches the 15% Saudi WHT rate on royalties/licences, and the buyer description explicitly states 'net of WHT 15%'. The GBP 2,925.00 gap (USD 3,677.46 at the invoice-date rate) is the withheld tax, not a booking error.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-SA should provide the WHT payment certificate for GBP 2,925.00, and NIG-UK should clear that portion of the IC receivable to WHT receivable/tax expense so both sides agree at GBP 16,575.00.",
+  "adjustment_amount": 2925.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-UK: credit IC receivable from NIG-SA by GBP 2,925.00 and debit WHT recoverable (or tax expense if not creditable), supported by NIG-SA's WHT certificate for invoice 9000010499.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

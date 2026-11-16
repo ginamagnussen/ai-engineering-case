@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2457,
+  "output": 475,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.04,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.8,
+  "explanation": "NIG-AU receivable NIG-AU:77419 is AUD 16,800.00 (80h @ 210 = 16,800), while NIG-DE payable NIG-DE:5100873317 is AUD 16,700.00 on the same reference AU/IC/2026/0745. Both are in the same currency and in period, so FX and cut-off do not explain it. A single digit differs, and the 100 AUD gap (about USD 53.86 at booking, USD 66.22 at the invoice-date rate per the evidence) is consistent with a keying error by NIG-DE.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Have NIG-DE verify the invoice amount against AU/IC/2026/0745 and correct the payable from AUD 16,700.00 to AUD 16,800.00.",
+  "adjustment_amount": 100.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "Increase the NIG-DE IC payable to NIG-AU by AUD 100.00 (Dr secondment expense, Cr IC payable NIG-AU) to match the invoice of AUD 16,800.00.",
+  "model_requests_review": true,
+  "review_reason": "A small partial-dispute or deliberate deduction cannot be fully ruled out from the evidence; NIG-DE should confirm the invoice amount before the correction is posted."
+ }
+}

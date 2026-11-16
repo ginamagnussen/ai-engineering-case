@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2482,
+  "output": 1045,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.34,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.9,
+  "explanation": "Seller NIG-SA line NIG-SA:ICV-SA-019021 invoices SAR 231,336.00, while buyer line NIG-AE:ICV-AE-031434 carries SAR 233,136.00 under the same reference SA-ICINV-00752. The digit pattern is an adjacent transposition (231336 vs 233136), the SAR difference of 1,800 is divisible by 9, and the ratio of 1.00778 is not consistent with a withholding rate, so this is a keying error rather than FX, WHT, or a dispute.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "NIG-AE should correct the keyed amount on ICV-AE-031434 from SAR 233,136.00 to SAR 231,336.00 so it agrees with the NIG-SA invoice SA-ICINV-00752.",
+  "adjustment_amount": -1800.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reduce NIG-AE IC payable to NIG-SA by SAR 1,800.00 to correct the transposed amount (233,136 to 231,336).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

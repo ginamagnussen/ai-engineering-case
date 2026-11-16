@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2617,
+  "output": 397,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.2,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK line NIG-UK:1900045352 (GBP 19,480.00, ~USD 24,193.38, ref 9000010594, project P-24017 QA/QC inspection) has no buyer booking at NIG-DE. The two unmatched NIG-DE lines searched (NIG-DE:5100873331 for AU, NIG-DE:5100873497 accrual for UK project P-25031) differ in project, counterparty, reference and amount, and no lines with the same reference exist elsewhere.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Ask NIG-DE to confirm receipt of invoice 9000010594 and book the IC payable of GBP 19,480.00 for project P-24017 in October 2026, or confirm if it was posted in a later period.",
+  "adjustment_amount": 19480.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-DE to debit project cost P-24017 (QA/QC inspection) and credit IC payable to NIG-UK for GBP 19,480.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

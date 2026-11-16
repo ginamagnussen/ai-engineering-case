@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2661,
+  "output": 454,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.87,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-UK line NIG-UK:1900045272 (GBP 74,290.00, USD 93,367.67, ref 9000010647, project P-24088 site supervision) has no buyer line at NIG-SA. The two unmatched NIG-SA accruals (ICV-SA-019078 GBP 62,280 for project P-24102 and ICV-SA-019063 USD 7,500 for project P-25019) relate to different projects and amounts, so they are not a match. No lines were found elsewhere with the same reference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to confirm receipt of invoice 9000010647 and book the GBP 74,290.00 IC payable to NIG-UK for P-24088 in October, or confirm if it was posted after period end.",
+  "adjustment_amount": 74290.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA to book the project cost for P-24088 with a credit to IC payable NIG-UK for GBP 74,290.00, matching the seller invoice.",
+  "model_requests_review": true,
+  "review_reason": "No buyer line exists, so it cannot be verified whether this is an unbooked invoice or a post-period-end posting (timing). NIG-SA should confirm."
+ }
+}

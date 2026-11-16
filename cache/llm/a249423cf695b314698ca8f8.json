@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2463,
+  "output": 374,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.17,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-SA receivable NIG-SA:ICV-SA-019035 and NIG-AU payable NIG-AU:77587 match on reference SA-ICINV-00644, amount 138,600 SAR (USD 36,960.46) and currency, with zero difference. However NIG-AU booked the counterparty as 'KSA branch', which does not resolve to master data, instead of NIG-SA, so the intercompany elimination fails on partner mapping.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU recode line NIG-AU:77587 from 'KSA branch' to counterparty NIG-SA and add the alias to the partner mapping.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Reclassify NIG-AU IC payable 138,600 SAR (reference SA-ICINV-00644) from the unresolved 'KSA branch' partner to NIG-SA; no amount change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

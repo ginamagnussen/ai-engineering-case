@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2621,
+  "output": 391,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.91,
+ "output": {
+  "category": "other",
+  "confidence": 0.55,
+  "explanation": "Seller line NIG-US:4471093 (USD 18,480, secondment Isabel Nasser, P-25031, ref INV-US-100454) has no buyer match by reference. NIG-AE:ICV-AE-031337 is the same amount, currency, project and employee (USD 18,480, ref 100458) and is booked to NIG-US, but the reference differs (100458 vs INV-US-100454), so it was not auto-matched. This is most likely the same invoice with a keyed reference error, but this cannot be confirmed from the evidence.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Confirm with NIG-AE that ICV-AE-031337 relates to INV-US-100454 and correct the reference so the pair matches, otherwise treat it as a missing buyer booking.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The reference mismatch (100458 vs INV-US-100454) means a human should verify that the buyer line is the same invoice and not a separate secondment charge before matching."
+ }
+}

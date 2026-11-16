@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2348,
+  "output": 480,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.8,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "Seller NIG-DE line 5100873464 (EUR 11,170 / USD 11,828.25, ref RE-2026-000776, project recharge P-24088 'Kostenschätzung') has no NIG-UK booking. The only unmatched NIG-UK line (1900045447, AED 16,800 / USD 4,574.47) is a secondment against NIG-AE with a different reference and project, so it is not a candidate. The description 'Kostenschätzung' (cost estimate) hints the charge could be an estimate, but there is no evidence of a buyer accrual.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "Ask NIG-UK to confirm receipt of invoice RE-2026-000776 for project P-24088 and book the IC payable, or confirm with NIG-DE whether the charge was only an estimate that should be reversed.",
+  "adjustment_amount": 11170.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "NIG-UK to book the IC payable and project cost for EUR 11,170 against NIG-DE, if the invoice is validated as a valid charge.",
+  "model_requests_review": true,
+  "review_reason": "The description 'Kostenschätzung' (cost estimate) suggests the charge may not be a final invoice, so this could instead be an unsupported seller-side charge; it needs confirmation before booking."
+ }
+}

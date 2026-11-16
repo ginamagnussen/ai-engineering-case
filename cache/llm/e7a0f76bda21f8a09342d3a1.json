@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2673,
+  "output": 1123,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.84,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.65,
+  "explanation": "NIG-AU line NIG-AU:77458 (EUR 35,280.00, RE-2026-000310, posted 2026-10-12) carries the same reference as NIG-AU:77432, already matched in M0067 (posted 2026-10-07), so the buyer appears to have booked the same seconded-staff invoice twice. The case evidence does not show the amount of NIG-AU:77432, so equality of the two bookings cannot be verified. The nearest unmatched NIG-DE seller lines (NIG-DE:5100873496 and NIG-DE:5100873391) have different references and amounts and do not explain this line.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm that NIG-AU:77432 and NIG-AU:77458 both relate to RE-2026-000310 for EUR 35,280.00, then reverse NIG-AU:77458 in the legacy SCE ledger, leaving the matched M0067 booking in place.",
+  "adjustment_amount": 35280.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Reverse duplicate IC payable NIG-AU:77458 (RE-2026-000310, seconded staff m.sharma P-25019) of EUR 35,280.00 owed to NIG-DE, if the duplicate is confirmed.",
+  "model_requests_review": true,
+  "review_reason": "The amount of the already-matched line NIG-AU:77432 is not in the case, so duplication is inferred from the shared reference only. The reversal should be approved by a human before posting."
+ }
+}

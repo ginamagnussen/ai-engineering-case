@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2429,
+  "output": 440,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.52,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.88,
+  "explanation": "NIG-AU:77488 matches NIG-UK:1900045364 exactly (GBP 5,700.00, ratio 1.0, same reference 9000010547, same project P-24088 and secondee N. Hassan, posted one day apart within October). However, the buyer booked the payable against an unresolved counterparty 'KSA branch' instead of NIG-UK, so the pair fails on counterparty only; the small USD difference (7,093.14 vs 7,142.04) is a translation effect, as the difference at the invoice-date rate is 0.0.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "NIG-AU should reclassify the IC payable on line 77488 from counterparty 'KSA branch' to NIG-UK, and the group controller should map the legacy SCE counterparty code to master data.",
+  "adjustment_amount": 5700.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-AU, debit IC payable – 'KSA branch' GBP 5,700.00 and credit IC payable – NIG-UK GBP 5,700.00 for invoice 9000010547 (secondment of N. Hassan, P-24088).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

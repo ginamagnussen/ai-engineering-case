@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2455,
+  "output": 781,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.11,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.85,
+  "explanation": "NIG-DE (line NIG-DE:5100873357) invoiced EUR 3,800.00 for P-24050 on RE-2026-000653, while NIG-SA (line NIG-SA:ICV-SA-018877) booked EUR 3,094.90 with the description 'partial accept, hours disputed pending PM approval', giving a buyer-to-seller ratio of 0.81445. The invoice reference is found on the buyer line, the counterparty matches, and both lines are in period, so the gap is an intentional partial acceptance rather than a timing, FX or keying error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Refer the disputed hours on P-24050 to the project manager for approval, and have NIG-SA and NIG-DE agree the accepted amount before any correcting entry is posted.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer has deliberately booked less pending a PM decision on disputed hours, so the outcome depends on a business judgement that cannot be verified from the ledger evidence."
+ }
+}

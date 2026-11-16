@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2477,
+  "output": 534,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.33,
+ "output": {
+  "category": "wht",
+  "confidence": 0.88,
+  "explanation": "NIG-AE receivable NIG-AE:ICV-AE-031426 is AED 272,160.00 (USD 74,106.45), while NIG-SA payable NIG-SA:ICV-SA-019065 is AED 258,552.00 (USD 70,401.12) against the same invoice reference AE-ICINV-00908. The buyer/seller ratio of 0.95 matches a 5% withholding rate and the buyer description says 'net of WHT 5%', leaving a USD 3,705.33 difference at the invoice-date rate. Both lines are in period and in the same currency, so FX and timing do not explain it.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA confirm the WHT is applicable to this recharge, book the AED 13,608.00 withheld as a WHT payable to the tax authority, and gross up the IC payable to the invoiced amount, with NIG-AE retaining the WHT certificate for credit.",
+  "adjustment_amount": 13608.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "At NIG-SA, debit WHT expense/receivable and credit IC payable to NIG-AE for AED 13,608.00 so the IC payable equals the invoice of AED 272,160.00, recognising the withheld tax separately.",
+  "model_requests_review": true,
+  "review_reason": "Applicability of 5% WHT to a UAE-to-Saudi design services recharge should be verified by tax; the 5% rate is inferred from the ratio and buyer description only."
+ }
+}

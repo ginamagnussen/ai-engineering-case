@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2450,
+  "output": 1195,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.6,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "Seller NIG-UK line NIG-UK:1900045219 invoices GBP 18,820.00 and buyer NIG-SA line NIG-SA:ICV-SA-018805 books GBP 17,879.00 for the same reference 9000010562, with the description stating 'net of WHT 5%'. The buyer-to-seller ratio of 0.95 and the GBP 941.00 gap equal exactly 5% of the invoice, so the difference is withholding tax, not a timing or FX issue.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the IC payable to GBP 18,820.00 and record the GBP 941.00 as Saudi WHT payable to ZATCA, supported by the WHT certificate for P-25019.",
+  "adjustment_amount": 941.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-SA: Dr IC services expense 941.00 GBP / Cr WHT payable (ZATCA) 941.00 GBP, so the IC payable is restated gross at GBP 18,820.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

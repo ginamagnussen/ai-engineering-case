@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2925,
+  "output": 836,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 11.12,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.6,
+  "explanation": "Seller line NIG-SA:ICV-SA-018837 (SA-ICINV-00663, SAR 105,000.00, secondment Daniel Smith P-24017) has no matched buyer line. However, NIG-AU:77450 matches it exactly on amount (ratio 1.0), currency, counterparty, project P-24017 and staff member, posted one day later, but cites reference SA-ICINV-00664. This looks like a one-digit keying error in the buyer's reference rather than in the amount, so it fits only loosely under amount_typo.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Confirm with NIG-SA that no invoice SA-ICINV-00664 exists, then have NIG-AU correct the reference on line 77450 to SA-ICINV-00663 and rematch the pair.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "No amount correction is needed; amend the reference on NIG-AU:77450 from SA-ICINV-00664 to SA-ICINV-00663.",
+  "model_requests_review": true,
+  "review_reason": "The error is in the reference, not the amount, so no category fits exactly. It must also be verified that SA-ICINV-00664 is not a genuine separate NIG-SA invoice, which would instead make this a missing_buyer case."
+ }
+}

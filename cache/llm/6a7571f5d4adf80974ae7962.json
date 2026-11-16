@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2430,
+  "output": 390,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.81,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-UK invoiced GBP 29,010.00 (NIG-UK:1900045344, ref 9000010555), but NIG-DE booked GBP 29,001.00 (NIG-DE:5100873419) against the same reference. Both lines are in GBP, so this is not a rate issue. The digits '10' and '01' are adjacent transpositions, and the ratio of 0.99969 fits no withholding rate. The difference is GBP 9.00, or USD 11.27 at the invoice-date rate.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should correct its IC payable for invoice 9000010555 to GBP 29,010.00 to match the NIG-UK invoice.",
+  "adjustment_amount": 9.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "NIG-DE to increase its IC payable to NIG-UK by GBP 9.00, with the offset to the project cost/expense account, correcting the keyed amount from 29,001.00 to 29,010.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

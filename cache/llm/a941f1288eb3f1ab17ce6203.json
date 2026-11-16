@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2443,
+  "output": 850,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.72,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-DE seller line NIG-DE:5100873388 invoices EUR 8,800.00 (RE-2026-000669), and NIG-UK buyer line NIG-UK:1900045354 books EUR 7,577.61 (ratio 0.86109) with the description 'partial accept, hours disputed pending PM approval'. The shortfall of USD 1,309.93 at the invoice-date rate is explained by the buyer's stated contest of hours, not by FX, timing, or keying error.",
+  "responsible_entity": "both",
+  "recommended_action": "NIG-UK and NIG-DE should obtain the project manager's decision on the disputed hours for P-25019, then either issue a credit note for the rejected portion or have NIG-UK book the remaining balance, with the open difference tracked until resolved.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "Buyer has intentionally under-booked a portion of the charge pending PM approval; the outcome depends on a commercial judgement about the disputed hours that cannot be verified from the ledger evidence."
+ }
+}

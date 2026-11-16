@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2618,
+  "output": 1303,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.95,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.8,
+  "explanation": "Seller line NIG-SA:ICV-SA-018846 (8,800 SAR, SA-ICINV-00524) and buyer line NIG-AU:77459 (3,386.29 AUD, same reference) match on invoice and counterparty. The buyer's implied rate equals the 2026 budget rate exactly (0.0% deviation), while it sits about 5.2% below the invoice-date rate, which accounts for the 122.08 USD difference.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU true up SA-ICINV-00524 from the budget rate to the invoice-date rate, booking the 122.08 USD equivalent, and confirm the group policy on budget-rate use with the group controller.",
+  "adjustment_amount": 122.08,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU IC payable for SA-ICINV-00524 from the 2026 budget rate to the invoice-date rate, increasing the payable by 122.08 USD equivalent.",
+  "model_requests_review": true,
+  "review_reason": "Booking at the budget rate may be an accepted group convention; the group controller should confirm whether the true-up is required before posting."
+ }
+}

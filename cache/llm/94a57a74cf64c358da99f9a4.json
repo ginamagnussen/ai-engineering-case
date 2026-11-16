@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2592,
+  "output": 436,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.94,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045259 is GBP 8,130.00 (USD 10,218.52) and NIG-AE payable NIG-AE:ICV-AE-031252 is AED 36,592.32 (USD 9,963.72), both with reference 9000010627 and the same project P-24017. The buyer's implied rate of 4.5009 matches the 2026 budget rate exactly (0.0% deviation), while it is about 2.5% off the invoice-date, posting-date and month-end rates. The USD difference of 254.80 is therefore a rate-basis difference, not a business difference.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to revalue the payable at the invoice-date rate instead of the 2026 budget rate and settle the GBP 8,130.00 invoice.",
+  "adjustment_amount": 254.8,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Increase NIG-AE IC payable by USD 254.80 (AED equivalent at invoice-date rate) with an offsetting FX loss, so the payable matches the NIG-UK receivable of GBP 8,130.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2878,
+  "output": 1016,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 13.92,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.6,
+  "explanation": "Seller line NIG-AU:77506 (AUD 21,280.00, secondment O. Nasser, P-23110, 21 Oct) has an exact AUD counterpart on the buyer side, NIG-DE:5100873443 (AUD 21,280.00, 'Personalgestellung O.Nasser P-23110', 22 Oct, in period). The only gap is the USD translation: USD 14,141.62 vs 14,095.66 (ratio 0.9968), a USD 45.96 difference from NIG-DE using a rate one day after the invoice date. The buyer reference (20260686) does not quote the seller invoice AU/IC/2026/0681, which likely stopped the automatic match.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Manually match NIG-AU:77506 with NIG-DE:5100873443, and have NIG-DE re-translate the payable at the 21 Oct 2026 invoice-date AUD/USD rate and record seller reference AU/IC/2026/0681 on its line.",
+  "adjustment_amount": 45.96,
+  "adjustment_currency": "USD",
+  "adjustment_description": "No change to the AUD 21,280.00 transaction amounts; clear the USD 45.96 translation difference by aligning NIG-DE's USD value to the invoice-date rate, or eliminate it as an FX difference in consolidation.",
+  "model_requests_review": true,
+  "review_reason": "The AUD amounts agree exactly, so the gap may be only a USD reporting-rate difference or a reference-matching failure rather than a true FX booking error. The group controller should confirm the treatment."
+ }
+}

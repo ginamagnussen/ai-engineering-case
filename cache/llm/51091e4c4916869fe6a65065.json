@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2426,
+  "output": 982,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.2,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-DE line NIG-DE:5100873345 (IC payable, 252,430.00 GBP) is booked against counterparty AU01 (NIG-AU), while seller line NIG-UK:1900045240 (same 252,430.00 GBP, same reference 9000010649, same project P-24050) is owed to NIG-UK. The invoice reference is found on the buyer line and the amounts match exactly (ratio 1.0, difference 0.0 at invoice-date rate), so the issue is the partner code, not the amount.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "Reclassify NIG-DE line 5100873345 from counterparty NIG-AU to NIG-UK in the October 2026 close so it matches the NIG-UK receivable.",
+  "adjustment_amount": 252430.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Move the IC payable of 252,430.00 GBP on NIG-DE:5100873345 from NIG-AU to NIG-UK; no change to total IC balance or P&L.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

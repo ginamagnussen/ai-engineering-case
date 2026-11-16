@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2483,
+  "output": 901,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.18,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-SA booked IC payable ICV-SA-018834 at AED 347,472.00, which is exactly AED 365,760.00 (NIG-AE receivable ICV-AE-031219) less 5% withholding (AED 18,288.00), and the invoice reference AE-ICINV-00924 appears on the buyer line. The USD gap of 4,979.64 at invoice-date rate is therefore the withholding amount, not an FX or keying error.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA gross up the October subcontract expense by AED 18,288.00 and book the withheld amount as a Saudi WHT payable, then confirm the IC balance agrees to AED 365,760.00 with NIG-AE.",
+  "adjustment_amount": 18288.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "NIG-SA: Dr subcontract expense (P-25019) AED 18,288.00 / Cr WHT payable (Saudi authority) AED 18,288.00, grossing the IC payable up to AED 365,760.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

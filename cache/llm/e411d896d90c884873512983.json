@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2446,
+  "output": 1363,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.89,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "NIG-SA line NIG-SA:ICV-SA-019058 (IC payable, 136,944 AED, 37,288.48 USD, posted 2026-10-31) carries the same reference AE-ICINV-00586 as NIG-SA:ICV-SA-019047, which is already matched in M0026 on the same date, so the buyer appears to have booked one NIG-AE invoice twice. The nearest unmatched seller line (NIG-AE:ICV-AE-031334, 37,000 AED, ratio 0.27) is a different invoice and does not explain this line. The matched twin's amount is not in the case, so it still needs to be confirmed as 136,944 AED.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Confirm that M0026's twin NIG-SA:ICV-SA-019047 carries the same 136,944 AED amount for AE-ICINV-00586, then have NIG-SA reverse the duplicate line NIG-SA:ICV-SA-019058 in Q4 close.",
+  "adjustment_amount": 136944.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reverse duplicate IC payable NIG-SA:ICV-SA-019058 for invoice AE-ICINV-00586 (BIM coordination, P-25002) in NIG-SA's books.",
+  "model_requests_review": true,
+  "review_reason": "The matched twin's amount is not in the case, so the duplicate status and reversal amount need confirmation before posting."
+ }
+}

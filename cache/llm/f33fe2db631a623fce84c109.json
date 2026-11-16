@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2348,
+  "output": 1245,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 7.74,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.6,
+  "explanation": "NIG-DE line NIG-DE:5100873464 books a EUR 11,170.00 (USD 11,828.25) IC receivable to NIG-UK on RE-2026-000776, described as a project recharge for P-24088 based on a cost estimate, and no NIG-UK line matches it by reference, counterparty or amount. The nearest unmatched NIG-UK line (NIG-UK:1900045447, AED 16,800 payable to NIG-AE for seconded staff) is a different counterparty, currency and purpose, so it is not a candidate match.",
+  "responsible_entity": "NIG-UK",
+  "recommended_action": "NIG-UK should confirm whether it received RE-2026-000776 and, if the recharge is valid, book the EUR 11,170.00 IC payable to NIG-DE in October; if not, NIG-DE should confirm whether the cost-estimate invoice was issued in error.",
+  "adjustment_amount": 11170.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "If confirmed as a valid invoice, NIG-UK to accrue/book IC payable to NIG-DE for EUR 11,170.00 (USD 11,828.25) for project P-24088 in the October 2026 period.",
+  "model_requests_review": true,
+  "review_reason": "The description says the charge is a cost estimate, so it is unclear whether it is a binding invoice the buyer should book, a preliminary recharge, or a disputed amount; the evidence does not show whether NIG-UK received it."
+ }
+}

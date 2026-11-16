@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2461,
+  "output": 937,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.3,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.9,
+  "explanation": "NIG-AU line NIG-AU:77572 carries the same invoice reference SA-ICINV-00692 and the same SAR 117,600 (USD 31,360.39) as seller line NIG-SA:ICV-SA-019027, with a buyer-to-seller ratio of 1.0 and no FX or timing difference. The only break is that the buyer booked the counterparty as 'KSA branch', which is unresolved in master data, where the expected partner is NIG-SA.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU recode the counterparty on line NIG-AU:77572 from 'KSA branch' to NIG-SA so that it matches the seller's IC receivable, and ask the group master-data team to map the legacy SCE 'KSA branch' code to NIG-SA.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": "Counterparty reclassification of the existing SAR 117,600 IC payable from 'KSA branch' to NIG-SA; no change to the amount.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

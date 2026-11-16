@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2444,
+  "output": 516,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.44,
+ "output": {
+  "category": "wht",
+  "confidence": 0.9,
+  "explanation": "NIG-UK invoiced GBP 47,420.00 (NIG-UK:1900045250) and NIG-SA booked GBP 45,049.00 (NIG-SA:ICV-SA-018882) against the same reference 9000010553. The buyer/seller ratio of 0.95 matches 5% WHT and the buyer description says 'net of WHT 5%'; the USD difference of 2,990.71 at the invoice-date rate is therefore the withheld tax, not a price or FX difference.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should record the GBP 2,371.00 withholding tax as a WHT payable and IC payable to NIG-UK (or confirm remittance and obtain WHT certificate), so the IC payable equals the invoiced GBP 47,420.00.",
+  "adjustment_amount": 2371.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-SA, increase the IC payable to NIG-UK by GBP 2,371.00 with the offset to WHT payable/expense, so IC balances agree at GBP 47,420.00; NIG-UK recognises the WHT receivable on its side once a certificate is received.",
+  "model_requests_review": true,
+  "review_reason": "Confirm the 5% WHT rate is applicable to this UK-to-Saudi project recharge service and that WHT was actually withheld and remitted, since the rate and treatment cannot be verified from the ledger evidence."
+ }
+}

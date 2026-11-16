@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2491,
+  "output": 586,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.05,
+ "output": {
+  "category": "dispute",
+  "confidence": 0.9,
+  "explanation": "NIG-AE booked SAR 93,360.16 (NIG-AE:ICV-AE-031234) against NIG-SA's invoice SA-ICINV-00740 for SAR 107,676.00 (NIG-SA:ICV-SA-018808). The buyer's line says 'partial accept, hours disputed pending PM approval'. The 0.86705 ratio does not match a withholding rate, and a UAE buyer would not apply Saudi WHT. The gap is USD 3,817.61 at the invoice-date rate, with no FX or cut-off cause, since both sides are in SAR and in period.",
+  "responsible_entity": "both",
+  "recommended_action": "Escalate to the P-24050 project managers at NIG-AE and NIG-SA to resolve the disputed hours, then either have NIG-AE book the remaining payable or have NIG-SA issue a credit note.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": true,
+  "review_reason": "The buyer is contesting part of the charge. Whether NIG-AE books the remaining SAR 14,315.84 or NIG-SA credits it depends on the outcome of the PM approval, which is a business judgement."
+ }
+}

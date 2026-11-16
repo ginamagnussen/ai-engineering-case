@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2455,
+  "output": 729,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 9.87,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-DE invoiced EUR 6,600.00 (NIG-DE:5100873334, RE-2026-000650) for seconded staff, and NIG-SA booked EUR 6,270.00 (NIG-SA:ICV-SA-018867) with the same invoice reference, described as 'net of WHT 5%'. The 0.95 buyer-to-seller ratio matches the 5% Saudi WHT rate on services, so the EUR 330.00 gap (USD 356.27 at the invoice-date rate) is tax withheld, not an error.",
+  "responsible_entity": "NIG-DE",
+  "recommended_action": "NIG-DE should obtain the WHT certificate and remittance evidence from NIG-SA, then reclassify the EUR 330.00 residual IC receivable to a withholding tax receivable or tax expense so both IC balances agree at EUR 6,270.00.",
+  "adjustment_amount": 330.0,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "In NIG-DE, debit WHT receivable or income tax expense and credit the IC receivable from NIG-SA for EUR 330.00 (5% Saudi WHT withheld on invoice RE-2026-000650).",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

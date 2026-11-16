@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2586,
+  "output": 408,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.43,
+ "output": {
+  "category": "fx_difference",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045358 is GBP 3,800.00 (USD 4,728.76) and NIG-AU payable NIG-AU:77492 is AUD 6,720.19 (USD 4,424.37), same reference 9000010525 and the same secondment (P-23110). The buyer's implied rate of 1.768471 matches the 2026 budget rate exactly (0.0% deviation), versus -6.4% against the invoice-date rate, so the USD difference of 302.64 is explained by the rate basis.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU rebook the payable at the invoice-date GBP/AUD rate instead of the 2026 budget rate.",
+  "adjustment_amount": 302.64,
+  "adjustment_currency": "USD",
+  "adjustment_description": "Revalue NIG-AU payable NIG-AU:77492 from the budget rate to the invoice-date rate, increasing the payable by the USD 302.64 difference so it agrees with NIG-UK's GBP 3,800.00 receivable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

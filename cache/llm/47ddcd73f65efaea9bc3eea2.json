@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2435,
+  "output": 820,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.49,
+ "output": {
+  "category": "wht",
+  "confidence": 0.92,
+  "explanation": "NIG-UK invoiced 2,100.00 GBP (line NIG-UK:1900045367, Microsoft 365 E5 licence recharge), and NIG-SA booked 1,785.00 GBP (line NIG-SA:ICV-SA-018997) against the same reference 9000010492. The 315.00 GBP gap is exactly 15% of the invoice (ratio 0.85), and the buyer's description states 'net of WHT 15%', which matches the Saudi 15% licence withholding rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Ask NIG-SA to gross up the IC payable to 2,100.00 GBP and record the 315.00 GBP as a withholding tax payable (or receivable if already remitted), supported by the WHT certificate.",
+  "adjustment_amount": 315.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "Gross up NIG-SA IC payable to NIG-UK by 315.00 GBP (WHT 15%) and recognise the same amount as WHT payable to the Saudi authority.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

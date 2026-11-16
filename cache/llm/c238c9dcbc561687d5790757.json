@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2464,
+  "output": 725,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.56,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "Seller line NIG-SA:ICV-SA-019028 and buyer line NIG-AE:ICV-AE-031415 both reference SA-ICINV-00595 for 390,456.00 SAR (USD 104,122.90), so the amounts match exactly with zero difference and the buyer posted within 2 days. The only break is that NIG-AE booked the payable against NIG-UK (NorthStar Infrastructure UK Ltd) instead of the expected counterparty NIG-SA.",
+  "responsible_entity": "NIG-AE",
+  "recommended_action": "Ask NIG-AE to reclassify line NIG-AE:ICV-AE-031415 from counterparty NIG-UK to NIG-SA so it matches the seller invoice in the October 2026 close.",
+  "adjustment_amount": 390456.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reclass the SAR 390,456.00 IC payable from NIG-UK to NIG-SA in NIG-AE's ledger; no net P&L or group balance change.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

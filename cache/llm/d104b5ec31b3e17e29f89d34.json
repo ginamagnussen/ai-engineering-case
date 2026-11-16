@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2451,
+  "output": 417,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 2.9,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-DE line NIG-DE:5100873478 invoiced EUR 21,830.00 (RE-2026-000754) and NIG-SA line NIG-SA:ICV-SA-019031 booked EUR 20,738.50 against the same reference, with the description explicitly stating net of WHT 5%. The buyer-to-seller ratio of 0.95 matches the 5% Saudi services withholding rate, and the EUR 1,091.50 gap equals 5% of the invoice.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Post the gross-up entry in NIG-SA for the withheld EUR 1,091.50 (WHT payable to ZATCA, with the offsetting IC payable to NIG-DE), and confirm the WHT certificate is filed for the October 2026 period.",
+  "adjustment_amount": 1091.5,
+  "adjustment_currency": "EUR",
+  "adjustment_description": "Gross up NIG-SA IC payable to EUR 21,830.00 and record EUR 1,091.50 as Saudi WHT payable on the P-24102 services invoice RE-2026-000754.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2410,
+  "output": 457,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.29,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.85,
+  "explanation": "Buyer line NIG-US:4471183 (SAR 13,200.00, ref SA-ICINV-00645, posted 2026-10-31) has no unmatched seller counterpart, and the evidence shows the same reference was already booked by NIG-US on line NIG-US:4471170 (same posting date), which is matched in M0146. The only unmatched NIG-SA seller line, NIG-SA:ICV-SA-018837 (SAR 105,000, ref SA-ICINV-00663), belongs to NIG-AU and is not a plausible match (ratio 7.95). NIG-US therefore appears to have booked invoice SA-ICINV-00645 twice.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "NIG-US should confirm that line 4471183 duplicates the already-matched line 4471170 for SA-ICINV-00645 and reverse it before close.",
+  "adjustment_amount": 13200.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse duplicate IC payable NIG-US:4471183 (SAR 13,200.00, ref SA-ICINV-00645) to NIG-SA: debit IC payable NIG-SA and credit the secondment cost account originally charged.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

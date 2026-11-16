@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2460,
+  "output": 593,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.44,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.93,
+  "explanation": "NIG-AU line NIG-AU:77435 books the same invoice SA-ICINV-00697 (SAR 7,600, identical to seller line NIG-SA:ICV-SA-018802, ratio 1.0, zero USD difference) against the unresolved counterparty 'KSA branch' instead of NIG-SA. The buyer posted 4 days after the seller, within the period, so no cut-off or amount issue applies.",
+  "responsible_entity": "NIG-AU",
+  "recommended_action": "Have NIG-AU recode line NIG-AU:77435 in the Legacy SCE Ledger to counterparty NIG-SA so it matches the seller receivable and clears in the October reconciliation.",
+  "adjustment_amount": null,
+  "adjustment_currency": null,
+  "adjustment_description": null,
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

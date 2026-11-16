@@ -1,0 +1,23 @@
+{
+ "model": "claude-haiku-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2410,
+  "output": 904,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 5.77,
+ "output": {
+  "category": "duplicate",
+  "confidence": 0.8,
+  "explanation": "NIG-US line NIG-US:4471183 (13,200 SAR, 3,520.04 USD) carries reference SA-ICINV-00645, the same reference as NIG-US:4471170, which is already matched in M0146 with the same posting date of 2026-10-31. The nearest seller line NIG-SA:ICV-SA-018837 (105,000 SAR, SA-ICINV-00663, P-24017) is a different invoice and amount, so it does not explain this line.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Confirm that SA-ICINV-00645 was booked twice in NIG-US and reverse the duplicate line NIG-US:4471183 (13,200 SAR) in October 2026.",
+  "adjustment_amount": 13200.0,
+  "adjustment_currency": "SAR",
+  "adjustment_description": "Reverse the duplicate IC payable posting of SA-ICINV-00645 in NIG-US, leaving the original line already matched in M0146.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

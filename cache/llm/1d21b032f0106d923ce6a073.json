@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2423,
+  "output": 429,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 6.31,
+ "output": {
+  "category": "wht",
+  "confidence": 0.95,
+  "explanation": "NIG-SA booked IC payable NIG-SA:ICV-SA-019051 at USD 56,800 against NIG-US receivable NIG-US:4471155 of USD 71,000 for the same invoice INV-US-100393. The 0.8 ratio matches Saudi 20% withholding on management fees, and the buyer description states 'net of WHT 20%'. The USD 14,200 difference is the tax withheld.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should gross up the IC payable to USD 71,000 and book the USD 14,200 WHT liability to the Saudi tax authority, then send the WHT certificate to NIG-US so it can record the tax credit or receivable.",
+  "adjustment_amount": 14200.0,
+  "adjustment_currency": "USD",
+  "adjustment_description": "In NIG-SA, reclassify USD 14,200 so the IC payable to NIG-US shows the gross USD 71,000, with the USD 14,200 credited to WHT payable to ZATCA. In NIG-US, clear the USD 14,200 receivable balance against a WHT tax receivable or expense once the certificate is received.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

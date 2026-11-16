@@ -1,0 +1,23 @@
+{
+ "model": "claude-opus-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2447,
+  "output": 624,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 8.72,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "NIG-UK receivable NIG-UK:1900045211 is GBP 48,340.00, while NIG-SA payable NIG-SA:ICV-SA-018801 is GBP 43,840.00 for the same reference 9000010633, same currency and same posting date (2026-10-01). The digits show an adjacent transposition (48340 vs 43840), so the gap is GBP 4,500.00 (USD 5,765.35 at the invoice-date rate). The ratio of 0.90691 does not match any Saudi WHT rate (5%, 15% or 20%), and there is no sign of FX, timing or a dispute.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should verify the amount against the NIG-UK invoice 9000010633 and post a correction increasing the IC payable to NIG-UK by GBP 4,500.00 in the October 2026 period.",
+  "adjustment_amount": 4500.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "In NIG-SA, debit project subcontract cost P-25019 and credit IC payable to NIG-UK for GBP 4,500.00. This corrects the payable from GBP 43,840.00 to GBP 48,340.00.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

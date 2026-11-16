@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2435,
+  "output": 496,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.89,
+ "output": {
+  "category": "wht",
+  "confidence": 0.93,
+  "explanation": "NIG-UK receivable NIG-UK:1900045348 is GBP 11,500.00 (USD 14,282.54) for the Bentley OpenRoads licence recharge. NIG-SA payable NIG-SA:ICV-SA-018976 is GBP 9,775.00 (USD 12,369.97) with the same reference 9000010496, and its description says net of WHT 15%. The buyer/seller ratio of 0.85 matches the 15% licence/royalty withholding rate, and the difference is USD 2,142.38 at the invoice-date rate.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should book the GBP 1,725.00 withheld amount to a WHT payable account against the IC payable, remit it to the Saudi tax authority, and send the WHT certificate to NIG-UK so it can record the WHT receivable.",
+  "adjustment_amount": 1725.0,
+  "adjustment_currency": "GBP",
+  "adjustment_description": "At NIG-SA, Dr WHT expense/clearing and Cr IC payable to NIG-UK GBP 1,725.00 so the IC payable equals the invoice of GBP 11,500.00, with the WHT liability to the tax authority recognised separately. NIG-UK records the GBP 1,725.00 as a WHT receivable/tax credit against the IC receivable.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

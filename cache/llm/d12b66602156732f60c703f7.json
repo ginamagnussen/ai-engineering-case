@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2872,
+  "output": 579,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 4.99,
+ "output": {
+  "category": "missing_buyer",
+  "confidence": 0.8,
+  "explanation": "NIG-AU line NIG-AU:77454 (AUD 39,400, ~USD 26,013.85, ref AU/IC/2026/0739, project P-25002) has no matching NIG-US payable, and no lines elsewhere share the reference. Of the 4 unmatched NIG-US lines searched, the nearest by amount are NIG-US:4471200 (GBP, NIG-UK, different project P-24017), NIG-US:4471173 (SAR accrual, NIG-SA, P-25002 but a different counterparty and a staff secondment) and NIG-US:4471184 (SAR accrual, NIG-SA, P-24050). None is a plausible counterpart in amount, currency or counterparty.",
+  "responsible_entity": "NIG-US",
+  "recommended_action": "Ask NIG-US to confirm receipt of invoice AU/IC/2026/0739 and book the AUD 39,400 payable to NIG-AU for the geotech analysis on P-25002, or accrue it if the invoice is still in approval.",
+  "adjustment_amount": 39400.0,
+  "adjustment_currency": "AUD",
+  "adjustment_description": "NIG-US to book an IC payable to NIG-AU of AUD 39,400 (about USD 26,013.85) against project P-25002 geotech analysis, debiting the project cost account.",
+  "model_requests_review": true,
+  "review_reason": "No buyer line was found. The P-25002 reference on the NIG-US SAR accrual (NIG-US:4471173) is a possible link, but it is booked to NIG-SA and the amounts don't match, so NIG-US must confirm whether the invoice was received or is a cut-off item."
+ }
+}

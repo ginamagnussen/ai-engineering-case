@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2475,
+  "output": 379,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.91,
+ "output": {
+  "category": "miscoded_counterparty",
+  "confidence": 0.96,
+  "explanation": "NIG-SA's IC payable NIG-SA:ICV-SA-019006 (AED 39,060 / USD 10,635.65) carries the same reference AE-ICINV-00927 as NIG-AE's receivable NIG-AE:ICV-AE-031394, with identical amount and no FX difference. However, NIG-SA booked it against NIG-AU instead of the expected counterparty NIG-AE, so the pair did not match on the counterparty key.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "NIG-SA should recode the counterparty on ICV-SA-019006 from NIG-AU to NIG-AE so it matches the seller's receivable.",
+  "adjustment_amount": 39060.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reclassify IC payable ICV-SA-019006 of AED 39,060 from the NIG-AU partner account to the NIG-AE partner account in NIG-SA's ledger; no P&L impact.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}

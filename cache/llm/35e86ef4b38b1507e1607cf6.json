@@ -1,0 +1,23 @@
+{
+ "model": "claude-sonnet-5-5",
+ "prompt_version": "v1",
+ "usage": {
+  "input": 2479,
+  "output": 416,
+  "cache_read": 0,
+  "cache_write": 0
+ },
+ "latency_s": 3.37,
+ "output": {
+  "category": "amount_typo",
+  "confidence": 0.88,
+  "explanation": "Seller NIG-AE:ICV-AE-031313 invoiced AED 19,080.00 (USD 5,195.29) and buyer NIG-SA:ICV-SA-018930 booked AED 19,800.00 (USD 5,391.34) under the same reference AE-ICINV-00936, a difference of USD 196.05 (ratio 1.03774). Both are in the same currency, in period, and the digit pattern shows adjacent digits transposed (19,080 vs 19,800), with no WHT, FX or cut-off explanation.",
+  "responsible_entity": "NIG-SA",
+  "recommended_action": "Have NIG-SA correct the IC payable on ICV-SA-018930 from AED 19,800.00 to AED 19,080.00 after confirming against the invoice AE-ICINV-00936.",
+  "adjustment_amount": 720.0,
+  "adjustment_currency": "AED",
+  "adjustment_description": "Reduce NIG-SA IC payable to NIG-AE by AED 720.00 (from 19,800.00 to 19,080.00) and reverse the over-booked expense or cost on project P-25031.",
+  "model_requests_review": false,
+  "review_reason": null
+ }
+}
