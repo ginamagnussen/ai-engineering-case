@@ -16,7 +16,7 @@ Every month, before NIG can close its books, each entity's intercompany balances
 - The AI only proposes; people decide.
 - Every result can be checked objectively, so value can be measured rather than claimed.
 
-## What we built
+## What was built
 
 A working prototype that does the routine matching automatically and prepares the difficult cases for an accountant to decide:
 
@@ -38,7 +38,7 @@ Tested on realistic simulated data, including a separate test set the system was
 | Share of cases still needing a person | **21%** |
 | AI cost per monthly run | **≈ $2.50** |
 
-The testing also found and fixed six defects in our own logic before they could reach users. The result to treat with caution: the data is simulated, and the AI's advantage over simple rules on real-world surprises is not yet proven. That is the first thing the pilot tests.
+The testing also found and fixed six defects in the system's own logic before they could reach users. The result to treat with caution: the data is simulated, and the AI's advantage over simple rules on real-world surprises is not yet proven. That is the first thing the pilot tests.
 
 ## Value and ROI
 
@@ -53,7 +53,7 @@ All figures are **placeholder assumptions** to be replaced with NIG data in the 
 
 | Scenario | Time saved | Annual capacity freed | Net per year | Payback after go-live |
 |---|---|---|---|---|
-| Low (the kill threshold) | 25% | $212k | $92k | about 3.8 years: **we would stop** |
+| Low (the kill threshold) | 25% | $212k | $92k | about 3.8 years: **stop** |
 | **Base** | **40%** | **$340k** | **$220k** | **about 19 months** |
 | High | 55% | $468k | $348k | about 12 months |
 
@@ -68,10 +68,10 @@ The freed capacity goes into analysis and a faster close, not headcount cuts. Th
 | Risk | How it is handled |
 |---|---|
 | The AI is wrong and nobody notices | Cases accepted without review are sampled every close. If more than 3% are wrong, or any wrongly cleared item exceeds $100k, automatic acceptance stops |
-| Data is hard to obtain from older systems | A 6-week data check is the first gate. If it fails, we narrow the scope to the entities with clean data |
+| Data is hard to obtain from older systems | A 6-week data check is the first gate. If it fails, the scope narrows to the entities with clean data |
 | Accountants don't trust or use it | It's designed with them: evidence first, every proposal shows its source lines, and their corrections improve it. Adoption is tracked from the first close |
 | Dependency on an AI vendor | One small integration point, and the model can be swapped and re-tested in minutes. Available through NIG's cloud providers for data residency |
-| The AI adds little over simple rules | Measured directly. If so, we keep the rules and review tool (most of the value) and drop the AI from classification |
+| The AI adds little over simple rules | Measured directly. If so, the rules and review tool are kept (most of the value) and the AI is dropped from classification |
 
 ## Rollout
 
@@ -80,7 +80,7 @@ The freed capacity goes into analysis and a faster close, not headcount cuts. Th
 3. **Quarter 2, live pilot:** the same teams work in the tool, with single sign-on, access by entity and the audit trail in place.
 4. **Quarter 3, group-wide rollout:** the remaining entities, including the acquired legacy systems.
 
-**Kill test.** We stop or redesign if any of these happens:
+**Kill test.** The solution is stopped or redesigned if any of these happens:
 
 - more than 3% of accepted cases are wrong in any close
 - accountant time saved stays below 25% after 3 closes

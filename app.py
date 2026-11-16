@@ -291,7 +291,7 @@ def page_audit():
 
 def page_eval():
     st.header("Evaluation against the synthetic answer key")
-    st.caption("Demo only: the mock-data generator's ground truth lets us measure the pipeline. "
+    st.caption("Demo only: the mock-data generator's ground truth makes the pipeline measurable. "
                "In production this is replaced by reviewer decisions (approve/override rates).")
     p = config.OUT / "eval.md"
     st.markdown(p.read_text(encoding="utf-8") if p.exists() else "Run the pipeline with evaluation first.")

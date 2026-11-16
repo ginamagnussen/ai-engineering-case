@@ -12,7 +12,7 @@ This document covers the design choices behind the prototype (Task 2), what it t
 
 **User.** A group IC accountant, who works the exceptions, and entity controllers, who approve corrections and resolve disputes.
 
-**Why this use case first.** NIG can't transform everything at once, so I scored candidate workflows on five criteria:
+**Why this use case first.** NIG can't transform everything at once, so candidate workflows were scored on five criteria:
 
 | Criterion | IC reconciliation (FIN) |
 |---|---|
@@ -28,7 +28,7 @@ This document covers the design choices behind the prototype (Task 2), what it t
 | ANL: monthly project status report drafting | Easy to demo, hard to prove: output quality is subjective, and the risk of plausible-but-wrong narrative is high |
 | FIN: invoice processing | Excluded by the brief. IC reconciliation is not invoice capture: it reconciles balances *between* group entities after booking |
 
-The brief is intentionally incomplete. These are the assumptions we made and how they shaped the design:
+The brief is intentionally incomplete. These are the assumptions made and how they shaped the design:
 
 | # | Assumption | How it shaped the design |
 |---|---|---|
@@ -105,15 +105,15 @@ The brief is intentionally incomplete. These are the assumptions we made and how
 
 ### Bought vs built
 
-| Capability | Decision | Why | The dependency we accept |
+| Capability | Decision | Why | The dependency accepted |
 |---|---|---|---|
 | LLM | **Buy** (Claude API) | Frontier quality on multilingual, messy text with no MLOps team; structured outputs remove parsing glue | Vendor and pricing risk. Mitigated by a thin wrapper (one function), an evaluation harness that can score any model in minutes, and availability through AWS Bedrock, Google Vertex AI and Azure for procurement and data residency |
-| Matching engine | **Build** (about 150 lines) | Domain-specific, must be explainable, and trivial to run | We own the rules. Covered by the evaluation suite |
+| Matching engine | **Build** (about 150 lines) | Domain-specific, must be explainable, and trivial to run | The rules are owned in-house. Covered by the evaluation suite |
 | UI | **Buy** (Streamlit) for the prototype | Hours, not weeks | Not a production UI (see §2) |
-| Evaluation harness | **Build** | No off-the-shelf tool knows our break taxonomy; this is what lets us change models or prompts safely | Ongoing maintenance |
-| **Whole-process alternative** | **Evaluate before scaling** | Established financial-close vendors sell intercompany matching modules, and several now add AI features. **We have not evaluated them.** | If NIG already licenses such a platform, the better path is probably to use its matching and add our exception copilot (evidence, explanation, routing) on top of its exports. The copilot is the differentiating part; the matcher is not |
+| Evaluation harness | **Build** | No off-the-shelf tool knows this break taxonomy; this is what makes model or prompt changes safe | Ongoing maintenance |
+| **Whole-process alternative** | **Evaluate before scaling** | Established financial-close vendors sell intercompany matching modules, and several now add AI features. **These have not been evaluated.** | If NIG already licenses such a platform, the better path is probably to use its matching and add the exception copilot (evidence, explanation, routing) on top of its exports. The copilot is the differentiating part; the matcher is not |
 
-### What I would change with more time
+### What would change with more time
 
 1. **Real labelled data:** 3–6 historical closes with the accountants' actual resolutions, as the evaluation set (§3, A1).
 2. **Measure run-to-run variance:** re-run a sample 5 times to quantify model agreement.
@@ -123,7 +123,7 @@ The brief is intentionally incomplete. These are the assumptions we made and how
 6. **Proposed correcting entries in each ERP's journal format**, for one-click hand-off to the ERP's own approval workflow.
 7. **Multi-label breaks** (for example, split and miscoded at once).
 
-### How we know it works (summary of [evaluation.md](evaluation.md))
+### How the system is known to work (summary of [evaluation.md](evaluation.md))
 
 - **Ground truth:** synthetic data with an answer key: 12 break types, 6 ERPs, multilingual text, recurring fixed fees, free-text partners. Plus a **held-out set** (a different seed) scored after all fixes.
 - **Held-out results:** 100% match precision; 96% auto-match recall; 100% of real breaks surfaced; **99.0%** classification accuracy (95% CI 94.7–99.8); **100%** accuracy on the 85 cases auto-accepted without review; 21% of cases routed to a person; $2.55 per monthly run.

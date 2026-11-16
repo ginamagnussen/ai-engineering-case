@@ -1,6 +1,6 @@
 # Evaluation report: IC Reconciliation Copilot
 
-How we know the prototype works, where it fails, and what the numbers do and don't prove. Every figure below can be reproduced from this repository (see §8).
+How the prototype is known to work, where it fails, and what the numbers do and don't prove. Every figure below can be reproduced from this repository (see §8).
 
 ## 1. Method
 
@@ -71,9 +71,9 @@ How to read this:
 - **On the final pipeline**, no model auto-accepted a wrong answer at any threshold from 0.50 to 0.95, on either dataset. Every error carried confidence of 0.55 or less and was routed to a human.
 - **Decision:** keep 0.75 for now. The sweep shows it is safe here, but data this clean can't tell 0.75 and 0.85 apart. **Re-calibrate on the first pilot month** using reviewer overrides. The threshold is one setting (`REVIEW_CONFIDENCE_THRESHOLD`).
 
-## 5. Failures observed, and what we changed
+## 5. Failures observed, and what was changed
 
-The evaluation's main value was finding defects in our own pipeline. Most model "errors" turned out to be upstream bugs that the model had correctly flagged as suspicious.
+The evaluation's main value was finding defects in the pipeline itself. Most model "errors" turned out to be upstream bugs that the model had correctly flagged as suspicious.
 
 | # | Found by | Failure | Impact | Fix |
 |---|---|---|---|---|
@@ -90,13 +90,13 @@ The evaluation's main value was finding defects in our own pipeline. Most model 
 - *Development, Sonnet and Haiku:* a seller invoice paired with an unrelated accrual for a different person. Called an accrual rather than a missing booking, at 0.50–0.55 confidence; **routed to review**.
 - *Development, Sonnet:* an FX difference whose ratio (0.951) happened to look like 5% Saudi withholding tax on a Saudi buyer. Genuinely ambiguous; 0.55 confidence; **routed to review**.
 
-**The trade-off we chose:** fix 6 costs about 1 point of auto-match recall on the development set (3 correct amount-only matches now become cases). A missed match lands in front of a reviewer; a false match is never seen. In reconciliation, precision wins.
+**The trade-off chosen:** fix 6 costs about 1 point of auto-match recall on the development set (3 correct amount-only matches now become cases). A missed match lands in front of a reviewer; a false match is never seen. In reconciliation, precision wins.
 
-## 6. What the rules baseline tells us
+## 6. What the rules baseline shows
 
-On the final pipeline, the hand-written baseline classifier reaches 97.8% (development) and 99.0% (held-out) **when given the model-resolved partners**. That is a real finding and we report it as one:
+On the final pipeline, the hand-written baseline classifier reaches 97.8% (development) and 99.0% (held-out) **when given the model-resolved partners**. That is a real finding and is reported as one:
 
-- The break types in the mock data are the ones we designed, and the evidence features were built to expose them. On this data a rule tree can be written for every category, so the model's classification advantage is small.
+- The break types in the mock data are the ones designed into the generator, and the evidence features were built to expose them. On this data a rule tree can be written for every category, so the model's classification advantage is small.
 - **The model's measured value is elsewhere:** resolving free-text partner names (+7 to +14 points of auto-match recall), explanations and correcting entries an accountant can act on, calibrated confidence for routing, and reading free text (multilingual descriptions, dispute and accrual notes).
 - **Its value on breaks nobody anticipated is unproven by this evaluation.** That is the assumption the pilot must test first. It is the first of the three in the design document's kill test: if the model doesn't beat the rules on real exceptions, keep the rules and the review UI and drop the model from classification.
 

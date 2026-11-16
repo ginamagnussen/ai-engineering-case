@@ -14,7 +14,7 @@ NIG has six legal entities running five different finance systems (ERPs). Every 
 
 ## 1. The case at a glance
 
-The brief asks us to choose one painful operational workflow, build a working prototype on mock data, and defend the engineering and business judgement behind it. Excluded use cases: invoice processing, CV screening, contract review, ticket routing, knowledge chatbots and lead qualification.
+The brief asks for one painful operational workflow, a working prototype on mock data, and a defence of the engineering and business judgement behind it. Excluded use cases: invoice processing, CV screening, contract review, ticket routing, knowledge chatbots and lead qualification.
 
 **What is evaluated:** engineering judgement, build-vs-buy reasoning, speed of delivery and how realistic the path to production is. Polish is not.
 
@@ -98,7 +98,7 @@ flowchart LR
 - **Human oversight is enforced in code, not in the prompt.** The review policy (confidence < 0.75, disputes, amounts > $100k) is deterministic and auditable.
 - **A rules baseline runs beside the model.** It sets the bar the LLM has to beat to justify its cost, and it is the fallback if the API is unavailable.
 - **Model answers are cached and versioned.** Cache keys include the model, prompt version and input. Answers are committed, so the demo and evaluation replay without an API key or any cost.
-- **Bought vs built:** we buy the model (Claude Opus 5.5 via the Anthropic API, structured outputs) and the UI framework (Streamlit). We build the domain logic: matching rules, evidence, review policy and evaluation. Full reasoning is in the design document.
+- **Bought vs built:** the model (Claude Opus 5.5 via the Anthropic API, structured outputs) and the UI framework (Streamlit) are bought; the domain logic is built: matching rules, evidence, review policy and evaluation. Full reasoning is in the design document.
 
 ---
 
@@ -122,7 +122,7 @@ Full analysis is in **[docs/evaluation.md](docs/evaluation.md)**.
 | Model cost per monthly run | $0 | **$2.55** (≈ $0.02 per case) | $2.62 |
 
 - **Model choice.** Opus, Sonnet and Haiku 5.5 all classify at 98–100%. Opus sends half as many cases to people as Sonnet, and reviewer time costs far more than tokens. **Recommended:** a Haiku-then-Opus cascade. It matches Opus's accuracy with the lowest review rate, at 47–64% lower cost.
-- **Failures found and fixed.** The evaluation surfaced six defects in our own pipeline, including reference matching that silently never worked for 2 of 6 entities. Most model "errors" were upstream bugs that the model had flagged as suspicious.
+- **Failures found and fixed.** The evaluation surfaced six defects in the pipeline itself, including reference matching that silently never worked for 2 of 6 entities. Most model "errors" were upstream bugs that the model had flagged as suspicious.
 - **Honest caveat.** On this synthetic data, a hand-written rules classifier is close behind the model, because the break types are known in advance. The model's measured value lies in resolving partner names, explanations, correcting entries and routable confidence. Its value on unanticipated real-world breaks is the first thing the pilot must prove.
 
 ---
