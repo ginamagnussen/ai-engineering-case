@@ -23,7 +23,7 @@ The brief asks us to choose one painful operational workflow, build a working pr
 | Deliverable | Where | Status |
 |---|---|---|
 | Working prototype (source code or hosted) | this repo: `recon/`, `app.py` | ✅ done |
-| Recorded demo, 5–10 min, at least one workflow end-to-end | link added here | ⏳ M6 |
+| Recorded demo, 5–10 min, at least one workflow end-to-end | **VIDEO LINK** (added on submission) | ⏳ recording |
 | Technical design document | [docs/technical_design.md](docs/technical_design.md) (+ [evaluation report](docs/evaluation.md)) | ✅ done |
 | Executive summary (standalone) | [docs/executive_summary.md](docs/executive_summary.md) | ✅ done |
 | Live session: ~30 min presentation and demo, ~30 min Q&A | uses the material above | later |
@@ -48,8 +48,8 @@ The brief asks us to choose one painful operational workflow, build a working pr
 | M3 | Review UI: queue, case detail, approve/override/escalate, alias confirmation, audit log | ✅ |
 | M4 | Evaluation: held-out test set, model comparison and cascade, calibration, failure analysis ([report](docs/evaluation.md)) | ✅ |
 | M5 | Technical design document and executive summary | ✅ |
-| M6 | Demo video | ⏳ |
-| M7 | Submission | ⏳ |
+| M6 | Demo: reset and case search in the app, cached demo states, script; recording | ✅ / ⏳ |
+| M7 | Fresh-clone check (installs and runs with no API key, all figures reproduce), gap check against the brief, submission | ✅ / ⏳ |
 
 ---
 
@@ -57,9 +57,12 @@ The brief asks us to choose one painful operational workflow, build a working pr
 
 **User:** a group accountant on the intercompany reconciliation team, with entity controllers as approvers.
 
+**Why this workflow first:** it recurs every month in every entity, it is caused directly by NIG's acquisition-driven system sprawl, it needs only data every ERP can already export (no months of data engineering), and every break has an objectively right answer, so value can be measured rather than demoed. Alternatives considered and the selection criteria are in the [design doc](docs/technical_design.md#0-problem-and-context-assumptions).
+
 **Today:** every month each entity exports its intercompany balances from its own ERP. Exports differ in format, language, date convention and how they identify partner entities. Accountants match lines in spreadsheets, then chase the leftovers across time zones by email: FX differences, timing, wrong partner codes, typos, duplicates, withholding tax, disputes. Breaks delay the group close and some get written off unexplained.
 
 **With the copilot:**
+
 1. The extracts are ingested and normalised automatically.
 2. Rules match about 95% of transactions. Each match has a stated rule and confidence that can be audited.
 3. Each remaining exception arrives as a **case**. It already holds the evidence (computed differences, FX rate comparisons, tax ratios, duplicate checks), a classification, a plain-language explanation and a proposed correcting entry.
@@ -102,6 +105,7 @@ flowchart LR
 ## 4. Results (mock October 2026 close)
 
 Scored against the generator's answer key. There are two datasets:
+
 - **development** (seed 42): used while building
 - **held-out** (seed 2027): an independent test, scored after all fixes
 
@@ -146,6 +150,8 @@ streamlit run app.py           # review UI at http://localhost:8501
 | `RECON_DATA=data_holdout RECON_OUT=out_holdout python -m recon.run` | Run on the held-out set (generate it first with `--seed 2027 --out data_holdout`) |
 
 To make live model calls, put `ANTHROPIC_API_KEY=...` in a `.env` file in the project root (it's gitignored). The model and effort can be changed with `RECON_MODEL` and `RECON_EFFORT`.
+
+On Windows PowerShell, set the environment variables first: `$env:RECON_DATA="data_holdout"; $env:RECON_OUT="out_holdout"; python -m recon.run`.
 
 ---
 

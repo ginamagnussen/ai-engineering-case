@@ -2,9 +2,19 @@
 
 **Decision requested:** fund a one-quarter data-discovery and shadow pilot (≈ $175k), with a go/no-go based on three pre-agreed kill metrics.
 
+*Prototype, source code and technical design: [github.com/ginamagnussen/ai-engineering-case](https://github.com/ginamagnussen/ai-engineering-case) · Demo video (7 min): VIDEO LINK*
+
 ## The problem
 
 Every month, before NIG can close its books, each entity's intercompany balances must agree with its partners'. Because NIG grew through acquisitions, its entities run different finance systems, in different formats and languages. Group accountants match thousands of lines in spreadsheets and chase the differences by email across time zones. This takes days of skilled time each close, delays the group close, and leaves some differences written off unexplained.
+
+**Why start here:**
+
+- It recurs every month in every entity.
+- It is caused directly by NIG's acquisition-driven system sprawl.
+- It needs only data every finance system can already export, so no months of data engineering.
+- The AI only proposes; people decide.
+- Every result can be checked objectively, so value can be measured rather than claimed.
 
 ## What we built
 
@@ -48,6 +58,7 @@ All figures are **placeholder assumptions** to be replaced with NIG data in the 
 | High | 55% | $468k | $348k | about 12 months |
 
 The freed capacity goes into analysis and a faster close, not headcount cuts. That matters for adoption. Not quantified in these figures:
+
 - a faster intercompany sign-off (for example, from about 5 to about 3 days)
 - fewer unexplained write-offs
 - a complete audit trail
@@ -70,10 +81,7 @@ The freed capacity goes into analysis and a faster close, not headcount cuts. Th
 4. **Quarter 3, group-wide rollout:** the remaining entities, including the acquired legacy systems.
 
 **Kill test.** We stop or redesign if any of these happens:
+
 - more than 3% of accepted cases are wrong in any close
 - accountant time saved stays below 25% after 3 closes
 - the AI is less than 5 points better than simple rules and accountants rate its explanations below 3 out of 5
-
----
-
-*Prototype, source code and full technical documentation: see the project repository. A 7-minute demo video accompanies this summary.*

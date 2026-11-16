@@ -33,3 +33,6 @@ out_holdout/
 
 # Private notes
 notes/
+
+# Exported PDFs for submission (regenerated from docs/)
+submission/

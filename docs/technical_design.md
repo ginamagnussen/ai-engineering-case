@@ -12,6 +12,22 @@ This document covers the design choices behind the prototype (Task 2), what it t
 
 **User.** A group IC accountant, who works the exceptions, and entity controllers, who approve corrections and resolve disputes.
 
+**Why this use case first.** NIG can't transform everything at once, so I scored candidate workflows on five criteria:
+
+| Criterion | IC reconciliation (FIN) |
+|---|---|
+| **Pain and frequency:** skilled time, recurring | Every month-end, in every entity, on the critical path of the group close |
+| **Caused by NIG's specific problem:** acquisitions and fragmented systems | It exists *because* entities run different ERPs and conventions |
+| **Feasible without months of data work** | Needs only IC account extracts every ERP can already produce; no new data platform |
+| **Low risk, controls-friendly** | The AI proposes and accountants decide; nothing is posted automatically |
+| **Measurable** | Every break has an objectively correct resolution, so quality and ROI can be measured, not just demoed |
+
+| Alternatives considered | Why not first |
+|---|---|
+| HR/PRO: site-mobilisation compliance (worker certifications, visas, subcontractor insurance by country) | High value for an infrastructure firm, but each jurisdiction's rules need curating before it works; a slower path to evidence |
+| ANL: monthly project status report drafting | Easy to demo, hard to prove: output quality is subjective, and the risk of plausible-but-wrong narrative is high |
+| FIN: invoice processing | Excluded by the brief. IC reconciliation is not invoice capture: it reconciles balances *between* group entities after booking |
+
 The brief is intentionally incomplete. These are the assumptions we made and how they shaped the design:
 
 | # | Assumption | How it shaped the design |
@@ -36,7 +52,7 @@ The brief is intentionally incomplete. These are the assumptions we made and how
      master data ► confirmed aliases ► Claude (batched, ≥0.8 confidence, else human)
                     │                         │
                     ▼                         ▼
-     deterministic matching: exact reference ▸ amount+date (with reference guard) ▸ split ▸ cross-period
+     deterministic matching: exact ref ▸ amount+date (ref guard) ▸ split ▸ cross-period
                     │ ~95% matched, each with rule + confidence
                     ▼
      exception cases + computed evidence (differences, FX rate bases, WHT ratios, digit patterns,
@@ -49,6 +65,7 @@ The brief is intentionally incomplete. These are the assumptions we made and how
 ```
 
 **Design principles:**
+
 1. **Rules first, the model for the residue.** Deterministic matching is free, instant and auditable. The model sees only what rules can't settle.
 2. **Code computes, the model reasons.** Every number the model needs (differences, implied FX rates against four rate bases, WHT ratios, digit-transposition checks) is computed in Python and passed as evidence. The model is never asked to do arithmetic.
 3. **Oversight is enforced in code, not in the prompt.** A case goes to a person if confidence is below 0.75, the category is dispute or "other", the amount exceeds $100k, or the model asks. The model can't talk its way past the policy.
@@ -68,6 +85,17 @@ The brief is intentionally incomplete. These are the assumptions we made and how
 | `review.py`, `app.py` | Human-in-the-loop | Append-only audit log keyed by the case's line set, so decisions survive re-runs |
 | `evaluate.py`, `experiments.py` | Measurement | Scoring against the answer key, model comparison, calibration, threshold sweep, cascade |
 
+### Integrations
+
+| | Prototype | Production |
+|---|---|---|
+| Ledger data | CSV extracts per ERP (Oracle EBS, SAP S/4 EN, SAP ECC DE, Dynamics 365, legacy ledger) | Scheduled read-only extracts or reports per ERP into a canonical store (§2) |
+| FX rates | Rate file (daily + budget) | Treasury's rate source |
+| Partner master data | CSV with an alias list; confirmed aliases in a file | Master data management (MDM) system, with confirmed aliases written back |
+| LLM | Anthropic API (Python SDK, structured outputs) | The same, through NIG's enterprise agreement or cloud provider, with regional routing |
+| Identity | None (reviewer name typed in) | SSO (Entra ID) with entity-level permissions |
+| Output | Audit log file; proposed entries shown in the UI | Write-once audit store; approved corrections handed to each ERP's journal approval workflow |
+
 ### Models
 
 - **Claude Opus 5.5** at medium effort with adaptive thinking, via the Anthropic API with structured outputs (a Pydantic schema, validated on return).
@@ -86,6 +114,7 @@ The brief is intentionally incomplete. These are the assumptions we made and how
 | **Whole-process alternative** | **Evaluate before scaling** | Established financial-close vendors sell intercompany matching modules, and several now add AI features. **We have not evaluated them.** | If NIG already licenses such a platform, the better path is probably to use its matching and add our exception copilot (evidence, explanation, routing) on top of its exports. The copilot is the differentiating part; the matcher is not |
 
 ### What I would change with more time
+
 1. **Real labelled data:** 3–6 historical closes with the accountants' actual resolutions, as the evaluation set (§3, A1).
 2. **Measure run-to-run variance:** re-run a sample 5 times to quantify model agreement.
 3. **Implement the cascade in code** (currently only simulated).
@@ -95,6 +124,7 @@ The brief is intentionally incomplete. These are the assumptions we made and how
 7. **Multi-label breaks** (for example, split and miscoded at once).
 
 ### How we know it works (summary of [evaluation.md](evaluation.md))
+
 - **Ground truth:** synthetic data with an answer key: 12 break types, 6 ERPs, multilingual text, recurring fixed fees, free-text partners. Plus a **held-out set** (a different seed) scored after all fixes.
 - **Held-out results:** 100% match precision; 96% auto-match recall; 100% of real breaks surfaced; **99.0%** classification accuracy (95% CI 94.7–99.8); **100%** accuracy on the 85 cases auto-accepted without review; 21% of cases routed to a person; $2.55 per monthly run.
 - **Failures observed:** 6 pipeline defects found and fixed, including reference matching that silently never worked for 2 of 6 entities. Most model "errors" were upstream mis-pairings that **the model itself flagged** as "different invoices". The remaining model errors all carried confidence of 0.55 or less and were routed to review.
@@ -107,6 +137,7 @@ The brief is intentionally incomplete. These are the assumptions we made and how
 ### The honest estimate
 
 **Two quarters to a production pilot on two entity clusters, then a third quarter to roll out group-wide.** It depends on three things:
+
 1. **Data access** to IC extracts from every ERP, including the acquired legacy ledgers, within the first 6 weeks.
 2. **A named process owner in Group Finance** who owns the review policy, taxonomy and thresholds, and signs off the controls with Internal Audit.
 3. **Identity and permissions integration** (SSO plus entity-level access) before any real data enters the tool.
@@ -144,16 +175,19 @@ Without (1), this becomes the "six months of data engineering" project the brief
 ### The three assumptions the solution depends on most
 
 **A1 · The model adds value beyond rules on real exceptions.**
+
 - *Why it matters:* on synthetic data, a rules classifier is close behind the model. If real breaks are equally predictable, the model's cost, dependency and governance aren't justified for classification.
 - *How to validate:* the shadow pilot on 3 historical closes. Compare model vs rules vs what the accountant actually did, on the long tail of breaks the taxonomy doesn't anticipate. Also have accountants rate explanation usefulness (1–5).
 - *If false:* keep ingestion, matching, the evidence layer and the review UI, which deliver most of the time saving without a model. Use the model only for partner-name resolution and drafting explanations. **Redesign, don't kill.**
 
 **A2 · IC data can be obtained from every ERP in weeks, with usable references.**
+
 - *Why it matters:* reference matching does most of the work; when references are missing, the system falls back to weaker amount-and-date matching and more human review. The brief warns that six months of data engineering means a failed prototype.
 - *How to validate:* Phase 0. One month's extract per ERP within 6 weeks; measure reference fill rate (target ≥ 70% of lines) and partner mapping coverage.
 - *If false:* scope down to the entities with clean extracts (likely SAP and Oracle) and treat legacy ledgers as a migration dependency, or buy connectors through a reconciliation vendor. The benefit shrinks with the coverage.
 
 **A3 · Accountants trust the proposals enough to stop re-doing the work.**
+
 - *Why it matters:* a perfectly accurate tool saves nothing if every proposal is re-checked by hand. Adoption, not accuracy, delivers the ROI. The users didn't ask for the tool.
 - *How to validate:* a time study before and after for two pilot teams (hours per close on IC); approve and override rates; share of cases actioned in the tool vs in spreadsheets; a short survey. Design for trust: the evidence comes first, every proposal cites its lines, and the accountants' overrides visibly improve the system.
 - *If false:* change the UX and positioning, for example evidence-only mode with no AI category, before spending more. If time saved stays below the threshold, stop.

@@ -16,6 +16,7 @@ How we know the prototype works, where it fails, and what the numbers do and don
 The held-out set was generated after the development fixes. One further fix (§5, item 6) was prompted by its rules-only run, and its pre-fix result is reported. The **model runs on the held-out set were made after all fixes, with no changes afterwards**, so they are a clean test.
 
 **Metrics.**
+
 - *Match precision:* share of rule-based auto-matches that pair lines from one real transaction. A false positive silently hides a break, so this is the key safety metric.
 - *Auto-match recall:* share of transactions that should match automatically (clean, reference-only differences, splits, timing) and are fully matched.
 - *Exception coverage:* share of real breaks that appear in at least one exception case.
@@ -59,6 +60,7 @@ The same exception cases go to each model (partner-name resolution and matching 
 | **Cascade: Haiku, then Opus if flagged** | 100% | 99.0% | **23% / 20%** | 100% / 100% | $0.008–0.013 | |
 
 How to read this:
+
 - **All three models classify about as accurately** as each other: the intervals overlap. They differ in **how often they are confident enough to skip review**. Opus sends half as many cases to people as Sonnet.
 - **Reviewer time outweighs tokens.** Opus costs about $0.02 more per case than Haiku. One avoided review (about 10 minutes of an accountant's time) costs roughly $10. So the model that minimises the review rate wins on total cost, as long as auto-accept accuracy holds.
 - **The cascade is the production recommendation.** Haiku handles the cases it's sure of, and Opus re-checks everything the policy flags. It matches Opus's accuracy, has the lowest review rate, and costs 47–64% less than Opus alone. Every configuration costs under $3 per monthly close at this volume, so this matters only at scale.
@@ -83,6 +85,7 @@ The evaluation's main value was finding defects in our own pipeline. Most model 
 | 6 | Held-out rules-only run | Two secondments with identical amounts (168h × 210 AUD). The guard missed it because the referenced invoice's partner was unresolved | 1 false positive (held-out precision 99.5% before the fix) | The guard now checks all of the seller's invoices |
 
 **Remaining model errors on the final pipeline:**
+
 - *Held-out, Opus:* a 90 SAR keying error (687,960 vs 688,050) that isn't a digit swap. Classified "other" at 0.50 confidence and **routed to review**. The rules baseline also missed it.
 - *Development, Sonnet and Haiku:* a seller invoice paired with an unrelated accrual for a different person. Called an accrual rather than a missing booking, at 0.50–0.55 confidence; **routed to review**.
 - *Development, Sonnet:* an FX difference whose ratio (0.951) happened to look like 5% Saudi withholding tax on a Saudi buyer. Genuinely ambiguous; 0.55 confidence; **routed to review**.
