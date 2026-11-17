@@ -8,7 +8,7 @@ NIG has six legal entities running five different finance systems (ERPs). Every 
 - **Claude** classifies, explains and proposes a fix for the exceptions that remain.
 - **An accountant** approves every proposal in a review screen, with a full audit trail.
 
-> Cluster: **FIN · Finance**. Status: prototype, evaluation, design document and executive summary done (M1–M5); demo video in progress.
+> Cluster: **FIN · Finance**. Status: prototype, evaluation, design document, executive summary and demo video done.
 >
 > Unfamiliar with a finance, AI or technical term (IC, FX, WHT, ledger, triage...)? See the **[glossary](docs/glossary.md)**.
 
@@ -24,8 +24,8 @@ The brief asks for one painful operational workflow, a working prototype on mock
 
 | Deliverable | Where | Status |
 |---|---|---|
-| Working prototype (source code or hosted) | this repo: `recon/`, `app.py` | ✅ done |
-| Recorded demo, 5–10 min, at least one workflow end-to-end | **VIDEO LINK** (added on submission) | ⏳ recording |
+| Working prototype (source code or hosted) | this repo: `recon/`, `app.py`; hosted at **[ai-engineering-case.streamlit.app](https://ai-engineering-case.streamlit.app/)** | ✅ done |
+| Recorded demo, 5–10 min, at least one workflow end-to-end | Link shared with the submission (not public) | ✅ done |
 | Technical design document | [docs/technical_design.md](docs/technical_design.md) (+ [evaluation report](docs/evaluation.md)) | ✅ done |
 | Executive summary (standalone) | [docs/executive_summary.md](docs/executive_summary.md) | ✅ done |
 | Live session: ~30 min presentation and demo, ~30 min Q&A | uses the material above | later |
@@ -50,7 +50,7 @@ The brief asks for one painful operational workflow, a working prototype on mock
 | M3 | Review UI: queue, case detail, approve/override/escalate, alias confirmation, audit log | ✅ |
 | M4 | Evaluation: held-out test set, model comparison and cascade, calibration, failure analysis ([report](docs/evaluation.md)) | ✅ |
 | M5 | Technical design document and executive summary | ✅ |
-| M6 | Demo: reset and case search in the app, cached demo states, script; recording | ✅ / ⏳ |
+| M6 | Demo: reset and case search in the app, cached demo states, script, recording | ✅ |
 | M7 | Fresh-clone check (installs and runs with no API key, all figures reproduce), gap check against the brief, submission | ✅ / ⏳ |
 
 ---
@@ -143,6 +143,8 @@ pip install -r requirements.txt
 python -m recon.run            # pipeline + evaluation -> out/
 streamlit run app.py           # review UI at http://localhost:8501
 ```
+
+Or try it without installing: **[ai-engineering-case.streamlit.app](https://ai-engineering-case.streamlit.app/)** (replays the saved model answers, no API key needed).
 
 | Command | What it does |
 |---|---|

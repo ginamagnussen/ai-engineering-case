@@ -4,7 +4,7 @@
 
 **Expected value (base case):** about **6,800 accountant hours a year** freed, worth about **$340k**, or **$220k net** after running costs. **Payback in about 19 months.** AI usage costs under $1k a year. *These are estimates on stated assumptions (page 2); the pilot measures the real saving.*
 
-*Repository: [github.com/ginamagnussen/ai-engineering-case](https://github.com/ginamagnussen/ai-engineering-case) · Demo: VIDEO LINK*
+*Repository: [github.com/ginamagnussen/ai-engineering-case](https://github.com/ginamagnussen/ai-engineering-case) · Live app: [ai-engineering-case.streamlit.app](https://ai-engineering-case.streamlit.app/) · Demo video: link shared with the submission*
 
 ## The problem
 
