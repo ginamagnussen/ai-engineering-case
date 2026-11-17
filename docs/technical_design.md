@@ -134,6 +134,17 @@ The brief is intentionally incomplete. These are the assumptions made and how th
 
 ## 2. Production readiness (Task 3)
 
+### Business case in brief
+
+Placeholder assumptions: 10 FTE spend their time on IC reconciliation today, at $85k loaded cost each.
+
+- **Base case:** 40% time saved, which frees about **6,800 hours, or $340k a year**.
+- **Net of costs:** after about $120k a year to run, that's **$220k net**, paying back the $350k build in about **19 months**.
+- **AI usage** is under $1k a year. People's time, not tokens, drives both cost and benefit.
+- **Kill threshold:** below about 25% time saved, payback stretches beyond 3.5 years, so the pilot stops (kill metric K2).
+
+The saving is an estimate until the pilot measures it. Scenarios are in the [executive summary](executive_summary.md).
+
 ### The honest estimate
 
 **Two quarters to a production pilot on two entity clusters, then a third quarter to roll out group-wide.** It depends on three things:

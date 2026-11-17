@@ -113,6 +113,8 @@ Scored against the generator's answer key. There are two datasets:
 
 Full analysis is in **[docs/evaluation.md](docs/evaluation.md)**.
 
+**Expected value (base case, placeholder assumptions):** about 6,800 accountant hours a year freed, roughly $340k, or $220k net of running costs, with payback in about 19 months. AI usage is under $1k a year. The saving is to be measured in the pilot. See the [executive summary](docs/executive_summary.md).
+
 | Metric | Rules only (no model) | Rules + Claude Opus 5.5, held-out | Development |
 |---|---|---|---|
 | Match precision (auto-matches that are correct) | 100% | **100%** (245/245) | 100% |

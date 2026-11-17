@@ -2,7 +2,9 @@
 
 **Decision requested:** fund a one-quarter data-discovery and shadow pilot (≈ $175k), with a go/no-go based on three pre-agreed kill metrics.
 
-*Prototype, source code and technical design: [github.com/ginamagnussen/ai-engineering-case](https://github.com/ginamagnussen/ai-engineering-case) · Demo video (7 min): VIDEO LINK*
+**Expected value (base case):** about **6,800 accountant hours a year** freed, worth about **$340k**, or **$220k net** after running costs. **Payback in about 19 months.** AI usage costs under $1k a year. *These are estimates on stated assumptions (page 2); the pilot measures the real saving.*
+
+*Repository: [github.com/ginamagnussen/ai-engineering-case](https://github.com/ginamagnussen/ai-engineering-case) · Demo: VIDEO LINK*
 
 ## The problem
 
@@ -13,7 +15,6 @@ Every month, before NIG can close its books, each entity's intercompany balances
 - It recurs every month in every entity.
 - It is caused directly by NIG's acquisition-driven system sprawl.
 - It needs only data every finance system can already export, so no months of data engineering.
-- The AI only proposes; people decide.
 - Every result can be checked objectively, so value can be measured rather than claimed.
 
 ## What was built
@@ -38,7 +39,7 @@ Tested on realistic simulated data, including a separate test set the system was
 | Share of cases still needing a person | **21%** |
 | AI cost per monthly run | **≈ $2.50** |
 
-The testing also found and fixed six defects in the system's own logic before they could reach users. The result to treat with caution: the data is simulated, and the AI's advantage over simple rules on real-world surprises is not yet proven. That is the first thing the pilot tests.
+Testing also caught and fixed six defects in the system's own logic. Caution: the data is simulated, and the AI's advantage over simple rules on real-world surprises is unproven. The pilot tests that first.
 
 ## Value and ROI
 
@@ -57,11 +58,7 @@ All figures are **placeholder assumptions** to be replaced with NIG data in the 
 | **Base** | **40%** | **$340k** | **$220k** | **about 19 months** |
 | High | 55% | $468k | $348k | about 12 months |
 
-The freed capacity goes into analysis and a faster close, not headcount cuts. That matters for adoption. Not quantified in these figures:
-
-- a faster intercompany sign-off (for example, from about 5 to about 3 days)
-- fewer unexplained write-offs
-- a complete audit trail
+The freed capacity goes into analysis and a faster close, not headcount cuts. That matters for adoption. Not quantified here: a faster intercompany sign-off (for example, from about 5 to about 3 days), fewer unexplained write-offs, and a complete audit trail.
 
 ## Costs and risks
 
