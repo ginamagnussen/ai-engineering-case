@@ -51,7 +51,7 @@ def status_of(c: dict, decisions: dict) -> str:
 st.sidebar.title("⚖️ IC Recon Copilot")
 st.sidebar.caption("NorthStar Infrastructure Group · Oct-2026 close (mock data)")
 reviewer = st.sidebar.text_input("Reviewer name", key="reviewer", placeholder="required to record decisions")
-page = st.sidebar.radio("Page", ["Overview", "Review queue", "Counterparty mapping",
+page = st.sidebar.radio("Page", ["Start here", "Overview", "Review queue", "Counterparty mapping",
                                  "Auto-matches", "Audit log", "Evaluation"])
 
 with st.sidebar.expander("Run pipeline"):
@@ -79,10 +79,86 @@ if not all((config.OUT / f).exists() for f in FILES):
     st.cache_data.clear()
 
 cases, lines, matches, summary = load(_mtime())
+ctx_entities = pd.read_csv(config.REFERENCE / "entities.csv", dtype=str, keep_default_na=False)
+ENTITY_CODES = list(ctx_entities.entity_code)
 decisions = latest_decisions()
 
 
 # ------------------------------------------------------------------------------- pages
+PLAIN_ENTITY = {"NIG-US": "US (head office)", "NIG-UK": "UK", "NIG-DE": "Germany", "NIG-AE": "UAE",
+                "NIG-SA": "Saudi Arabia", "NIG-AU": "Australia (acquired)"}
+TRICKY = {
+    "NIG-US": "Separate debit and credit columns; US date order",
+    "NIG-UK": "Signed amounts; partner as an SAP code",
+    "NIG-DE": "German headers and text; semicolons; decimal comma",
+    "NIG-AE": "Partner written as its full legal name",
+    "NIG-SA": "Partner written as its full legal name",
+    "NIG-AU": "Old system: partner names typed by hand",
+}
+
+
+def _raw_lines(entity: str, n: int) -> list[str]:
+    with (config.RAW / f"ledger_{entity}.csv").open(encoding="utf-8") as f:
+        return [next(f).rstrip("\n") for _ in range(n)]
+
+
+def _sample_row(entity: str) -> dict:
+    import csv as _csv
+    from recon.ingest import SCHEMAS
+
+    sc = SCHEMAS[entity]
+    header, first = _raw_lines(entity, 2)
+    row = dict(zip(next(_csv.reader([header], delimiter=sc["sep"])), next(_csv.reader([first], delimiter=sc["sep"]))))
+    if "dr" in sc:
+        amount = f"debit {row[sc['dr']]}" if row[sc["dr"]] else f"credit {row[sc['cr']]}"
+    else:
+        amount = row[sc["amount"]]
+    return {"date": row[sc["date"]], "amount": f"{amount} {row[sc['ccy']]}", "partner": row[sc["cp"]]}
+
+
+def page_start():
+    st.header("Month-end intercompany check")
+    st.markdown("##### Six group companies must agree on what they owe each other before the books can close. "
+                "Today that means spreadsheets and email. Here, **rules match, AI explains, people decide.**")
+
+    cols = st.columns([4, 1, 4, 1, 4, 1, 4])
+    steps = [(f"{len(ENTITY_CODES)} exports", "arrive in different formats, from 5 finance systems"),
+             (f"{summary['matches']} matched", "automatically by rules. No AI, no cost, fully traceable"),
+             (f"{summary['cases']} explained", "differences, each with a cause and suggested fix from AI"),
+             (f"{summary['needs_review']} decided", "by a person. Nothing is booked automatically")]
+    for i, (big, small) in enumerate(steps):
+        with cols[2 * i], st.container(border=True):
+            st.markdown(f"### {big}")
+            st.caption(small)
+        if i < 3:
+            cols[2 * i + 1].markdown("<h2 style='text-align:center'>→</h2>", unsafe_allow_html=True)
+
+    st.subheader("What comes in")
+    st.caption("One example entry from each company's export, exactly as written. Same kind of data, six different formats.")
+    erp = ctx_entities.set_index("entity_code").erp
+    rows = []
+    for e in ENTITY_CODES:
+        s = _sample_row(e)
+        rows.append({"Company": PLAIN_ENTITY[e], "Finance system": erp[e].split(" (")[0],
+                     "Date as written": s["date"], "Amount as written": s["amount"],
+                     "Partner company written as": s["partner"], "What makes it tricky": TRICKY[e]})
+    st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
+
+    pick = st.selectbox("Show a raw export file", ENTITY_CODES, index=ENTITY_CODES.index("NIG-DE"),
+                        format_func=lambda e: f"{PLAIN_ENTITY[e]} · ledger_{e}.csv")
+    st.code("\n".join(_raw_lines(pick, 6)), language=None)
+
+    st.subheader("Run the October close")
+    if st.button("▶ Run now", type="primary"):
+        with st.spinner("Reading 6 exports, matching, explaining exceptions..."):
+            s = run_pipeline(use_llm=False, log=lambda m: None)
+        st.cache_data.clear()
+        st.session_state["start_ran"] = s["runtime_s"]
+        st.rerun()
+    if "start_ran" in st.session_state:
+        st.success(f"Done in {st.session_state['start_ran']} seconds. Open **Overview** in the sidebar.")
+
+
 def page_overview():
     st.header("October 2026 intercompany close")
     n_matched_lines = sum(len(ast.literal_eval(x)) for col in ("seller_lines", "buyer_lines")
@@ -297,5 +373,5 @@ def page_eval():
     st.markdown(p.read_text(encoding="utf-8") if p.exists() else "Run the pipeline with evaluation first.")
 
 
-{"Overview": page_overview, "Review queue": page_queue, "Counterparty mapping": page_counterparties,
+{"Start here": page_start, "Overview": page_overview, "Review queue": page_queue, "Counterparty mapping": page_counterparties,
  "Auto-matches": page_matches, "Audit log": page_audit, "Evaluation": page_eval}[page]()
